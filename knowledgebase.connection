@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_Obligatorio1v2</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>(LocalDB)\MSSQLLocalDB</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\Models\Obligatorio1v2</Directory>
+	<DataFile>GX_KB_Obligatorio1v2.mdf</DataFile>
+	<LogFile>GX_KB_Obligatorio1v2_log.ldf</LogFile>
+	<HostName>LAPTOP-JS3D3FLO</HostName>
+</ConnectionInformation>
