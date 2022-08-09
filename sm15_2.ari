@@ -1,0 +1,3 @@
+domain_i(88,'gxdomainpage.cs').
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,3,0 ]).
+sdt_map_i(15,'Pais',[ 0,3,0 ]).

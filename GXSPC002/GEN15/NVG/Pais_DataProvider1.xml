@@ -1,0 +1,26 @@
+
+<ObjectSpec>
+<SpecVersion>17_0_10-161416</SpecVersion>
+<Object>
+<ObjClsGuid>2a9e9aba-d2de-4801-ae7f-5e3819222daf</ObjClsGuid>
+<ObjCls>33</ObjCls>
+<ObjId>2</ObjId>
+<ObjName>Pais_DataProvider1</ObjName>
+<ObjDesc>Pais_Data Provider1</ObjDesc>
+<ObjPgmName>Pais_DataProvider1</ObjPgmName>
+<ObjClsName>DataProvider</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Main>Yes</Main>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (.NET Framework)</GenName></Generator>
+<FormClass>HTML</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Token>Pais</Token></Parameter></Parameters>
+<Levels></Levels></ObjectSpec>

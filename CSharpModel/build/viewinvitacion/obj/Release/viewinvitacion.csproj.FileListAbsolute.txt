@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\viewinvitacion.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.dll

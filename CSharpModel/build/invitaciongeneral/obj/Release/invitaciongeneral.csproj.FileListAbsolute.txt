@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\invitaciongeneral.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.dll

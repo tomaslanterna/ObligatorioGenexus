@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prgs.xsl"?>
+<Objects>
+   <Charset>UTF-8</Charset>
+   <Path>file:///C:/Program Files (x86)/GeneXus/GeneXus17Trial/</Path>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>Home</ObjName>
+      <ObjDesc>Home</ObjDesc>
+      <ObjLink>home.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWCliente</ObjName>
+      <ObjDesc>Clientes</ObjDesc>
+      <ObjLink>wwcliente.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWVenta</ObjName>
+      <ObjDesc>Ventas</ObjDesc>
+      <ObjLink>wwventa.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWEntrada</ObjName>
+      <ObjDesc>Entradas</ObjDesc>
+      <ObjLink>wwentrada.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWEspectaculo</ObjName>
+      <ObjDesc>Espectaculoes</ObjDesc>
+      <ObjLink>wwespectaculo.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWPais</ObjName>
+      <ObjDesc>Pais</ObjDesc>
+      <ObjLink>wwpais.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWTipoEspectaculo</ObjName>
+      <ObjDesc>Tipo Espectaculoes</ObjDesc>
+      <ObjLink>wwtipoespectaculo.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWFuncion</ObjName>
+      <ObjDesc>Funcions</ObjDesc>
+      <ObjLink>wwfuncion.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWInvitacion</ObjName>
+      <ObjDesc>Invitacions</ObjDesc>
+      <ObjLink>wwinvitacion.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWLugar</ObjName>
+      <ObjDesc>Lugars</ObjDesc>
+      <ObjLink>wwlugar.aspx</ObjLink>
+   </Object>
+</Objects>

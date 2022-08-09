@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwentrada.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\wwentrada\obj\Release\wwentrada.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\wwentrada\obj\Release\wwentrada.dll

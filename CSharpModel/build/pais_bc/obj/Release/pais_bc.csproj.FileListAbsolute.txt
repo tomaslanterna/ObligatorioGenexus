@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\pais_bc.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\pais_bc\obj\Release\pais_bc.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\pais_bc\obj\Release\pais_bc.dll

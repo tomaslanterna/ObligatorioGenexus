@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\paislugarwc.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\paislugarwc\obj\Release\paislugarwc.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\paislugarwc\obj\Release\paislugarwc.dll

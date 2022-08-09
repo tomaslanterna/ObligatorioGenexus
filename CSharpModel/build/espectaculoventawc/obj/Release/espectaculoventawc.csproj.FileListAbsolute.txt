@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\espectaculoventawc.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\espectaculoventawc\obj\Release\espectaculoventawc.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\espectaculoventawc\obj\Release\espectaculoventawc.dll

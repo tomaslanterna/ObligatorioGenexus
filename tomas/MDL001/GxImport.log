@@ -1,2 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportLog />
+<ImportLog>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+		<TypeName>DataProvider</TypeName>
+		<Name>Pais_DataProvider1</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+</ImportLog>

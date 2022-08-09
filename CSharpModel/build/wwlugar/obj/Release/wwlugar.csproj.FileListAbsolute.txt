@@ -1,0 +1,3 @@
+C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwlugar.dll
+C:\Models\Obligatorio1v2\CSharpModel\build\wwlugar\obj\Release\wwlugar.csprojResolveAssemblyReference.cache
+C:\Models\Obligatorio1v2\CSharpModel\build\wwlugar\obj\Release\wwlugar.dll
