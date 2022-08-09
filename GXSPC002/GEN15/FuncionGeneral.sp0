@@ -19,7 +19,7 @@ lac_i(2,[ [] ]).
  
  
  
-cls_i([ 0,0 ],[ 0,19 ]).
+cls_i([ 0,0 ],[ 0,39 ]).
  
 pos_i(15,[ 0,0,0 ]).
 pos_i(1,[ 0,0,0 ]).
@@ -141,7 +141,7 @@ v_i(t,o,3,1).
  
  
  
-attri_i(22,[ 'FuncionName',char,20,0,'',0,'Funcion Name','',0 ]).
+attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
 attri_i(21,[ 'PrecioFuncion',int,4,0,'ZZZ9',0,'Precio Funcion','',0 ]).
 attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(15,[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',0 ]).
@@ -171,6 +171,7 @@ index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
  
  
 add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -193,6 +194,7 @@ enum_value_info_i(2,42,'GeneXus\TrnMode').
 enum_type_i(2,42,char,3,0).
  
 dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
  
  
 break_i(2,nvg,1,[],[ [ 15,1,21,22 ],[],[] ]).
@@ -623,7 +625,7 @@ html_comp_i(32,'Semanticcontent',div,d,[ str ]).
 html_comp_i(32,'Align',left,d,[ str ]).
 html_comp_i(32,'Valign',top,d,[ str ]).
 html_comp_i(33,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(33,'Colcount',20,d,[ num ]).
+html_comp_i(33,'Colcount',40,d,[ num ]).
 html_comp_i(33,'Attid',22,v,[ num ]).
 html_comp_i(33,'Class','ReadonlyAttribute',v,[ str ]).
 html_comp_i(33,'Controlname','Funcionname',d,[ str ]).
@@ -645,7 +647,7 @@ html_comp_i(33,'Readonly',-1,v,[ bool ]).
 html_comp_i(33,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(33,'Ispassword',0,d,[ bool ]).
 html_comp_i(33,'Autoresize',-1,d,[ bool ]).
-html_comp_i(33,'Gxwidth',measure(20,chr),d,[ measure ]).
+html_comp_i(33,'Gxwidth',measure(40,chr),d,[ measure ]).
 html_comp_i(33,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(33,'Ismultiline',0,d,[ bool ]).
 html_comp_i(33,'Maxtextnumberlines',0,d,[ num ]).
@@ -747,7 +749,7 @@ att_prop_i(2,21,'FullName','PrecioFuncion',v).
 att_prop_i(2,22,'ExternalName','FuncionName',d).
 att_prop_i(2,22,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,22,'EmptyAsNull','Yes',d).
-att_prop_i(2,22,idBasedOn,'',d).
+att_prop_i(2,22,idBasedOn,87,v).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,22,'DB_NLS_SUPPORT','Yes',d).
 att_prop_i(2,22,'AttRegEx','',d).

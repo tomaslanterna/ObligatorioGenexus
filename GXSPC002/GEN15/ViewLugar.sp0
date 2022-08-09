@@ -182,6 +182,7 @@ index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
  
  
  
+add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  

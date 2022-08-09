@@ -9,7 +9,7 @@
 <ObjDesc>Invitacion</ObjDesc>
 <ObjPgmName>Invitacion</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -50,6 +50,17 @@
 <Description>Invitacion Id</Description></Attribute></KeyAttributes>
 <Tables>
 <Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
 <TableId>1</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
@@ -81,7 +92,7 @@
 <AttriId>3</AttriId>
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
@@ -102,13 +113,13 @@
 <AttriName>InvitacionFecha</AttriName>
 <Description>Invitacion Fecha</Description></Attribute>
 <Attribute>
-<AttriId>36</AttriId>
-<AttriName>InvitacionNominada</AttriName>
-<Description>Invitacion Nominada</Description></Attribute>
+<AttriId>45</AttriId>
+<AttriName>InvitacionName</AttriName>
+<Description>Invitacion Name</Description></Attribute>
 <Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>10</TableId>
@@ -121,13 +132,13 @@
 <AttriName>InvitacionFecha</AttriName>
 <Description>Invitacion Fecha</Description></Attribute>
 <Attribute>
-<AttriId>36</AttriId>
-<AttriName>InvitacionNominada</AttriName>
-<Description>Invitacion Nominada</Description></Attribute>
+<AttriId>45</AttriId>
+<AttriName>InvitacionName</AttriName>
+<Description>Invitacion Name</Description></Attribute>
 <Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>10</TableId>
@@ -145,21 +156,21 @@
 <Prompts>
 <Prompt>
 <Table>
-<TableId>1</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description></Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>57</ObjId>
-<ObjName>Gx0010</ObjName>
-<ObjPgmName>Gx0010</ObjPgmName>
+<ObjId>59</ObjId>
+<ObjName>Gx0070</ObjName>
+<ObjPgmName>Gx0070</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <InputParameters></InputParameters>
 <OutputParameters>
 <Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></OutputParameters>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt></Prompts>
 <Suggests></Suggests></ObjectSpec>

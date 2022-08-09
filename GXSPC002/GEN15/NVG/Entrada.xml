@@ -9,7 +9,7 @@
 <ObjDesc>Entrada</ObjDesc>
 <ObjPgmName>Entrada</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -103,7 +103,82 @@
 <AttriId>4</AttriId>
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table>
+<Table>
+<TableId>4</TableId>
+<TableName>TipoEspectaculo</TableName>
+<Description>Tipo Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>9</TableId>
+<TableName>LugarSectorVendidas navigation</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
@@ -120,13 +195,17 @@
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>SectorId</AttriName>
-<Description>Sector Id</Description></Attribute>
+<AttriId>42</AttriId>
+<AttriName>EntradaFecha</AttriName>
+<Description>Entrada Fecha</Description></Attribute>
 <Attribute>
-<AttriId>17</AttriId>
-<AttriName>SectorName</AttriName>
-<Description>Sector Name</Description></Attribute>
+<AttriId>43</AttriId>
+<AttriName>EntradaPaisOrigenId</AttriName>
+<Description>Entrada Pais Origen Id</Description></Attribute>
+<Attribute>
+<AttriId>44</AttriId>
+<AttriName>EntradaPaisOrigenName</AttriName>
+<Description>Entrada Pais Origen Name</Description></Attribute>
 <Attribute>
 <AttriId>9</AttriId>
 <AttriName>ClienteId</AttriName>
@@ -134,7 +213,11 @@
 <Attribute>
 <AttriId>15</AttriId>
 <AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Funcion Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
@@ -143,13 +226,17 @@
 <TableAction>update</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>SectorId</AttriName>
-<Description>Sector Id</Description></Attribute>
+<AttriId>42</AttriId>
+<AttriName>EntradaFecha</AttriName>
+<Description>Entrada Fecha</Description></Attribute>
 <Attribute>
-<AttriId>17</AttriId>
-<AttriName>SectorName</AttriName>
-<Description>Sector Name</Description></Attribute>
+<AttriId>43</AttriId>
+<AttriName>EntradaPaisOrigenId</AttriName>
+<Description>Entrada Pais Origen Id</Description></Attribute>
+<Attribute>
+<AttriId>44</AttriId>
+<AttriName>EntradaPaisOrigenName</AttriName>
+<Description>Entrada Pais Origen Name</Description></Attribute>
 <Attribute>
 <AttriId>9</AttriId>
 <AttriName>ClienteId</AttriName>
@@ -157,7 +244,11 @@
 <Attribute>
 <AttriId>15</AttriId>
 <AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Funcion Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>

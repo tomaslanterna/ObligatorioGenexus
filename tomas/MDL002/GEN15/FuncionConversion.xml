@@ -75,8 +75,8 @@
 <Description>Funcion Name</Description>
 <TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>C</DataType>
-<Presicion>20</Presicion>
+<DataType>V</DataType>
+<Presicion>40</Presicion>
 <Scale>0</Scale>
 <Properties>
 <Property>
@@ -128,7 +128,7 @@
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Funcion] ([FuncionId] smallint NOT NULL , [EspectaculoId] smallint NOT NULL , [PrecioFuncion] smallint NOT NULL , [FuncionName] nchar(20) NOT NULL , PRIMARY KEY([FuncionId])) </Statement>
+<Statement>CREATE TABLE [Funcion] ([FuncionId] smallint NOT NULL , [EspectaculoId] smallint NOT NULL , [PrecioFuncion] smallint NOT NULL , [FuncionName] nvarchar(40) NOT NULL , PRIMARY KEY([FuncionId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IFUNCION1] ON [Funcion] ([EspectaculoId] )</Statement>
 <Statement>ALTER TABLE [Funcion] ADD CONSTRAINT [IFUNCION1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>

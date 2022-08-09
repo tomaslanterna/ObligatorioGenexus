@@ -1415,14 +1415,6 @@ namespace GeneXus.Programs {
                AnyError = 1;
             }
             pr_default.close(12);
-            /* Using cursor T000515 */
-            pr_default.execute(13, new Object[] {A9ClienteId});
-            if ( (pr_default.getStatus(13) != 101) )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Venta"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(13);
          }
       }
 
@@ -1466,13 +1458,13 @@ namespace GeneXus.Programs {
       public void ScanStart055( )
       {
          /* Scan By routine */
-         /* Using cursor T000516 */
-         pr_default.execute(14);
+         /* Using cursor T000515 */
+         pr_default.execute(13);
          RcdFound5 = 0;
-         if ( (pr_default.getStatus(14) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound5 = 1;
-            A9ClienteId = T000516_A9ClienteId[0];
+            A9ClienteId = T000515_A9ClienteId[0];
             AssignAttri("", false, "A9ClienteId", StringUtil.LTrimStr( (decimal)(A9ClienteId), 4, 0));
          }
          /* Load Subordinate Levels */
@@ -1481,19 +1473,19 @@ namespace GeneXus.Programs {
       protected void ScanNext055( )
       {
          /* Scan next routine */
-         pr_default.readNext(14);
+         pr_default.readNext(13);
          RcdFound5 = 0;
-         if ( (pr_default.getStatus(14) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound5 = 1;
-            A9ClienteId = T000516_A9ClienteId[0];
+            A9ClienteId = T000515_A9ClienteId[0];
             AssignAttri("", false, "A9ClienteId", StringUtil.LTrimStr( (decimal)(A9ClienteId), 4, 0));
          }
       }
 
       protected void ScanEnd055( )
       {
-         pr_default.close(14);
+         pr_default.close(13);
       }
 
       protected void AfterConfirm055( )
@@ -1580,7 +1572,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228822543398", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?2022891326274", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1757,7 +1749,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022882254341", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022891326277", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1773,7 +1765,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("cliente.js", "?2022882254341", false, true);
+         context.AddJavascriptSource("cliente.js", "?2022891326277", false, true);
          /* End function include_jscripts */
       }
 
@@ -1985,8 +1977,7 @@ namespace GeneXus.Programs {
          T000510_A9ClienteId = new short[1] ;
          T000513_A6PaisName = new string[] {""} ;
          T000514_A23EntradaId = new short[1] ;
-         T000515_A11VentaId = new short[1] ;
-         T000516_A9ClienteId = new short[1] ;
+         T000515_A9ClienteId = new short[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -2030,10 +2021,7 @@ namespace GeneXus.Programs {
                T000514_A23EntradaId
                }
                , new Object[] {
-               T000515_A11VentaId
-               }
-               , new Object[] {
-               T000516_A9ClienteId
+               T000515_A9ClienteId
                }
             }
          );
@@ -2168,8 +2156,7 @@ namespace GeneXus.Programs {
       private short[] T000510_A9ClienteId ;
       private string[] T000513_A6PaisName ;
       private short[] T000514_A23EntradaId ;
-      private short[] T000515_A11VentaId ;
-      private short[] T000516_A9ClienteId ;
+      private short[] T000515_A9ClienteId ;
       private GXWebForm Form ;
       private SdtTransactionContext AV9TrnContext ;
       private SdtTransactionContext_Attribute AV12TrnContextAtt ;
@@ -2195,7 +2182,6 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[11])
          ,new ForEachCursor(def[12])
          ,new ForEachCursor(def[13])
-         ,new ForEachCursor(def[14])
        };
     }
 
@@ -2257,10 +2243,6 @@ namespace GeneXus.Programs {
           };
           Object[] prmT000515;
           prmT000515 = new Object[] {
-          new ParDef("@ClienteId",GXType.Int16,4,0)
-          };
-          Object[] prmT000516;
-          prmT000516 = new Object[] {
           };
           Object[] prmT000513;
           prmT000513 = new Object[] {
@@ -2280,8 +2262,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("T000512", "DELETE FROM [Cliente]  WHERE [ClienteId] = @ClienteId", GxErrorMask.GX_NOMASK,prmT000512)
              ,new CursorDef("T000513", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000513,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T000514", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [ClienteId] = @ClienteId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000514,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000515", "SELECT TOP 1 [VentaId] FROM [Venta] WHERE [ClienteId] = @ClienteId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000515,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000516", "SELECT [ClienteId] FROM [Cliente] ORDER BY [ClienteId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000516,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000515", "SELECT [ClienteId] FROM [Cliente] ORDER BY [ClienteId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000515,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -2333,9 +2314,6 @@ namespace GeneXus.Programs {
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 13 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                return;
-             case 14 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
        }

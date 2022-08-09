@@ -6,9 +6,9 @@
 <TableName>Pais</TableName>
 <Description>Pais</Description></Table>
 <ReorgCls>c</ReorgCls>
-<ReorgCode>same</ReorgCode>
-<ReorgMsg>Pais needs initialization (initialize with Pais_DataProvider1)</ReorgMsg>
-<ReorgAction>#</ReorgAction>
+<ReorgCode>new</ReorgCode>
+<ReorgMsg>Pais is new (initialize with Pais_DataProvider1)</ReorgMsg>
+<ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
 <Attribute>
@@ -106,7 +106,8 @@
 <IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>Yes</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
-<Statements></Statements>
+<Statements>
+<Statement>CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId])) </Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

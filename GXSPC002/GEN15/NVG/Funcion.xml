@@ -122,6 +122,16 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
+<TableId>10</TableId>
+<TableName>Invitacion</TableName>
+<Description>Invitacion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes></Table>
+<Table>
 <TableId>9</TableId>
 <TableName>Entrada</TableName>
 <Description>Entrada</Description>

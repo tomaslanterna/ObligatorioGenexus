@@ -256,7 +256,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228822352379", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?2022891326268", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -305,7 +305,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GXH_vCFUNCIONID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6cFuncionId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCESPECTACULOID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7cEspectaculoId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCPRECIOFUNCION", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8cPrecioFuncion), 4, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "GXH_vCFUNCIONNAME", StringUtil.RTrim( AV9cFuncionName));
+         GxWebStd.gx_hidden_field( context, "GXH_vCFUNCIONNAME", AV9cFuncionName);
          /* Send saved values. */
          send_integrity_footer_hashes( ) ;
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_54", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_54), 8, 0, ",", "")));
@@ -525,7 +525,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtavCfuncionname_Internalname, "Funcion Name", "col-sm-3 AttributeLabel", 0, true, "");
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 46,'',false,'" + sGXsfl_54_idx + "',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavCfuncionname_Internalname, StringUtil.RTrim( AV9cFuncionName), StringUtil.RTrim( context.localUtil.Format( AV9cFuncionName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,46);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCfuncionname_Jsonclick, 0, "Attribute", "", "", "", "", edtavCfuncionname_Visible, edtavCfuncionname_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_Gx0070.htm");
+            GxWebStd.gx_single_line_edit( context, edtavCfuncionname_Internalname, AV9cFuncionName, StringUtil.RTrim( context.localUtil.Format( AV9cFuncionName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,46);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCfuncionname_Jsonclick, 0, "Attribute", "", "", "", "", edtavCfuncionname_Visible, edtavCfuncionname_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_Gx0070.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -964,7 +964,7 @@ namespace GeneXus.Programs {
                                                  TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT
                                                  }
             });
-            lV9cFuncionName = StringUtil.PadR( StringUtil.RTrim( AV9cFuncionName), 20, "%");
+            lV9cFuncionName = StringUtil.Concat( StringUtil.RTrim( AV9cFuncionName), "%", "");
             /* Using cursor H001N2 */
             pr_default.execute(0, new Object[] {AV6cFuncionId, AV7cEspectaculoId, AV8cPrecioFuncion, lV9cFuncionName, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_54_idx = 1;
@@ -1018,7 +1018,7 @@ namespace GeneXus.Programs {
                                               TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT
                                               }
          });
-         lV9cFuncionName = StringUtil.PadR( StringUtil.RTrim( AV9cFuncionName), 20, "%");
+         lV9cFuncionName = StringUtil.Concat( StringUtil.RTrim( AV9cFuncionName), "%", "");
          /* Using cursor H001N3 */
          pr_default.execute(1, new Object[] {AV6cFuncionId, AV7cEspectaculoId, AV8cPrecioFuncion, lV9cFuncionName});
          GRID1_nRecordCount = H001N3_AGRID1_nRecordCount[0];
@@ -1331,7 +1331,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022882235240", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228913262627", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1347,7 +1347,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("gx0070.js", "?2022882235240", false, true);
+         context.AddJavascriptSource("gx0070.js", "?20228913262627", false, true);
          /* End function include_jscripts */
       }
 
@@ -1478,7 +1478,7 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtFuncionName_Internalname,StringUtil.RTrim( A22FuncionName),(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtFuncionName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn OptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)54,(short)1,(short)-1,(short)-1,(bool)true,(string)"",(string)"left",(bool)true,(string)""});
+            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtFuncionName_Internalname,(string)A22FuncionName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtFuncionName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn OptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)54,(short)1,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"left",(bool)true,(string)""});
             send_integrity_lvl_hashes1N2( ) ;
             Grid1Container.AddRow(Grid1Row);
             nGXsfl_54_idx = ((subGrid1_Islastpage==1)&&(nGXsfl_54_idx+1>subGrid1_fnc_Recordsperpage( )) ? 1 : nGXsfl_54_idx+1);
@@ -1582,7 +1582,7 @@ namespace GeneXus.Programs {
             Grid1Column.AddObjectProperty("Link", StringUtil.RTrim( edtPrecioFuncion_Link));
             Grid1Container.AddColumnProperties(Grid1Column);
             Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
-            Grid1Column.AddObjectProperty("Value", StringUtil.RTrim( A22FuncionName));
+            Grid1Column.AddObjectProperty("Value", A22FuncionName);
             Grid1Container.AddColumnProperties(Grid1Column);
             Grid1Container.AddObjectProperty("Selectedindex", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Selectedindex), 4, 0, ".", "")));
             Grid1Container.AddObjectProperty("Allowselection", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Allowselection), 1, 0, ".", "")));
@@ -1835,7 +1835,6 @@ namespace GeneXus.Programs {
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
       private string sGXsfl_54_idx="0001" ;
-      private string AV9cFuncionName ;
       private string sDynURL ;
       private string FormProcess ;
       private string bodyStyle ;
@@ -1882,10 +1881,8 @@ namespace GeneXus.Programs {
       private string edtFuncionId_Internalname ;
       private string edtEspectaculoId_Internalname ;
       private string edtPrecioFuncion_Internalname ;
-      private string A22FuncionName ;
       private string edtFuncionName_Internalname ;
       private string scmdbuf ;
-      private string lV9cFuncionName ;
       private string AV11ADVANCED_LABEL_TEMPLATE ;
       private string sGXsfl_54_fel_idx="0001" ;
       private string subGrid1_Class ;
@@ -1908,7 +1905,10 @@ namespace GeneXus.Programs {
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private bool AV5LinkSelection_IsBlob ;
+      private string AV9cFuncionName ;
       private string AV14Linkselection_GXI ;
+      private string A22FuncionName ;
+      private string lV9cFuncionName ;
       private string AV5LinkSelection ;
       private GXWebGrid Grid1Container ;
       private GXWebRow Grid1Row ;
@@ -2057,7 +2057,7 @@ namespace GeneXus.Programs {
           new ParDef("@AV6cFuncionId",GXType.Int16,4,0) ,
           new ParDef("@AV7cEspectaculoId",GXType.Int16,4,0) ,
           new ParDef("@AV8cPrecioFuncion",GXType.Int16,4,0) ,
-          new ParDef("@lV9cFuncionName",GXType.NChar,20,0) ,
+          new ParDef("@lV9cFuncionName",GXType.NVarChar,40,0) ,
           new ParDef("@GXPagingFrom2",GXType.Int32,9,0) ,
           new ParDef("@GXPagingTo2",GXType.Int32,9,0) ,
           new ParDef("@GXPagingTo2",GXType.Int32,9,0)
@@ -2067,7 +2067,7 @@ namespace GeneXus.Programs {
           new ParDef("@AV6cFuncionId",GXType.Int16,4,0) ,
           new ParDef("@AV7cEspectaculoId",GXType.Int16,4,0) ,
           new ParDef("@AV8cPrecioFuncion",GXType.Int16,4,0) ,
-          new ParDef("@lV9cFuncionName",GXType.NChar,20,0)
+          new ParDef("@lV9cFuncionName",GXType.NVarChar,40,0)
           };
           def= new CursorDef[] {
               new CursorDef("H001N2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001N2,11, GxCacheFrequency.OFF ,false,false )
@@ -2083,7 +2083,7 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                ((string[]) buf[0])[0] = rslt.getString(1, 20);
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
                 ((short[]) buf[2])[0] = rslt.getShort(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);

@@ -4,6 +4,7 @@ current_guid('1b21cf0d-1505-4ed5-a2d3-aa646f3b0747').
  
  
 called_tree_i(0,4,1,13).
+called_tree_i(0,4,1000,4).
  
  
  
@@ -28,9 +29,12 @@ ij_object_dependency(tipoespectaculo,[],[],[],4).
 obj_parms_i([ 'string aP0_Gx_mode','short aP1_TipoEspectaculoId' ],[ [ 'Mode',in ],[ 'Tipoespectaculoid',in ] ]).
  
  
+has_silent_trn_i(tipoespectaculo_bc).
  
  
  
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
 module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
 module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

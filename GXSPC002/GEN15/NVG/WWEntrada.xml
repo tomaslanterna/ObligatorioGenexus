@@ -9,16 +9,16 @@
 <ObjDesc>Entradas</ObjDesc>
 <ObjPgmName>WWEntrada</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings>
 <Warning>
 <MsgCode>spc0038</MsgCode>
 <Message>
 <Token>There is no index for order </Token>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>SectorId</AttriName>
-<Description>Sector Id</Description></Attribute>
+<AttriId>42</AttriId>
+<AttriName>EntradaFecha</AttriName>
+<Description>Entrada Fecha</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in grid '</Token>
 <Token>Grid</Token>
@@ -61,9 +61,9 @@
 <Description>Entrada</Description></Table></BaseTable>
 <Order>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>SectorId</AttriName>
-<Description>Sector Id</Description></Attribute></Order>
+<AttriId>42</AttriId>
+<AttriName>EntradaFecha</AttriName>
+<Description>Entrada Fecha</Description></Attribute></Order>
 <Condition></Condition>
 <LevelOptions></LevelOptions>
 <Optimizations>
@@ -80,21 +80,21 @@
 <ConditionalConstraint>
 <Constraint>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>SectorId</AttriName>
-<Description>Sector Id</Description></Attribute>
+<AttriId>42</AttriId>
+<AttriName>EntradaFecha</AttriName>
+<Description>Entrada Fecha</Description></Attribute>
 <Sp></Sp>
 <Token>&gt;=</Token>
 <Sp></Sp>
 <Variable>
-<VarId>Sectorid</VarId>
-<VarName>&amp;SectorId</VarName></Variable></Constraint>
+<VarId>Entradafecha</VarId>
+<VarName>&amp;EntradaFecha</VarName></Variable></Constraint>
 <Condition>
 <Token>not</Token>
 <Sp></Sp>
 <Variable>
-<VarId>Sectorid</VarId>
-<VarName>&amp;SectorId</VarName></Variable>
+<VarId>Entradafecha</VarId>
+<VarName>&amp;EntradaFecha</VarName></Variable>
 <Token>.</Token>
 <Token>isempty(</Token>
 <Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
@@ -165,7 +165,81 @@
 <AttriId>4</AttriId>
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table>
+<Table>
+<TableId>4</TableId>
+<TableName>TipoEspectaculo</TableName>
+<Description>Tipo Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>9</TableId>
+<TableName>LugarSectorVendidas navigation</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

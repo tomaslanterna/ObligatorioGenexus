@@ -9,7 +9,7 @@
 <ObjDesc>Pais_Data Provider1</ObjDesc>
 <ObjPgmName>Pais_DataProvider1</ObjPgmName>
 <ObjClsName>DataProvider</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <OutputDevices>

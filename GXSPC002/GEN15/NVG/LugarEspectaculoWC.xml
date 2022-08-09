@@ -9,7 +9,7 @@
 <ObjDesc>Lugar Espectaculo WC</ObjDesc>
 <ObjPgmName>LugarEspectaculoWC</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

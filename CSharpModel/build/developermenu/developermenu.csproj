@@ -11,6 +11,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include=".\..\apais_dataprovider1\apais_dataprovider1.csproj" />
+		<ProjectReference Include=".\..\atipoespectaculo_dataprovider\atipoespectaculo_dataprovider.csproj" />
+		<ProjectReference Include=".\..\alugar_dataprovider\alugar_dataprovider.csproj" />
 		<ProjectReference Include=".\..\appmasterpage\appmasterpage.csproj" />
 		<ProjectReference Include=".\..\recentlinks\recentlinks.csproj" />
 		<ProjectReference Include=".\..\promptmasterpage\promptmasterpage.csproj" />
@@ -24,20 +26,14 @@
 		<ProjectReference Include=".\..\viewcliente\viewcliente.csproj" />
 		<ProjectReference Include=".\..\wwcliente\wwcliente.csproj" />
 		<ProjectReference Include=".\..\clientegeneral\clientegeneral.csproj" />
-		<ProjectReference Include=".\..\clienteventawc\clienteventawc.csproj" />
 		<ProjectReference Include=".\..\clienteentradawc\clienteentradawc.csproj" />
-		<ProjectReference Include=".\..\viewventa\viewventa.csproj" />
-		<ProjectReference Include=".\..\wwventa\wwventa.csproj" />
-		<ProjectReference Include=".\..\ventageneral\ventageneral.csproj" />
 		<ProjectReference Include=".\..\viewentrada\viewentrada.csproj" />
 		<ProjectReference Include=".\..\wwentrada\wwentrada.csproj" />
 		<ProjectReference Include=".\..\entradageneral\entradageneral.csproj" />
 		<ProjectReference Include=".\..\viewespectaculo\viewespectaculo.csproj" />
 		<ProjectReference Include=".\..\wwespectaculo\wwespectaculo.csproj" />
 		<ProjectReference Include=".\..\espectaculogeneral\espectaculogeneral.csproj" />
-		<ProjectReference Include=".\..\espectaculosectorwc\espectaculosectorwc.csproj" />
 		<ProjectReference Include=".\..\espectaculofuncionwc\espectaculofuncionwc.csproj" />
-		<ProjectReference Include=".\..\espectaculoinvitacionwc\espectaculoinvitacionwc.csproj" />
 		<ProjectReference Include=".\..\viewpais\viewpais.csproj" />
 		<ProjectReference Include=".\..\wwpais\wwpais.csproj" />
 		<ProjectReference Include=".\..\paisgeneral\paisgeneral.csproj" />
@@ -61,18 +57,19 @@
 		<ProjectReference Include=".\..\lugarespectaculowc\lugarespectaculowc.csproj" />
 		<ProjectReference Include=".\..\gx0020\gx0020.csproj" />
 		<ProjectReference Include=".\..\gx0040\gx0040.csproj" />
-		<ProjectReference Include=".\..\gx00c1\gx00c1.csproj" />
 		<ProjectReference Include=".\..\gx0030\gx0030.csproj" />
 		<ProjectReference Include=".\..\gx00b1\gx00b1.csproj" />
 		<ProjectReference Include=".\..\gx0010\gx0010.csproj" />
 		<ProjectReference Include=".\..\gx0050\gx0050.csproj" />
 		<ProjectReference Include=".\..\gx0070\gx0070.csproj" />
+		<ProjectReference Include=".\..\espectaculolugarsectorwc\espectaculolugarsectorwc.csproj" />
+		<ProjectReference Include=".\..\funcioninvitacionwc\funcioninvitacionwc.csproj" />
+		<ProjectReference Include=".\..\gx00d1\gx00d1.csproj" />
 		<ProjectReference Include=".\..\espectaculo\espectaculo.csproj" />
 		<ProjectReference Include=".\..\lugar\lugar.csproj" />
 		<ProjectReference Include=".\..\pais\pais.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculo\tipoespectaculo.csproj" />
 		<ProjectReference Include=".\..\cliente\cliente.csproj" />
-		<ProjectReference Include=".\..\venta\venta.csproj" />
 		<ProjectReference Include=".\..\funcion\funcion.csproj" />
 		<ProjectReference Include=".\..\entrada\entrada.csproj" />
 		<ProjectReference Include=".\..\invitacion\invitacion.csproj" />

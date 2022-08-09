@@ -1,0 +1,10 @@
+bc_dt_elem_i([ 0,2,0 ],'Lugarid',allownulls,no).
+bc_dt_elem_i([ 0,2,0 ],'Lugarname',allownulls,no).
+bc_dt_elem_i([ 0,2,0 ],'Paisid',allownulls,no).
+bc_dt_elem_i([ 0,2,0 ],'Paisname',readonly,yes).
+bc_dt_elem_i([ 0,2,0 ],'Paisname',allownulls,no).
+bc_dt_elem_i([ 0,2,[ 4,27 ] ],'Lugarsectorid',allownulls,no).
+bc_dt_elem_i([ 0,2,[ 4,27 ] ],'Lugarsectorname',allownulls,no).
+bc_dt_elem_i([ 0,2,[ 4,27 ] ],'Lugarsectorcantidad',allownulls,no).
+bc_dt_elem_i([ 0,2,[ 4,27 ] ],'Lugarsectorprecio',allownulls,no).
+ 

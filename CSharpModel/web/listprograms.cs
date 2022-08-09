@@ -161,16 +161,6 @@ namespace GeneXus.Programs {
             this.cleanup();
             if (true) return;
          }
-         AV11name = "WWVenta";
-         AV12description = "Ventas";
-         AV13link = formatLink("wwventa.aspx") ;
-         /* Execute user subroutine: 'ADDPROGRAM' */
-         S111 ();
-         if ( returnInSub )
-         {
-            this.cleanup();
-            if (true) return;
-         }
          this.cleanup();
       }
 

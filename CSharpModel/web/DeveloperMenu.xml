@@ -17,12 +17,6 @@
    </Object>
    <Object>
       <ObjCls>13</ObjCls>
-      <ObjName>WWVenta</ObjName>
-      <ObjDesc>Ventas</ObjDesc>
-      <ObjLink>wwventa.aspx</ObjLink>
-   </Object>
-   <Object>
-      <ObjCls>13</ObjCls>
       <ObjName>WWEntrada</ObjName>
       <ObjDesc>Entradas</ObjDesc>
       <ObjLink>wwentrada.aspx</ObjLink>

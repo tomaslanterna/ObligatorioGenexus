@@ -1,3 +1,9 @@
 domain_i(88,'gxdomainpage.cs').
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,2,[ 4,27 ] ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,2,0 ]).
 ext_sdt_map_i(15,'GeneXus.dll',[ 0,3,0 ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,4,0 ]).
+sdt_map_i(15,'Lugar',[ 0,2,0 ]).
+sdt_map_i(15,'Lugar.Sector',[ 0,2,[ 4,27 ] ]).
 sdt_map_i(15,'Pais',[ 0,3,0 ]).
+sdt_map_i(15,'TipoEspectaculo',[ 0,4,0 ]).

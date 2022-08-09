@@ -9,7 +9,7 @@
 <ObjDesc>Espectaculo</ObjDesc>
 <ObjPgmName>Espectaculo</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -102,6 +102,10 @@
 <AttriName>EspectaculoName</AttriName>
 <Description>Espectaculo Name</Description></Attribute>
 <Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description></Attribute>
+<Attribute>
 <AttriId>26</AttriId>
 <AttriName>EspectaculoImagen</AttriName>
 <Description>Espectaculo Imagen</Description></Attribute>
@@ -129,6 +133,10 @@
 <AttriName>EspectaculoName</AttriName>
 <Description>Espectaculo Name</Description></Attribute>
 <Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description></Attribute>
+<Attribute>
 <AttriId>26</AttriId>
 <AttriName>EspectaculoImagen</AttriName>
 <Description>Espectaculo Imagen</Description></Attribute>
@@ -156,16 +164,6 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
-<TableId>10</TableId>
-<TableName>Invitacion</TableName>
-<Description>Invitacion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></KeyAttributes></Table>
-<Table>
 <TableId>7</TableId>
 <TableName>Funcion</TableName>
 <Description>Funcion</Description>
@@ -178,17 +176,17 @@
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
-<LevelNumber>12</LevelNumber>
+<LevelNumber>13</LevelNumber>
 <BaseTable>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
-<Description>Sector</Description></Table></BaseTable>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
-<Description>Sector</Description>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>
@@ -197,32 +195,58 @@
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>31</AttriId>
-<AttriName>EspectaculoSectorId</AttriName>
-<Description>Espectaculo Sector Id</Description></Attribute></KeyAttributes>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables>
 <Table>
-<TableId>12</TableId>
-<TableName>LugarSectorVendidas navigation</TableName>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
 <Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>13</TableId>
+<TableName>LugarSectorVendidas navigation</TableName>
+<Description>Lugar Sector</Description>
 <RecordsToRead>one</RecordsToRead>
 <JoinType>Outer</JoinType>
 <Tables>
 <Table>
-<TableId>6</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>
 <Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
 <AttriId>1</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
 <Attribute>
-<AttriId>31</AttriId>
-<AttriName>EspectaculoSectorId</AttriName>
-<Description>Espectaculo Sector Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
@@ -233,9 +257,9 @@
 <TablesToUpdate>
 <TableToUpdate>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
-<Description>Sector</Description></Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
@@ -243,73 +267,43 @@
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>31</AttriId>
-<AttriName>EspectaculoSectorId</AttriName>
-<Description>Espectaculo Sector Id</Description></Attribute>
+<AttriId>40</AttriId>
+<AttriName>LugarSectorCantidadAsientos</AttriName>
+<Description>Lugar Sector Cantidad Asientos</Description></Attribute>
 <Attribute>
-<AttriId>32</AttriId>
-<AttriName>EspectaculoSectorName</AttriName>
-<Description>Espectaculo Sector Name</Description></Attribute>
+<AttriId>41</AttriId>
+<AttriName>LugarSectorEstadoSector</AttriName>
+<Description>Lugar Sector Estado Sector</Description></Attribute>
 <Attribute>
-<AttriId>33</AttriId>
-<AttriName>EspectaculoSectorCantidadAsien</AttriName>
-<Description>Espectaculo Sector Cantidad Asientos</Description></Attribute>
-<Attribute>
-<AttriId>34</AttriId>
-<AttriName>EspectaculoSectorEstadoSector</AttriName>
-<Description>Espectaculo Sector Estado Sector</Description></Attribute>
-<Attribute>
-<AttriId>35</AttriId>
-<AttriName>EspectaculoSectorPrecio</AttriName>
-<Description>Espectaculo Sector Precio</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
-<Description>Sector</Description></Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>32</AttriId>
-<AttriName>EspectaculoSectorName</AttriName>
-<Description>Espectaculo Sector Name</Description></Attribute>
+<AttriId>40</AttriId>
+<AttriName>LugarSectorCantidadAsientos</AttriName>
+<Description>Lugar Sector Cantidad Asientos</Description></Attribute>
 <Attribute>
-<AttriId>33</AttriId>
-<AttriName>EspectaculoSectorCantidadAsien</AttriName>
-<Description>Espectaculo Sector Cantidad Asientos</Description></Attribute>
-<Attribute>
-<AttriId>34</AttriId>
-<AttriName>EspectaculoSectorEstadoSector</AttriName>
-<Description>Espectaculo Sector Estado Sector</Description></Attribute>
-<Attribute>
-<AttriId>35</AttriId>
-<AttriName>EspectaculoSectorPrecio</AttriName>
-<Description>Espectaculo Sector Precio</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>41</AttriId>
+<AttriName>LugarSectorEstadoSector</AttriName>
+<Description>Lugar Sector Estado Sector</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
-<Description>Sector</Description></Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
 <AfterInsertRules></AfterInsertRules>
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
-<TablesToControlOnDelete>
-<Table>
-<TableId>6</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute>
-<Attribute>
-<AttriId>31</AttriId>
-<AttriName>EspectaculoSectorId</AttriName>
-<Description>Espectaculo Sector Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<TablesToControlOnDelete></TablesToControlOnDelete>
 <Levels></Levels>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
 <AfterTrnRules></AfterTrnRules>
@@ -317,15 +311,38 @@
 <Prompts>
 <Prompt>
 <Table>
-<TableId>12</TableId>
-<TableName>EspectaculoSector</TableName>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
 <Description>Sector</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>54</ObjId>
-<ObjName>Gx00C1</ObjName>
-<ObjPgmName>Gx00C1</ObjPgmName>
+<ObjId>56</ObjId>
+<ObjName>Gx00B1</ObjName>
+<ObjPgmName>Gx00B1</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<InputParameters>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>13</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>63</ObjId>
+<ObjName>Gx00D1</ObjName>
+<ObjPgmName>Gx00D1</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <InputParameters>
 <Attribute>
@@ -334,9 +351,9 @@
 <Description>Espectaculo Id</Description></Attribute></InputParameters>
 <OutputParameters>
 <Attribute>
-<AttriId>31</AttriId>
-<AttriName>EspectaculoSectorId</AttriName>
-<Description>Espectaculo Sector Id</Description></Attribute></OutputParameters>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>

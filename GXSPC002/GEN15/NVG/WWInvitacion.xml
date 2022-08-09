@@ -9,7 +9,7 @@
 <ObjDesc>Invitacions</ObjDesc>
 <ObjPgmName>WWInvitacion</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings>
 <Warning>
 <MsgCode>spc0038</MsgCode>
@@ -112,6 +112,17 @@
 <Description>Invitacion Id</Description></Attribute></KeyAttributes>
 <Tables>
 <Table>
+<TableId>7</TableId>
+<TableName>Funcion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>FuncionId</AttriName>
+<Description>Funcion Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
 <TableId>1</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
@@ -143,7 +154,7 @@
 <AttriId>3</AttriId>
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

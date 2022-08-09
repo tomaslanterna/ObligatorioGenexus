@@ -22,15 +22,15 @@ lac_i(2,[ [ 'Preciofuncion','Update','Delete' ] ]).
  
 lits_i('Funcions',5,10).
  
-cls_i([ 0,0 ],[ 5,76 ]).
+cls_i([ 0,0 ],[ 5,96 ]).
  
 pos_i('Preciofuncion',[ 0,0,0 ]).
 pos_i(15,[ 1,2,0 ]).
 pos_i(1,[ 1,2,5 ]).
 pos_i(21,[ 1,2,10 ]).
 pos_i(22,[ 1,2,15 ]).
-pos_i('Update',[ 1,2,36 ]).
-pos_i('Delete',[ 1,2,57 ]).
+pos_i('Update',[ 1,2,56 ]).
+pos_i('Delete',[ 1,2,77 ]).
  
 repeat_i(2,[ 1,2,[ 15,1,21,22,'Update','Delete' ],[ 'Update','Delete' ] ]).
  
@@ -152,7 +152,7 @@ v_i(f,o,5,[ t('&Delete',23),t('Enabled',3) ]).
  
  
  
-attri_i(22,[ 'FuncionName',char,20,0,'',0,'Funcion Name','',0 ]).
+attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
 attri_i(21,[ 'PrecioFuncion',int,4,0,'ZZZ9',0,'Precio Funcion','',0 ]).
 attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(15,[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',0 ]).
@@ -187,6 +187,7 @@ index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
  
  
 add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -207,6 +208,7 @@ enum_value_info_i(2,42,'GeneXus\TrnMode').
 enum_type_i(2,42,char,3,0).
  
 dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
  
  
 break_i(2,nvg,1,[ 21 ],[ [ 15,1,21,22 ],[],[] ]).
@@ -629,7 +631,7 @@ html_comp_i(28,'Colvisible',-1,v,[ bool ]).
 html_comp_i(28,'Title','',d,[ str ]).
 html_comp_i(28,'Invitemsg','',d,[ str ]).
 html_comp_i(29,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(29,'Colcount',20,d,[ num ]).
+html_comp_i(29,'Colcount',40,d,[ num ]).
 html_comp_i(29,'Colattid',22,v,[ num ]).
 html_comp_i(29,'Controlname','Funcionname',d,[ str ]).
 html_comp_i(29,'Class','Attribute',v,[ str ]).
@@ -810,7 +812,7 @@ att_prop_i(2,21,'FullName','PrecioFuncion',v).
 att_prop_i(2,22,'ExternalName','FuncionName',d).
 att_prop_i(2,22,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,22,'EmptyAsNull','Yes',d).
-att_prop_i(2,22,idBasedOn,'',d).
+att_prop_i(2,22,idBasedOn,87,v).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,22,'DB_NLS_SUPPORT','Yes',d).
 att_prop_i(2,22,'AttRegEx','',d).

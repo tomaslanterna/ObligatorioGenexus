@@ -7,7 +7,7 @@
 <Description>Tipo Espectaculo</Description></Table>
 <ReorgCls>c</ReorgCls>
 <ReorgCode>new</ReorgCode>
-<ReorgMsg>TipoEspectaculo is new</ReorgMsg>
+<ReorgMsg>TipoEspectaculo is new (initialize with TipoEspectaculo_DataProvider)</ReorgMsg>
 <ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>

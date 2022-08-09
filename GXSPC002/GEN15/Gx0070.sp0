@@ -27,7 +27,7 @@ lits_i('Espectaculo Id',5,10).
 lits_i('Precio Funcion',5,10).
 lits_i('Funcion Name',5,10).
  
-cls_i([ 0,0 ],[ 5,1059 ]).
+cls_i([ 0,0 ],[ 5,1079 ]).
  
 pos_i('Cfuncionid',[ 0,0,0 ]).
 pos_i('Cespectaculoid',[ 0,0,0 ]).
@@ -155,7 +155,7 @@ v_i(t,o,2,15).
  
  
  
-attri_i(22,[ 'FuncionName',char,20,0,'',0,'Funcion Name','',0 ]).
+attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
 attri_i(21,[ 'PrecioFuncion',int,4,0,'ZZZ9',0,'Precio Funcion','',0 ]).
 attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(15,[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',0 ]).
@@ -164,7 +164,7 @@ attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',13 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',12 ]).
 attri_i('Advanced_label_template',[ 'ADVANCED_LABEL_TEMPLATE',char,20,0,'',0,'ADVANCED_LABEL_TEMPLATE','',11 ]).
 attri_i('Pfuncionid',[ pFuncionId,int,4,0,'ZZZ9',0,'Funcion Id','',10 ]).
-attri_i('Cfuncionname',[ cFuncionName,char,20,0,'',0,'Funcion Name','',9 ]).
+attri_i('Cfuncionname',[ cFuncionName,svchar,40,0,'',0,'Funcion Name','',9 ]).
 attri_i('Cpreciofuncion',[ cPrecioFuncion,int,4,0,'ZZZ9',0,'Precio Funcion','',8 ]).
 attri_i('Cespectaculoid',[ cEspectaculoId,int,4,0,'ZZZ9',0,'Espectaculo Id','',7 ]).
 attri_i('Cfuncionid',[ cFuncionId,int,4,0,'ZZZ9',0,'Funcion Id','',6 ]).
@@ -187,6 +187,7 @@ index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
  
 add_att_i(bits,2,'Linkselection_GXI','Linkselection','Linkselection_GXI',[ svchar,2048,0,0 ]).
 add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -202,6 +203,7 @@ start_i(2,0,0,[ [ [ 15,23,'Cfuncionid',>= ] ],many ]).
  
  
 dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
  
  
 break_i(2,nvg,1,[ 15 ],[ [ 15,1,21,22 ],[],[] ]).
@@ -799,7 +801,7 @@ html_comp_i(45,'Semanticcontent',div,d,[ str ]).
 html_comp_i(45,'Align',left,d,[ str ]).
 html_comp_i(45,'Valign',top,d,[ str ]).
 html_comp_i(46,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(46,'Colcount',20,d,[ num ]).
+html_comp_i(46,'Colcount',40,d,[ num ]).
 html_comp_i(46,'Attid',-9,v,[ num ]).
 html_comp_i(46,'Class','Attribute',v,[ str ]).
 html_comp_i(46,'Controlname','&Cfuncionname',d,[ str ]).
@@ -820,7 +822,7 @@ html_comp_i(46,'Readonly',0,v,[ bool ]).
 html_comp_i(46,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(46,'Ispassword',0,d,[ bool ]).
 html_comp_i(46,'Autoresize',-1,d,[ bool ]).
-html_comp_i(46,'Gxwidth',measure(20,chr),d,[ measure ]).
+html_comp_i(46,'Gxwidth',measure(40,chr),d,[ measure ]).
 html_comp_i(46,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(46,'Ismultiline',0,d,[ bool ]).
 html_comp_i(46,'Maxtextnumberlines',0,d,[ num ]).
@@ -1033,7 +1035,7 @@ html_comp_i(58,'Colvisible',-1,d,[ bool ]).
 html_comp_i(58,'Title','',d,[ str ]).
 html_comp_i(58,'Invitemsg','',d,[ str ]).
 html_comp_i(59,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(59,'Colcount',20,d,[ num ]).
+html_comp_i(59,'Colcount',40,d,[ num ]).
 html_comp_i(59,'Colattid',22,v,[ num ]).
 html_comp_i(59,'Controlname','Funcionname',d,[ str ]).
 html_comp_i(59,'Class','Attribute',v,[ str ]).
@@ -1211,7 +1213,7 @@ att_prop_i(2,21,'FullName','PrecioFuncion',v).
 att_prop_i(2,22,'ExternalName','FuncionName',d).
 att_prop_i(2,22,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,22,'EmptyAsNull','Yes',d).
-att_prop_i(2,22,idBasedOn,'',d).
+att_prop_i(2,22,idBasedOn,87,v).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,22,'DB_NLS_SUPPORT','Yes',d).
 att_prop_i(2,22,'AttRegEx','',d).

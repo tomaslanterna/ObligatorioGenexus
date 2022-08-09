@@ -4,6 +4,7 @@ current_guid('83d99cbc-c8ec-4af8-8bab-93d8be188158').
  
  
 called_tree_i(0,2,1,13).
+called_tree_i(0,2,1000,2).
  
  
  
@@ -28,9 +29,12 @@ ij_object_dependency(lugar,[],[],[],2).
 obj_parms_i([ 'string aP0_Gx_mode','short aP1_LugarId' ],[ [ 'Mode',in ],[ 'Lugarid',in ] ]).
  
  
+has_silent_trn_i(lugar_bc).
  
  
  
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
 module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
 module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

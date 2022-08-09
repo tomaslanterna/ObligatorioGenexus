@@ -29,9 +29,8 @@ lac_i(3,[ [] ]).
 lits_i('Espectaculo Information',5,10).
 lits_i('Espectaculoes',5,10).
 lits_i('General',5,10).
-lits_i('Sector',5,10).
 lits_i('Funcion',5,10).
-lits_i('Invitacion',5,10).
+lits_i('Lugar Sector',5,10).
  
 cls_i([ 0,0 ],[ 5,39 ]).
  
@@ -184,6 +183,7 @@ index_i(1,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
  
  
 add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -249,16 +249,13 @@ b_line_i(32,2,5,cmd,8,[ t('',143,32,0),t('''LOAD TAB''',3,32,5) ]).
 b_line_i(33,2,6,cmd,8,[ t('',109,33,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('''''',3,33,42),t('.OR.',9,8,45),t('Selectedtabcode',23,8,49),t(=,10,8,66),t('"General"',3,33,68) ]).
 b_line_i(34,2,6,cmd,8,[ t('',107,34,0),t([ t('Generalwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoGeneral'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
 b_line_i(35,2,6,cmd,8,[ t('',111,35,0) ]).
-b_line_i(36,2,6,cmd,8,[ t('',109,36,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Sector"',3,36,42) ]).
-b_line_i(37,2,6,cmd,8,[ t('',107,37,0),t([ t('Sectorwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoSectorWC'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
+b_line_i(36,2,6,cmd,8,[ t('',109,36,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Funcion"',3,36,42) ]).
+b_line_i(37,2,6,cmd,8,[ t('',107,37,0),t([ t('Funcionwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoFuncionWC'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
 b_line_i(38,2,6,cmd,8,[ t('',111,38,0) ]).
-b_line_i(39,2,6,cmd,8,[ t('',109,39,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Funcion"',3,39,42) ]).
-b_line_i(40,2,6,cmd,8,[ t('',107,40,0),t([ t('Funcionwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoFuncionWC'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
+b_line_i(39,2,6,cmd,8,[ t('',109,39,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"LugarSector"',3,39,42) ]).
+b_line_i(40,2,6,cmd,8,[ t('',107,40,0),t([ t('Lugarsectorwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoLugarSectorWC'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
 b_line_i(41,2,6,cmd,8,[ t('',111,41,0) ]).
-b_line_i(42,2,6,cmd,8,[ t('',109,42,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Invitacion"',3,42,42) ]).
-b_line_i(43,2,6,cmd,8,[ t('',107,43,0),t([ t('Invitacionwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'EspectaculoInvitacionWC'),28,8,0),t(',',7,8,0),t('Espectaculoid',23,8,0),t(')',4,8,0) ]).
-b_line_i(44,2,6,cmd,8,[ t('',111,44,0) ]).
-b_line_i(45,2,6,cmd,8,[ t('',144,45,0) ]).
+b_line_i(42,2,6,cmd,8,[ t('',144,42,0) ]).
 b_line_i(1000,2,6,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,6,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,6,cmd,0,[ t('',147,0,0) ]).
@@ -308,32 +305,23 @@ html_sub_i(27,28,html_i(0,div(28))).
 html_sub_i(28,29,html_i(0,div(29))).
 html_sub_i(29,30,html_i(0,comp(webcomp))).
 html_sub_i(22,31,html_i(2,container(31))).
-html_sub_i(31,32,html_i(0,t('Sector',3))).
+html_sub_i(31,32,html_i(0,t('Funcion',3))).
 html_sub_i(31,33,html_i(1,div(33))).
-html_sub_i(33,0,html_i(0,html('Sector'))).
+html_sub_i(33,0,html_i(0,html('Funcion'))).
 html_sub_i(22,34,html_i(3,container(34))).
 html_sub_i(34,35,html_i(0,div(35))).
 html_sub_i(35,36,html_i(0,div(36))).
 html_sub_i(36,37,html_i(0,div(37))).
 html_sub_i(37,38,html_i(0,comp(webcomp))).
 html_sub_i(22,39,html_i(4,container(39))).
-html_sub_i(39,40,html_i(0,t('Funcion',3))).
+html_sub_i(39,40,html_i(0,t('Lugar Sector',3))).
 html_sub_i(39,41,html_i(1,div(41))).
-html_sub_i(41,0,html_i(0,html('Funcion'))).
+html_sub_i(41,0,html_i(0,html('LugarSector'))).
 html_sub_i(22,42,html_i(5,container(42))).
 html_sub_i(42,43,html_i(0,div(43))).
 html_sub_i(43,44,html_i(0,div(44))).
 html_sub_i(44,45,html_i(0,div(45))).
 html_sub_i(45,46,html_i(0,comp(webcomp))).
-html_sub_i(22,47,html_i(6,container(47))).
-html_sub_i(47,48,html_i(0,t('Invitacion',3))).
-html_sub_i(47,49,html_i(1,div(49))).
-html_sub_i(49,0,html_i(0,html('Invitacion'))).
-html_sub_i(22,50,html_i(7,container(50))).
-html_sub_i(50,51,html_i(0,div(51))).
-html_sub_i(51,52,html_i(0,div(52))).
-html_sub_i(52,53,html_i(0,div(53))).
-html_sub_i(53,54,html_i(0,comp(webcomp))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
@@ -348,8 +336,6 @@ html_tags_i(33,style,'display:none;').
 html_tags_i(38,'Object','').
 html_tags_i(41,style,'display:none;').
 html_tags_i(46,'Object','').
-html_tags_i(49,style,'display:none;').
-html_tags_i(54,'Object','').
  
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(2,'Class','Section',d,[ str ]).
@@ -550,7 +536,7 @@ html_comp_i(22,'Usercontroltype','Tab',d,[ str ]).
 html_comp_i(22,'Constructorname','gx.ui.controls.Tab',d,[ str ]).
 html_comp_i(22,'Showmethodname',show,d,[ str ]).
 html_comp_i(22,'Controlname','Tab',v,[ str ]).
-html_comp_i(22,'Pagecount',4,v,[ num ]).
+html_comp_i(22,'Pagecount',3,v,[ num ]).
 html_comp_i(22,'Class','WWTab',v,[ str ]).
 html_comp_i(22,'Historymanagement',-1,v,[ bool ]).
 html_comp_i(22,'Visible',-1,d,[ bool ]).
@@ -609,8 +595,8 @@ html_comp_i(30,'Controlname','Generalwc',v,[ str ]).
 html_comp_i(30,'Params',[],v,[ params ]).
 html_comp_i(31,'Containerid',title2,v,[ str ]).
 html_comp_i(32,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(32,'Caption','Sector',d,[ str ]).
-html_comp_i(32,'Id','Sector_title',v,[ str ]).
+html_comp_i(32,'Caption','Funcion',d,[ str ]).
+html_comp_i(32,'Id','Funcion_title',v,[ str ]).
 html_comp_i(32,'Class','TextBlock',d,[ str ]).
 html_comp_i(32,'Event','',d,[ str ]).
 html_comp_i(32,'Returnonclick',0,d,[ bool ]).
@@ -631,7 +617,7 @@ html_comp_i(33,'Valign',top,d,[ str ]).
 html_comp_i(34,'Containerid',panel2,v,[ str ]).
 html_comp_i(35,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(35,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(35,'Id','Tablesector',v,[ str ]).
+html_comp_i(35,'Id','Tablefuncion',v,[ str ]).
 html_comp_i(35,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(35,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(35,'Semanticcontent',div,d,[ str ]).
@@ -654,12 +640,12 @@ html_comp_i(37,'Semanticcontent',div,d,[ str ]).
 html_comp_i(37,'Align',left,d,[ str ]).
 html_comp_i(37,'Valign',top,d,[ str ]).
 html_comp_i(38,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(38,'Controlname','Sectorwc',v,[ str ]).
+html_comp_i(38,'Controlname','Funcionwc',v,[ str ]).
 html_comp_i(38,'Params',[],v,[ params ]).
 html_comp_i(39,'Containerid',title3,v,[ str ]).
 html_comp_i(40,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(40,'Caption','Funcion',d,[ str ]).
-html_comp_i(40,'Id','Funcion_title',v,[ str ]).
+html_comp_i(40,'Caption','Lugar Sector',d,[ str ]).
+html_comp_i(40,'Id','Lugarsector_title',v,[ str ]).
 html_comp_i(40,'Class','TextBlock',d,[ str ]).
 html_comp_i(40,'Event','',d,[ str ]).
 html_comp_i(40,'Returnonclick',0,d,[ bool ]).
@@ -680,7 +666,7 @@ html_comp_i(41,'Valign',top,d,[ str ]).
 html_comp_i(42,'Containerid',panel3,v,[ str ]).
 html_comp_i(43,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(43,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(43,'Id','Tablefuncion',v,[ str ]).
+html_comp_i(43,'Id','Tablelugarsector',v,[ str ]).
 html_comp_i(43,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(43,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(43,'Semanticcontent',div,d,[ str ]).
@@ -703,57 +689,8 @@ html_comp_i(45,'Semanticcontent',div,d,[ str ]).
 html_comp_i(45,'Align',left,d,[ str ]).
 html_comp_i(45,'Valign',top,d,[ str ]).
 html_comp_i(46,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(46,'Controlname','Funcionwc',v,[ str ]).
+html_comp_i(46,'Controlname','Lugarsectorwc',v,[ str ]).
 html_comp_i(46,'Params',[],v,[ params ]).
-html_comp_i(47,'Containerid',title4,v,[ str ]).
-html_comp_i(48,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(48,'Caption','Invitacion',d,[ str ]).
-html_comp_i(48,'Id','Invitacion_title',v,[ str ]).
-html_comp_i(48,'Class','TextBlock',d,[ str ]).
-html_comp_i(48,'Event','',d,[ str ]).
-html_comp_i(48,'Returnonclick',0,d,[ bool ]).
-html_comp_i(48,'Gxformat',0,v,[ num ]).
-html_comp_i(48,'Title','',d,[ str ]).
-html_comp_i(48,'Fill',-1,d,[ bool ]).
-html_comp_i(48,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(48,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(48,'Font','',d,[ str ]).
-html_comp_i(49,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(49,'Class','Section',d,[ str ]).
-html_comp_i(49,'Id','',d,[ str ]).
-html_comp_i(49,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(49,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(49,'Semanticcontent',div,d,[ str ]).
-html_comp_i(49,'Align',left,d,[ str ]).
-html_comp_i(49,'Valign',top,d,[ str ]).
-html_comp_i(50,'Containerid',panel4,v,[ str ]).
-html_comp_i(51,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(51,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(51,'Id','Tableinvitacion',v,[ str ]).
-html_comp_i(51,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(51,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(51,'Semanticcontent',div,d,[ str ]).
-html_comp_i(51,'Align',left,d,[ str ]).
-html_comp_i(51,'Valign',top,d,[ str ]).
-html_comp_i(52,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(52,'Class',row,v,[ str ]).
-html_comp_i(52,'Id','',d,[ str ]).
-html_comp_i(52,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(52,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(52,'Semanticcontent',div,d,[ str ]).
-html_comp_i(52,'Align',left,d,[ str ]).
-html_comp_i(52,'Valign',top,d,[ str ]).
-html_comp_i(53,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(53,'Class','col-xs-12',v,[ str ]).
-html_comp_i(53,'Id','',d,[ str ]).
-html_comp_i(53,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(53,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(53,'Semanticcontent',div,d,[ str ]).
-html_comp_i(53,'Align',left,d,[ str ]).
-html_comp_i(53,'Valign',top,d,[ str ]).
-html_comp_i(54,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(54,'Controlname','Invitacionwc',v,[ str ]).
-html_comp_i(54,'Params',[],v,[ params ]).
  
  
  
@@ -785,25 +722,19 @@ lit_i(30,1,comp(webcomp),[ ctlname('Generalwc'),width(0),rect(0,0,10,10),title('
 lit_i(29,1,div(29),[ ctlname('') ]).
 lit_i(28,1,div(28),[ ctlname('') ]).
 lit_i(27,1,div(27),[ ctlname('Tablegeneral') ]).
-lit_i(32,1,t('Sector',3),[ ctlname('Sector_title') ]).
+lit_i(32,1,t('Funcion',3),[ ctlname('Funcion_title') ]).
 lit_i(33,1,div(33),[ ctlname('') ]).
-lit_i(38,1,comp(webcomp),[ ctlname('Sectorwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(38,1,comp(webcomp),[ ctlname('Funcionwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(37,1,div(37),[ ctlname('') ]).
 lit_i(36,1,div(36),[ ctlname('') ]).
-lit_i(35,1,div(35),[ ctlname('Tablesector') ]).
-lit_i(40,1,t('Funcion',3),[ ctlname('Funcion_title') ]).
+lit_i(35,1,div(35),[ ctlname('Tablefuncion') ]).
+lit_i(40,1,t('Lugar Sector',3),[ ctlname('Lugarsector_title') ]).
 lit_i(41,1,div(41),[ ctlname('') ]).
-lit_i(46,1,comp(webcomp),[ ctlname('Funcionwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(46,1,comp(webcomp),[ ctlname('Lugarsectorwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(45,1,div(45),[ ctlname('') ]).
 lit_i(44,1,div(44),[ ctlname('') ]).
-lit_i(43,1,div(43),[ ctlname('Tablefuncion') ]).
-lit_i(48,1,t('Invitacion',3),[ ctlname('Invitacion_title') ]).
-lit_i(49,1,div(49),[ ctlname('') ]).
-lit_i(54,1,comp(webcomp),[ ctlname('Invitacionwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(53,1,div(53),[ ctlname('') ]).
-lit_i(52,1,div(52),[ ctlname('') ]).
-lit_i(51,1,div(51),[ ctlname('Tableinvitacion') ]).
-lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34),container(39),container(42),container(47),container(50) ]) ]).
+lit_i(43,1,div(43),[ ctlname('Tablelugarsector') ]).
+lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34),container(39),container(42) ]) ]).
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(3,1,div(3),[ ctlname('Maintable') ]).
@@ -951,22 +882,20 @@ struct_dt_elem_i([ 26,57,84 ],4,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,24,[ [ 'Pgmname',1,'Espectaculoid',2,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Sectorwc',3),t('Object',3) ],[ t('Funcionwc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
-sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Espectaculoid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Sectorwc',3),t('Object',3) ],[ t('Funcionwc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',1,24,[ [ 'Pgmname',1,'Espectaculoid',2,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Funcionwc',3),t('Object',3) ],[ t('Lugarsectorwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Espectaculoid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Funcionwc',3),t('Object',3) ],[ t('Lugarsectorwc',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
-pgm_parm_i(web,30,'ESPECTACULOINVITACIONWC',[ [ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ] ]).
+pgm_parm_i(web,60,'ESPECTACULOLUGARSECTORWC',[ [ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ] ]).
 pgm_parm_i(web,29,'ESPECTACULOFUNCIONWC',[ [ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ] ]).
-pgm_parm_i(web,27,'ESPECTACULOSECTORWC',[ [ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ] ]).
 pgm_parm_i(web,26,'ESPECTACULOGENERAL',[ [ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ] ]).
 pgm_parm_i(web,25,'WWESPECTACULO',[],[]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
 pgm_callprotocol_i(web,24,'VIEWESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
-pgm_callprotocol_i(web,30,'ESPECTACULOINVITACIONWC','INTERNAL','Secure').
+pgm_callprotocol_i(web,60,'ESPECTACULOLUGARSECTORWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,29,'ESPECTACULOFUNCIONWC','INTERNAL','Secure').
-pgm_callprotocol_i(web,27,'ESPECTACULOSECTORWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,26,'ESPECTACULOGENERAL','INTERNAL','Secure').
 pgm_callprotocol_i(web,25,'WWESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').

@@ -128,6 +128,25 @@
 <Value>No</Value></Property>
 <Property>
 <Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>D</DataType>
+<Presicion>8</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
@@ -187,7 +206,7 @@
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NOT NULL , PRIMARY KEY([EspectaculoId])) </Statement>
+<Statement>CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NOT NULL , [EspectaculoFecha] datetime NOT NULL , PRIMARY KEY([EspectaculoId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IESPECTACULO1] ON [Espectaculo] ([LugarId] )</Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IESPECTACULO3] ON [Espectaculo] ([TipoEspectaculoId] )</Statement>
 <Statement>ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO1] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId])</Statement>

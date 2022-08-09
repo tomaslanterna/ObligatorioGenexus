@@ -221,11 +221,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228822352010", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?2022891326477", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
+         context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 552120), false, true);
+         context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 552120), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -271,7 +274,7 @@ namespace GeneXus.Programs {
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
          forbiddenHiddens = new GXProperties();
          forbiddenHiddens.Add("hshsalt", "hsh"+"ViewEntrada");
-         forbiddenHiddens.Add("SectorId", context.localUtil.Format( (decimal)(A13SectorId), "ZZZ9"));
+         forbiddenHiddens.Add("EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
          GxWebStd.gx_hidden_field( context, "hsh", GetEncryptedHash( forbiddenHiddens.ToString(), GXKey));
          GXUtil.WriteLogInfo("viewentrada:[ SendSecurityCheck value for]"+forbiddenHiddens.ToJSonString());
       }
@@ -413,13 +416,16 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6", "left", "top", "", "", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtSectorId_Internalname+"\"", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtEntradaFecha_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtSectorId_Internalname, "Id", "col-sm-3 ReadonlyAttributeLabel", 1, true, "");
+            GxWebStd.gx_label_element( context, edtEntradaFecha_Internalname, "Fecha", "col-sm-3 ReadonlyAttributeLabel", 1, true, "");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            GxWebStd.gx_single_line_edit( context, edtSectorId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A13SectorId), 4, 0, ",", "")), StringUtil.LTrim( ((edtSectorId_Enabled!=0) ? context.localUtil.Format( (decimal)(A13SectorId), "ZZZ9") : context.localUtil.Format( (decimal)(A13SectorId), "ZZZ9"))), " inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtSectorId_Jsonclick, 0, "ReadonlyAttribute", "", "", "", "", 1, edtSectorId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "Id", "right", false, "", "HLP_ViewEntrada.htm");
+            context.WriteHtmlText( "<div id=\""+edtEntradaFecha_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
+            GxWebStd.gx_single_line_edit( context, edtEntradaFecha_Internalname, context.localUtil.Format(A42EntradaFecha, "99/99/99"), context.localUtil.Format( A42EntradaFecha, "99/99/99"), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtEntradaFecha_Jsonclick, 0, "ReadonlyAttribute", "", "", "", "", 1, edtEntradaFecha_Enabled, 0, "text", "", 8, "chr", 1, "row", 8, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_ViewEntrada.htm");
+            GxWebStd.gx_bitmap( context, edtEntradaFecha_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtEntradaFecha_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_ViewEntrada.htm");
+            context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -716,8 +722,8 @@ namespace GeneXus.Programs {
             while ( (pr_default.getStatus(0) != 101) )
             {
                A23EntradaId = H000L2_A23EntradaId[0];
-               A13SectorId = H000L2_A13SectorId[0];
-               AssignAttri("", false, "A13SectorId", StringUtil.LTrimStr( (decimal)(A13SectorId), 4, 0));
+               A42EntradaFecha = H000L2_A42EntradaFecha[0];
+               AssignAttri("", false, "A42EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
                /* Execute user event: Load */
                E120L2 ();
                /* Exiting from a For First loop. */
@@ -761,16 +767,16 @@ namespace GeneXus.Programs {
             Tab_Class = cgiGet( "TAB_Class");
             Tab_Historymanagement = StringUtil.StrToBool( cgiGet( "TAB_Historymanagement"));
             /* Read variables values. */
-            A13SectorId = (short)(context.localUtil.CToN( cgiGet( edtSectorId_Internalname), ",", "."));
-            AssignAttri("", false, "A13SectorId", StringUtil.LTrimStr( (decimal)(A13SectorId), 4, 0));
+            A42EntradaFecha = context.localUtil.CToD( cgiGet( edtEntradaFecha_Internalname), 2);
+            AssignAttri("", false, "A42EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
             forbiddenHiddens = new GXProperties();
             forbiddenHiddens.Add("hshsalt", "hsh"+"ViewEntrada");
-            A13SectorId = (short)(context.localUtil.CToN( cgiGet( edtSectorId_Internalname), ",", "."));
-            AssignAttri("", false, "A13SectorId", StringUtil.LTrimStr( (decimal)(A13SectorId), 4, 0));
-            forbiddenHiddens.Add("SectorId", context.localUtil.Format( (decimal)(A13SectorId), "ZZZ9"));
+            A42EntradaFecha = context.localUtil.CToD( cgiGet( edtEntradaFecha_Internalname), 2);
+            AssignAttri("", false, "A42EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
+            forbiddenHiddens.Add("EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
             hsh = cgiGet( "hsh");
             if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens.ToString(), hsh, GXKey) )
             {
@@ -817,10 +823,10 @@ namespace GeneXus.Programs {
          while ( (pr_default.getStatus(1) != 101) )
          {
             A23EntradaId = H000L3_A23EntradaId[0];
-            A13SectorId = H000L3_A13SectorId[0];
-            AssignAttri("", false, "A13SectorId", StringUtil.LTrimStr( (decimal)(A13SectorId), 4, 0));
+            A42EntradaFecha = H000L3_A42EntradaFecha[0];
+            AssignAttri("", false, "A42EntradaFecha", context.localUtil.Format(A42EntradaFecha, "99/99/99"));
             AV16GXLvl6 = 1;
-            Form.Caption = StringUtil.Str( (decimal)(A13SectorId), 4, 0);
+            Form.Caption = context.localUtil.DToC( A42EntradaFecha, 2, "/");
             AssignProp("", false, "FORM", "Caption", Form.Caption, true);
             lblViewall_Link = formatLink("wwentrada.aspx") ;
             AssignProp("", false, lblViewall_Internalname, "Link", lblViewall_Link, true);
@@ -934,6 +940,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
+         AddStyleSheetFile("calendar-system.css", "");
          AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?"+GetCacheInvalidationToken( ));
          if ( ! ( WebComp_Generalwc == null ) )
          {
@@ -950,7 +957,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228822352023", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022891326487", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -966,7 +973,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("viewentrada.js", "?20228822352023", false, true);
+         context.AddJavascriptSource("viewentrada.js", "?2022891326487", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -985,7 +992,7 @@ namespace GeneXus.Programs {
          lblViewtitle_Internalname = "VIEWTITLE";
          lblViewall_Internalname = "VIEWALL";
          divTabletop_Internalname = "TABLETOP";
-         edtSectorId_Internalname = "SECTORID";
+         edtEntradaFecha_Internalname = "ENTRADAFECHA";
          divTabtable_1_Internalname = "TABTABLE_1";
          lblGeneral_title_Internalname = "GENERAL_TITLE";
          divTablegeneral_Internalname = "TABLEGENERAL";
@@ -1002,8 +1009,8 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
-         edtSectorId_Jsonclick = "";
-         edtSectorId_Enabled = 0;
+         edtEntradaFecha_Jsonclick = "";
+         edtEntradaFecha_Enabled = 0;
          lblViewall_Link = "";
          lblViewall_Visible = 1;
          Tab_Historymanagement = Convert.ToBoolean( -1);
@@ -1027,7 +1034,7 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AV12EntradaId',fld:'vENTRADAID',pic:'ZZZ9',hsh:true},{av:'AV6TabCode',fld:'vTABCODE',pic:'',hsh:true},{av:'A13SectorId',fld:'SECTORID',pic:'ZZZ9'}]");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AV12EntradaId',fld:'vENTRADAID',pic:'ZZZ9',hsh:true},{av:'AV6TabCode',fld:'vTABCODE',pic:'',hsh:true},{av:'A42EntradaFecha',fld:'ENTRADAFECHA',pic:''}]");
          setEventMetadata("REFRESH",",oparms:[]}");
          return  ;
       }
@@ -1057,6 +1064,7 @@ namespace GeneXus.Programs {
          bodyStyle = "";
          GXKey = "";
          forbiddenHiddens = new GXProperties();
+         A42EntradaFecha = DateTime.MinValue;
          AV7SelectedTabCode = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
@@ -1074,19 +1082,19 @@ namespace GeneXus.Programs {
          AV15Pgmname = "";
          scmdbuf = "";
          H000L2_A23EntradaId = new short[1] ;
-         H000L2_A13SectorId = new short[1] ;
+         H000L2_A42EntradaFecha = new DateTime[] {DateTime.MinValue} ;
          hsh = "";
          H000L3_A23EntradaId = new short[1] ;
-         H000L3_A13SectorId = new short[1] ;
+         H000L3_A42EntradaFecha = new DateTime[] {DateTime.MinValue} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.viewentrada__default(),
             new Object[][] {
                 new Object[] {
-               H000L2_A23EntradaId, H000L2_A13SectorId
+               H000L2_A23EntradaId, H000L2_A42EntradaFecha
                }
                , new Object[] {
-               H000L3_A23EntradaId, H000L3_A13SectorId
+               H000L3_A23EntradaId, H000L3_A42EntradaFecha
                }
             }
          );
@@ -1105,7 +1113,6 @@ namespace GeneXus.Programs {
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
-      private short A13SectorId ;
       private short wbEnd ;
       private short wbStart ;
       private short nCmpId ;
@@ -1116,7 +1123,7 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private int Tab_Pagecount ;
       private int lblViewall_Visible ;
-      private int edtSectorId_Enabled ;
+      private int edtEntradaFecha_Enabled ;
       private int idxLst ;
       private string AV6TabCode ;
       private string wcpOAV6TabCode ;
@@ -1139,8 +1146,8 @@ namespace GeneXus.Programs {
       private string lblViewall_Link ;
       private string lblViewall_Jsonclick ;
       private string divTabtable_1_Internalname ;
-      private string edtSectorId_Internalname ;
-      private string edtSectorId_Jsonclick ;
+      private string edtEntradaFecha_Internalname ;
+      private string edtEntradaFecha_Jsonclick ;
       private string Tab_Internalname ;
       private string lblGeneral_title_Internalname ;
       private string lblGeneral_title_Jsonclick ;
@@ -1154,6 +1161,7 @@ namespace GeneXus.Programs {
       private string AV15Pgmname ;
       private string scmdbuf ;
       private string hsh ;
+      private DateTime A42EntradaFecha ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool AV11LoadAllTabs ;
@@ -1171,9 +1179,9 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private short[] H000L2_A23EntradaId ;
-      private short[] H000L2_A13SectorId ;
+      private DateTime[] H000L2_A42EntradaFecha ;
       private short[] H000L3_A23EntradaId ;
-      private short[] H000L3_A13SectorId ;
+      private DateTime[] H000L3_A42EntradaFecha ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
@@ -1204,8 +1212,8 @@ namespace GeneXus.Programs {
           new ParDef("@AV12EntradaId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H000L2", "SELECT [EntradaId], [SectorId] FROM [Entrada] WHERE [EntradaId] = @AV12EntradaId ORDER BY [EntradaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000L2,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("H000L3", "SELECT [EntradaId], [SectorId] FROM [Entrada] WHERE [EntradaId] = @AV12EntradaId ORDER BY [EntradaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000L3,1, GxCacheFrequency.OFF ,false,true )
+              new CursorDef("H000L2", "SELECT [EntradaId], [EntradaFecha] FROM [Entrada] WHERE [EntradaId] = @AV12EntradaId ORDER BY [EntradaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000L2,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("H000L3", "SELECT [EntradaId], [EntradaFecha] FROM [Entrada] WHERE [EntradaId] = @AV12EntradaId ORDER BY [EntradaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000L3,1, GxCacheFrequency.OFF ,false,true )
           };
        }
     }
@@ -1218,11 +1226,11 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((short[]) buf[1])[0] = rslt.getShort(2);
+                ((DateTime[]) buf[1])[0] = rslt.getGXDate(2);
                 return;
              case 1 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((short[]) buf[1])[0] = rslt.getShort(2);
+                ((DateTime[]) buf[1])[0] = rslt.getGXDate(2);
                 return;
        }
     }

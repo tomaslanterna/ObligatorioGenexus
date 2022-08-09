@@ -3,8 +3,8 @@ spec_i([ web,21,'View Entrada','ViewEntrada',0,spa,'17_0_10-161416' ]).
 struct_i(2,1,[ 'Pgmname','Exists','GXLvl6' ],[]).
 struct_i(3,1,[],[]).
  
-level_i(2,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 23,13 ] ] ],[ [ [ 9 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],'Entradaid',23 ] ] ],[] ]).
-level_i(3,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 23,13 ] ] ],[ [ [ 9 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],'Entradaid',23 ] ] ],[] ]).
+level_i(2,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 23,42 ] ] ],[ [ [ 9 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],'Entradaid',23 ] ] ],[] ]).
+level_i(3,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 23,42 ] ] ],[ [ [ 9 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],'Entradaid',23 ] ] ],[] ]).
  
 tw_i(2,[]).
 tw_i(3,[]).
@@ -16,11 +16,11 @@ lwi_i(3,[ [] ]).
  
 level_option_i(3,when_none,'GXLvl6').
  
-ta_i(2,[ [ [ 9,23 ],[ 9,13 ] ] ]).
-ta_i(3,[ [ [ 9,23 ],[ 9,13 ] ] ]).
+ta_i(2,[ [ [ 9,23 ],[ 9,42 ] ] ]).
+ta_i(3,[ [ [ 9,23 ],[ 9,42 ] ] ]).
  
-las_i(2,[ [ 'Entradaid','Tabcode',23,13 ] ]).
-las_i(3,[ [ 'Entradaid','Tabcode',23,13 ] ]).
+las_i(2,[ [ 'Entradaid','Tabcode',23,42 ] ]).
+las_i(3,[ [ 'Entradaid','Tabcode',23,42 ] ]).
  
 lac_i(2,[ [] ]).
 lac_i(3,[ [] ]).
@@ -32,7 +32,7 @@ lits_i('General',5,10).
  
 cls_i([ 0,0 ],[ 5,28 ]).
  
-pos_i(13,[ 0,0,0 ]).
+pos_i(42,[ 0,0,0 ]).
  
  
 default_i(e('Pgmname',2,2,'"ViewEntrada"')).
@@ -140,10 +140,10 @@ v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
 v_i(t,i,3,'Entradaid').
 v_i(t,o,3,23).
-v_i(t,o,3,13).
+v_i(t,o,3,42).
 v_i(t,i,4,'Entradaid').
 v_i(t,o,4,23).
-v_i(t,o,4,13).
+v_i(t,o,4,42).
  
  
  
@@ -151,7 +151,7 @@ v_i(t,o,4,13).
  
  
 attri_i(23,[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',0 ]).
-attri_i(13,[ 'SectorId',int,4,0,'ZZZ9',0,'Sector Id','',0 ]).
+attri_i(42,[ 'EntradaFecha',date,8,0,'99/99/99',0,'Entrada Fecha','',0 ]).
 attri_i('GXLvl6',[ 'GXLvl6',int,1,0,'',0,'',[],16 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',15 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
@@ -165,7 +165,7 @@ attri_i('Selectedtabcode',[ 'SelectedTabCode',char,50,0,'',0,'Selected Tab Code'
 attri_i('Tabcode',[ 'TabCode',char,50,0,'',0,'Tab Code','',6 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ]).
  
-table_i(9,[ 'Entrada',[ 23,13 ],'Entrada','Entrada' ]).
+table_i(9,[ 'Entrada',[ 23,42 ],'Entrada','Entrada' ]).
  
 index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
  
@@ -180,7 +180,8 @@ index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
  
  
  
-add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -199,11 +200,12 @@ end_i(3,0,0,[ [ [ t(23,2),t(=,10),t('Entradaid',23) ] ] ]).
  
  
 dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
 dom_info_i(89,[ 'TabCode' ]).
  
  
-break_i(3,nvg,1,[],[ [ 13 ],[ 23 ],[] ]).
-break_i(2,nvg,1,[],[ [ 13 ],[],[] ]).
+break_i(3,nvg,1,[],[ [ 42 ],[ 23 ],[] ]).
+break_i(2,nvg,1,[],[ [ 42 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,1).
@@ -220,7 +222,7 @@ b_line_i(4,2,2,cmd,1,[ t('',111,4,0) ]).
 b_line_i([ 6,0 ],2,2,cmd,1,[ t('',107,6,0),t('GXLvl6',23,1,0),t(=,10,1,0),t('0',3,1,0) ]).
 b_line_i(6,3,1,cmd,7,[ t('',121,6,0) ]).
 b_line_i([ 6,1 ],3,1,cmd,6,[ t('',107,6,0),t('GXLvl6',23,6,0),t(=,10,6,0),t('1',3,6,0) ]).
-b_line_i(8,3,1,cmd,7,[ t('',107,8,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t('str(',1,7,0),t(13,2,7,0),t(',',7,7,0),t(4,3,7,0),t(',',7,7,0),t(0,3,7,0),t(')',4,7,0) ]).
+b_line_i(8,3,1,cmd,7,[ t('',107,8,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t('dtoc(',1,7,0),t(42,2,7,0),t(')',4,7,0) ]).
 b_line_i(9,3,1,cmd,7,[ t('',107,9,0),t([ t('Viewall',3,7,0),t('Link',3,7,0) ],29,7,0),t(=,10,7,0),t('link(',1,7,0),t(o(13,'WWEntrada'),28,7,0),t(')',4,7,0) ]).
 b_line_i(10,3,1,cmd,7,[ t('',107,10,0),t('Exists',23,7,0),t(=,10,7,0),t('TRUE',40,7,0) ]).
 b_line_i(12,3,1,cmd,7,[ t('',128,12,0) ]).
@@ -281,7 +283,7 @@ html_sub_i(14,15,html_i(0,div(15))).
 html_sub_i(15,16,html_i(0,div(16))).
 html_sub_i(16,17,html_i(0,div(17))).
 html_sub_i(17,18,html_i(0,div(18))).
-html_sub_i(18,19,html_i(0,t(13,2))).
+html_sub_i(18,19,html_i(0,t(42,2))).
 html_sub_i(3,20,html_i(2,div(20))).
 html_sub_i(20,21,html_i(0,div(21))).
 html_sub_i(21,22,html_i(0,usercontrol(22))).
@@ -300,8 +302,8 @@ html_tags_i(2,'data-gx-base-lib',bootstrapv3).
 html_tags_i(2,'data-abstract-form','').
 html_tags_i(9,'ControlType','').
 html_tags_i(11,'ControlType','').
-html_tags_i(17,'data-gx-att','att:13').
-html_tags_i(19,'data-gx-att','att:13').
+html_tags_i(17,'data-gx-att','att:42').
+html_tags_i(19,'data-gx-att','att:42').
 html_tags_i(25,style,'display:none;').
 html_tags_i(30,'Object','').
  
@@ -450,16 +452,16 @@ html_comp_i(18,'Semanticcontent',div,d,[ str ]).
 html_comp_i(18,'Align',left,d,[ str ]).
 html_comp_i(18,'Valign',top,d,[ str ]).
 html_comp_i(19,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(19,'Colcount',4,d,[ num ]).
-html_comp_i(19,'Attid',13,v,[ num ]).
+html_comp_i(19,'Colcount',8,d,[ num ]).
+html_comp_i(19,'Attid',42,v,[ num ]).
 html_comp_i(19,'Class','ReadonlyAttribute',v,[ str ]).
-html_comp_i(19,'Controlname','Sectorid',d,[ str ]).
+html_comp_i(19,'Controlname','Entradafecha',d,[ str ]).
 html_comp_i(19,'Returnonclick',0,v,[ bool ]).
 html_comp_i(19,'Eventgx','',d,[ str ]).
 html_comp_i(19,'Captionclass','col-sm-3 ReadonlyAttributeLabel',v,[ str ]).
 html_comp_i(19,'Captionstyle','',v,[ str ]).
 html_comp_i(19,'Captionposition','Left',v,[ str ]).
-html_comp_i(19,'Captionvalue','Id',d,[ str ]).
+html_comp_i(19,'Captionvalue','Fecha',d,[ str ]).
 html_comp_i(19,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(19,'Controltype',2,d,[ num ]).
 html_comp_i(19,'Inputtype',0,d,[ num ]).
@@ -469,7 +471,7 @@ html_comp_i(19,'Readonly',-1,v,[ bool ]).
 html_comp_i(19,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(19,'Ispassword',0,d,[ bool ]).
 html_comp_i(19,'Autoresize',-1,d,[ bool ]).
-html_comp_i(19,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(19,'Gxwidth',measure(8,chr),d,[ measure ]).
 html_comp_i(19,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(19,'Ismultiline',0,d,[ bool ]).
 html_comp_i(19,'Maxtextnumberlines',0,d,[ num ]).
@@ -480,7 +482,8 @@ html_comp_i(19,'Font',font('Arial',10,[]),d,[ font ]).
 html_comp_i(19,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(19,'Gxformat',0,d,[ num ]).
 html_comp_i(19,'Title','',d,[ str ]).
-html_comp_i(19,'Invitemsg','',v,[ str ]).
+html_comp_i(19,'Use_datepicker',-1,d,[ bool ]).
+html_comp_i(19,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(20,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(20,'Class',row,v,[ str ]).
 html_comp_i(20,'Id','',d,[ str ]).
@@ -575,7 +578,7 @@ lit_i(7,1,div(7),[ ctlname('') ]).
 lit_i(6,1,div(6),[ ctlname('Tabletop') ]).
 lit_i(5,1,div(5),[ ctlname('') ]).
 lit_i(4,1,div(4),[ ctlname('') ]).
-lit_i(19,1,t(13,2),[ ctlname(13),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(19,1,t(42,2),[ ctlname(42),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(18,1,div(18),[ ctlname('') ]).
 lit_i(17,1,div(17),[ ctlname('') ]).
 lit_i(16,1,div(16),[ ctlname('') ]).
@@ -604,17 +607,17 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
-att_prop_i(2,13,'ExternalName','SectorId',d).
-att_prop_i(2,13,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,13,'EmptyAsNull','Yes',d).
-att_prop_i(2,13,idBasedOn,86,v).
-att_prop_i(2,13,'AUTONUMBER','0',d).
-att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,13,'AttRegEx','',d).
-att_prop_i(2,13,'AttValidationFailedMsg','',d).
-att_prop_i(2,13,'DownloadOffline','0',d).
-att_prop_i(2,13,'VarServiceExtName','',d).
-att_prop_i(2,13,'FullName','SectorId',v).
+att_prop_i(2,42,'ExternalName','EntradaFecha',d).
+att_prop_i(2,42,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,42,'EmptyAsNull','Yes',d).
+att_prop_i(2,42,idBasedOn,'',d).
+att_prop_i(2,42,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,42,'AttRegEx','',d).
+att_prop_i(2,42,'AttValidationFailedMsg','',d).
+att_prop_i(2,42,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,42,'DownloadOffline','0',d).
+att_prop_i(2,42,'VarServiceExtName','',d).
+att_prop_i(2,42,'FullName','EntradaFecha',v).
 att_prop_i(2,23,'ExternalName','EntradaId',d).
 att_prop_i(2,23,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,23,'EmptyAsNull','Yes',d).
@@ -633,7 +636,7 @@ att_prop_i(2,23,'FullName','EntradaId',v).
  
 tbl_att_prop_i(2,9,23,'AllowNulls',n).
 tbl_att_prop_i(2,9,23,'AUTONUMBER',y).
-tbl_att_prop_i(2,9,13,'AllowNulls',n).
+tbl_att_prop_i(2,9,42,'AllowNulls',n).
  
 var_prop_i(2,'Tabcode',idBasedOn,89,v).
 var_prop_i(2,'Selectedtabcode',idBasedOn,89,v).
@@ -737,7 +740,7 @@ struct_dt_elem_i([ 26,57,84 ],4,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,24,[ [ 'Pgmname',23,'Entradaid',13,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',1,24,[ [ 'Pgmname',23,'Entradaid',42,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ] ] ]).
 sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Entradaid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).

@@ -1,0 +1,37 @@
+current_obj_i(2,mnproc,3).
+ 
+current_guid('241ef032-2a3a-71ea-9dec-955b50043878').
+ 
+ 
+called_tree_i(33,3,1000,4).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(atipoespectaculo_dataprovider,'Tipo Espectaculo_Data Provider','','""','INTERNAL',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(atipoespectaculo_dataprovider,[],[],[],3).
+ 
+ 
+obj_parms_i([ 'GXBCCollection<SdtTipoEspectaculo> aP0_Gxm2rootcol' ],[ [ 'Gxm2rootcol',out ] ]).
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+ 

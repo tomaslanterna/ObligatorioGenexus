@@ -7,7 +7,7 @@
 <Description>Sector</Description></Table>
 <ReorgCls>c</ReorgCls>
 <ReorgCode>new</ReorgCode>
-<ReorgMsg>LugarSector is new</ReorgMsg>
+<ReorgMsg>LugarSector is new (initialize with Lugar_DataProvider)</ReorgMsg>
 <ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>

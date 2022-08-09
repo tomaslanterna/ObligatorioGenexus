@@ -185,12 +185,10 @@ act_info_i(5,[ [ 3 ] ]).
 ca_i(5,3).
  
 tbl_to_delete_i(5,[ 9,[ [ 5,9,9 ] ],c,'IENTRADA2',0,[ 23 ],'' ]).
-tbl_to_delete_i(5,[ 6,[ [ 5,9,9 ] ],c,'IVENTA2',0,[ 11 ],'' ]).
  
  
  
 attri_i(23,[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',0 ]).
-attri_i(11,[ 'VentaId',int,4,0,'ZZZ9',0,'Venta Id','',0 ]).
 attri_i(6,[ 'PaisName',svchar,40,0,'',0,'Pais Name','',0 ]).
 attri_i(10,[ 'ClienteName',svchar,40,0,'',0,'Cliente Name','',0 ]).
 attri_i(3,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
@@ -207,14 +205,11 @@ attri_i('Clienteid',[ 'ClienteId',int,4,0,'ZZZ9',0,'Cliente Id','',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(9,[ 'Entrada',[ 23,9 ],'Entrada','Entrada' ]).
-table_i(6,[ 'Venta',[ 11,9 ],'Venta','Venta' ]).
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
 table_i(5,[ 'Cliente',[ 9,10,3 ],'Cliente','Cliente' ]).
  
 index_i(5,[ 'ICLIENTE',u,[ 9 ],'ICliente' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
-index_i(6,[ 'IVENTA',u,[ 11 ],'IVenta' ]).
-index_i(6,[ 'IVENTA2',d,[ 9 ],'IVenta2' ]).
 index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
 index_i(9,[ 'IENTRADA2',d,[ 9 ],'IEntrada2' ]).
  
@@ -1102,20 +1097,6 @@ att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
 att_prop_i(2,6,'VarServiceExtName','',d).
 att_prop_i(2,6,'FullName','PaisName',v).
-att_prop_i(2,11,'ExternalName','VentaId',d).
-att_prop_i(2,11,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,11,'EmptyAsNull','Yes',d).
-att_prop_i(2,11,idBasedOn,86,v).
-att_prop_i(2,11,'AUTONUMBER','-1',v).
-att_prop_i(2,11,'AUTONUMBER_START','1',d).
-att_prop_i(2,11,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,11,'AUTONUMBER_FORREPLICATION','-1',d).
-att_prop_i(2,11,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,11,'AttRegEx','',d).
-att_prop_i(2,11,'AttValidationFailedMsg','',d).
-att_prop_i(2,11,'DownloadOffline','0',d).
-att_prop_i(2,11,'VarServiceExtName','',d).
-att_prop_i(2,11,'FullName','VentaId',v).
 att_prop_i(2,23,'ExternalName','EntradaId',d).
 att_prop_i(2,23,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,23,'EmptyAsNull','Yes',d).
@@ -1132,12 +1113,10 @@ att_prop_i(2,23,'VarServiceExtName','',d).
 att_prop_i(2,23,'FullName','EntradaId',v).
  
 tbl_prop_i(2,9,'AllDirSuper',[ [ 5,[ 9 ] ] ],v).
-tbl_prop_i(2,6,'AllDirSuper',[ [ 5,[ 9 ] ] ],v).
 tbl_prop_i(2,5,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
 tbl_prop_i(2,3,'DirSubor',[ [ 5,[ 3 ] ] ],v).
-tbl_prop_i(2,5,'DirSubor',[ [ 6,[ 9 ] ],[ 9,[ 9 ] ] ],v).
+tbl_prop_i(2,5,'DirSubor',[ [ 9,[ 9 ] ] ],v).
 tbl_prop_i(2,9,'DirSuper',[ [ 5,[ 9 ] ] ],v).
-tbl_prop_i(2,6,'DirSuper',[ [ 5,[ 9 ] ] ],v).
 tbl_prop_i(2,5,'DirSuper',[ [ 3,[ 3 ] ] ],v).
  
 tbl_att_prop_i(2,5,9,'AllowNulls',n).
@@ -1147,9 +1126,6 @@ tbl_att_prop_i(2,5,3,'AllowNulls',n).
 tbl_att_prop_i(2,3,3,'AllowNulls',n).
 tbl_att_prop_i(2,3,3,'AUTONUMBER',y).
 tbl_att_prop_i(2,3,6,'AllowNulls',n).
-tbl_att_prop_i(2,6,11,'AllowNulls',n).
-tbl_att_prop_i(2,6,11,'AUTONUMBER',y).
-tbl_att_prop_i(2,6,9,'AllowNulls',n).
 tbl_att_prop_i(2,9,23,'AllowNulls',n).
 tbl_att_prop_i(2,9,23,'AUTONUMBER',y).
 tbl_att_prop_i(2,9,9,'AllowNulls',n).

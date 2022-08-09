@@ -24,8 +24,9 @@
 
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include = "$(WebDirectory)\lugar.cs" />
 		<Compile Include = "$(WebDirectory)\isauthorized.cs" />
+		<Compile Include = "$(WebDirectory)\lugar.cs" />
+		<Compile Include = "$(WebDirectory)\lugar_bc.cs" />
 
 	</ItemGroup>
 	

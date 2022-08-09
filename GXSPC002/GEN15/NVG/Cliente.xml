@@ -9,7 +9,7 @@
 <ObjDesc>Cliente</ObjDesc>
 <ObjPgmName>Cliente</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -113,16 +113,6 @@
 <TableId>9</TableId>
 <TableName>Entrada</TableName>
 <Description>Entrada</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>9</AttriId>
-<AttriName>ClienteId</AttriName>
-<Description>Cliente Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>6</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>

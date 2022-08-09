@@ -409,7 +409,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 49,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtFuncionName_Internalname, StringUtil.RTrim( A22FuncionName), StringUtil.RTrim( context.localUtil.Format( A22FuncionName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,49);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtFuncionName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtFuncionName_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_Funcion.htm");
+         GxWebStd.gx_single_line_edit( context, edtFuncionName_Internalname, A22FuncionName, StringUtil.RTrim( context.localUtil.Format( A22FuncionName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,49);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtFuncionName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtFuncionName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 1, -1, -1, true, "Name", "left", true, "", "HLP_Funcion.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -1446,10 +1446,18 @@ namespace GeneXus.Programs {
             pr_default.execute(11, new Object[] {A15FuncionId});
             if ( (pr_default.getStatus(11) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Entrada"}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Invitacion"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(11);
+            /* Using cursor T000714 */
+            pr_default.execute(12, new Object[] {A15FuncionId});
+            if ( (pr_default.getStatus(12) != 101) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Entrada"}), "CannotDeleteReferencedRecord", 1, "");
+               AnyError = 1;
+            }
+            pr_default.close(12);
          }
       }
 
@@ -1491,13 +1499,13 @@ namespace GeneXus.Programs {
       public void ScanStart077( )
       {
          /* Scan By routine */
-         /* Using cursor T000714 */
-         pr_default.execute(12);
+         /* Using cursor T000715 */
+         pr_default.execute(13);
          RcdFound7 = 0;
-         if ( (pr_default.getStatus(12) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound7 = 1;
-            A15FuncionId = T000714_A15FuncionId[0];
+            A15FuncionId = T000715_A15FuncionId[0];
             AssignAttri("", false, "A15FuncionId", StringUtil.LTrimStr( (decimal)(A15FuncionId), 4, 0));
          }
          /* Load Subordinate Levels */
@@ -1506,19 +1514,19 @@ namespace GeneXus.Programs {
       protected void ScanNext077( )
       {
          /* Scan next routine */
-         pr_default.readNext(12);
+         pr_default.readNext(13);
          RcdFound7 = 0;
-         if ( (pr_default.getStatus(12) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound7 = 1;
-            A15FuncionId = T000714_A15FuncionId[0];
+            A15FuncionId = T000715_A15FuncionId[0];
             AssignAttri("", false, "A15FuncionId", StringUtil.LTrimStr( (decimal)(A15FuncionId), 4, 0));
          }
       }
 
       protected void ScanEnd077( )
       {
-         pr_default.close(12);
+         pr_default.close(13);
       }
 
       protected void AfterConfirm077( )
@@ -1605,7 +1613,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022882235470", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228913261188", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1657,7 +1665,7 @@ namespace GeneXus.Programs {
          send_integrity_footer_hashes( ) ;
          GxWebStd.gx_hidden_field( context, "Z15FuncionId", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z15FuncionId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z21PrecioFuncion", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z21PrecioFuncion), 4, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "Z22FuncionName", StringUtil.RTrim( Z22FuncionName));
+         GxWebStd.gx_hidden_field( context, "Z22FuncionName", Z22FuncionName);
          GxWebStd.gx_hidden_field( context, "Z1EspectaculoId", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z1EspectaculoId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
@@ -1783,7 +1791,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022882235474", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228913261192", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1799,7 +1807,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("funcion.js", "?2022882235474", false, true);
+         context.AddJavascriptSource("funcion.js", "?20228913261192", false, true);
          /* End function include_jscripts */
       }
 
@@ -1900,15 +1908,15 @@ namespace GeneXus.Programs {
 
       public void Valid_Espectaculoid( )
       {
-         /* Using cursor T000715 */
-         pr_default.execute(13, new Object[] {A1EspectaculoId});
-         if ( (pr_default.getStatus(13) == 101) )
+         /* Using cursor T000716 */
+         pr_default.execute(14, new Object[] {A1EspectaculoId});
+         if ( (pr_default.getStatus(14) == 101) )
          {
             GX_msglist.addItem("No existe 'Espectaculo'.", "ForeignKeyNotFound", 1, "ESPECTACULOID");
             AnyError = 1;
             GX_FocusControl = edtEspectaculoId_Internalname;
          }
-         pr_default.close(13);
+         pr_default.close(14);
          dynload_actions( ) ;
          /*  Sending validation outputs */
       }
@@ -1946,7 +1954,7 @@ namespace GeneXus.Programs {
       protected void CloseOpenCursors( )
       {
          pr_default.close(1);
-         pr_default.close(13);
+         pr_default.close(14);
       }
 
       public override void initialize( )
@@ -2006,12 +2014,13 @@ namespace GeneXus.Programs {
          T00072_A21PrecioFuncion = new short[1] ;
          T00072_A22FuncionName = new string[] {""} ;
          T00072_A1EspectaculoId = new short[1] ;
-         T000713_A23EntradaId = new short[1] ;
-         T000714_A15FuncionId = new short[1] ;
+         T000713_A24InvitacionId = new short[1] ;
+         T000714_A23EntradaId = new short[1] ;
+         T000715_A15FuncionId = new short[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         T000715_A1EspectaculoId = new short[1] ;
+         T000716_A1EspectaculoId = new short[1] ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.funcion__default(),
             new Object[][] {
                 new Object[] {
@@ -2045,13 +2054,16 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000713_A23EntradaId
+               T000713_A24InvitacionId
                }
                , new Object[] {
-               T000714_A15FuncionId
+               T000714_A23EntradaId
                }
                , new Object[] {
-               T000715_A1EspectaculoId
+               T000715_A15FuncionId
+               }
+               , new Object[] {
+               T000716_A1EspectaculoId
                }
             }
          );
@@ -2100,7 +2112,6 @@ namespace GeneXus.Programs {
       private int idxLst ;
       private string sPrefix ;
       private string wcpOGx_mode ;
-      private string Z22FuncionName ;
       private string scmdbuf ;
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
@@ -2138,7 +2149,6 @@ namespace GeneXus.Programs {
       private string edtPrecioFuncion_Internalname ;
       private string edtPrecioFuncion_Jsonclick ;
       private string edtFuncionName_Internalname ;
-      private string A22FuncionName ;
       private string edtFuncionName_Jsonclick ;
       private string bttBtn_enter_Internalname ;
       private string bttBtn_enter_Caption ;
@@ -2164,6 +2174,8 @@ namespace GeneXus.Programs {
       private bool toggleJsOutput ;
       private bool wbErr ;
       private bool returnInSub ;
+      private string Z22FuncionName ;
+      private string A22FuncionName ;
       private IGxSession AV10WebSession ;
       private GXProperties forbiddenHiddens ;
       private IGxDataStore dsDefault ;
@@ -2185,9 +2197,10 @@ namespace GeneXus.Programs {
       private short[] T00072_A21PrecioFuncion ;
       private string[] T00072_A22FuncionName ;
       private short[] T00072_A1EspectaculoId ;
-      private short[] T000713_A23EntradaId ;
-      private short[] T000714_A15FuncionId ;
-      private short[] T000715_A1EspectaculoId ;
+      private short[] T000713_A24InvitacionId ;
+      private short[] T000714_A23EntradaId ;
+      private short[] T000715_A15FuncionId ;
+      private short[] T000716_A1EspectaculoId ;
       private GXWebForm Form ;
       private SdtTransactionContext AV9TrnContext ;
       private SdtTransactionContext_Attribute AV12TrnContextAtt ;
@@ -2213,6 +2226,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[11])
          ,new ForEachCursor(def[12])
          ,new ForEachCursor(def[13])
+         ,new ForEachCursor(def[14])
        };
     }
 
@@ -2257,13 +2271,13 @@ namespace GeneXus.Programs {
           prmT000710 = new Object[] {
           new ParDef("@FuncionId",GXType.Int16,4,0) ,
           new ParDef("@PrecioFuncion",GXType.Int16,4,0) ,
-          new ParDef("@FuncionName",GXType.NChar,20,0) ,
+          new ParDef("@FuncionName",GXType.NVarChar,40,0) ,
           new ParDef("@EspectaculoId",GXType.Int16,4,0)
           };
           Object[] prmT000711;
           prmT000711 = new Object[] {
           new ParDef("@PrecioFuncion",GXType.Int16,4,0) ,
-          new ParDef("@FuncionName",GXType.NChar,20,0) ,
+          new ParDef("@FuncionName",GXType.NVarChar,40,0) ,
           new ParDef("@EspectaculoId",GXType.Int16,4,0) ,
           new ParDef("@FuncionId",GXType.Int16,4,0)
           };
@@ -2277,9 +2291,13 @@ namespace GeneXus.Programs {
           };
           Object[] prmT000714;
           prmT000714 = new Object[] {
+          new ParDef("@FuncionId",GXType.Int16,4,0)
           };
           Object[] prmT000715;
           prmT000715 = new Object[] {
+          };
+          Object[] prmT000716;
+          prmT000716 = new Object[] {
           new ParDef("@EspectaculoId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
@@ -2294,9 +2312,10 @@ namespace GeneXus.Programs {
              ,new CursorDef("T000710", "INSERT INTO [Funcion]([FuncionId], [PrecioFuncion], [FuncionName], [EspectaculoId]) VALUES(@FuncionId, @PrecioFuncion, @FuncionName, @EspectaculoId)", GxErrorMask.GX_NOMASK,prmT000710)
              ,new CursorDef("T000711", "UPDATE [Funcion] SET [PrecioFuncion]=@PrecioFuncion, [FuncionName]=@FuncionName, [EspectaculoId]=@EspectaculoId  WHERE [FuncionId] = @FuncionId", GxErrorMask.GX_NOMASK,prmT000711)
              ,new CursorDef("T000712", "DELETE FROM [Funcion]  WHERE [FuncionId] = @FuncionId", GxErrorMask.GX_NOMASK,prmT000712)
-             ,new CursorDef("T000713", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [FuncionId] = @FuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000713,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000714", "SELECT [FuncionId] FROM [Funcion] ORDER BY [FuncionId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000714,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000715", "SELECT [EspectaculoId] FROM [Espectaculo] WHERE [EspectaculoId] = @EspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000715,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000713", "SELECT TOP 1 [InvitacionId] FROM [Invitacion] WHERE [FuncionId] = @FuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000713,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000714", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [FuncionId] = @FuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000714,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000715", "SELECT [FuncionId] FROM [Funcion] ORDER BY [FuncionId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000715,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000716", "SELECT [EspectaculoId] FROM [Espectaculo] WHERE [EspectaculoId] = @EspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000716,1, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -2310,13 +2329,13 @@ namespace GeneXus.Programs {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getString(3, 20);
+                ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
                 return;
              case 1 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getString(3, 20);
+                ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
                 return;
              case 2 :
@@ -2325,7 +2344,7 @@ namespace GeneXus.Programs {
              case 3 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getString(3, 20);
+                ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
                 return;
              case 4 :
@@ -2347,6 +2366,9 @@ namespace GeneXus.Programs {
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 13 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                return;
+             case 14 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
        }

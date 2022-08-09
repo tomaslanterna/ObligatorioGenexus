@@ -36,6 +36,8 @@
 <Event>
 <EventName>Lbltipoespectaculoidfilter.Click</EventName></Event>
 <Event>
+<EventName>Lblespectaculofechafilter.Click</EventName></Event>
+<Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>
 <ImplicitForEach>
@@ -134,6 +136,27 @@
 <Variable>
 <VarId>Ctipoespectaculoid</VarId>
 <VarName>&amp;cTipoEspectaculoId</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description></Attribute>
+<Sp></Sp>
+<Token>&gt;=</Token>
+<Sp></Sp>
+<Variable>
+<VarId>Cespectaculofecha</VarId>
+<VarName>&amp;cEspectaculoFecha</VarName></Variable></Constraint>
+<Condition>
+<Token>not</Token>
+<Sp></Sp>
+<Variable>
+<VarId>Cespectaculofecha</VarId>
+<VarName>&amp;cEspectaculoFecha</VarName></Variable>
 <Token>.</Token>
 <Token>isempty(</Token>
 <Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>

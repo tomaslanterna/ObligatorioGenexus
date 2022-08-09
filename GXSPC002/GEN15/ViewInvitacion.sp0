@@ -181,6 +181,7 @@ index_i(10,[ 'IINVITACION',u,[ 24 ],'IInvitacion' ]).
  
  
 add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -199,6 +200,7 @@ end_i(3,0,0,[ [ [ t(24,2),t(=,10),t('Invitacionid',23) ] ] ]).
  
  
 dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
 dom_info_i(89,[ 'TabCode' ]).
  
  

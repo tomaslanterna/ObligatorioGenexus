@@ -46,9 +46,115 @@ namespace GeneXus.Programs {
 
       void executePrivate( )
       {
+         SetCreateDataBase( ) ;
+         CreateDataBase( ) ;
          if ( PreviousCheck() )
          {
             ExecuteReorganization( ) ;
+         }
+      }
+
+      private void CreateDataBase( )
+      {
+         DS = (GxDataStore)(context.GetDataStore( "Default"));
+         ErrCode = DS.Connection.FullConnect();
+         DataBaseName = DS.Connection.Database;
+         if ( ErrCode != 0 )
+         {
+            DS.Connection.Database = "";
+            ErrCode = DS.Connection.FullConnect();
+            if ( ErrCode == 0 )
+            {
+               try
+               {
+                  GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("GXM_dbcrea")+ " " +DataBaseName , null);
+                  cmdBuffer = "CREATE DATABASE " + "[" + DataBaseName + "]";
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+                  Count = 1;
+               }
+               catch ( Exception ex )
+               {
+                  ErrCode = 1;
+                  GeneXus.Reorg.GXReorganization.AddMsg( ex.Message , null);
+                  throw;
+               }
+               ErrCode = DS.Connection.Disconnect();
+               DS.Connection.Database = DataBaseName;
+               ErrCode = DS.Connection.FullConnect();
+               while ( ( ErrCode != 0 ) && ( Count > 0 ) && ( Count < 30 ) )
+               {
+                  Res = GXUtil.Sleep( 1);
+                  ErrCode = DS.Connection.FullConnect();
+                  Count = (short)(Count+1);
+               }
+               setupDB = 0;
+               if ( ( setupDB == 1 ) || GeneXus.Configuration.Preferences.MustSetupDB( ) )
+               {
+                  defaultUsers = GXUtil.DefaultWebUser( context);
+                  short gxidx;
+                  gxidx = 1;
+                  while ( gxidx <= defaultUsers.Count )
+                  {
+                     defaultUser = ((string)defaultUsers.Item(gxidx));
+                     try
+                     {
+                        GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("GXM_dbadduser", new   object[]  {defaultUser, DataBaseName}) , null);
+                        cmdBuffer = "CREATE LOGIN " + "[" + defaultUser + "]" + " FROM WINDOWS";
+                        RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                        RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                        RGZ.ExecuteStmt() ;
+                        RGZ.Drop();
+                     }
+                     catch
+                     {
+                     }
+                     try
+                     {
+                        cmdBuffer = "CREATE USER " + "[" + defaultUser + "]" + " FOR LOGIN " + "[" + defaultUser + "]";
+                        RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                        RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                        RGZ.ExecuteStmt() ;
+                        RGZ.Drop();
+                     }
+                     catch
+                     {
+                     }
+                     try
+                     {
+                        cmdBuffer = "EXEC sp_addrolemember N'db_datareader', N'" + defaultUser + "'";
+                        RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                        RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                        RGZ.ExecuteStmt() ;
+                        RGZ.Drop();
+                     }
+                     catch
+                     {
+                     }
+                     try
+                     {
+                        cmdBuffer = "EXEC sp_addrolemember N'db_datawriter', N'" + defaultUser + "'";
+                        RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                        RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                        RGZ.ExecuteStmt() ;
+                        RGZ.Drop();
+                     }
+                     catch
+                     {
+                     }
+                     gxidx = (short)(gxidx+1);
+                  }
+               }
+            }
+            if ( ErrCode != 0 )
+            {
+               ErrMsg = DS.ErrDescription;
+               GeneXus.Reorg.GXReorganization.AddMsg( ErrMsg , null);
+               ErrCode = 1;
+               throw new Exception( ErrMsg) ;
+            }
          }
       }
 
@@ -57,34 +163,1180 @@ namespace GeneXus.Programs {
          /* Load data into tables. */
       }
 
-      public void ReorganizePais( )
+      public void CreateEspectaculoLugarSector( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table EspectaculoLugarSector */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [EspectaculoLugarSector] ([EspectaculoId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorCantidadAsientos] smallint NOT NULL , [LugarSectorEstadoSector] smallint NOT NULL , PRIMARY KEY([EspectaculoId], [LugarSectorId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[EspectaculoLugarSector]") ;
+               cmdBuffer=" DROP TABLE [EspectaculoLugarSector] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[EspectaculoLugarSector]") ;
+                  cmdBuffer=" DROP VIEW [EspectaculoLugarSector] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[EspectaculoLugarSector]") ;
+                     cmdBuffer=" DROP FUNCTION [EspectaculoLugarSector] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [EspectaculoLugarSector] ([EspectaculoId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorCantidadAsientos] smallint NOT NULL , [LugarSectorEstadoSector] smallint NOT NULL , PRIMARY KEY([EspectaculoId], [LugarSectorId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateLugarSector( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table LugarSector */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [LugarSector] ([LugarId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorName] nvarchar(40) NOT NULL , [LugarSectorCantidad] smallint NOT NULL , [LugarSectorPrecio] smallint NOT NULL , PRIMARY KEY([LugarId], [LugarSectorId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[LugarSector]") ;
+               cmdBuffer=" DROP TABLE [LugarSector] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[LugarSector]") ;
+                  cmdBuffer=" DROP VIEW [LugarSector] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[LugarSector]") ;
+                     cmdBuffer=" DROP FUNCTION [LugarSector] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [LugarSector] ([LugarId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorName] nvarchar(40) NOT NULL , [LugarSectorCantidad] smallint NOT NULL , [LugarSectorPrecio] smallint NOT NULL , PRIMARY KEY([LugarId], [LugarSectorId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateInvitacion( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Invitacion */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Invitacion] ([InvitacionId] smallint NOT NULL IDENTITY(1,1), [InvitacionFecha] datetime NOT NULL , [FuncionId] smallint NOT NULL , [InvitacionName] nvarchar(40) NULL , PRIMARY KEY([InvitacionId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Invitacion]") ;
+               cmdBuffer=" DROP TABLE [Invitacion] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Invitacion]") ;
+                  cmdBuffer=" DROP VIEW [Invitacion] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Invitacion]") ;
+                     cmdBuffer=" DROP FUNCTION [Invitacion] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Invitacion] ([InvitacionId] smallint NOT NULL IDENTITY(1,1), [InvitacionFecha] datetime NOT NULL , [FuncionId] smallint NOT NULL , [InvitacionName] nvarchar(40) NULL , PRIMARY KEY([InvitacionId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IINVITACION1] ON [Invitacion] ([FuncionId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IINVITACION1] ON [Invitacion] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IINVITACION1] ON [Invitacion] ([FuncionId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateEntrada( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Entrada */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Entrada] ([EntradaId] smallint NOT NULL IDENTITY(1,1), [ClienteId] smallint NOT NULL , [FuncionId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [EntradaFecha] datetime NOT NULL , [EntradaPaisOrigenId] smallint NOT NULL , [EntradaPaisOrigenName] nvarchar(40) NOT NULL , PRIMARY KEY([EntradaId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Entrada]") ;
+               cmdBuffer=" DROP TABLE [Entrada] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Entrada]") ;
+                  cmdBuffer=" DROP VIEW [Entrada] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Entrada]") ;
+                     cmdBuffer=" DROP FUNCTION [Entrada] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Entrada] ([EntradaId] smallint NOT NULL IDENTITY(1,1), [ClienteId] smallint NOT NULL , [FuncionId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [EntradaFecha] datetime NOT NULL , [EntradaPaisOrigenId] smallint NOT NULL , [EntradaPaisOrigenName] nvarchar(40) NOT NULL , PRIMARY KEY([EntradaId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IENTRADA1] ON [Entrada] ([FuncionId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IENTRADA1] ON [Entrada] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IENTRADA1] ON [Entrada] ([FuncionId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IENTRADA2] ON [Entrada] ([ClienteId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IENTRADA2] ON [Entrada] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IENTRADA2] ON [Entrada] ([ClienteId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateFuncion( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Funcion */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Funcion] ([FuncionId] smallint NOT NULL , [EspectaculoId] smallint NOT NULL , [PrecioFuncion] smallint NOT NULL , [FuncionName] nvarchar(40) NOT NULL , PRIMARY KEY([FuncionId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Funcion]") ;
+               cmdBuffer=" DROP TABLE [Funcion] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Funcion]") ;
+                  cmdBuffer=" DROP VIEW [Funcion] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Funcion]") ;
+                     cmdBuffer=" DROP FUNCTION [Funcion] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Funcion] ([FuncionId] smallint NOT NULL , [EspectaculoId] smallint NOT NULL , [PrecioFuncion] smallint NOT NULL , [FuncionName] nvarchar(40) NOT NULL , PRIMARY KEY([FuncionId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IFUNCION1] ON [Funcion] ([EspectaculoId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IFUNCION1] ON [Funcion] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IFUNCION1] ON [Funcion] ([EspectaculoId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateCliente( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Cliente */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([ClienteId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Cliente]") ;
+               cmdBuffer=" DROP TABLE [Cliente] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Cliente]") ;
+                  cmdBuffer=" DROP VIEW [Cliente] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Cliente]") ;
+                     cmdBuffer=" DROP FUNCTION [Cliente] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([ClienteId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ICLIENTE1] ON [Cliente] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [ICLIENTE1] ON [Cliente] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ICLIENTE1] ON [Cliente] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateTipoEspectaculo( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table TipoEspectaculo */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoName] nvarchar(40) NOT NULL , PRIMARY KEY([TipoEspectaculoId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[TipoEspectaculo]") ;
+               cmdBuffer=" DROP TABLE [TipoEspectaculo] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[TipoEspectaculo]") ;
+                  cmdBuffer=" DROP VIEW [TipoEspectaculo] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[TipoEspectaculo]") ;
+                     cmdBuffer=" DROP FUNCTION [TipoEspectaculo] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoName] nvarchar(40) NOT NULL , PRIMARY KEY([TipoEspectaculoId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreatePais( )
       {
          string cmdBuffer = "";
          /* Indices for table Pais */
-         cmdBuffer=" ALTER TABLE [Pais] ALTER COLUMN [PaisFlag] VARBINARY(MAX) NULL  "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" ALTER TABLE [Pais] ALTER COLUMN [PaisFlag_GXI] varchar(2048) NULL  "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Pais]") ;
+               cmdBuffer=" DROP TABLE [Pais] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Pais]") ;
+                  cmdBuffer=" DROP VIEW [Pais] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Pais]") ;
+                     cmdBuffer=" DROP FUNCTION [Pais] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateLugar( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Lugar */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([LugarId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Lugar]") ;
+               cmdBuffer=" DROP TABLE [Lugar] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Lugar]") ;
+                  cmdBuffer=" DROP VIEW [Lugar] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Lugar]") ;
+                     cmdBuffer=" DROP FUNCTION [Lugar] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([LugarId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [ILUGAR1] ON [Lugar] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void CreateEspectaculo( )
+      {
+         string cmdBuffer = "";
+         /* Indices for table Espectaculo */
+         try
+         {
+            cmdBuffer=" CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NULL , [EspectaculoFecha] datetime NOT NULL , PRIMARY KEY([EspectaculoId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               DropTableConstraints( "[Espectaculo]") ;
+               cmdBuffer=" DROP TABLE [Espectaculo] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+               try
+               {
+                  DropTableConstraints( "[Espectaculo]") ;
+                  cmdBuffer=" DROP VIEW [Espectaculo] "
+                  ;
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+               }
+               catch
+               {
+                  try
+                  {
+                     DropTableConstraints( "[Espectaculo]") ;
+                     cmdBuffer=" DROP FUNCTION [Espectaculo] "
+                     ;
+                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+                     RGZ.ExecuteStmt() ;
+                     RGZ.Drop();
+                  }
+                  catch
+                  {
+                  }
+               }
+            }
+            cmdBuffer=" CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NULL , [EspectaculoFecha] datetime NOT NULL , PRIMARY KEY([EspectaculoId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IESPECTACULO1] ON [Espectaculo] ([LugarId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IESPECTACULO1] ON [Espectaculo] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IESPECTACULO1] ON [Espectaculo] ([LugarId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IESPECTACULO3] ON [Espectaculo] ([TipoEspectaculoId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IESPECTACULO3] ON [Espectaculo] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IESPECTACULO3] ON [Espectaculo] ([TipoEspectaculoId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIEspectaculoLugar( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO1] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Espectaculo] DROP CONSTRAINT [IESPECTACULO1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO1] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIEspectaculoTipoEspectaculo( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO3] FOREIGN KEY ([TipoEspectaculoId]) REFERENCES [TipoEspectaculo] ([TipoEspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Espectaculo] DROP CONSTRAINT [IESPECTACULO3] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO3] FOREIGN KEY ([TipoEspectaculoId]) REFERENCES [TipoEspectaculo] ([TipoEspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RILugarPais( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Lugar] DROP CONSTRAINT [ILUGAR1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIClientePais( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Cliente] ADD CONSTRAINT [ICLIENTE1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Cliente] DROP CONSTRAINT [ICLIENTE1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Cliente] ADD CONSTRAINT [ICLIENTE1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIFuncionEspectaculo( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Funcion] ADD CONSTRAINT [IFUNCION1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Funcion] DROP CONSTRAINT [IFUNCION1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Funcion] ADD CONSTRAINT [IFUNCION1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIEntradaCliente( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA2] FOREIGN KEY ([ClienteId]) REFERENCES [Cliente] ([ClienteId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Entrada] DROP CONSTRAINT [IENTRADA2] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA2] FOREIGN KEY ([ClienteId]) REFERENCES [Cliente] ([ClienteId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIEntradaFuncion( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Entrada] DROP CONSTRAINT [IENTRADA1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIInvitacionFuncion( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Invitacion] ADD CONSTRAINT [IINVITACION1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Invitacion] DROP CONSTRAINT [IINVITACION1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Invitacion] ADD CONSTRAINT [IINVITACION1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RILugarSectorLugar( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [LugarSector] ADD CONSTRAINT [ILUGARSECTOR1] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [LugarSector] DROP CONSTRAINT [ILUGARSECTOR1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [LugarSector] ADD CONSTRAINT [ILUGARSECTOR1] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIEspectaculoLugarSectorEspectaculo( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [EspectaculoLugarSector] ADD CONSTRAINT [IESPECTACULOLUGARSECTOR1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [EspectaculoLugarSector] DROP CONSTRAINT [IESPECTACULOLUGARSECTOR1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [EspectaculoLugarSector] ADD CONSTRAINT [IESPECTACULOLUGARSECTOR1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       private void TablesCount( )
       {
-         if ( ! IsResumeMode( ) )
-         {
-            /* Using cursor P00012 */
-            pr_default.execute(0);
-            PaisCount = P00012_APaisCount[0];
-            pr_default.close(0);
-            PrintRecordCount ( "Pais" ,  PaisCount );
-         }
       }
 
       private bool PreviousCheck( )
@@ -103,6 +1355,18 @@ namespace GeneXus.Programs {
          }
          if ( GXUtil.IsSQLSERVER2005( context, "DEFAULT") )
          {
+            /* Using cursor P00012 */
+            pr_default.execute(0);
+            while ( (pr_default.getStatus(0) != 101) )
+            {
+               sSchemaVar = P00012_AsSchemaVar[0];
+               nsSchemaVar = P00012_nsSchemaVar[0];
+               pr_default.readNext(0);
+            }
+            pr_default.close(0);
+         }
+         else
+         {
             /* Using cursor P00023 */
             pr_default.execute(1);
             while ( (pr_default.getStatus(1) != 101) )
@@ -113,28 +1377,35 @@ namespace GeneXus.Programs {
             }
             pr_default.close(1);
          }
-         else
-         {
-            /* Using cursor P00034 */
-            pr_default.execute(2);
-            while ( (pr_default.getStatus(2) != 101) )
-            {
-               sSchemaVar = P00034_AsSchemaVar[0];
-               nsSchemaVar = P00034_nsSchemaVar[0];
-               pr_default.readNext(2);
-            }
-            pr_default.close(2);
-         }
          return true ;
       }
 
       private void ExecuteOnlyTablesReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 1 ,  "ReorganizePais" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "CreateEspectaculoLugarSector" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 2 ,  "CreateLugarSector" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 3 ,  "CreateInvitacion" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 4 ,  "CreateEntrada" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 5 ,  "CreateFuncion" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 6 ,  "CreateCliente" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 7 ,  "CreateTipoEspectaculo" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 8 ,  "CreatePais" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 9 ,  "CreateLugar" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 10 ,  "CreateEspectaculo" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
       {
+         ReorgExecute.RegisterBlockForSubmit( 11 ,  "RIEspectaculoLugar" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 12 ,  "RIEspectaculoTipoEspectaculo" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 13 ,  "RILugarPais" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 14 ,  "RIClientePais" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 15 ,  "RIFuncionEspectaculo" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 16 ,  "RIEntradaCliente" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 17 ,  "RIEntradaFuncion" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 18 ,  "RIInvitacionFuncion" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 19 ,  "RILugarSectorLugar" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 20 ,  "RIEspectaculoLugarSectorEspectaculo" , new Object[]{ });
       }
 
       private void ExecuteTablesReorganization( )
@@ -152,11 +1423,60 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
-         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"Pais", ""}) );
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"EspectaculoLugarSector", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateEspectaculoLugarSector" ,  "CreateEspectaculo" );
+         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"LugarSector", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateLugarSector" ,  "CreateLugar" );
+         GXReorganization.SetMsg( 3 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Invitacion", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateInvitacion" ,  "CreateFuncion" );
+         GXReorganization.SetMsg( 4 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Entrada", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateEntrada" ,  "CreateCliente" );
+         ReorgExecute.RegisterPrecedence( "CreateEntrada" ,  "CreateFuncion" );
+         GXReorganization.SetMsg( 5 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Funcion", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateFuncion" ,  "CreateEspectaculo" );
+         GXReorganization.SetMsg( 6 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Cliente", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateCliente" ,  "CreatePais" );
+         GXReorganization.SetMsg( 7 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"TipoEspectaculo", ""}) );
+         GXReorganization.SetMsg( 8 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Pais", ""}) );
+         GXReorganization.SetMsg( 9 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Lugar", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateLugar" ,  "CreatePais" );
+         GXReorganization.SetMsg( 10 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Espectaculo", ""}) );
+         ReorgExecute.RegisterPrecedence( "CreateEspectaculo" ,  "CreateLugar" );
+         ReorgExecute.RegisterPrecedence( "CreateEspectaculo" ,  "CreateTipoEspectaculo" );
       }
 
       private void SetPrecedenceris( )
       {
+         GXReorganization.SetMsg( 11 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IESPECTACULO1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoLugar" ,  "CreateEspectaculo" );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoLugar" ,  "CreateLugar" );
+         GXReorganization.SetMsg( 12 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IESPECTACULO3]"}) );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoTipoEspectaculo" ,  "CreateEspectaculo" );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoTipoEspectaculo" ,  "CreateTipoEspectaculo" );
+         GXReorganization.SetMsg( 13 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ILUGAR1]"}) );
+         ReorgExecute.RegisterPrecedence( "RILugarPais" ,  "CreateLugar" );
+         ReorgExecute.RegisterPrecedence( "RILugarPais" ,  "CreatePais" );
+         GXReorganization.SetMsg( 14 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ICLIENTE1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIClientePais" ,  "CreateCliente" );
+         ReorgExecute.RegisterPrecedence( "RIClientePais" ,  "CreatePais" );
+         GXReorganization.SetMsg( 15 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IFUNCION1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIFuncionEspectaculo" ,  "CreateFuncion" );
+         ReorgExecute.RegisterPrecedence( "RIFuncionEspectaculo" ,  "CreateEspectaculo" );
+         GXReorganization.SetMsg( 16 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IENTRADA2]"}) );
+         ReorgExecute.RegisterPrecedence( "RIEntradaCliente" ,  "CreateEntrada" );
+         ReorgExecute.RegisterPrecedence( "RIEntradaCliente" ,  "CreateCliente" );
+         GXReorganization.SetMsg( 17 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IENTRADA1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIEntradaFuncion" ,  "CreateEntrada" );
+         ReorgExecute.RegisterPrecedence( "RIEntradaFuncion" ,  "CreateFuncion" );
+         GXReorganization.SetMsg( 18 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IINVITACION1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIInvitacionFuncion" ,  "CreateInvitacion" );
+         ReorgExecute.RegisterPrecedence( "RIInvitacionFuncion" ,  "CreateFuncion" );
+         GXReorganization.SetMsg( 19 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ILUGARSECTOR1]"}) );
+         ReorgExecute.RegisterPrecedence( "RILugarSectorLugar" ,  "CreateLugarSector" );
+         ReorgExecute.RegisterPrecedence( "RILugarSectorLugar" ,  "CreateLugar" );
+         GXReorganization.SetMsg( 20 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IESPECTACULOLUGARSECTOR1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoLugarSectorEspectaculo" ,  "CreateEspectaculoLugarSector" );
+         ReorgExecute.RegisterPrecedence( "RIEspectaculoLugarSectorEspectaculo" ,  "CreateEspectaculo" );
       }
 
       private void ExecuteReorganization( )
@@ -171,6 +1491,30 @@ namespace GeneXus.Programs {
                ExecuteTablesReorganization( ) ;
             }
          }
+      }
+
+      [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+      public void DropTableConstraints( string sTableName )
+      {
+         string cmdBuffer;
+         /* Using cursor P00034 */
+         pr_default.execute(2, new Object[] {sTableName});
+         while ( (pr_default.getStatus(2) != 101) )
+         {
+            constid = P00034_Aconstid[0];
+            nconstid = P00034_nconstid[0];
+            fkeyid = P00034_Afkeyid[0];
+            nfkeyid = P00034_nfkeyid[0];
+            rkeyid = P00034_Arkeyid[0];
+            nrkeyid = P00034_nrkeyid[0];
+            cmdBuffer = "ALTER TABLE " + "[" + fkeyid + "] DROP CONSTRAINT " + constid;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            pr_default.readNext(2);
+         }
+         pr_default.close(2);
       }
 
       public void UtilsCleanup( )
@@ -189,24 +1533,39 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
-         scmdbuf = "";
-         P00012_APaisCount = new int[1] ;
+         DS = new GxDataStore();
+         ErrMsg = "";
+         DataBaseName = "";
+         defaultUsers = new GeneXus.Utils.GxStringCollection();
+         defaultUser = "";
          sSchemaVar = "";
          nsSchemaVar = false;
+         scmdbuf = "";
+         P00012_AsSchemaVar = new string[] {""} ;
+         P00012_nsSchemaVar = new bool[] {false} ;
          P00023_AsSchemaVar = new string[] {""} ;
          P00023_nsSchemaVar = new bool[] {false} ;
-         P00034_AsSchemaVar = new string[] {""} ;
-         P00034_nsSchemaVar = new bool[] {false} ;
+         sTableName = "";
+         constid = "";
+         nconstid = false;
+         fkeyid = "";
+         nfkeyid = false;
+         P00034_Aconstid = new string[] {""} ;
+         P00034_nconstid = new bool[] {false} ;
+         P00034_Afkeyid = new string[] {""} ;
+         P00034_nfkeyid = new bool[] {false} ;
+         P00034_Arkeyid = new int[1] ;
+         P00034_nrkeyid = new bool[] {false} ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.reorg__default(),
             new Object[][] {
                 new Object[] {
-               P00012_APaisCount
+               P00012_AsSchemaVar
                }
                , new Object[] {
                P00023_AsSchemaVar
                }
                , new Object[] {
-               P00034_AsSchemaVar
+               P00034_Aconstid, P00034_Afkeyid, P00034_Arkeyid
                }
             }
          );
@@ -214,18 +1573,38 @@ namespace GeneXus.Programs {
       }
 
       protected short ErrCode ;
-      protected int PaisCount ;
-      protected string scmdbuf ;
+      protected short Count ;
+      protected short Res ;
+      protected short setupDB ;
+      protected int rkeyid ;
+      protected string ErrMsg ;
+      protected string DataBaseName ;
+      protected string cmdBuffer ;
+      protected string defaultUser ;
       protected string sSchemaVar ;
+      protected string scmdbuf ;
+      protected string sTableName ;
       protected bool nsSchemaVar ;
+      protected bool nconstid ;
+      protected bool nfkeyid ;
+      protected bool nrkeyid ;
+      protected string constid ;
+      protected string fkeyid ;
+      protected GeneXus.Utils.GxStringCollection defaultUsers ;
+      protected GxDataStore DS ;
       protected IGxDataStore dsDefault ;
       protected GxCommand RGZ ;
       protected IDataStoreProvider pr_default ;
-      protected int[] P00012_APaisCount ;
+      protected string[] P00012_AsSchemaVar ;
+      protected bool[] P00012_nsSchemaVar ;
       protected string[] P00023_AsSchemaVar ;
       protected bool[] P00023_nsSchemaVar ;
-      protected string[] P00034_AsSchemaVar ;
-      protected bool[] P00034_nsSchemaVar ;
+      protected string[] P00034_Aconstid ;
+      protected bool[] P00034_nconstid ;
+      protected string[] P00034_Afkeyid ;
+      protected bool[] P00034_nfkeyid ;
+      protected int[] P00034_Arkeyid ;
+      protected bool[] P00034_nrkeyid ;
    }
 
    public class reorg__default : DataStoreHelperBase, IDataStoreHelper
@@ -253,11 +1632,12 @@ namespace GeneXus.Programs {
           };
           Object[] prmP00034;
           prmP00034 = new Object[] {
+          new ParDef("@sTableName",GXType.Char,255,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P00012", "SELECT COUNT(*) FROM [Pais] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("P00023", "SELECT SCHEMA_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00023,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("P00034", "SELECT USER_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00034,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P00012", "SELECT SCHEMA_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("P00023", "SELECT USER_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00023,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("P00034", "SELECT OBJECT_NAME(object_id), OBJECT_NAME(parent_object_id), referenced_object_id FROM sys.foreign_keys WHERE referenced_object_id = OBJECT_ID(RTRIM(LTRIM(@sTableName))) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00034,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -269,13 +1649,15 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                ((int[]) buf[0])[0] = rslt.getInt(1);
+                ((string[]) buf[0])[0] = rslt.getString(1, 255);
                 return;
              case 1 :
                 ((string[]) buf[0])[0] = rslt.getString(1, 255);
                 return;
              case 2 :
-                ((string[]) buf[0])[0] = rslt.getString(1, 255);
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                ((string[]) buf[1])[0] = rslt.getVarchar(2);
+                ((int[]) buf[2])[0] = rslt.getInt(3);
                 return;
        }
     }

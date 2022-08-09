@@ -190,6 +190,7 @@ index_i(11,[ 'ILUGARSECTOR',u,[ 4,27 ],'ILugarSector' ]).
  
  
 add_att_i(bits,2,'Linkselection_GXI','Linkselection','Linkselection_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -1210,7 +1211,7 @@ att_prop_i(2,27,'ExternalName','LugarSectorId',d).
 att_prop_i(2,27,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,27,'EmptyAsNull','Yes',d).
 att_prop_i(2,27,idBasedOn,86,v).
-att_prop_i(2,27,'AUTONUMBER','0',d).
+att_prop_i(2,27,'AUTONUMBER','0',v).
 att_prop_i(2,27,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,27,'AttRegEx','',d).
 att_prop_i(2,27,'AttValidationFailedMsg','',d).

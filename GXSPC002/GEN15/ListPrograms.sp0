@@ -128,7 +128,7 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ])
  
  
  
-function_i(1,'Isauthorized',yes,udp,o(1,'IsAuthorized'),[],51,'Isauthorized',[ [ t('Name',23) ] ]).
+function_i(1,'Isauthorized',yes,udp,o(1,'IsAuthorized'),[],46,'Isauthorized',[ [ t('Name',23) ] ]).
  
  
  
@@ -157,8 +157,8 @@ dom_info_i(32,[ 'GeneXus\Url' ]).
  
 break_i(1,rpt,0,[],[ [],[],[] ]).
  
-b_group_i(1,1,lit,0,1,49).
-b_group_i(1,2,lit,0,50,0).
+b_group_i(1,1,lit,0,1,44).
+b_group_i(1,2,lit,0,45,0).
  
 b_line_i(0,1,1,cmd,0,[]).
 b_line_i(1,1,1,cmd,0,[]).
@@ -204,22 +204,17 @@ b_line_i(40,1,1,cmd,0,[ t('',107,40,0),t('Description',23,0,0),t(=,10,0,0),t('"T
 b_line_i(41,1,1,cmd,0,[ t('',107,41,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWTipoEspectaculo'),28,0,0),t(')',4,0,0) ]).
 b_line_i(42,1,1,cmd,0,[ t('',145,42,0),t('''ADDPROGRAM''',3,42,4) ]).
 b_line_i(43,1,1,cmd,0,[]).
-b_line_i(44,1,1,cmd,0,[ t('',107,44,0),t('Name',23,0,0),t(=,10,0,0),t('"WWVenta"',3,0,0) ]).
-b_line_i(45,1,1,cmd,0,[ t('',107,45,0),t('Description',23,0,0),t(=,10,0,0),t('"Ventas"',3,0,0) ]).
-b_line_i(46,1,1,cmd,0,[ t('',107,46,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWVenta'),28,0,0),t(')',4,0,0) ]).
-b_line_i(47,1,1,cmd,0,[ t('',145,47,0),t('''ADDPROGRAM''',3,47,4) ]).
-b_line_i(48,1,1,cmd,0,[]).
-b_line_i(49,1,1,cmd,0,[ t('',143,49,0),t('''ADDPROGRAM''',3,49,5) ]).
-b_line_i(50,1,2,cmd,0,[ t('',107,50,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('TRUE',40,0,0) ]).
-b_line_i(51,1,2,cmd,0,[ t('',107,51,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('udp(',1,0,0),t('Isauthorized',3,0,0),t(51,3,0,0),t('Name',23,0,0),t(')',4,0,0) ]).
-b_line_i(52,1,2,cmd,0,[ t('',109,52,0),t('(',0,0,5),t('Isauthorized',23,0,6),t(')',4,0,19) ]).
-b_line_i(53,1,2,cmd,0,[ t('',107,53,0),t('Programname',23,0,0),t(=,10,0,0),t([ 'ProgramNames.ProgramName',[ t('(',0,53,131),t(')',4,53,132) ],n ],46,0,0) ]).
-b_line_i(54,1,2,cmd,0,[ t('',107,54,0),t([ t('Programname',23,0,0),t('Name',3,0,0) ],29,0,0),t(=,10,0,0),t('Name',23,0,0) ]).
-b_line_i(55,1,2,cmd,0,[ t('',107,55,0),t([ t('Programname',23,0,0),t('Description',3,0,0) ],29,0,0),t(=,10,0,0),t('Description',23,0,0) ]).
-b_line_i(56,1,2,cmd,0,[ t('',107,56,0),t([ t('Programname',23,0,0),t('Link',3,0,0) ],29,0,0),t(=,10,0,0),t('Link',23,0,0) ]).
-b_line_i(57,1,2,cmd,0,[ t('',107,57,0),t([ t('Programnames',23,57,3),t('add(',1,57,17) ],31,57,3),t('Programname',23,0,22),t(')',4,0,34) ]).
-b_line_i(58,1,2,cmd,0,[ t('',111,58,0) ]).
-b_line_i(59,1,2,cmd,0,[ t('',144,59,0) ]).
+b_line_i(44,1,1,cmd,0,[ t('',143,44,0),t('''ADDPROGRAM''',3,44,5) ]).
+b_line_i(45,1,2,cmd,0,[ t('',107,45,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('TRUE',40,0,0) ]).
+b_line_i(46,1,2,cmd,0,[ t('',107,46,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('udp(',1,0,0),t('Isauthorized',3,0,0),t(46,3,0,0),t('Name',23,0,0),t(')',4,0,0) ]).
+b_line_i(47,1,2,cmd,0,[ t('',109,47,0),t('(',0,0,5),t('Isauthorized',23,0,6),t(')',4,0,19) ]).
+b_line_i(48,1,2,cmd,0,[ t('',107,48,0),t('Programname',23,0,0),t(=,10,0,0),t([ 'ProgramNames.ProgramName',[ t('(',0,48,131),t(')',4,48,132) ],n ],46,0,0) ]).
+b_line_i(49,1,2,cmd,0,[ t('',107,49,0),t([ t('Programname',23,0,0),t('Name',3,0,0) ],29,0,0),t(=,10,0,0),t('Name',23,0,0) ]).
+b_line_i(50,1,2,cmd,0,[ t('',107,50,0),t([ t('Programname',23,0,0),t('Description',3,0,0) ],29,0,0),t(=,10,0,0),t('Description',23,0,0) ]).
+b_line_i(51,1,2,cmd,0,[ t('',107,51,0),t([ t('Programname',23,0,0),t('Link',3,0,0) ],29,0,0),t(=,10,0,0),t('Link',23,0,0) ]).
+b_line_i(52,1,2,cmd,0,[ t('',107,52,0),t([ t('Programnames',23,52,3),t('add(',1,52,17) ],31,52,3),t('Programname',23,0,22),t(')',4,0,34) ]).
+b_line_i(53,1,2,cmd,0,[ t('',111,53,0) ]).
+b_line_i(54,1,2,cmd,0,[ t('',144,54,0) ]).
  
  
  
@@ -353,7 +348,6 @@ struct_dt_elem_i([ 26,56,83 ],3,'JsonInclude',idJsonEmpty).
  
  
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
-pgm_parm_i(web,19,'WWVENTA',[],[]).
 pgm_parm_i(web,37,'WWTIPOESPECTACULO',[],[]).
 pgm_parm_i(web,32,'WWPAIS',[],[]).
 pgm_parm_i(web,48,'WWLUGAR',[],[]).
@@ -365,7 +359,6 @@ pgm_parm_i(web,14,'WWCLIENTE',[],[]).
  
 pgm_callprotocol_i(proc,14,'LISTPROGRAMS','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').
-pgm_callprotocol_i(web,19,'WWVENTA','INTERNAL','Secure').
 pgm_callprotocol_i(web,37,'WWTIPOESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,32,'WWPAIS','INTERNAL','Secure').
 pgm_callprotocol_i(web,48,'WWLUGAR','INTERNAL','Secure').
