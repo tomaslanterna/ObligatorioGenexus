@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\tipoespectaculo.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\tipoespectaculo\obj\Release\tipoespectaculo.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\tipoespectaculo\obj\Release\tipoespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\tipoespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\tipoespectaculo\obj\Release\tipoespectaculo.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\tipoespectaculo\obj\Release\tipoespectaculo.dll

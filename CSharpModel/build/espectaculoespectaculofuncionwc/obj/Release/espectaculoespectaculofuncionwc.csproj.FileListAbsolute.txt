@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\espectaculoespectaculofuncionwc.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\espectaculoespectaculofuncionwc\obj\Release\espectaculoespectaculofuncionwc.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\espectaculoespectaculofuncionwc\obj\Release\espectaculoespectaculofuncionwc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\espectaculoespectaculofuncionwc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\espectaculoespectaculofuncionwc\obj\Release\espectaculoespectaculofuncionwc.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\espectaculoespectaculofuncionwc\obj\Release\espectaculoespectaculofuncionwc.dll

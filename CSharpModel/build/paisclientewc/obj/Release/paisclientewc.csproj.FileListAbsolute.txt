@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\paisclientewc.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\paisclientewc\obj\Release\paisclientewc.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\paisclientewc\obj\Release\paisclientewc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\paisclientewc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\paisclientewc\obj\Release\paisclientewc.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\paisclientewc\obj\Release\paisclientewc.dll

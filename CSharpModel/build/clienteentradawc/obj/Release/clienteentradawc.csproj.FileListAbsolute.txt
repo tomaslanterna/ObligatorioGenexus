@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\clienteentradawc.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\clienteentradawc\obj\Release\clienteentradawc.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\clienteentradawc\obj\Release\clienteentradawc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\clienteentradawc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\clienteentradawc\obj\Release\clienteentradawc.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\clienteentradawc\obj\Release\clienteentradawc.dll

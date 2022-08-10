@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\promptmasterpage.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\promptmasterpage.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.dll

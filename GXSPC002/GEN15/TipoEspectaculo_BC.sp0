@@ -1,4 +1,4 @@
-spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo_BC',[],spa,'17_0_10-161416' ]).
+spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo_BC',[],spa,'17_0_10-162473' ]).
  
 struct_i(4,0,[ 'Websession' ],[]).
  

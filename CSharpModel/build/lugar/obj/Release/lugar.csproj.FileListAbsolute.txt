@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\lugar.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\lugar\obj\Release\lugar.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\lugar\obj\Release\lugar.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\lugar.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugar\obj\Release\lugar.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugar\obj\Release\lugar.dll

@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwpais.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwpais\obj\Release\wwpais.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwpais\obj\Release\wwpais.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwpais.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwpais\obj\Release\wwpais.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwpais\obj\Release\wwpais.dll

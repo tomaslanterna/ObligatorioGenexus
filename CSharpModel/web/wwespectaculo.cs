@@ -247,18 +247,18 @@ namespace GeneXus.Programs {
          }
          if ( ( ( context.GetBrowserType( ) == 1 ) || ( context.GetBrowserType( ) == 5 ) ) && ( StringUtil.StrCmp(context.GetBrowserVersion( ), "7.0") == 0 ) )
          {
-            context.AddJavascriptSource("json2.js", "?"+context.GetBuildNumber( 552120), false, true);
+            context.AddJavascriptSource("json2.js", "?"+context.GetBuildNumber( 511400), false, true);
          }
-         context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228923293165", false, true);
+         context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 511400), false, true);
+         context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 511400), false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202281012272992", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
-         context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 552120), false, true);
+         context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 511400), false, true);
+         context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 511400), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 511400), false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -541,7 +541,7 @@ namespace GeneXus.Programs {
          {
             if ( context.ExposeMetadata( ) )
             {
-               Form.Meta.addItem("generator", "GeneXus .NET Framework 17_0_10-161416", 0) ;
+               Form.Meta.addItem("generator", "GeneXus .NET Framework 17_0_10-162473", 0) ;
             }
             Form.Meta.addItem("description", "Espectaculoes", 0) ;
          }
@@ -635,10 +635,10 @@ namespace GeneXus.Programs {
                               A1EspectaculoId = (short)(context.localUtil.CToN( cgiGet( edtEspectaculoId_Internalname), ",", "."));
                               A2EspectaculoName = cgiGet( edtEspectaculoName_Internalname);
                               A16EspectaculoFecha = DateTimeUtil.ResetTime(context.localUtil.CToT( cgiGet( edtEspectaculoFecha_Internalname), 0));
-                              A3PaisId = (short)(context.localUtil.CToN( cgiGet( edtPaisId_Internalname), ",", "."));
-                              A6PaisName = cgiGet( edtPaisName_Internalname);
                               A4LugarId = (short)(context.localUtil.CToN( cgiGet( edtLugarId_Internalname), ",", "."));
                               A5LugarName = cgiGet( edtLugarName_Internalname);
+                              A3PaisId = (short)(context.localUtil.CToN( cgiGet( edtPaisId_Internalname), ",", "."));
+                              A6PaisName = cgiGet( edtPaisName_Internalname);
                               A7TipoEspectaculoId = (short)(context.localUtil.CToN( cgiGet( edtTipoEspectaculoId_Internalname), ",", "."));
                               A8TipoEspectaculoName = cgiGet( edtTipoEspectaculoName_Internalname);
                               A26EspectaculoImagen = cgiGet( edtEspectaculoImagen_Internalname);
@@ -883,10 +883,10 @@ namespace GeneXus.Programs {
                AssignProp("", false, edtEspectaculoImagen_Internalname, "SrcSet", context.GetImageSrcSet( A26EspectaculoImagen), true);
                A8TipoEspectaculoName = H001U2_A8TipoEspectaculoName[0];
                A7TipoEspectaculoId = H001U2_A7TipoEspectaculoId[0];
-               A5LugarName = H001U2_A5LugarName[0];
-               A4LugarId = H001U2_A4LugarId[0];
                A6PaisName = H001U2_A6PaisName[0];
                A3PaisId = H001U2_A3PaisId[0];
+               A5LugarName = H001U2_A5LugarName[0];
+               A4LugarId = H001U2_A4LugarId[0];
                A16EspectaculoFecha = H001U2_A16EspectaculoFecha[0];
                A2EspectaculoName = H001U2_A2EspectaculoName[0];
                A1EspectaculoId = H001U2_A1EspectaculoId[0];
@@ -894,8 +894,8 @@ namespace GeneXus.Programs {
                AssignProp("", false, edtEspectaculoImagen_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A26EspectaculoImagen)) ? A40000EspectaculoImagen_GXI : context.convertURL( context.PathToRelativeUrl( A26EspectaculoImagen))), !bGXsfl_25_Refreshing);
                AssignProp("", false, edtEspectaculoImagen_Internalname, "SrcSet", context.GetImageSrcSet( A26EspectaculoImagen), true);
                A8TipoEspectaculoName = H001U2_A8TipoEspectaculoName[0];
-               A5LugarName = H001U2_A5LugarName[0];
                A3PaisId = H001U2_A3PaisId[0];
+               A5LugarName = H001U2_A5LugarName[0];
                A6PaisName = H001U2_A6PaisName[0];
                E141U2 ();
                pr_default.readNext(0);
@@ -1188,8 +1188,8 @@ namespace GeneXus.Programs {
          edtavUpdate_Link = formatLink("espectaculo.aspx", new object[] {UrlEncode(StringUtil.RTrim("UPD")),UrlEncode(StringUtil.LTrimStr(A1EspectaculoId,4,0))}, new string[] {"Mode","EspectaculoId"}) ;
          edtavDelete_Link = formatLink("espectaculo.aspx", new object[] {UrlEncode(StringUtil.RTrim("DLT")),UrlEncode(StringUtil.LTrimStr(A1EspectaculoId,4,0))}, new string[] {"Mode","EspectaculoId"}) ;
          edtEspectaculoName_Link = formatLink("viewespectaculo.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A1EspectaculoId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"EspectaculoId","TabCode"}) ;
-         edtPaisName_Link = formatLink("viewpais.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A3PaisId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"PaisId","TabCode"}) ;
          edtLugarName_Link = formatLink("viewlugar.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A4LugarId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"LugarId","TabCode"}) ;
+         edtPaisName_Link = formatLink("viewpais.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A3PaisId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"PaisId","TabCode"}) ;
          edtTipoEspectaculoName_Link = formatLink("viewtipoespectaculo.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A7TipoEspectaculoId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"TipoEspectaculoId","TabCode"}) ;
          /* Load Method */
          if ( wbStart != -1 )
@@ -1265,7 +1265,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228923293180", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202281012273012", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1283,7 +1283,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("wwespectaculo.js", "?20228923293180", false, true);
+            context.AddJavascriptSource("wwespectaculo.js", "?202281012273013", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1293,10 +1293,10 @@ namespace GeneXus.Programs {
          edtEspectaculoId_Internalname = "ESPECTACULOID_"+sGXsfl_25_idx;
          edtEspectaculoName_Internalname = "ESPECTACULONAME_"+sGXsfl_25_idx;
          edtEspectaculoFecha_Internalname = "ESPECTACULOFECHA_"+sGXsfl_25_idx;
-         edtPaisId_Internalname = "PAISID_"+sGXsfl_25_idx;
-         edtPaisName_Internalname = "PAISNAME_"+sGXsfl_25_idx;
          edtLugarId_Internalname = "LUGARID_"+sGXsfl_25_idx;
          edtLugarName_Internalname = "LUGARNAME_"+sGXsfl_25_idx;
+         edtPaisId_Internalname = "PAISID_"+sGXsfl_25_idx;
+         edtPaisName_Internalname = "PAISNAME_"+sGXsfl_25_idx;
          edtTipoEspectaculoId_Internalname = "TIPOESPECTACULOID_"+sGXsfl_25_idx;
          edtTipoEspectaculoName_Internalname = "TIPOESPECTACULONAME_"+sGXsfl_25_idx;
          edtEspectaculoImagen_Internalname = "ESPECTACULOIMAGEN_"+sGXsfl_25_idx;
@@ -1309,10 +1309,10 @@ namespace GeneXus.Programs {
          edtEspectaculoId_Internalname = "ESPECTACULOID_"+sGXsfl_25_fel_idx;
          edtEspectaculoName_Internalname = "ESPECTACULONAME_"+sGXsfl_25_fel_idx;
          edtEspectaculoFecha_Internalname = "ESPECTACULOFECHA_"+sGXsfl_25_fel_idx;
-         edtPaisId_Internalname = "PAISID_"+sGXsfl_25_fel_idx;
-         edtPaisName_Internalname = "PAISNAME_"+sGXsfl_25_fel_idx;
          edtLugarId_Internalname = "LUGARID_"+sGXsfl_25_fel_idx;
          edtLugarName_Internalname = "LUGARNAME_"+sGXsfl_25_fel_idx;
+         edtPaisId_Internalname = "PAISID_"+sGXsfl_25_fel_idx;
+         edtPaisName_Internalname = "PAISNAME_"+sGXsfl_25_fel_idx;
          edtTipoEspectaculoId_Internalname = "TIPOESPECTACULOID_"+sGXsfl_25_fel_idx;
          edtTipoEspectaculoName_Internalname = "TIPOESPECTACULONAME_"+sGXsfl_25_fel_idx;
          edtEspectaculoImagen_Internalname = "ESPECTACULOIMAGEN_"+sGXsfl_25_fel_idx;
@@ -1414,22 +1414,6 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtPaisId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A3PaisId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A3PaisId), "ZZZ9")),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtPaisId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"left"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtPaisName_Internalname,(string)A6PaisName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtPaisName_Link,(string)"",(string)"",(string)"",(string)edtPaisName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"left",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"right"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
             GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtLugarId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A4LugarId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A4LugarId), "ZZZ9")),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtLugarId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
@@ -1439,6 +1423,22 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtLugarName_Internalname,(string)A5LugarName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtLugarName_Link,(string)"",(string)"",(string)"",(string)edtLugarName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"left",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"right"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtPaisId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A3PaisId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A3PaisId), "ZZZ9")),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtPaisId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"left"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtPaisName_Internalname,(string)A6PaisName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtPaisName_Link,(string)"",(string)"",(string)"",(string)edtPaisName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn WWOptionalColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)25,(short)1,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"left",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -1543,16 +1543,16 @@ namespace GeneXus.Programs {
             context.SendWebValue( "Fecha") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( "Pais Id") ;
-            context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( "Pais Name") ;
-            context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
             context.SendWebValue( "Lugar Id") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
             context.SendWebValue( "Lugar Name") ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "Pais Id") ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "Pais Name") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
             context.SendWebValue( "Tipo Espectaculo Id") ;
@@ -1602,18 +1602,18 @@ namespace GeneXus.Programs {
             GridColumn.AddObjectProperty("Value", context.localUtil.Format(A16EspectaculoFecha, "99/99/99"));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A3PaisId), 4, 0, ".", "")));
-            GridContainer.AddColumnProperties(GridColumn);
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", A6PaisName);
-            GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtPaisName_Link));
-            GridContainer.AddColumnProperties(GridColumn);
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A4LugarId), 4, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", A5LugarName);
             GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtLugarName_Link));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A3PaisId), 4, 0, ".", "")));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", A6PaisName);
+            GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtPaisName_Link));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A7TipoEspectaculoId), 4, 0, ".", "")));
@@ -1654,10 +1654,10 @@ namespace GeneXus.Programs {
          edtEspectaculoId_Internalname = "ESPECTACULOID";
          edtEspectaculoName_Internalname = "ESPECTACULONAME";
          edtEspectaculoFecha_Internalname = "ESPECTACULOFECHA";
-         edtPaisId_Internalname = "PAISID";
-         edtPaisName_Internalname = "PAISNAME";
          edtLugarId_Internalname = "LUGARID";
          edtLugarName_Internalname = "LUGARNAME";
+         edtPaisId_Internalname = "PAISID";
+         edtPaisName_Internalname = "PAISNAME";
          edtTipoEspectaculoId_Internalname = "TIPOESPECTACULOID";
          edtTipoEspectaculoName_Internalname = "TIPOESPECTACULONAME";
          edtEspectaculoImagen_Internalname = "ESPECTACULOIMAGEN";
@@ -1690,12 +1690,12 @@ namespace GeneXus.Programs {
          edtTipoEspectaculoName_Jsonclick = "";
          edtTipoEspectaculoName_Link = "";
          edtTipoEspectaculoId_Jsonclick = "";
-         edtLugarName_Jsonclick = "";
-         edtLugarName_Link = "";
-         edtLugarId_Jsonclick = "";
          edtPaisName_Jsonclick = "";
          edtPaisName_Link = "";
          edtPaisId_Jsonclick = "";
+         edtLugarName_Jsonclick = "";
+         edtLugarName_Link = "";
+         edtLugarId_Jsonclick = "";
          edtEspectaculoFecha_Jsonclick = "";
          edtEspectaculoName_Jsonclick = "";
          edtEspectaculoName_Link = "";
@@ -1726,8 +1726,8 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV11EspectaculoName',fld:'vESPECTACULONAME',pic:''},{av:'AV12Update',fld:'vUPDATE',pic:''},{av:'AV13Delete',fld:'vDELETE',pic:''}]");
          setEventMetadata("REFRESH",",oparms:[]}");
-         setEventMetadata("GRID.LOAD","{handler:'E141U2',iparms:[{av:'A1EspectaculoId',fld:'ESPECTACULOID',pic:'ZZZ9',hsh:true},{av:'A3PaisId',fld:'PAISID',pic:'ZZZ9'},{av:'A4LugarId',fld:'LUGARID',pic:'ZZZ9'},{av:'A7TipoEspectaculoId',fld:'TIPOESPECTACULOID',pic:'ZZZ9'}]");
-         setEventMetadata("GRID.LOAD",",oparms:[{av:'edtavUpdate_Link',ctrl:'vUPDATE',prop:'Link'},{av:'edtavDelete_Link',ctrl:'vDELETE',prop:'Link'},{av:'edtEspectaculoName_Link',ctrl:'ESPECTACULONAME',prop:'Link'},{av:'edtPaisName_Link',ctrl:'PAISNAME',prop:'Link'},{av:'edtLugarName_Link',ctrl:'LUGARNAME',prop:'Link'},{av:'edtTipoEspectaculoName_Link',ctrl:'TIPOESPECTACULONAME',prop:'Link'}]}");
+         setEventMetadata("GRID.LOAD","{handler:'E141U2',iparms:[{av:'A1EspectaculoId',fld:'ESPECTACULOID',pic:'ZZZ9',hsh:true},{av:'A4LugarId',fld:'LUGARID',pic:'ZZZ9'},{av:'A3PaisId',fld:'PAISID',pic:'ZZZ9'},{av:'A7TipoEspectaculoId',fld:'TIPOESPECTACULOID',pic:'ZZZ9'}]");
+         setEventMetadata("GRID.LOAD",",oparms:[{av:'edtavUpdate_Link',ctrl:'vUPDATE',prop:'Link'},{av:'edtavDelete_Link',ctrl:'vDELETE',prop:'Link'},{av:'edtEspectaculoName_Link',ctrl:'ESPECTACULONAME',prop:'Link'},{av:'edtLugarName_Link',ctrl:'LUGARNAME',prop:'Link'},{av:'edtPaisName_Link',ctrl:'PAISNAME',prop:'Link'},{av:'edtTipoEspectaculoName_Link',ctrl:'TIPOESPECTACULONAME',prop:'Link'}]}");
          setEventMetadata("'DOINSERT'","{handler:'E111U2',iparms:[{av:'A1EspectaculoId',fld:'ESPECTACULOID',pic:'ZZZ9',hsh:true}]");
          setEventMetadata("'DOINSERT'",",oparms:[]}");
          setEventMetadata("GRID_FIRSTPAGE","{handler:'subgrid_firstpage',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV11EspectaculoName',fld:'vESPECTACULONAME',pic:''},{av:'AV12Update',fld:'vUPDATE',pic:''},{av:'AV13Delete',fld:'vDELETE',pic:''}]");
@@ -1738,10 +1738,10 @@ namespace GeneXus.Programs {
          setEventMetadata("GRID_NEXTPAGE",",oparms:[]}");
          setEventMetadata("GRID_LASTPAGE","{handler:'subgrid_lastpage',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV11EspectaculoName',fld:'vESPECTACULONAME',pic:''},{av:'AV12Update',fld:'vUPDATE',pic:''},{av:'AV13Delete',fld:'vDELETE',pic:''}]");
          setEventMetadata("GRID_LASTPAGE",",oparms:[]}");
-         setEventMetadata("VALID_PAISID","{handler:'Valid_Paisid',iparms:[]");
-         setEventMetadata("VALID_PAISID",",oparms:[]}");
          setEventMetadata("VALID_LUGARID","{handler:'Valid_Lugarid',iparms:[]");
          setEventMetadata("VALID_LUGARID",",oparms:[]}");
+         setEventMetadata("VALID_PAISID","{handler:'Valid_Paisid',iparms:[]");
+         setEventMetadata("VALID_PAISID",",oparms:[]}");
          setEventMetadata("VALID_TIPOESPECTACULOID","{handler:'Valid_Tipoespectaculoid',iparms:[]");
          setEventMetadata("VALID_TIPOESPECTACULOID",",oparms:[]}");
          setEventMetadata("NULL","{handler:'Validv_Delete',iparms:[]");
@@ -1790,8 +1790,8 @@ namespace GeneXus.Programs {
          sEvtType = "";
          A2EspectaculoName = "";
          A16EspectaculoFecha = DateTime.MinValue;
-         A6PaisName = "";
          A5LugarName = "";
+         A6PaisName = "";
          A8TipoEspectaculoName = "";
          A26EspectaculoImagen = "";
          A40000EspectaculoImagen_GXI = "";
@@ -1802,10 +1802,10 @@ namespace GeneXus.Programs {
          H001U2_A40000EspectaculoImagen_GXI = new string[] {""} ;
          H001U2_A8TipoEspectaculoName = new string[] {""} ;
          H001U2_A7TipoEspectaculoId = new short[1] ;
-         H001U2_A5LugarName = new string[] {""} ;
-         H001U2_A4LugarId = new short[1] ;
          H001U2_A6PaisName = new string[] {""} ;
          H001U2_A3PaisId = new short[1] ;
+         H001U2_A5LugarName = new string[] {""} ;
+         H001U2_A4LugarId = new short[1] ;
          H001U2_A16EspectaculoFecha = new DateTime[] {DateTime.MinValue} ;
          H001U2_A2EspectaculoName = new string[] {""} ;
          H001U2_A1EspectaculoId = new short[1] ;
@@ -1824,7 +1824,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.wwespectaculo__default(),
             new Object[][] {
                 new Object[] {
-               H001U2_A40000EspectaculoImagen_GXI, H001U2_A8TipoEspectaculoName, H001U2_A7TipoEspectaculoId, H001U2_A5LugarName, H001U2_A4LugarId, H001U2_A6PaisName, H001U2_A3PaisId, H001U2_A16EspectaculoFecha, H001U2_A2EspectaculoName, H001U2_A1EspectaculoId,
+               H001U2_A40000EspectaculoImagen_GXI, H001U2_A8TipoEspectaculoName, H001U2_A7TipoEspectaculoId, H001U2_A6PaisName, H001U2_A3PaisId, H001U2_A5LugarName, H001U2_A4LugarId, H001U2_A16EspectaculoFecha, H001U2_A2EspectaculoName, H001U2_A1EspectaculoId,
                H001U2_A26EspectaculoImagen
                }
                , new Object[] {
@@ -1849,8 +1849,8 @@ namespace GeneXus.Programs {
       private short wbEnd ;
       private short wbStart ;
       private short A1EspectaculoId ;
-      private short A3PaisId ;
       private short A4LugarId ;
+      private short A3PaisId ;
       private short A7TipoEspectaculoId ;
       private short nDonePA ;
       private short gxcookieaux ;
@@ -1914,10 +1914,10 @@ namespace GeneXus.Programs {
       private string edtEspectaculoId_Internalname ;
       private string edtEspectaculoName_Internalname ;
       private string edtEspectaculoFecha_Internalname ;
-      private string edtPaisId_Internalname ;
-      private string edtPaisName_Internalname ;
       private string edtLugarId_Internalname ;
       private string edtLugarName_Internalname ;
+      private string edtPaisId_Internalname ;
+      private string edtPaisName_Internalname ;
       private string edtTipoEspectaculoId_Internalname ;
       private string edtTipoEspectaculoName_Internalname ;
       private string edtEspectaculoImagen_Internalname ;
@@ -1928,8 +1928,8 @@ namespace GeneXus.Programs {
       private string edtavUpdate_Link ;
       private string edtavDelete_Link ;
       private string edtEspectaculoName_Link ;
-      private string edtPaisName_Link ;
       private string edtLugarName_Link ;
+      private string edtPaisName_Link ;
       private string edtTipoEspectaculoName_Link ;
       private string sGXsfl_25_fel_idx="0001" ;
       private string subGrid_Class ;
@@ -1938,10 +1938,10 @@ namespace GeneXus.Programs {
       private string edtEspectaculoId_Jsonclick ;
       private string edtEspectaculoName_Jsonclick ;
       private string edtEspectaculoFecha_Jsonclick ;
-      private string edtPaisId_Jsonclick ;
-      private string edtPaisName_Jsonclick ;
       private string edtLugarId_Jsonclick ;
       private string edtLugarName_Jsonclick ;
+      private string edtPaisId_Jsonclick ;
+      private string edtPaisName_Jsonclick ;
       private string edtTipoEspectaculoId_Jsonclick ;
       private string edtTipoEspectaculoName_Jsonclick ;
       private string sImgUrl ;
@@ -1961,8 +1961,8 @@ namespace GeneXus.Programs {
       private bool A26EspectaculoImagen_IsBlob ;
       private string AV11EspectaculoName ;
       private string A2EspectaculoName ;
-      private string A6PaisName ;
       private string A5LugarName ;
+      private string A6PaisName ;
       private string A8TipoEspectaculoName ;
       private string A40000EspectaculoImagen_GXI ;
       private string lV11EspectaculoName ;
@@ -1976,10 +1976,10 @@ namespace GeneXus.Programs {
       private string[] H001U2_A40000EspectaculoImagen_GXI ;
       private string[] H001U2_A8TipoEspectaculoName ;
       private short[] H001U2_A7TipoEspectaculoId ;
-      private string[] H001U2_A5LugarName ;
-      private short[] H001U2_A4LugarId ;
       private string[] H001U2_A6PaisName ;
       private short[] H001U2_A3PaisId ;
+      private string[] H001U2_A5LugarName ;
+      private short[] H001U2_A4LugarId ;
       private DateTime[] H001U2_A16EspectaculoFecha ;
       private string[] H001U2_A2EspectaculoName ;
       private short[] H001U2_A1EspectaculoId ;
@@ -2006,7 +2006,7 @@ namespace GeneXus.Programs {
          string sSelectString;
          string sFromString;
          string sOrderString;
-         sSelectString = " T1.[EspectaculoImagen_GXI], T2.[TipoEspectaculoName], T1.[TipoEspectaculoId], T3.[LugarName], T1.[LugarId], T4.[PaisName], T3.[PaisId], T1.[EspectaculoFecha], T1.[EspectaculoName], T1.[EspectaculoId], T1.[EspectaculoImagen]";
+         sSelectString = " T1.[EspectaculoImagen_GXI], T2.[TipoEspectaculoName], T1.[TipoEspectaculoId], T4.[PaisName], T3.[PaisId], T3.[LugarName], T1.[LugarId], T1.[EspectaculoFecha], T1.[EspectaculoName], T1.[EspectaculoId], T1.[EspectaculoImagen]";
          sFromString = " FROM ((([Espectaculo] T1 INNER JOIN [TipoEspectaculo] T2 ON T2.[TipoEspectaculoId] = T1.[TipoEspectaculoId]) INNER JOIN [Lugar] T3 ON T3.[LugarId] = T1.[LugarId]) INNER JOIN [Pais] T4 ON T4.[PaisId] = T3.[PaisId])";
          sOrderString = "";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV11EspectaculoName)) )

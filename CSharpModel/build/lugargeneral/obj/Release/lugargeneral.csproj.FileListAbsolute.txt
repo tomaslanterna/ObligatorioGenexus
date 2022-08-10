@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\lugargeneral.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\lugargeneral\obj\Release\lugargeneral.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\lugargeneral\obj\Release\lugargeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\lugargeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugargeneral\obj\Release\lugargeneral.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugargeneral\obj\Release\lugargeneral.dll

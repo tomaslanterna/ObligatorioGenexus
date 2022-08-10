@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\tabbedview.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\tabbedview\obj\Release\tabbedview.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\tabbedview\obj\Release\tabbedview.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\tabbedview.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\tabbedview\obj\Release\tabbedview.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\tabbedview\obj\Release\tabbedview.dll

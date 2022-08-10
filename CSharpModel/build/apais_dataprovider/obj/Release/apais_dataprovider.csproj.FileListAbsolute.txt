@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\apais_dataprovider.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\apais_dataprovider\obj\Release\apais_dataprovider.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\apais_dataprovider\obj\Release\apais_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\apais_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\apais_dataprovider\obj\Release\apais_dataprovider.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\apais_dataprovider\obj\Release\apais_dataprovider.dll

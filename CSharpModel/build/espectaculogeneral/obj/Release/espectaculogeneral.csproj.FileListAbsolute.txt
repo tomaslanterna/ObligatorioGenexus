@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\espectaculogeneral.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\espectaculogeneral\obj\Release\espectaculogeneral.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\espectaculogeneral\obj\Release\espectaculogeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\espectaculogeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\espectaculogeneral\obj\Release\espectaculogeneral.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\espectaculogeneral\obj\Release\espectaculogeneral.dll

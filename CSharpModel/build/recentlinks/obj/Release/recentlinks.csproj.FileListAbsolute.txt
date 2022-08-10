@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\recentlinks.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\recentlinks\obj\Release\recentlinks.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\recentlinks\obj\Release\recentlinks.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\recentlinks.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\recentlinks\obj\Release\recentlinks.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\recentlinks\obj\Release\recentlinks.dll

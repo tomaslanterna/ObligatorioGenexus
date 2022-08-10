@@ -1,4 +1,4 @@
-spec_i([ proc,0,'Stub for Espectaculo_DataProvider','Espectaculo_DataProvider',80,spa,'17_0_10-161416' ]).
+spec_i([ proc,0,'Stub for Espectaculo_DataProvider','Espectaculo_DataProvider',80,spa,'17_0_10-162473' ]).
  
  
  
@@ -238,8 +238,8 @@ struct_dt_elem_i([ 0,10,0 ],3,collection,'False').
 struct_dt_elem_i([ 0,10,0 ],3,attributeid,'16').
 struct_dt_elem_i([ 0,10,0 ],3,'ExternalName','EspectaculoFecha').
 struct_dt_elem_i([ 0,10,0 ],3,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],4,name,'Paisid').
-struct_dt_elem_i([ 0,10,0 ],4,camelname,'PaisId').
+struct_dt_elem_i([ 0,10,0 ],4,name,'Lugarid').
+struct_dt_elem_i([ 0,10,0 ],4,camelname,'LugarId').
 struct_dt_elem_i([ 0,10,0 ],4,basedon,86).
 struct_dt_elem_i([ 0,10,0 ],4,length,4).
 struct_dt_elem_i([ 0,10,0 ],4,decimals,0).
@@ -247,22 +247,22 @@ struct_dt_elem_i([ 0,10,0 ],4,sign,0).
 struct_dt_elem_i([ 0,10,0 ],4,type,[ 4,4,0 ]).
 struct_dt_elem_i([ 0,10,0 ],4,pic,'ZZZ9').
 struct_dt_elem_i([ 0,10,0 ],4,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],4,attributeid,'3').
-struct_dt_elem_i([ 0,10,0 ],4,'ExternalName','PaisId').
+struct_dt_elem_i([ 0,10,0 ],4,attributeid,'4').
+struct_dt_elem_i([ 0,10,0 ],4,'ExternalName','LugarId').
 struct_dt_elem_i([ 0,10,0 ],4,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],5,name,'Paisname').
-struct_dt_elem_i([ 0,10,0 ],5,camelname,'PaisName').
+struct_dt_elem_i([ 0,10,0 ],5,name,'Lugarname').
+struct_dt_elem_i([ 0,10,0 ],5,camelname,'LugarName').
 struct_dt_elem_i([ 0,10,0 ],5,basedon,87).
 struct_dt_elem_i([ 0,10,0 ],5,length,40).
 struct_dt_elem_i([ 0,10,0 ],5,decimals,0).
 struct_dt_elem_i([ 0,10,0 ],5,type,[ 13,40,0 ]).
 struct_dt_elem_i([ 0,10,0 ],5,pic,'').
 struct_dt_elem_i([ 0,10,0 ],5,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],5,attributeid,'6').
-struct_dt_elem_i([ 0,10,0 ],5,'ExternalName','PaisName').
+struct_dt_elem_i([ 0,10,0 ],5,attributeid,'5').
+struct_dt_elem_i([ 0,10,0 ],5,'ExternalName','LugarName').
 struct_dt_elem_i([ 0,10,0 ],5,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],6,name,'Lugarid').
-struct_dt_elem_i([ 0,10,0 ],6,camelname,'LugarId').
+struct_dt_elem_i([ 0,10,0 ],6,name,'Paisid').
+struct_dt_elem_i([ 0,10,0 ],6,camelname,'PaisId').
 struct_dt_elem_i([ 0,10,0 ],6,basedon,86).
 struct_dt_elem_i([ 0,10,0 ],6,length,4).
 struct_dt_elem_i([ 0,10,0 ],6,decimals,0).
@@ -270,19 +270,19 @@ struct_dt_elem_i([ 0,10,0 ],6,sign,0).
 struct_dt_elem_i([ 0,10,0 ],6,type,[ 4,4,0 ]).
 struct_dt_elem_i([ 0,10,0 ],6,pic,'ZZZ9').
 struct_dt_elem_i([ 0,10,0 ],6,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],6,attributeid,'4').
-struct_dt_elem_i([ 0,10,0 ],6,'ExternalName','LugarId').
+struct_dt_elem_i([ 0,10,0 ],6,attributeid,'3').
+struct_dt_elem_i([ 0,10,0 ],6,'ExternalName','PaisId').
 struct_dt_elem_i([ 0,10,0 ],6,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],7,name,'Lugarname').
-struct_dt_elem_i([ 0,10,0 ],7,camelname,'LugarName').
+struct_dt_elem_i([ 0,10,0 ],7,name,'Paisname').
+struct_dt_elem_i([ 0,10,0 ],7,camelname,'PaisName').
 struct_dt_elem_i([ 0,10,0 ],7,basedon,87).
 struct_dt_elem_i([ 0,10,0 ],7,length,40).
 struct_dt_elem_i([ 0,10,0 ],7,decimals,0).
 struct_dt_elem_i([ 0,10,0 ],7,type,[ 13,40,0 ]).
 struct_dt_elem_i([ 0,10,0 ],7,pic,'').
 struct_dt_elem_i([ 0,10,0 ],7,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],7,attributeid,'5').
-struct_dt_elem_i([ 0,10,0 ],7,'ExternalName','LugarName').
+struct_dt_elem_i([ 0,10,0 ],7,attributeid,'6').
+struct_dt_elem_i([ 0,10,0 ],7,'ExternalName','PaisName').
 struct_dt_elem_i([ 0,10,0 ],7,'ExternalNamespace','Obligatorio1v2').
 struct_dt_elem_i([ 0,10,0 ],8,name,'Tipoespectaculoid').
 struct_dt_elem_i([ 0,10,0 ],8,camelname,'TipoEspectaculoId').

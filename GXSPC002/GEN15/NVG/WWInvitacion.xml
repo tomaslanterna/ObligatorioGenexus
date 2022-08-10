@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
@@ -170,6 +170,21 @@
 <AttriName>LugarSectorId</AttriName>
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
 <Table>
 <TableId>10</TableId>
 <TableName>LugarSectorVendidas navigation</TableName>

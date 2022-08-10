@@ -78,10 +78,10 @@ namespace GeneXus.Programs {
          state.Add("gxTpr_Espectaculoid_Z");
          state.Add("gxTpr_Espectaculoname_Z");
          state.Add("gxTpr_Espectaculofecha_Z_Nullable");
-         state.Add("gxTpr_Paisid_Z");
-         state.Add("gxTpr_Paisname_Z");
          state.Add("gxTpr_Lugarid_Z");
          state.Add("gxTpr_Lugarname_Z");
+         state.Add("gxTpr_Paisid_Z");
+         state.Add("gxTpr_Paisname_Z");
          state.Add("gxTpr_Tipoespectaculoid_Z");
          state.Add("gxTpr_Tipoespectaculoname_Z");
          state.Add("gxTpr_Espectaculoimagen_gxi_Z");
@@ -95,10 +95,10 @@ namespace GeneXus.Programs {
          gxTv_SdtEspectaculo_Espectaculoid = sdt.gxTv_SdtEspectaculo_Espectaculoid ;
          gxTv_SdtEspectaculo_Espectaculoname = sdt.gxTv_SdtEspectaculo_Espectaculoname ;
          gxTv_SdtEspectaculo_Espectaculofecha = sdt.gxTv_SdtEspectaculo_Espectaculofecha ;
-         gxTv_SdtEspectaculo_Paisid = sdt.gxTv_SdtEspectaculo_Paisid ;
-         gxTv_SdtEspectaculo_Paisname = sdt.gxTv_SdtEspectaculo_Paisname ;
          gxTv_SdtEspectaculo_Lugarid = sdt.gxTv_SdtEspectaculo_Lugarid ;
          gxTv_SdtEspectaculo_Lugarname = sdt.gxTv_SdtEspectaculo_Lugarname ;
+         gxTv_SdtEspectaculo_Paisid = sdt.gxTv_SdtEspectaculo_Paisid ;
+         gxTv_SdtEspectaculo_Paisname = sdt.gxTv_SdtEspectaculo_Paisname ;
          gxTv_SdtEspectaculo_Tipoespectaculoid = sdt.gxTv_SdtEspectaculo_Tipoespectaculoid ;
          gxTv_SdtEspectaculo_Tipoespectaculoname = sdt.gxTv_SdtEspectaculo_Tipoespectaculoname ;
          gxTv_SdtEspectaculo_Espectaculoimagen = sdt.gxTv_SdtEspectaculo_Espectaculoimagen ;
@@ -110,10 +110,10 @@ namespace GeneXus.Programs {
          gxTv_SdtEspectaculo_Espectaculoid_Z = sdt.gxTv_SdtEspectaculo_Espectaculoid_Z ;
          gxTv_SdtEspectaculo_Espectaculoname_Z = sdt.gxTv_SdtEspectaculo_Espectaculoname_Z ;
          gxTv_SdtEspectaculo_Espectaculofecha_Z = sdt.gxTv_SdtEspectaculo_Espectaculofecha_Z ;
-         gxTv_SdtEspectaculo_Paisid_Z = sdt.gxTv_SdtEspectaculo_Paisid_Z ;
-         gxTv_SdtEspectaculo_Paisname_Z = sdt.gxTv_SdtEspectaculo_Paisname_Z ;
          gxTv_SdtEspectaculo_Lugarid_Z = sdt.gxTv_SdtEspectaculo_Lugarid_Z ;
          gxTv_SdtEspectaculo_Lugarname_Z = sdt.gxTv_SdtEspectaculo_Lugarname_Z ;
+         gxTv_SdtEspectaculo_Paisid_Z = sdt.gxTv_SdtEspectaculo_Paisid_Z ;
+         gxTv_SdtEspectaculo_Paisname_Z = sdt.gxTv_SdtEspectaculo_Paisname_Z ;
          gxTv_SdtEspectaculo_Tipoespectaculoid_Z = sdt.gxTv_SdtEspectaculo_Tipoespectaculoid_Z ;
          gxTv_SdtEspectaculo_Tipoespectaculoname_Z = sdt.gxTv_SdtEspectaculo_Tipoespectaculoname_Z ;
          gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z = sdt.gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z ;
@@ -147,10 +147,10 @@ namespace GeneXus.Programs {
          sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_SdtEspectaculo_Espectaculofecha)), 10, 0));
          sDateCnv += StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("EspectaculoFecha", sDateCnv, false, includeNonInitialized);
-         AddObjectProperty("PaisId", gxTv_SdtEspectaculo_Paisid, false, includeNonInitialized);
-         AddObjectProperty("PaisName", gxTv_SdtEspectaculo_Paisname, false, includeNonInitialized);
          AddObjectProperty("LugarId", gxTv_SdtEspectaculo_Lugarid, false, includeNonInitialized);
          AddObjectProperty("LugarName", gxTv_SdtEspectaculo_Lugarname, false, includeNonInitialized);
+         AddObjectProperty("PaisId", gxTv_SdtEspectaculo_Paisid, false, includeNonInitialized);
+         AddObjectProperty("PaisName", gxTv_SdtEspectaculo_Paisname, false, includeNonInitialized);
          AddObjectProperty("TipoEspectaculoId", gxTv_SdtEspectaculo_Tipoespectaculoid, false, includeNonInitialized);
          AddObjectProperty("TipoEspectaculoName", gxTv_SdtEspectaculo_Tipoespectaculoname, false, includeNonInitialized);
          AddObjectProperty("EspectaculoImagen", gxTv_SdtEspectaculo_Espectaculoimagen, false, includeNonInitialized);
@@ -179,10 +179,10 @@ namespace GeneXus.Programs {
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_SdtEspectaculo_Espectaculofecha_Z)), 10, 0));
             sDateCnv += StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("EspectaculoFecha_Z", sDateCnv, false, includeNonInitialized);
-            AddObjectProperty("PaisId_Z", gxTv_SdtEspectaculo_Paisid_Z, false, includeNonInitialized);
-            AddObjectProperty("PaisName_Z", gxTv_SdtEspectaculo_Paisname_Z, false, includeNonInitialized);
             AddObjectProperty("LugarId_Z", gxTv_SdtEspectaculo_Lugarid_Z, false, includeNonInitialized);
             AddObjectProperty("LugarName_Z", gxTv_SdtEspectaculo_Lugarname_Z, false, includeNonInitialized);
+            AddObjectProperty("PaisId_Z", gxTv_SdtEspectaculo_Paisid_Z, false, includeNonInitialized);
+            AddObjectProperty("PaisName_Z", gxTv_SdtEspectaculo_Paisname_Z, false, includeNonInitialized);
             AddObjectProperty("TipoEspectaculoId_Z", gxTv_SdtEspectaculo_Tipoespectaculoid_Z, false, includeNonInitialized);
             AddObjectProperty("TipoEspectaculoName_Z", gxTv_SdtEspectaculo_Tipoespectaculoname_Z, false, includeNonInitialized);
             AddObjectProperty("EspectaculoImagen_GXI_Z", gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z, false, includeNonInitialized);
@@ -207,16 +207,6 @@ namespace GeneXus.Programs {
             gxTv_SdtEspectaculo_N = 0;
             gxTv_SdtEspectaculo_Espectaculofecha = sdt.gxTv_SdtEspectaculo_Espectaculofecha ;
          }
-         if ( sdt.IsDirty("PaisId") )
-         {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisid = sdt.gxTv_SdtEspectaculo_Paisid ;
-         }
-         if ( sdt.IsDirty("PaisName") )
-         {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisname = sdt.gxTv_SdtEspectaculo_Paisname ;
-         }
          if ( sdt.IsDirty("LugarId") )
          {
             gxTv_SdtEspectaculo_N = 0;
@@ -226,6 +216,16 @@ namespace GeneXus.Programs {
          {
             gxTv_SdtEspectaculo_N = 0;
             gxTv_SdtEspectaculo_Lugarname = sdt.gxTv_SdtEspectaculo_Lugarname ;
+         }
+         if ( sdt.IsDirty("PaisId") )
+         {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisid = sdt.gxTv_SdtEspectaculo_Paisid ;
+         }
+         if ( sdt.IsDirty("PaisName") )
+         {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisname = sdt.gxTv_SdtEspectaculo_Paisname ;
          }
          if ( sdt.IsDirty("TipoEspectaculoId") )
          {
@@ -318,10 +318,10 @@ namespace GeneXus.Programs {
                this.gxTv_SdtEspectaculo_Espectaculoid_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Espectaculoname_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Espectaculofecha_Z_SetNull( );
-               this.gxTv_SdtEspectaculo_Paisid_Z_SetNull( );
-               this.gxTv_SdtEspectaculo_Paisname_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Lugarid_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Lugarname_Z_SetNull( );
+               this.gxTv_SdtEspectaculo_Paisid_Z_SetNull( );
+               this.gxTv_SdtEspectaculo_Paisname_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Tipoespectaculoid_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Tipoespectaculoname_Z_SetNull( );
                this.gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z_SetNull( );
@@ -410,38 +410,6 @@ namespace GeneXus.Programs {
 
       }
 
-      [  SoapElement( ElementName = "PaisId" )]
-      [  XmlElement( ElementName = "PaisId"   )]
-      public short gxTpr_Paisid
-      {
-         get {
-            return gxTv_SdtEspectaculo_Paisid ;
-         }
-
-         set {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisid = value;
-            SetDirty("Paisid");
-         }
-
-      }
-
-      [  SoapElement( ElementName = "PaisName" )]
-      [  XmlElement( ElementName = "PaisName"   )]
-      public string gxTpr_Paisname
-      {
-         get {
-            return gxTv_SdtEspectaculo_Paisname ;
-         }
-
-         set {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisname = value;
-            SetDirty("Paisname");
-         }
-
-      }
-
       [  SoapElement( ElementName = "LugarId" )]
       [  XmlElement( ElementName = "LugarId"   )]
       public short gxTpr_Lugarid
@@ -470,6 +438,38 @@ namespace GeneXus.Programs {
             gxTv_SdtEspectaculo_N = 0;
             gxTv_SdtEspectaculo_Lugarname = value;
             SetDirty("Lugarname");
+         }
+
+      }
+
+      [  SoapElement( ElementName = "PaisId" )]
+      [  XmlElement( ElementName = "PaisId"   )]
+      public short gxTpr_Paisid
+      {
+         get {
+            return gxTv_SdtEspectaculo_Paisid ;
+         }
+
+         set {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisid = value;
+            SetDirty("Paisid");
+         }
+
+      }
+
+      [  SoapElement( ElementName = "PaisName" )]
+      [  XmlElement( ElementName = "PaisName"   )]
+      public string gxTpr_Paisname
+      {
+         get {
+            return gxTv_SdtEspectaculo_Paisname ;
+         }
+
+         set {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisname = value;
+            SetDirty("Paisname");
          }
 
       }
@@ -821,62 +821,6 @@ namespace GeneXus.Programs {
          return false ;
       }
 
-      [  SoapElement( ElementName = "PaisId_Z" )]
-      [  XmlElement( ElementName = "PaisId_Z"   )]
-      public short gxTpr_Paisid_Z
-      {
-         get {
-            return gxTv_SdtEspectaculo_Paisid_Z ;
-         }
-
-         set {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisid_Z = value;
-            SetDirty("Paisid_Z");
-         }
-
-      }
-
-      public void gxTv_SdtEspectaculo_Paisid_Z_SetNull( )
-      {
-         gxTv_SdtEspectaculo_Paisid_Z = 0;
-         SetDirty("Paisid_Z");
-         return  ;
-      }
-
-      public bool gxTv_SdtEspectaculo_Paisid_Z_IsNull( )
-      {
-         return false ;
-      }
-
-      [  SoapElement( ElementName = "PaisName_Z" )]
-      [  XmlElement( ElementName = "PaisName_Z"   )]
-      public string gxTpr_Paisname_Z
-      {
-         get {
-            return gxTv_SdtEspectaculo_Paisname_Z ;
-         }
-
-         set {
-            gxTv_SdtEspectaculo_N = 0;
-            gxTv_SdtEspectaculo_Paisname_Z = value;
-            SetDirty("Paisname_Z");
-         }
-
-      }
-
-      public void gxTv_SdtEspectaculo_Paisname_Z_SetNull( )
-      {
-         gxTv_SdtEspectaculo_Paisname_Z = "";
-         SetDirty("Paisname_Z");
-         return  ;
-      }
-
-      public bool gxTv_SdtEspectaculo_Paisname_Z_IsNull( )
-      {
-         return false ;
-      }
-
       [  SoapElement( ElementName = "LugarId_Z" )]
       [  XmlElement( ElementName = "LugarId_Z"   )]
       public short gxTpr_Lugarid_Z
@@ -929,6 +873,62 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_SdtEspectaculo_Lugarname_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "PaisId_Z" )]
+      [  XmlElement( ElementName = "PaisId_Z"   )]
+      public short gxTpr_Paisid_Z
+      {
+         get {
+            return gxTv_SdtEspectaculo_Paisid_Z ;
+         }
+
+         set {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisid_Z = value;
+            SetDirty("Paisid_Z");
+         }
+
+      }
+
+      public void gxTv_SdtEspectaculo_Paisid_Z_SetNull( )
+      {
+         gxTv_SdtEspectaculo_Paisid_Z = 0;
+         SetDirty("Paisid_Z");
+         return  ;
+      }
+
+      public bool gxTv_SdtEspectaculo_Paisid_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "PaisName_Z" )]
+      [  XmlElement( ElementName = "PaisName_Z"   )]
+      public string gxTpr_Paisname_Z
+      {
+         get {
+            return gxTv_SdtEspectaculo_Paisname_Z ;
+         }
+
+         set {
+            gxTv_SdtEspectaculo_N = 0;
+            gxTv_SdtEspectaculo_Paisname_Z = value;
+            SetDirty("Paisname_Z");
+         }
+
+      }
+
+      public void gxTv_SdtEspectaculo_Paisname_Z_SetNull( )
+      {
+         gxTv_SdtEspectaculo_Paisname_Z = "";
+         SetDirty("Paisname_Z");
+         return  ;
+      }
+
+      public bool gxTv_SdtEspectaculo_Paisname_Z_IsNull( )
       {
          return false ;
       }
@@ -1022,16 +1022,16 @@ namespace GeneXus.Programs {
          gxTv_SdtEspectaculo_N = 1;
          gxTv_SdtEspectaculo_Espectaculoname = "";
          gxTv_SdtEspectaculo_Espectaculofecha = DateTime.MinValue;
-         gxTv_SdtEspectaculo_Paisname = "";
          gxTv_SdtEspectaculo_Lugarname = "";
+         gxTv_SdtEspectaculo_Paisname = "";
          gxTv_SdtEspectaculo_Tipoespectaculoname = "";
          gxTv_SdtEspectaculo_Espectaculoimagen = "";
          gxTv_SdtEspectaculo_Espectaculoimagen_gxi = "";
          gxTv_SdtEspectaculo_Mode = "";
          gxTv_SdtEspectaculo_Espectaculoname_Z = "";
          gxTv_SdtEspectaculo_Espectaculofecha_Z = DateTime.MinValue;
-         gxTv_SdtEspectaculo_Paisname_Z = "";
          gxTv_SdtEspectaculo_Lugarname_Z = "";
+         gxTv_SdtEspectaculo_Paisname_Z = "";
          gxTv_SdtEspectaculo_Tipoespectaculoname_Z = "";
          gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z = "";
          sDateCnv = "";
@@ -1052,13 +1052,13 @@ namespace GeneXus.Programs {
 
       private short gxTv_SdtEspectaculo_Espectaculoid ;
       private short gxTv_SdtEspectaculo_N ;
-      private short gxTv_SdtEspectaculo_Paisid ;
       private short gxTv_SdtEspectaculo_Lugarid ;
+      private short gxTv_SdtEspectaculo_Paisid ;
       private short gxTv_SdtEspectaculo_Tipoespectaculoid ;
       private short gxTv_SdtEspectaculo_Initialized ;
       private short gxTv_SdtEspectaculo_Espectaculoid_Z ;
-      private short gxTv_SdtEspectaculo_Paisid_Z ;
       private short gxTv_SdtEspectaculo_Lugarid_Z ;
+      private short gxTv_SdtEspectaculo_Paisid_Z ;
       private short gxTv_SdtEspectaculo_Tipoespectaculoid_Z ;
       private string gxTv_SdtEspectaculo_Mode ;
       private string sDateCnv ;
@@ -1066,13 +1066,13 @@ namespace GeneXus.Programs {
       private DateTime gxTv_SdtEspectaculo_Espectaculofecha ;
       private DateTime gxTv_SdtEspectaculo_Espectaculofecha_Z ;
       private string gxTv_SdtEspectaculo_Espectaculoname ;
-      private string gxTv_SdtEspectaculo_Paisname ;
       private string gxTv_SdtEspectaculo_Lugarname ;
+      private string gxTv_SdtEspectaculo_Paisname ;
       private string gxTv_SdtEspectaculo_Tipoespectaculoname ;
       private string gxTv_SdtEspectaculo_Espectaculoimagen_gxi ;
       private string gxTv_SdtEspectaculo_Espectaculoname_Z ;
-      private string gxTv_SdtEspectaculo_Paisname_Z ;
       private string gxTv_SdtEspectaculo_Lugarname_Z ;
+      private string gxTv_SdtEspectaculo_Paisname_Z ;
       private string gxTv_SdtEspectaculo_Tipoespectaculoname_Z ;
       private string gxTv_SdtEspectaculo_Espectaculoimagen_gxi_Z ;
       private string gxTv_SdtEspectaculo_Espectaculoimagen ;
@@ -1133,35 +1133,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "PaisId" , Order = 3 )]
-      [GxSeudo()]
-      public Nullable<short> gxTpr_Paisid
-      {
-         get {
-            return sdt.gxTpr_Paisid ;
-         }
-
-         set {
-            sdt.gxTpr_Paisid = (short)(value.HasValue ? value.Value : 0);
-         }
-
-      }
-
-      [DataMember( Name = "PaisName" , Order = 4 )]
-      [GxSeudo()]
-      public string gxTpr_Paisname
-      {
-         get {
-            return sdt.gxTpr_Paisname ;
-         }
-
-         set {
-            sdt.gxTpr_Paisname = value;
-         }
-
-      }
-
-      [DataMember( Name = "LugarId" , Order = 5 )]
+      [DataMember( Name = "LugarId" , Order = 3 )]
       [GxSeudo()]
       public Nullable<short> gxTpr_Lugarid
       {
@@ -1175,7 +1147,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "LugarName" , Order = 6 )]
+      [DataMember( Name = "LugarName" , Order = 4 )]
       [GxSeudo()]
       public string gxTpr_Lugarname
       {
@@ -1185,6 +1157,34 @@ namespace GeneXus.Programs {
 
          set {
             sdt.gxTpr_Lugarname = value;
+         }
+
+      }
+
+      [DataMember( Name = "PaisId" , Order = 5 )]
+      [GxSeudo()]
+      public Nullable<short> gxTpr_Paisid
+      {
+         get {
+            return sdt.gxTpr_Paisid ;
+         }
+
+         set {
+            sdt.gxTpr_Paisid = (short)(value.HasValue ? value.Value : 0);
+         }
+
+      }
+
+      [DataMember( Name = "PaisName" , Order = 6 )]
+      [GxSeudo()]
+      public string gxTpr_Paisname
+      {
+         get {
+            return sdt.gxTpr_Paisname ;
+         }
+
+         set {
+            sdt.gxTpr_Paisname = value;
          }
 
       }

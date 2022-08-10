@@ -1,4 +1,4 @@
-spec_i([ trn,10,'Espectaculo','Espectaculo',[],spa,'17_0_10-161416' ]).
+spec_i([ trn,10,'Espectaculo','Espectaculo',[],spa,'17_0_10-162473' ]).
  
 struct_i(15,0,[ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt','Mode','Espectaculoid','Websession' ],[]).
 struct_i(16,15,[ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt',4,1 ],[]).
@@ -21,11 +21,11 @@ lwi_i(15,[ [] ]).
  
 ta_i(18,[ [ [ 18,1 ],[ 18,47 ],[ 18,48 ],[ 18,49 ] ] ]).
 ta_i(16,[ [ [ 16,1 ],[ 11,28 ],[ 11,29 ],[ 16,41 ],[ 11,30 ],[ 16,27 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
-ta_i(15,[ [ [ 15,1 ],[ 15,2 ],[ 15,16 ],[ 3,6 ],[ 2,5 ],[ 4,8 ],[ 15,26 ],[ 15,40000 ],[ 15,4 ],[ 15,7 ],[ 2,3 ] ] ]).
+ta_i(15,[ [ [ 15,1 ],[ 15,2 ],[ 15,16 ],[ 2,5 ],[ 3,6 ],[ 4,8 ],[ 15,26 ],[ 15,40000 ],[ 15,4 ],[ 15,7 ],[ 2,3 ] ] ]).
  
 las_i(18,[ [ 1,47,48,49 ] ]).
 las_i(16,[ [ 4,1,27,38,28,29,41,30,37 ] ]).
-las_i(15,[ [ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt','Mode','Espectaculoid','Websession',1,4,7,2,16,3,6,5,8,26,40000 ] ]).
+las_i(15,[ [ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt','Mode','Espectaculoid','Websession',1,4,7,2,16,5,3,6,8,26,40000 ] ]).
  
 lac_i(18,[ [ 47,48,49 ] ]).
 lac_i(16,[ [ 27,41 ] ]).
@@ -41,10 +41,10 @@ cls_i([ 0,0 ],[ 5,1023 ]).
 pos_i(1,[ 0,0,0 ]).
 pos_i(2,[ 0,0,0 ]).
 pos_i(16,[ 0,0,0 ]).
-pos_i(3,[ 0,0,0 ]).
-pos_i(6,[ 0,0,0 ]).
 pos_i(4,[ 0,0,0 ]).
 pos_i(5,[ 0,0,0 ]).
+pos_i(3,[ 0,0,0 ]).
+pos_i(6,[ 0,0,0 ]).
 pos_i(7,[ 0,0,0 ]).
 pos_i(8,[ 0,0,0 ]).
 pos_i(26,[ 0,0,0 ]).
@@ -288,6 +288,7 @@ act_info_i(8,[ [ 7 ] ]).
 ca_i(8,7).
 ca_i(6,4).
  
+tbl_to_delete_i(18,[ 10,[ [ 18,1,1 ],[ 18,47,47 ] ],c,'IINVITACION2',0,[ 24 ],'' ]).
 tbl_to_delete_i(18,[ 9,[ [ 18,1,1 ],[ 18,47,47 ] ],c,'IENTRADA3',0,[ 23 ],'' ]).
 tbl_to_delete_i(16,[ 10,[ [ 16,1,1 ],[ 16,27,27 ] ],c,'IINVITACION1',0,[ 24 ],'' ]).
 tbl_to_delete_i(16,[ 9,[ [ 16,1,1 ],[ 16,27,27 ] ],c,'IENTRADA1',0,[ 23 ],'' ]).
@@ -310,9 +311,9 @@ attri_i(27,[ 'LugarSectorId',int,4,0,'ZZZ9',0,'Lugar Sector Id','',0 ]).
 attri_i(23,[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',0 ]).
 attri_i(26,[ 'EspectaculoImagen',bits,4,0,'',0,'Espectaculo Imagen','',0 ]).
 attri_i(8,[ 'TipoEspectaculoName',svchar,40,0,'',0,'Tipo Espectaculo Name','',0 ]).
-attri_i(5,[ 'LugarName',svchar,40,0,'',0,'Lugar Name','',0 ]).
 attri_i(6,[ 'PaisName',svchar,40,0,'',0,'Pais Name','',0 ]).
 attri_i(3,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
+attri_i(5,[ 'LugarName',svchar,40,0,'',0,'Lugar Name','',0 ]).
 attri_i(16,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
 attri_i(2,[ 'EspectaculoName',svchar,40,0,'',0,'Espectaculo Name','',0 ]).
 attri_i(7,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
@@ -331,11 +332,11 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ])
 attri_i('Espectaculoid',[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(10,[ 'Invitacion',[ 24,27,1 ],'Invitacion','Invitacion' ]).
+table_i(10,[ 'Invitacion',[ 24,27,1,47 ],'Invitacion','Invitacion' ]).
 table_i(9,[ 'Entrada',[ 23,27,1,47 ],'Entrada','Entrada' ]).
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
-table_i(2,[ 'Lugar',[ 4,5,3 ],'Lugar','Lugar' ]).
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
+table_i(2,[ 'Lugar',[ 4,5,3 ],'Lugar','Lugar' ]).
 table_i(15,[ 'Espectaculo',[ 1,2,16,4,7,26,40000 ],'Espectaculo','Espectaculo' ]).
 table_i(2000,[ 'EspectaculoLugarSector',[ 37,1,27 ],'Lugar Sector','EspectaculoLugarSector' ]).
 table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
@@ -355,6 +356,7 @@ index_i(2000,[ 'IESPECTACULOLUGARSECTOR',u,[ 1,27 ],'IEspectaculoLugarSector' ])
 index_i(10,[ 'IINVITACION',u,[ 24 ],'IInvitacion' ]).
 index_i(10,[ 'IINVITACION1',d,[ 1,27 ],'IInvitacion1' ]).
 index_i(18,[ 'IESPECTACULOFUNCION',u,[ 1,47 ],'IEspectaculoFuncion' ]).
+index_i(10,[ 'IINVITACION2',d,[ 1,47 ],'IInvitacion2' ]).
  
 lv_i(2,2000,16).
  
@@ -509,22 +511,22 @@ html_sub_i(15,45,html_i(4,div(45))).
 html_sub_i(45,46,html_i(0,div(46))).
 html_sub_i(46,47,html_i(0,div(47))).
 html_sub_i(47,48,html_i(0,div(48))).
-html_sub_i(48,49,html_i(0,t(3,2))).
+html_sub_i(48,49,html_i(0,t(4,2))).
 html_sub_i(15,50,html_i(5,div(50))).
 html_sub_i(50,51,html_i(0,div(51))).
 html_sub_i(51,52,html_i(0,div(52))).
 html_sub_i(52,53,html_i(0,div(53))).
-html_sub_i(53,54,html_i(0,t(6,2))).
+html_sub_i(53,54,html_i(0,t(5,2))).
 html_sub_i(15,55,html_i(6,div(55))).
 html_sub_i(55,56,html_i(0,div(56))).
 html_sub_i(56,57,html_i(0,div(57))).
 html_sub_i(57,58,html_i(0,div(58))).
-html_sub_i(58,59,html_i(0,t(4,2))).
+html_sub_i(58,59,html_i(0,t(3,2))).
 html_sub_i(15,60,html_i(7,div(60))).
 html_sub_i(60,61,html_i(0,div(61))).
 html_sub_i(61,62,html_i(0,div(62))).
 html_sub_i(62,63,html_i(0,div(63))).
-html_sub_i(63,64,html_i(0,t(5,2))).
+html_sub_i(63,64,html_i(0,t(6,2))).
 html_sub_i(15,65,html_i(8,div(65))).
 html_sub_i(65,66,html_i(0,div(66))).
 html_sub_i(66,67,html_i(0,div(67))).
@@ -584,14 +586,14 @@ html_tags_i(37,'data-gx-att','att:2').
 html_tags_i(39,'data-gx-att','att:2').
 html_tags_i(42,'data-gx-att','att:16').
 html_tags_i(44,'data-gx-att','att:16').
-html_tags_i(47,'data-gx-att','att:3').
-html_tags_i(49,'data-gx-att','att:3').
-html_tags_i(52,'data-gx-att','att:6').
-html_tags_i(54,'data-gx-att','att:6').
-html_tags_i(57,'data-gx-att','att:4').
-html_tags_i(59,'data-gx-att','att:4').
-html_tags_i(62,'data-gx-att','att:5').
-html_tags_i(64,'data-gx-att','att:5').
+html_tags_i(47,'data-gx-att','att:4').
+html_tags_i(49,'data-gx-att','att:4').
+html_tags_i(52,'data-gx-att','att:5').
+html_tags_i(54,'data-gx-att','att:5').
+html_tags_i(57,'data-gx-att','att:3').
+html_tags_i(59,'data-gx-att','att:3').
+html_tags_i(62,'data-gx-att','att:6').
+html_tags_i(64,'data-gx-att','att:6').
 html_tags_i(67,'data-gx-att','att:7').
 html_tags_i(69,'data-gx-att','att:7').
 html_tags_i(72,'data-gx-att','att:8').
@@ -1080,14 +1082,14 @@ html_comp_i(48,'Align',left,d,[ str ]).
 html_comp_i(48,'Valign',top,d,[ str ]).
 html_comp_i(49,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(49,'Colcount',4,d,[ num ]).
-html_comp_i(49,'Attid',3,v,[ num ]).
+html_comp_i(49,'Attid',4,v,[ num ]).
 html_comp_i(49,'Class','Attribute',v,[ str ]).
-html_comp_i(49,'Controlname','Paisid',d,[ str ]).
+html_comp_i(49,'Controlname','Lugarid',d,[ str ]).
 html_comp_i(49,'Returnonclick',0,v,[ bool ]).
 html_comp_i(49,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(49,'Captionstyle','',v,[ str ]).
 html_comp_i(49,'Captionposition','Left',v,[ str ]).
-html_comp_i(49,'Captionvalue','Pais Id',d,[ str ]).
+html_comp_i(49,'Captionvalue','Lugar Id',d,[ str ]).
 html_comp_i(49,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(49,'Controltype',2,d,[ num ]).
 html_comp_i(49,'Inputtype',0,d,[ num ]).
@@ -1143,14 +1145,14 @@ html_comp_i(53,'Align',left,d,[ str ]).
 html_comp_i(53,'Valign',top,d,[ str ]).
 html_comp_i(54,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(54,'Colcount',40,d,[ num ]).
-html_comp_i(54,'Attid',6,v,[ num ]).
+html_comp_i(54,'Attid',5,v,[ num ]).
 html_comp_i(54,'Class','Attribute',v,[ str ]).
-html_comp_i(54,'Controlname','Paisname',d,[ str ]).
+html_comp_i(54,'Controlname','Lugarname',d,[ str ]).
 html_comp_i(54,'Returnonclick',0,v,[ bool ]).
 html_comp_i(54,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(54,'Captionstyle','',v,[ str ]).
 html_comp_i(54,'Captionposition','Left',v,[ str ]).
-html_comp_i(54,'Captionvalue','Pais Name',d,[ str ]).
+html_comp_i(54,'Captionvalue','Lugar Name',d,[ str ]).
 html_comp_i(54,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(54,'Controltype',2,d,[ num ]).
 html_comp_i(54,'Inputtype',0,d,[ num ]).
@@ -1209,14 +1211,14 @@ html_comp_i(58,'Align',left,d,[ str ]).
 html_comp_i(58,'Valign',top,d,[ str ]).
 html_comp_i(59,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(59,'Colcount',4,d,[ num ]).
-html_comp_i(59,'Attid',4,v,[ num ]).
+html_comp_i(59,'Attid',3,v,[ num ]).
 html_comp_i(59,'Class','Attribute',v,[ str ]).
-html_comp_i(59,'Controlname','Lugarid',d,[ str ]).
+html_comp_i(59,'Controlname','Paisid',d,[ str ]).
 html_comp_i(59,'Returnonclick',0,v,[ bool ]).
 html_comp_i(59,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(59,'Captionstyle','',v,[ str ]).
 html_comp_i(59,'Captionposition','Left',v,[ str ]).
-html_comp_i(59,'Captionvalue','Lugar Id',d,[ str ]).
+html_comp_i(59,'Captionvalue','Pais Id',d,[ str ]).
 html_comp_i(59,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(59,'Controltype',2,d,[ num ]).
 html_comp_i(59,'Inputtype',0,d,[ num ]).
@@ -1272,14 +1274,14 @@ html_comp_i(63,'Align',left,d,[ str ]).
 html_comp_i(63,'Valign',top,d,[ str ]).
 html_comp_i(64,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(64,'Colcount',40,d,[ num ]).
-html_comp_i(64,'Attid',5,v,[ num ]).
+html_comp_i(64,'Attid',6,v,[ num ]).
 html_comp_i(64,'Class','Attribute',v,[ str ]).
-html_comp_i(64,'Controlname','Lugarname',d,[ str ]).
+html_comp_i(64,'Controlname','Paisname',d,[ str ]).
 html_comp_i(64,'Returnonclick',0,v,[ bool ]).
 html_comp_i(64,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(64,'Captionstyle','',v,[ str ]).
 html_comp_i(64,'Captionposition','Left',v,[ str ]).
-html_comp_i(64,'Captionvalue','Lugar Name',d,[ str ]).
+html_comp_i(64,'Captionvalue','Pais Name',d,[ str ]).
 html_comp_i(64,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(64,'Controltype',2,d,[ num ]).
 html_comp_i(64,'Inputtype',0,d,[ num ]).
@@ -2086,22 +2088,22 @@ lit_i(43,1,div(43),[ ctlname('') ]).
 lit_i(42,1,div(42),[ ctlname('') ]).
 lit_i(41,1,div(41),[ ctlname('') ]).
 lit_i(40,1,div(40),[ ctlname('') ]).
-lit_i(49,1,t(3,2),[ ctlname(3),ctrltype(edit,49),pos(49),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(49,1,t(4,2),[ ctlname(4),ctrltype(edit,49),pos(49),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(48,1,div(48),[ ctlname('') ]).
 lit_i(47,1,div(47),[ ctlname('') ]).
 lit_i(46,1,div(46),[ ctlname('') ]).
 lit_i(45,1,div(45),[ ctlname('') ]).
-lit_i(54,1,t(6,2),[ ctlname(6),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(54,1,t(5,2),[ ctlname(5),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(53,1,div(53),[ ctlname('') ]).
 lit_i(52,1,div(52),[ ctlname('') ]).
 lit_i(51,1,div(51),[ ctlname('') ]).
 lit_i(50,1,div(50),[ ctlname('') ]).
-lit_i(59,1,t(4,2),[ ctlname(4),ctrltype(edit,59),pos(59),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(59,1,t(3,2),[ ctlname(3),ctrltype(edit,59),pos(59),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(58,1,div(58),[ ctlname('') ]).
 lit_i(57,1,div(57),[ ctlname('') ]).
 lit_i(56,1,div(56),[ ctlname('') ]).
 lit_i(55,1,div(55),[ ctlname('') ]).
-lit_i(64,1,t(5,2),[ ctlname(5),ctrltype(edit,64),pos(64),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(64,1,t(6,2),[ ctlname(6),ctrltype(edit,64),pos(64),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(63,1,div(63),[ ctlname('') ]).
 lit_i(62,1,div(62),[ ctlname('') ]).
 lit_i(61,1,div(61),[ ctlname('') ]).
@@ -2213,33 +2215,6 @@ att_prop_i(2,16,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,16,'DownloadOffline','0',d).
 att_prop_i(2,16,'VarServiceExtName','',d).
 att_prop_i(2,16,'FullName','EspectaculoFecha',v).
-att_prop_i(2,3,'HORIZONTAL_DESCRIPTION','Pais Id',d).
-att_prop_i(2,3,'ExternalName','PaisId',d).
-att_prop_i(2,3,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,3,'EmptyAsNull','Yes',d).
-att_prop_i(2,3,idBasedOn,86,v).
-att_prop_i(2,3,'AUTONUMBER','-1',v).
-att_prop_i(2,3,'AUTONUMBER_START','1',d).
-att_prop_i(2,3,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,3,'AUTONUMBER_FORREPLICATION','-1',d).
-att_prop_i(2,3,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,3,'AttRegEx','',d).
-att_prop_i(2,3,'AttValidationFailedMsg','',d).
-att_prop_i(2,3,'DownloadOffline','0',d).
-att_prop_i(2,3,'VarServiceExtName','',d).
-att_prop_i(2,3,'FullName','PaisId',v).
-att_prop_i(2,6,'HORIZONTAL_DESCRIPTION','Pais Name',d).
-att_prop_i(2,6,'ExternalName','PaisName',d).
-att_prop_i(2,6,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,6,'EmptyAsNull','Yes',d).
-att_prop_i(2,6,idBasedOn,87,v).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,6,'DB_NLS_SUPPORT','Yes',d).
-att_prop_i(2,6,'AttRegEx','',d).
-att_prop_i(2,6,'AttValidationFailedMsg','',d).
-att_prop_i(2,6,'DownloadOffline','0',d).
-att_prop_i(2,6,'VarServiceExtName','',d).
-att_prop_i(2,6,'FullName','PaisName',v).
 att_prop_i(2,4,'HORIZONTAL_DESCRIPTION','Lugar Id',d).
 att_prop_i(2,4,'ExternalName','LugarId',d).
 att_prop_i(2,4,'ExternalNamespace','Obligatorio1v2',d).
@@ -2267,6 +2242,33 @@ att_prop_i(2,5,'AttValidationFailedMsg','',d).
 att_prop_i(2,5,'DownloadOffline','0',d).
 att_prop_i(2,5,'VarServiceExtName','',d).
 att_prop_i(2,5,'FullName','LugarName',v).
+att_prop_i(2,3,'HORIZONTAL_DESCRIPTION','Pais Id',d).
+att_prop_i(2,3,'ExternalName','PaisId',d).
+att_prop_i(2,3,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,3,'EmptyAsNull','Yes',d).
+att_prop_i(2,3,idBasedOn,86,v).
+att_prop_i(2,3,'AUTONUMBER','-1',v).
+att_prop_i(2,3,'AUTONUMBER_START','1',d).
+att_prop_i(2,3,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,3,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,3,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,3,'AttRegEx','',d).
+att_prop_i(2,3,'AttValidationFailedMsg','',d).
+att_prop_i(2,3,'DownloadOffline','0',d).
+att_prop_i(2,3,'VarServiceExtName','',d).
+att_prop_i(2,3,'FullName','PaisId',v).
+att_prop_i(2,6,'HORIZONTAL_DESCRIPTION','Pais Name',d).
+att_prop_i(2,6,'ExternalName','PaisName',d).
+att_prop_i(2,6,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,6,'EmptyAsNull','Yes',d).
+att_prop_i(2,6,idBasedOn,87,v).
+att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,6,'AttRegEx','',d).
+att_prop_i(2,6,'AttValidationFailedMsg','',d).
+att_prop_i(2,6,'DownloadOffline','0',d).
+att_prop_i(2,6,'VarServiceExtName','',d).
+att_prop_i(2,6,'FullName','PaisName',v).
 att_prop_i(2,7,'HORIZONTAL_DESCRIPTION','Tipo Espectaculo Id',d).
 att_prop_i(2,7,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,7,'ExternalNamespace','Obligatorio1v2',d).
@@ -2457,14 +2459,14 @@ att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName','',v).
  
 tbl_prop_i(2,18,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
-tbl_prop_i(2,10,'AllDirSuper',[ [ 16,[ 1,27 ] ] ],v).
+tbl_prop_i(2,10,'AllDirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ] ],v).
 tbl_prop_i(2,2000,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,11,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
 tbl_prop_i(2,16,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,9,'AllDirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ] ],v).
 tbl_prop_i(2,2,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
 tbl_prop_i(2,15,'AllDirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
-tbl_prop_i(2,18,'DirSubor',[ [ 9,[ 1,47 ] ] ],v).
+tbl_prop_i(2,18,'DirSubor',[ [ 9,[ 1,47 ] ],[ 10,[ 1,47 ] ] ],v).
 tbl_prop_i(2,2000,'DirSubor',[ [ 9,[ 1,27 ] ],[ 10,[ 1,27 ] ] ],v).
 tbl_prop_i(2,16,'DirSubor',[ [ 9,[ 1,27 ] ],[ 10,[ 1,27 ] ] ],v).
 tbl_prop_i(2,3,'DirSubor',[ [ 2,[ 3 ] ] ],v).
@@ -2472,7 +2474,7 @@ tbl_prop_i(2,4,'DirSubor',[ [ 15,[ 7 ] ] ],v).
 tbl_prop_i(2,2,'DirSubor',[ [ 11,[ 4 ] ],[ 15,[ 4 ] ] ],v).
 tbl_prop_i(2,15,'DirSubor',[ [ 16,[ 1 ] ],[ 18,[ 1 ] ] ],v).
 tbl_prop_i(2,18,'DirSuper',[ [ 15,[ 1 ] ] ],v).
-tbl_prop_i(2,10,'DirSuper',[ [ 16,[ 1,27 ] ] ],v).
+tbl_prop_i(2,10,'DirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ] ],v).
 tbl_prop_i(2,2000,'DirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,11,'DirSuper',[ [ 2,[ 4 ] ] ],v).
 tbl_prop_i(2,16,'DirSuper',[ [ 15,[ 1 ] ] ],v).
@@ -2517,6 +2519,7 @@ tbl_att_prop_i(2,10,24,'AllowNulls',n).
 tbl_att_prop_i(2,10,24,'AUTONUMBER',y).
 tbl_att_prop_i(2,10,27,'AllowNulls',n).
 tbl_att_prop_i(2,10,1,'AllowNulls',n).
+tbl_att_prop_i(2,10,47,'AllowNulls',n).
 tbl_att_prop_i(2,18,1,'AllowNulls',n).
 tbl_att_prop_i(2,18,47,'AllowNulls',n).
 tbl_att_prop_i(2,18,48,'AllowNulls',n).
@@ -2531,7 +2534,7 @@ var_prop_i(2,'Insert_tipoespectaculoid',idBasedOn,'',v).
 a_alias_i([ 'count(',23 ],'LugarSectorVendidas').
 a_alias_i(se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]),'LugarSectorVendidas').
  
-trn_level_i(15,[ [ 1,2,16,3,6,4,5,7,8,26,40000 ],'Espectaculo','Espectaculo','Espectaculo','',2 ]).
+trn_level_i(15,[ [ 1,2,16,4,5,3,6,7,8,26,40000 ],'Espectaculo','Espectaculo','Espectaculo','',2 ]).
 trn_level_i(16,[ [ 27,28,29,41,30,37,38 ],'LugarSector','Lugar Sector','LugarSector','',41 ]).
 trn_level_i(18,[ [ 47,48,49 ],'EspectaculoFuncion','Espectaculo Funcion','EspectaculoFuncion','',48 ]).
  
@@ -2735,8 +2738,8 @@ struct_dt_elem_i([ 0,10,0 ],3,collection,'False').
 struct_dt_elem_i([ 0,10,0 ],3,attributeid,'16').
 struct_dt_elem_i([ 0,10,0 ],3,'ExternalName','EspectaculoFecha').
 struct_dt_elem_i([ 0,10,0 ],3,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],4,name,'Paisid').
-struct_dt_elem_i([ 0,10,0 ],4,camelname,'PaisId').
+struct_dt_elem_i([ 0,10,0 ],4,name,'Lugarid').
+struct_dt_elem_i([ 0,10,0 ],4,camelname,'LugarId').
 struct_dt_elem_i([ 0,10,0 ],4,basedon,86).
 struct_dt_elem_i([ 0,10,0 ],4,length,4).
 struct_dt_elem_i([ 0,10,0 ],4,decimals,0).
@@ -2744,22 +2747,22 @@ struct_dt_elem_i([ 0,10,0 ],4,sign,0).
 struct_dt_elem_i([ 0,10,0 ],4,type,[ 4,4,0 ]).
 struct_dt_elem_i([ 0,10,0 ],4,pic,'ZZZ9').
 struct_dt_elem_i([ 0,10,0 ],4,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],4,attributeid,'3').
-struct_dt_elem_i([ 0,10,0 ],4,'ExternalName','PaisId').
+struct_dt_elem_i([ 0,10,0 ],4,attributeid,'4').
+struct_dt_elem_i([ 0,10,0 ],4,'ExternalName','LugarId').
 struct_dt_elem_i([ 0,10,0 ],4,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],5,name,'Paisname').
-struct_dt_elem_i([ 0,10,0 ],5,camelname,'PaisName').
+struct_dt_elem_i([ 0,10,0 ],5,name,'Lugarname').
+struct_dt_elem_i([ 0,10,0 ],5,camelname,'LugarName').
 struct_dt_elem_i([ 0,10,0 ],5,basedon,87).
 struct_dt_elem_i([ 0,10,0 ],5,length,40).
 struct_dt_elem_i([ 0,10,0 ],5,decimals,0).
 struct_dt_elem_i([ 0,10,0 ],5,type,[ 13,40,0 ]).
 struct_dt_elem_i([ 0,10,0 ],5,pic,'').
 struct_dt_elem_i([ 0,10,0 ],5,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],5,attributeid,'6').
-struct_dt_elem_i([ 0,10,0 ],5,'ExternalName','PaisName').
+struct_dt_elem_i([ 0,10,0 ],5,attributeid,'5').
+struct_dt_elem_i([ 0,10,0 ],5,'ExternalName','LugarName').
 struct_dt_elem_i([ 0,10,0 ],5,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],6,name,'Lugarid').
-struct_dt_elem_i([ 0,10,0 ],6,camelname,'LugarId').
+struct_dt_elem_i([ 0,10,0 ],6,name,'Paisid').
+struct_dt_elem_i([ 0,10,0 ],6,camelname,'PaisId').
 struct_dt_elem_i([ 0,10,0 ],6,basedon,86).
 struct_dt_elem_i([ 0,10,0 ],6,length,4).
 struct_dt_elem_i([ 0,10,0 ],6,decimals,0).
@@ -2767,19 +2770,19 @@ struct_dt_elem_i([ 0,10,0 ],6,sign,0).
 struct_dt_elem_i([ 0,10,0 ],6,type,[ 4,4,0 ]).
 struct_dt_elem_i([ 0,10,0 ],6,pic,'ZZZ9').
 struct_dt_elem_i([ 0,10,0 ],6,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],6,attributeid,'4').
-struct_dt_elem_i([ 0,10,0 ],6,'ExternalName','LugarId').
+struct_dt_elem_i([ 0,10,0 ],6,attributeid,'3').
+struct_dt_elem_i([ 0,10,0 ],6,'ExternalName','PaisId').
 struct_dt_elem_i([ 0,10,0 ],6,'ExternalNamespace','Obligatorio1v2').
-struct_dt_elem_i([ 0,10,0 ],7,name,'Lugarname').
-struct_dt_elem_i([ 0,10,0 ],7,camelname,'LugarName').
+struct_dt_elem_i([ 0,10,0 ],7,name,'Paisname').
+struct_dt_elem_i([ 0,10,0 ],7,camelname,'PaisName').
 struct_dt_elem_i([ 0,10,0 ],7,basedon,87).
 struct_dt_elem_i([ 0,10,0 ],7,length,40).
 struct_dt_elem_i([ 0,10,0 ],7,decimals,0).
 struct_dt_elem_i([ 0,10,0 ],7,type,[ 13,40,0 ]).
 struct_dt_elem_i([ 0,10,0 ],7,pic,'').
 struct_dt_elem_i([ 0,10,0 ],7,collection,'False').
-struct_dt_elem_i([ 0,10,0 ],7,attributeid,'5').
-struct_dt_elem_i([ 0,10,0 ],7,'ExternalName','LugarName').
+struct_dt_elem_i([ 0,10,0 ],7,attributeid,'6').
+struct_dt_elem_i([ 0,10,0 ],7,'ExternalName','PaisName').
 struct_dt_elem_i([ 0,10,0 ],7,'ExternalNamespace','Obligatorio1v2').
 struct_dt_elem_i([ 0,10,0 ],8,name,'Tipoespectaculoid').
 struct_dt_elem_i([ 0,10,0 ],8,camelname,'TipoEspectaculoId').

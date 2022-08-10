@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwespectaculo.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwespectaculo\obj\Release\wwespectaculo.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwespectaculo\obj\Release\wwespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwespectaculo\obj\Release\wwespectaculo.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwespectaculo\obj\Release\wwespectaculo.dll

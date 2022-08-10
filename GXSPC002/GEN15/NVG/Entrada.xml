@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
@@ -176,7 +176,27 @@
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
 <DynamicLoads></DynamicLoads>
-<Rules></Rules>
+<Rules>
+<ActionType>BusinessRule</ActionType>
+<CALL>
+<Object>
+<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
+<ObjCls>1</ObjCls>
+<ObjId>15</ObjId>
+<ObjName>ImpresionEntrada</ObjName>
+<ObjPgmName>ImpresionEntrada</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Expression>
+<Attribute>
+<AttriId>23</AttriId>
+<AttriName>EntradaId</AttriName>
+<Description>Entrada Id</Description></Attribute></Expression>
+<IF>
+<Token>insert</Token>
+<Sp></Sp>
+<Token>or</Token>
+<Sp></Sp>
+<Token>update</Token></IF></CALL></Rules>
 <AfterAttributeRules></AfterAttributeRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>
@@ -192,13 +212,9 @@
 <AttriName>EntradaFecha</AttriName>
 <Description>Entrada Fecha</Description></Attribute>
 <Attribute>
-<AttriId>43</AttriId>
-<AttriName>EntradaPaisOrigenId</AttriName>
-<Description>Entrada Pais Origen Id</Description></Attribute>
-<Attribute>
-<AttriId>44</AttriId>
-<AttriName>EntradaPaisOrigenName</AttriName>
-<Description>Entrada Pais Origen Name</Description></Attribute>
+<AttriId>50</AttriId>
+<AttriName>EspectaculoPaisName</AttriName>
+<Description>Espectaculo Pais Name</Description></Attribute>
 <Attribute>
 <AttriId>9</AttriId>
 <AttriName>ClienteId</AttriName>
@@ -227,13 +243,9 @@
 <AttriName>EntradaFecha</AttriName>
 <Description>Entrada Fecha</Description></Attribute>
 <Attribute>
-<AttriId>43</AttriId>
-<AttriName>EntradaPaisOrigenId</AttriName>
-<Description>Entrada Pais Origen Id</Description></Attribute>
-<Attribute>
-<AttriId>44</AttriId>
-<AttriName>EntradaPaisOrigenName</AttriName>
-<Description>Entrada Pais Origen Name</Description></Attribute>
+<AttriId>50</AttriId>
+<AttriName>EspectaculoPaisName</AttriName>
+<Description>Espectaculo Pais Name</Description></Attribute>
 <Attribute>
 <AttriId>9</AttriId>
 <AttriName>ClienteId</AttriName>
@@ -270,8 +282,13 @@
 <TableId>18</TableId>
 <TableName>EspectaculoFuncion</TableName>
 <Description>Funcion</Description></Table>
-<ProgramName>
-<Token>Gx00I1</Token></ProgramName>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>73</ObjId>
+<ObjName>Gx00I1</ObjName>
+<ObjPgmName>Gx00I1</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
 <InputParameters>
 <Attribute>
 <AttriId>1</AttriId>

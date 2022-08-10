@@ -5,6 +5,12 @@ using GeneXus.Resources;
 using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
+using GeneXus.Reorg;
+using System.Threading;
+using GeneXus.Programs;
+using System.Web.Services;
+using System.Data;
+using GeneXus.Data;
 using GeneXus.Data.ADO;
 using GeneXus.Data.NTier;
 using GeneXus.Data.NTier.ADO;
@@ -21,21 +27,6 @@ namespace GeneXus.Programs {
          GxSilentTrnSdt obj;
          IGxSilentTrn trn;
          bool result;
-         obj = new SdtPais(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new SdtFuncion(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new SdtLugar(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new SdtTipoEspectaculo(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new SdtEspectaculo(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
          return 1 ;
       }
 

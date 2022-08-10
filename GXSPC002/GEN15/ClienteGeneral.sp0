@@ -1,4 +1,4 @@
-spec_i([ web,15,'Cliente General','ClienteGeneral',0,spa,'17_0_10-161416' ]).
+spec_i([ web,15,'Cliente General','ClienteGeneral',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname',9 ],[]).
  

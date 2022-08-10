@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\invitaciongeneral.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\invitaciongeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\invitaciongeneral\obj\Release\invitaciongeneral.dll

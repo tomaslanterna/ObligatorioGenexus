@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
@@ -9,7 +9,7 @@
 <ObjDesc>Invitacion</ObjDesc>
 <ObjPgmName>Invitacion</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -124,6 +124,21 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table>
 <Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
 <TableId>10</TableId>
 <TableName>LugarSectorVendidas navigation</TableName>
 <Description>Invitacion</Description>
@@ -175,7 +190,11 @@
 <Attribute>
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>10</TableId>
@@ -198,7 +217,11 @@
 <Attribute>
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>10</TableId>
@@ -214,6 +237,29 @@
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
 <Prompts>
+<Prompt>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description></Table>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>73</ObjId>
+<ObjName>Gx00I1</ObjName>
+<ObjPgmName>Gx00I1</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<InputParameters>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>
 <TableId>15</TableId>

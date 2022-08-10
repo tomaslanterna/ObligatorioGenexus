@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\viewinvitacion.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\viewinvitacion.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\viewinvitacion\obj\Release\viewinvitacion.dll

@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\paisgeneral.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\paisgeneral\obj\Release\paisgeneral.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\paisgeneral\obj\Release\paisgeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\paisgeneral.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\paisgeneral\obj\Release\paisgeneral.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\paisgeneral\obj\Release\paisgeneral.dll

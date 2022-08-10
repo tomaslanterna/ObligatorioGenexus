@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwcliente.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwcliente\obj\Release\wwcliente.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwcliente\obj\Release\wwcliente.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwcliente.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwcliente\obj\Release\wwcliente.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwcliente\obj\Release\wwcliente.dll

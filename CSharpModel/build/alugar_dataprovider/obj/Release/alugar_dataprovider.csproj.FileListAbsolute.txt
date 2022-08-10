@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\alugar_dataprovider.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\alugar_dataprovider\obj\Release\alugar_dataprovider.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\alugar_dataprovider\obj\Release\alugar_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\alugar_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\alugar_dataprovider\obj\Release\alugar_dataprovider.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\alugar_dataprovider\obj\Release\alugar_dataprovider.dll

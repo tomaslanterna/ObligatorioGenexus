@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\gx00g1.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\gx00g1\obj\Release\gx00g1.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\gx00g1\obj\Release\gx00g1.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\gx00g1.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\gx00g1\obj\Release\gx00g1.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\gx00g1\obj\Release\gx00g1.dll

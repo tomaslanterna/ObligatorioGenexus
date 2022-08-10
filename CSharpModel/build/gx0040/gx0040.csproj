@@ -15,6 +15,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Reference Include="GeneXus.dll" > 
+			<HintPath>$(WebBinDirectory)\GeneXus.dll</HintPath>
+		</Reference>
 
 	</ItemGroup>
 	<ItemGroup>

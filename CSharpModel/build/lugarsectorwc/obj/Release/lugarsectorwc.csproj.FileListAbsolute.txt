@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\lugarsectorwc.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\lugarsectorwc\obj\Release\lugarsectorwc.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\lugarsectorwc\obj\Release\lugarsectorwc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\lugarsectorwc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugarsectorwc\obj\Release\lugarsectorwc.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugarsectorwc\obj\Release\lugarsectorwc.dll

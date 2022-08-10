@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\lugarespectaculowc.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\lugarespectaculowc\obj\Release\lugarespectaculowc.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\lugarespectaculowc\obj\Release\lugarespectaculowc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\lugarespectaculowc.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugarespectaculowc\obj\Release\lugarespectaculowc.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\lugarespectaculowc\obj\Release\lugarespectaculowc.dll

@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\rwdpromptmasterpage.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\rwdpromptmasterpage\obj\Release\rwdpromptmasterpage.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\rwdpromptmasterpage\obj\Release\rwdpromptmasterpage.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\rwdpromptmasterpage.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\rwdpromptmasterpage\obj\Release\rwdpromptmasterpage.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\rwdpromptmasterpage\obj\Release\rwdpromptmasterpage.dll

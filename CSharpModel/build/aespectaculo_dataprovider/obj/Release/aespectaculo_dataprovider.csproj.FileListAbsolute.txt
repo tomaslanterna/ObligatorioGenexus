@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\aespectaculo_dataprovider.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\aespectaculo_dataprovider\obj\Release\aespectaculo_dataprovider.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\aespectaculo_dataprovider\obj\Release\aespectaculo_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\aespectaculo_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aespectaculo_dataprovider\obj\Release\aespectaculo_dataprovider.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aespectaculo_dataprovider\obj\Release\aespectaculo_dataprovider.dll

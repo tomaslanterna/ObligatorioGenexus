@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
@@ -9,7 +9,7 @@
 <ObjDesc>Espectaculo</ObjDesc>
 <ObjPgmName>Espectaculo</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -387,6 +387,20 @@
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
+<Table>
+<TableId>10</TableId>
+<TableName>Invitacion</TableName>
+<Description>Invitacion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes></Table>
 <Table>
 <TableId>9</TableId>
 <TableName>Entrada</TableName>

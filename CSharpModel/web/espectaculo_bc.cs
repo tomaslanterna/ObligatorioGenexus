@@ -398,8 +398,8 @@ namespace GeneXus.Programs {
             RcdFound15 = 1;
             A2EspectaculoName = BC000A14_A2EspectaculoName[0];
             A16EspectaculoFecha = BC000A14_A16EspectaculoFecha[0];
-            A6PaisName = BC000A14_A6PaisName[0];
             A5LugarName = BC000A14_A5LugarName[0];
+            A6PaisName = BC000A14_A6PaisName[0];
             A8TipoEspectaculoName = BC000A14_A8TipoEspectaculoName[0];
             A40000EspectaculoImagen_GXI = BC000A14_A40000EspectaculoImagen_GXI[0];
             A4LugarId = BC000A14_A4LugarId[0];
@@ -1020,8 +1020,8 @@ namespace GeneXus.Programs {
             A1EspectaculoId = BC000A25_A1EspectaculoId[0];
             A2EspectaculoName = BC000A25_A2EspectaculoName[0];
             A16EspectaculoFecha = BC000A25_A16EspectaculoFecha[0];
-            A6PaisName = BC000A25_A6PaisName[0];
             A5LugarName = BC000A25_A5LugarName[0];
+            A6PaisName = BC000A25_A6PaisName[0];
             A8TipoEspectaculoName = BC000A25_A8TipoEspectaculoName[0];
             A40000EspectaculoImagen_GXI = BC000A25_A40000EspectaculoImagen_GXI[0];
             A4LugarId = BC000A25_A4LugarId[0];
@@ -1050,8 +1050,8 @@ namespace GeneXus.Programs {
             A1EspectaculoId = BC000A25_A1EspectaculoId[0];
             A2EspectaculoName = BC000A25_A2EspectaculoName[0];
             A16EspectaculoFecha = BC000A25_A16EspectaculoFecha[0];
-            A6PaisName = BC000A25_A6PaisName[0];
             A5LugarName = BC000A25_A5LugarName[0];
+            A6PaisName = BC000A25_A6PaisName[0];
             A8TipoEspectaculoName = BC000A25_A8TipoEspectaculoName[0];
             A40000EspectaculoImagen_GXI = BC000A25_A40000EspectaculoImagen_GXI[0];
             A4LugarId = BC000A25_A4LugarId[0];
@@ -1871,10 +1871,18 @@ namespace GeneXus.Programs {
             pr_default.execute(38, new Object[] {A1EspectaculoId, A47EspectaculoFuncionId});
             if ( (pr_default.getStatus(38) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Entrada"}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Invitacion"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(38);
+            /* Using cursor BC000A45 */
+            pr_default.execute(39, new Object[] {A1EspectaculoId, A47EspectaculoFuncionId});
+            if ( (pr_default.getStatus(39) != 101) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Entrada"}), "CannotDeleteReferencedRecord", 1, "");
+               AnyError = 1;
+            }
+            pr_default.close(39);
          }
       }
 
@@ -1894,15 +1902,15 @@ namespace GeneXus.Programs {
       public void ScanKeyStart0A18( )
       {
          /* Scan By routine */
-         /* Using cursor BC000A45 */
-         pr_default.execute(39, new Object[] {A1EspectaculoId});
+         /* Using cursor BC000A46 */
+         pr_default.execute(40, new Object[] {A1EspectaculoId});
          RcdFound18 = 0;
-         if ( (pr_default.getStatus(39) != 101) )
+         if ( (pr_default.getStatus(40) != 101) )
          {
             RcdFound18 = 1;
-            A47EspectaculoFuncionId = BC000A45_A47EspectaculoFuncionId[0];
-            A48EspectaculoFuncionName = BC000A45_A48EspectaculoFuncionName[0];
-            A49EspectaculoFuncionPrecio = BC000A45_A49EspectaculoFuncionPrecio[0];
+            A47EspectaculoFuncionId = BC000A46_A47EspectaculoFuncionId[0];
+            A48EspectaculoFuncionName = BC000A46_A48EspectaculoFuncionName[0];
+            A49EspectaculoFuncionPrecio = BC000A46_A49EspectaculoFuncionPrecio[0];
          }
          /* Load Subordinate Levels */
       }
@@ -1910,7 +1918,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext0A18( )
       {
          /* Scan next routine */
-         pr_default.readNext(39);
+         pr_default.readNext(40);
          RcdFound18 = 0;
          ScanKeyLoad0A18( ) ;
       }
@@ -1919,19 +1927,19 @@ namespace GeneXus.Programs {
       {
          sMode18 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(39) != 101) )
+         if ( (pr_default.getStatus(40) != 101) )
          {
             RcdFound18 = 1;
-            A47EspectaculoFuncionId = BC000A45_A47EspectaculoFuncionId[0];
-            A48EspectaculoFuncionName = BC000A45_A48EspectaculoFuncionName[0];
-            A49EspectaculoFuncionPrecio = BC000A45_A49EspectaculoFuncionPrecio[0];
+            A47EspectaculoFuncionId = BC000A46_A47EspectaculoFuncionId[0];
+            A48EspectaculoFuncionName = BC000A46_A48EspectaculoFuncionName[0];
+            A49EspectaculoFuncionPrecio = BC000A46_A49EspectaculoFuncionPrecio[0];
          }
          Gx_mode = sMode18;
       }
 
       protected void ScanKeyEnd0A18( )
       {
-         pr_default.close(39);
+         pr_default.close(40);
       }
 
       protected void AfterConfirm0A18( )
@@ -2022,10 +2030,10 @@ namespace GeneXus.Programs {
       {
          A2EspectaculoName = "";
          A16EspectaculoFecha = DateTime.MinValue;
-         A3PaisId = 0;
-         A6PaisName = "";
          A4LugarId = 0;
          A5LugarName = "";
+         A3PaisId = 0;
+         A6PaisName = "";
          A7TipoEspectaculoId = 0;
          A8TipoEspectaculoName = "";
          A26EspectaculoImagen = "";
@@ -2111,10 +2119,10 @@ namespace GeneXus.Programs {
          obj15.gxTpr_Mode = Gx_mode;
          obj15.gxTpr_Espectaculoname = A2EspectaculoName;
          obj15.gxTpr_Espectaculofecha = A16EspectaculoFecha;
-         obj15.gxTpr_Paisid = A3PaisId;
-         obj15.gxTpr_Paisname = A6PaisName;
          obj15.gxTpr_Lugarid = A4LugarId;
          obj15.gxTpr_Lugarname = A5LugarName;
+         obj15.gxTpr_Paisid = A3PaisId;
+         obj15.gxTpr_Paisname = A6PaisName;
          obj15.gxTpr_Tipoespectaculoid = A7TipoEspectaculoId;
          obj15.gxTpr_Tipoespectaculoname = A8TipoEspectaculoName;
          obj15.gxTpr_Espectaculoimagen = A26EspectaculoImagen;
@@ -2123,10 +2131,10 @@ namespace GeneXus.Programs {
          obj15.gxTpr_Espectaculoid_Z = Z1EspectaculoId;
          obj15.gxTpr_Espectaculoname_Z = Z2EspectaculoName;
          obj15.gxTpr_Espectaculofecha_Z = Z16EspectaculoFecha;
-         obj15.gxTpr_Paisid_Z = Z3PaisId;
-         obj15.gxTpr_Paisname_Z = Z6PaisName;
          obj15.gxTpr_Lugarid_Z = Z4LugarId;
          obj15.gxTpr_Lugarname_Z = Z5LugarName;
+         obj15.gxTpr_Paisid_Z = Z3PaisId;
+         obj15.gxTpr_Paisname_Z = Z6PaisName;
          obj15.gxTpr_Tipoespectaculoid_Z = Z7TipoEspectaculoId;
          obj15.gxTpr_Tipoespectaculoname_Z = Z8TipoEspectaculoName;
          obj15.gxTpr_Espectaculoimagen_gxi_Z = Z40000EspectaculoImagen_GXI;
@@ -2146,10 +2154,10 @@ namespace GeneXus.Programs {
          Gx_mode = obj15.gxTpr_Mode;
          A2EspectaculoName = obj15.gxTpr_Espectaculoname;
          A16EspectaculoFecha = obj15.gxTpr_Espectaculofecha;
-         A3PaisId = obj15.gxTpr_Paisid;
-         A6PaisName = obj15.gxTpr_Paisname;
          A4LugarId = obj15.gxTpr_Lugarid;
          A5LugarName = obj15.gxTpr_Lugarname;
+         A3PaisId = obj15.gxTpr_Paisid;
+         A6PaisName = obj15.gxTpr_Paisname;
          A7TipoEspectaculoId = obj15.gxTpr_Tipoespectaculoid;
          A8TipoEspectaculoName = obj15.gxTpr_Tipoespectaculoname;
          A26EspectaculoImagen = obj15.gxTpr_Espectaculoimagen;
@@ -2158,10 +2166,10 @@ namespace GeneXus.Programs {
          Z1EspectaculoId = obj15.gxTpr_Espectaculoid_Z;
          Z2EspectaculoName = obj15.gxTpr_Espectaculoname_Z;
          Z16EspectaculoFecha = obj15.gxTpr_Espectaculofecha_Z;
-         Z3PaisId = obj15.gxTpr_Paisid_Z;
-         Z6PaisName = obj15.gxTpr_Paisname_Z;
          Z4LugarId = obj15.gxTpr_Lugarid_Z;
          Z5LugarName = obj15.gxTpr_Lugarname_Z;
+         Z3PaisId = obj15.gxTpr_Paisid_Z;
+         Z6PaisName = obj15.gxTpr_Paisname_Z;
          Z7TipoEspectaculoId = obj15.gxTpr_Tipoespectaculoid_Z;
          Z8TipoEspectaculoName = obj15.gxTpr_Tipoespectaculoname_Z;
          Z40000EspectaculoImagen_GXI = obj15.gxTpr_Espectaculoimagen_gxi_Z;
@@ -2770,8 +2778,8 @@ namespace GeneXus.Programs {
          BC000A14_A1EspectaculoId = new short[1] ;
          BC000A14_A2EspectaculoName = new string[] {""} ;
          BC000A14_A16EspectaculoFecha = new DateTime[] {DateTime.MinValue} ;
-         BC000A14_A6PaisName = new string[] {""} ;
          BC000A14_A5LugarName = new string[] {""} ;
+         BC000A14_A6PaisName = new string[] {""} ;
          BC000A14_A8TipoEspectaculoName = new string[] {""} ;
          BC000A14_A40000EspectaculoImagen_GXI = new string[] {""} ;
          BC000A14_A4LugarId = new short[1] ;
@@ -2807,8 +2815,8 @@ namespace GeneXus.Programs {
          BC000A25_A1EspectaculoId = new short[1] ;
          BC000A25_A2EspectaculoName = new string[] {""} ;
          BC000A25_A16EspectaculoFecha = new DateTime[] {DateTime.MinValue} ;
-         BC000A25_A6PaisName = new string[] {""} ;
          BC000A25_A5LugarName = new string[] {""} ;
+         BC000A25_A6PaisName = new string[] {""} ;
          BC000A25_A8TipoEspectaculoName = new string[] {""} ;
          BC000A25_A40000EspectaculoImagen_GXI = new string[] {""} ;
          BC000A25_A4LugarId = new short[1] ;
@@ -2873,11 +2881,12 @@ namespace GeneXus.Programs {
          BC000A2_A47EspectaculoFuncionId = new short[1] ;
          BC000A2_A48EspectaculoFuncionName = new string[] {""} ;
          BC000A2_A49EspectaculoFuncionPrecio = new short[1] ;
-         BC000A44_A23EntradaId = new short[1] ;
-         BC000A45_A1EspectaculoId = new short[1] ;
-         BC000A45_A47EspectaculoFuncionId = new short[1] ;
-         BC000A45_A48EspectaculoFuncionName = new string[] {""} ;
-         BC000A45_A49EspectaculoFuncionPrecio = new short[1] ;
+         BC000A44_A24InvitacionId = new short[1] ;
+         BC000A45_A23EntradaId = new short[1] ;
+         BC000A46_A1EspectaculoId = new short[1] ;
+         BC000A46_A47EspectaculoFuncionId = new short[1] ;
+         BC000A46_A48EspectaculoFuncionName = new string[] {""} ;
+         BC000A46_A49EspectaculoFuncionPrecio = new short[1] ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.espectaculo_bc__default(),
@@ -2916,7 +2925,7 @@ namespace GeneXus.Programs {
                BC000A13_A6PaisName
                }
                , new Object[] {
-               BC000A14_A1EspectaculoId, BC000A14_A2EspectaculoName, BC000A14_A16EspectaculoFecha, BC000A14_A6PaisName, BC000A14_A5LugarName, BC000A14_A8TipoEspectaculoName, BC000A14_A40000EspectaculoImagen_GXI, BC000A14_A4LugarId, BC000A14_A7TipoEspectaculoId, BC000A14_A3PaisId,
+               BC000A14_A1EspectaculoId, BC000A14_A2EspectaculoName, BC000A14_A16EspectaculoFecha, BC000A14_A5LugarName, BC000A14_A6PaisName, BC000A14_A8TipoEspectaculoName, BC000A14_A40000EspectaculoImagen_GXI, BC000A14_A4LugarId, BC000A14_A7TipoEspectaculoId, BC000A14_A3PaisId,
                BC000A14_A26EspectaculoImagen
                }
                , new Object[] {
@@ -2947,7 +2956,7 @@ namespace GeneXus.Programs {
                BC000A24_A23EntradaId
                }
                , new Object[] {
-               BC000A25_A1EspectaculoId, BC000A25_A2EspectaculoName, BC000A25_A16EspectaculoFecha, BC000A25_A6PaisName, BC000A25_A5LugarName, BC000A25_A8TipoEspectaculoName, BC000A25_A40000EspectaculoImagen_GXI, BC000A25_A4LugarId, BC000A25_A7TipoEspectaculoId, BC000A25_A3PaisId,
+               BC000A25_A1EspectaculoId, BC000A25_A2EspectaculoName, BC000A25_A16EspectaculoFecha, BC000A25_A5LugarName, BC000A25_A6PaisName, BC000A25_A8TipoEspectaculoName, BC000A25_A40000EspectaculoImagen_GXI, BC000A25_A4LugarId, BC000A25_A7TipoEspectaculoId, BC000A25_A3PaisId,
                BC000A25_A26EspectaculoImagen
                }
                , new Object[] {
@@ -2990,10 +2999,13 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               BC000A44_A23EntradaId
+               BC000A44_A24InvitacionId
                }
                , new Object[] {
-               BC000A45_A1EspectaculoId, BC000A45_A47EspectaculoFuncionId, BC000A45_A48EspectaculoFuncionName, BC000A45_A49EspectaculoFuncionPrecio
+               BC000A45_A23EntradaId
+               }
+               , new Object[] {
+               BC000A46_A1EspectaculoId, BC000A46_A47EspectaculoFuncionId, BC000A46_A48EspectaculoFuncionName, BC000A46_A49EspectaculoFuncionPrecio
                }
             }
          );
@@ -3085,8 +3097,8 @@ namespace GeneXus.Programs {
       private short[] BC000A14_A1EspectaculoId ;
       private string[] BC000A14_A2EspectaculoName ;
       private DateTime[] BC000A14_A16EspectaculoFecha ;
-      private string[] BC000A14_A6PaisName ;
       private string[] BC000A14_A5LugarName ;
+      private string[] BC000A14_A6PaisName ;
       private string[] BC000A14_A8TipoEspectaculoName ;
       private string[] BC000A14_A40000EspectaculoImagen_GXI ;
       private short[] BC000A14_A4LugarId ;
@@ -3122,8 +3134,8 @@ namespace GeneXus.Programs {
       private short[] BC000A25_A1EspectaculoId ;
       private string[] BC000A25_A2EspectaculoName ;
       private DateTime[] BC000A25_A16EspectaculoFecha ;
-      private string[] BC000A25_A6PaisName ;
       private string[] BC000A25_A5LugarName ;
+      private string[] BC000A25_A6PaisName ;
       private string[] BC000A25_A8TipoEspectaculoName ;
       private string[] BC000A25_A40000EspectaculoImagen_GXI ;
       private short[] BC000A25_A4LugarId ;
@@ -3182,11 +3194,12 @@ namespace GeneXus.Programs {
       private short[] BC000A2_A47EspectaculoFuncionId ;
       private string[] BC000A2_A48EspectaculoFuncionName ;
       private short[] BC000A2_A49EspectaculoFuncionPrecio ;
-      private short[] BC000A44_A23EntradaId ;
-      private short[] BC000A45_A1EspectaculoId ;
-      private short[] BC000A45_A47EspectaculoFuncionId ;
-      private string[] BC000A45_A48EspectaculoFuncionName ;
-      private short[] BC000A45_A49EspectaculoFuncionPrecio ;
+      private short[] BC000A44_A24InvitacionId ;
+      private short[] BC000A45_A23EntradaId ;
+      private short[] BC000A46_A1EspectaculoId ;
+      private short[] BC000A46_A47EspectaculoFuncionId ;
+      private string[] BC000A46_A48EspectaculoFuncionName ;
+      private short[] BC000A46_A49EspectaculoFuncionPrecio ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
    }
@@ -3237,6 +3250,7 @@ namespace GeneXus.Programs {
          ,new UpdateCursor(def[37])
          ,new ForEachCursor(def[38])
          ,new ForEachCursor(def[39])
+         ,new ForEachCursor(def[40])
        };
     }
 
@@ -3443,6 +3457,11 @@ namespace GeneXus.Programs {
           };
           Object[] prmBC000A45;
           prmBC000A45 = new Object[] {
+          new ParDef("@EspectaculoId",GXType.Int16,4,0) ,
+          new ParDef("@EspectaculoFuncionId",GXType.Int16,4,0)
+          };
+          Object[] prmBC000A46;
+          prmBC000A46 = new Object[] {
           new ParDef("@EspectaculoId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
@@ -3457,7 +3476,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC000A11", "SELECT [LugarName], [PaisId] FROM [Lugar] WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A11,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A12", "SELECT [TipoEspectaculoName] FROM [TipoEspectaculo] WHERE [TipoEspectaculoId] = @TipoEspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A12,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A13", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A13,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC000A14", "SELECT TM1.[EspectaculoId], TM1.[EspectaculoName], TM1.[EspectaculoFecha], T3.[PaisName], T2.[LugarName], T4.[TipoEspectaculoName], TM1.[EspectaculoImagen_GXI], TM1.[LugarId], TM1.[TipoEspectaculoId], T2.[PaisId], TM1.[EspectaculoImagen] FROM ((([Espectaculo] TM1 INNER JOIN [Lugar] T2 ON T2.[LugarId] = TM1.[LugarId]) INNER JOIN [Pais] T3 ON T3.[PaisId] = T2.[PaisId]) INNER JOIN [TipoEspectaculo] T4 ON T4.[TipoEspectaculoId] = TM1.[TipoEspectaculoId]) WHERE TM1.[EspectaculoId] = @EspectaculoId ORDER BY TM1.[EspectaculoId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A14,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000A14", "SELECT TM1.[EspectaculoId], TM1.[EspectaculoName], TM1.[EspectaculoFecha], T2.[LugarName], T3.[PaisName], T4.[TipoEspectaculoName], TM1.[EspectaculoImagen_GXI], TM1.[LugarId], TM1.[TipoEspectaculoId], T2.[PaisId], TM1.[EspectaculoImagen] FROM ((([Espectaculo] TM1 INNER JOIN [Lugar] T2 ON T2.[LugarId] = TM1.[LugarId]) INNER JOIN [Pais] T3 ON T3.[PaisId] = T2.[PaisId]) INNER JOIN [TipoEspectaculo] T4 ON T4.[TipoEspectaculoId] = TM1.[TipoEspectaculoId]) WHERE TM1.[EspectaculoId] = @EspectaculoId ORDER BY TM1.[EspectaculoId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A14,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A15", "SELECT [EspectaculoId] FROM [Espectaculo] WHERE [EspectaculoId] = @EspectaculoId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A15,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A16", "INSERT INTO [Espectaculo]([EspectaculoName], [EspectaculoFecha], [EspectaculoImagen], [EspectaculoImagen_GXI], [LugarId], [TipoEspectaculoId]) VALUES(@EspectaculoName, @EspectaculoFecha, @EspectaculoImagen, @EspectaculoImagen_GXI, @LugarId, @TipoEspectaculoId); SELECT SCOPE_IDENTITY()",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A16,1, GxCacheFrequency.OFF ,true,true )
              ,new CursorDef("BC000A17", "UPDATE [Espectaculo] SET [EspectaculoName]=@EspectaculoName, [EspectaculoFecha]=@EspectaculoFecha, [LugarId]=@LugarId, [TipoEspectaculoId]=@TipoEspectaculoId  WHERE [EspectaculoId] = @EspectaculoId", GxErrorMask.GX_NOMASK,prmBC000A17)
@@ -3468,7 +3487,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC000A22", "SELECT [TipoEspectaculoName] FROM [TipoEspectaculo] WHERE [TipoEspectaculoId] = @TipoEspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A22,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A23", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [EspectaculoId] = @EspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A23,1, GxCacheFrequency.OFF ,true,true )
              ,new CursorDef("BC000A24", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [EspectaculoId] = @EspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A24,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000A25", "SELECT TM1.[EspectaculoId], TM1.[EspectaculoName], TM1.[EspectaculoFecha], T3.[PaisName], T2.[LugarName], T4.[TipoEspectaculoName], TM1.[EspectaculoImagen_GXI], TM1.[LugarId], TM1.[TipoEspectaculoId], T2.[PaisId], TM1.[EspectaculoImagen] FROM ((([Espectaculo] TM1 INNER JOIN [Lugar] T2 ON T2.[LugarId] = TM1.[LugarId]) INNER JOIN [Pais] T3 ON T3.[PaisId] = T2.[PaisId]) INNER JOIN [TipoEspectaculo] T4 ON T4.[TipoEspectaculoId] = TM1.[TipoEspectaculoId]) WHERE TM1.[EspectaculoId] = @EspectaculoId ORDER BY TM1.[EspectaculoId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A25,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000A25", "SELECT TM1.[EspectaculoId], TM1.[EspectaculoName], TM1.[EspectaculoFecha], T2.[LugarName], T3.[PaisName], T4.[TipoEspectaculoName], TM1.[EspectaculoImagen_GXI], TM1.[LugarId], TM1.[TipoEspectaculoId], T2.[PaisId], TM1.[EspectaculoImagen] FROM ((([Espectaculo] TM1 INNER JOIN [Lugar] T2 ON T2.[LugarId] = TM1.[LugarId]) INNER JOIN [Pais] T3 ON T3.[PaisId] = T2.[PaisId]) INNER JOIN [TipoEspectaculo] T4 ON T4.[TipoEspectaculoId] = TM1.[TipoEspectaculoId]) WHERE TM1.[EspectaculoId] = @EspectaculoId ORDER BY TM1.[EspectaculoId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A25,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A27", "SELECT T2.[LugarId], T1.[EspectaculoId], T2.[LugarSectorName], T2.[LugarSectorCantidad], T1.[LugarSectorEstadoSector], T2.[LugarSectorPrecio], T1.[LugarSectorId], COALESCE( T3.[LugarSectorVendidas], 0) AS LugarSectorVendidas FROM (([EspectaculoLugarSector] T1 LEFT JOIN [LugarSector] T2 ON T2.[LugarId] = @LugarId AND T2.[LugarSectorId] = T1.[LugarSectorId]) LEFT JOIN (SELECT COUNT(*) AS LugarSectorVendidas, [EspectaculoId], [LugarSectorId] FROM [Entrada] GROUP BY [EspectaculoId], [LugarSectorId] ) T3 ON T3.[EspectaculoId] = T1.[EspectaculoId] AND T3.[LugarSectorId] = T1.[LugarSectorId]) WHERE T1.[EspectaculoId] = @EspectaculoId and T1.[LugarSectorId] = @LugarSectorId ORDER BY T1.[EspectaculoId], T1.[LugarSectorId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A27,11, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A28", "SELECT [EspectaculoId], [LugarSectorId] FROM [EspectaculoLugarSector] WHERE [EspectaculoId] = @EspectaculoId AND [LugarSectorId] = @LugarSectorId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A28,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC000A29", "INSERT INTO [EspectaculoLugarSector]([EspectaculoId], [LugarSectorEstadoSector], [LugarSectorId]) VALUES(@EspectaculoId, @LugarSectorEstadoSector, @LugarSectorId)", GxErrorMask.GX_NOMASK,prmBC000A29)
@@ -3484,8 +3503,9 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC000A41", "INSERT INTO [EspectaculoFuncion]([EspectaculoId], [EspectaculoFuncionId], [EspectaculoFuncionName], [EspectaculoFuncionPrecio]) VALUES(@EspectaculoId, @EspectaculoFuncionId, @EspectaculoFuncionName, @EspectaculoFuncionPrecio)", GxErrorMask.GX_NOMASK,prmBC000A41)
              ,new CursorDef("BC000A42", "UPDATE [EspectaculoFuncion] SET [EspectaculoFuncionName]=@EspectaculoFuncionName, [EspectaculoFuncionPrecio]=@EspectaculoFuncionPrecio  WHERE [EspectaculoId] = @EspectaculoId AND [EspectaculoFuncionId] = @EspectaculoFuncionId", GxErrorMask.GX_NOMASK,prmBC000A42)
              ,new CursorDef("BC000A43", "DELETE FROM [EspectaculoFuncion]  WHERE [EspectaculoId] = @EspectaculoId AND [EspectaculoFuncionId] = @EspectaculoFuncionId", GxErrorMask.GX_NOMASK,prmBC000A43)
-             ,new CursorDef("BC000A44", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [EspectaculoId] = @EspectaculoId AND [EspectaculoFuncionId] = @EspectaculoFuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A44,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000A45", "SELECT [EspectaculoId], [EspectaculoFuncionId], [EspectaculoFuncionName], [EspectaculoFuncionPrecio] FROM [EspectaculoFuncion] WHERE [EspectaculoId] = @EspectaculoId ORDER BY [EspectaculoId], [EspectaculoFuncionId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A45,11, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000A44", "SELECT TOP 1 [InvitacionId] FROM [Invitacion] WHERE [EspectaculoId] = @EspectaculoId AND [EspectaculoFuncionId] = @EspectaculoFuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A44,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("BC000A45", "SELECT TOP 1 [EntradaId] FROM [Entrada] WHERE [EspectaculoId] = @EspectaculoId AND [EspectaculoFuncionId] = @EspectaculoFuncionId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A45,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("BC000A46", "SELECT [EspectaculoId], [EspectaculoFuncionId], [EspectaculoFuncionName], [EspectaculoFuncionPrecio] FROM [EspectaculoFuncion] WHERE [EspectaculoId] = @EspectaculoId ORDER BY [EspectaculoId], [EspectaculoFuncionId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000A46,11, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -3668,6 +3688,9 @@ namespace GeneXus.Programs {
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 39 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                return;
+             case 40 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
                 ((string[]) buf[2])[0] = rslt.getVarchar(3);

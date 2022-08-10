@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\GeneXus.Programs.Common.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\GeneXus.Programs.Common\obj\Release\GeneXus.Programs.Common.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\GeneXus.Programs.Common\obj\Release\GeneXus.Programs.Common.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\GeneXus.Programs.Common.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\GeneXus.Programs.Common\obj\Release\GeneXus.Programs.Common.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\GeneXus.Programs.Common\obj\Release\GeneXus.Programs.Common.dll

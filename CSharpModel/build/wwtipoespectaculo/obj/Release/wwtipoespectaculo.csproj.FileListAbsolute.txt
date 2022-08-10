@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwtipoespectaculo.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwtipoespectaculo\obj\Release\wwtipoespectaculo.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwtipoespectaculo\obj\Release\wwtipoespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwtipoespectaculo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwtipoespectaculo\obj\Release\wwtipoespectaculo.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwtipoespectaculo\obj\Release\wwtipoespectaculo.dll

@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwlugar.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwlugar\obj\Release\wwlugar.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwlugar\obj\Release\wwlugar.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwlugar.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwlugar\obj\Release\wwlugar.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwlugar\obj\Release\wwlugar.dll

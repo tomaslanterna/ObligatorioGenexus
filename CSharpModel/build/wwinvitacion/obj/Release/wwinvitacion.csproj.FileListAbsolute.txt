@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\wwinvitacion.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\wwinvitacion\obj\Release\wwinvitacion.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\wwinvitacion\obj\Release\wwinvitacion.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\wwinvitacion.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwinvitacion\obj\Release\wwinvitacion.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\wwinvitacion\obj\Release\wwinvitacion.dll

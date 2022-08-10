@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\viewentrada.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\viewentrada\obj\Release\viewentrada.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\viewentrada\obj\Release\viewentrada.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\viewentrada.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\viewentrada\obj\Release\viewentrada.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\viewentrada\obj\Release\viewentrada.dll

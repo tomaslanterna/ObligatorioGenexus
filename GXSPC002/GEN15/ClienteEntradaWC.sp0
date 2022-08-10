@@ -1,8 +1,8 @@
-spec_i([ web,17,'Cliente Entrada WC','ClienteEntradaWC',0,spa,'17_0_10-161416' ]).
+spec_i([ web,17,'Cliente Entrada WC','ClienteEntradaWC',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 9,[ [ 9,many ],[ 15,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 18,one ],[ 2000,one ] ],[],[],[ [ [ 9,15,2,4,11,18,2000 ],[ 4,7,9,48,47,44,43,8,30,28,27,16,2,1,42,5,23,29,37,38 ] ] ],[ [ [ 9,15,2,4,11,18,2000 ],[] ] ],[ 9 ],'IENTRADA2',[ 9,[ [ [],'Clienteid',9 ] ] ],[] ]).
+level_i(2,[ 9,[ [ 9,many ],[ 15,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 18,one ],[ 2000,one ] ],[],[],[ [ [ 9,15,2,4,11,18,2000 ],[ 4,7,9,30,28,50,48,47,8,27,16,2,1,42,5,23,29,37,38 ] ] ],[ [ [ 9,15,2,4,11,18,2000 ],[] ] ],[ 9 ],'IENTRADA2',[ 9,[ [ [],'Clienteid',9 ] ] ],[] ]).
  
 tw_i(2,[ [ 15,[ [ 9,1,1 ] ] ],[ 2,[ [ 15,4,4 ] ] ],[ 4,[ [ 15,7,7 ] ] ],[ 11,[ [ 15,4,4 ],[ 9,27,27 ] ] ],[ 18,[ [ 9,1,1 ],[ 9,47,47 ] ] ],[ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ]).
  
@@ -12,15 +12,15 @@ lwi_i(2,[ [] ]).
  
 level_option_i(2,server_paging,[ y,[] ]).
  
-ta_i(2,[ [ [ 15,4 ],[ 15,7 ],[ 9,9 ],[ 18,48 ],[ 9,47 ],[ 9,44 ],[ 9,43 ],[ 4,8 ],[ 11,30 ],[ 11,28 ],[ 9,27 ],[ 15,16 ],[ 15,2 ],[ 9,1 ],[ 9,42 ],[ 2,5 ],[ 9,23 ],[ 11,29 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(2,[ [ [ 15,4 ],[ 15,7 ],[ 9,9 ],[ 11,30 ],[ 11,28 ],[ 9,50 ],[ 18,48 ],[ 9,47 ],[ 4,8 ],[ 9,27 ],[ 15,16 ],[ 15,2 ],[ 9,1 ],[ 9,42 ],[ 2,5 ],[ 9,23 ],[ 11,29 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
  
-las_i(2,[ [ 'Clienteid','Update','Delete',4,7,9,48,47,44,43,8,30,28,27,16,2,1,42,5,23,29,37,38 ] ]).
+las_i(2,[ [ 'Clienteid','Update','Delete',4,7,9,30,28,50,48,47,8,27,16,2,1,42,5,23,29,37,38 ] ]).
  
 lac_i(2,[ [ 'Update','Delete' ] ]).
  
  
  
-cls_i([ 0,0 ],[ 2,339 ]).
+cls_i([ 0,0 ],[ 2,334 ]).
  
 pos_i(23,[ 1,2,0 ]).
 pos_i(5,[ 1,2,5 ]).
@@ -29,19 +29,18 @@ pos_i(1,[ 1,2,55 ]).
 pos_i(2,[ 1,2,60 ]).
 pos_i(16,[ 1,2,101 ]).
 pos_i(27,[ 1,2,110 ]).
-pos_i(28,[ 1,2,115 ]).
-pos_i(30,[ 1,2,156 ]).
-pos_i(38,[ 1,2,161 ]).
-pos_i(8,[ 1,2,166 ]).
-pos_i(43,[ 1,2,207 ]).
-pos_i(44,[ 1,2,212 ]).
-pos_i(47,[ 1,2,253 ]).
-pos_i(48,[ 1,2,258 ]).
-pos_i('Update',[ 1,2,299 ]).
-pos_i('Delete',[ 1,2,320 ]).
+pos_i(38,[ 1,2,115 ]).
+pos_i(8,[ 1,2,120 ]).
+pos_i(47,[ 1,2,161 ]).
+pos_i(48,[ 1,2,166 ]).
+pos_i(50,[ 1,2,207 ]).
+pos_i(28,[ 1,2,248 ]).
+pos_i(30,[ 1,2,289 ]).
+pos_i('Update',[ 1,2,294 ]).
+pos_i('Delete',[ 1,2,315 ]).
 pos_i(9,[ 0,0,0 ]).
  
-repeat_i(2,[ 1,2,[ 23,5,42,1,2,16,27,28,30,38,8,43,44,47,48,'Update','Delete' ],[ 'Update','Delete' ] ]).
+repeat_i(2,[ 1,2,[ 23,5,42,1,2,16,27,38,8,47,48,50,28,30,'Update','Delete' ],[ 'Update','Delete' ] ]).
  
 default_i(e('Pgmname',2,2,'"ClienteEntradaWC"')).
  
@@ -160,9 +159,8 @@ v_i(f,i,3,[]).
 v_i(f,o,3,'Err').
 v_i(t,i,4,'Clienteid').
 v_i(t,o,4,9).
+v_i(t,o,4,50).
 v_i(t,o,4,47).
-v_i(t,o,4,44).
-v_i(t,o,4,43).
 v_i(t,o,4,27).
 v_i(t,o,4,1).
 v_i(t,o,4,42).
@@ -202,14 +200,13 @@ attri_i(29,[ 'LugarSectorCantidad',int,4,0,'ZZZ9',0,'Lugar Sector Cantidad','',0
 attri_i(4,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
 attri_i(9,[ 'ClienteId',int,4,0,'ZZZ9',0,'Cliente Id','',0 ]).
-attri_i(48,[ 'EspectaculoFuncionName',svchar,40,0,'',0,'Espectaculo Funcion Name','',0 ]).
-attri_i(47,[ 'EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Espectaculo Funcion Id','',0 ]).
-attri_i(44,[ 'EntradaPaisOrigenName',svchar,40,0,'',0,'Entrada Pais Origen Name','',0 ]).
-attri_i(43,[ 'EntradaPaisOrigenId',int,4,0,'ZZZ9',0,'Entrada Pais Origen Id','',0 ]).
-attri_i(8,[ 'TipoEspectaculoName',svchar,40,0,'',0,'Tipo Espectaculo Name','',0 ]).
-attri_i(38,[ 'LugarSectorDisponibles',int,4,0,'ZZZ9',0,'Lugar Sector Disponibles','',0 ]).
 attri_i(30,[ 'LugarSectorPrecio',int,4,0,'ZZZ9',0,'Lugar Sector Precio','',0 ]).
 attri_i(28,[ 'LugarSectorName',svchar,40,0,'',0,'Lugar Sector Name','',0 ]).
+attri_i(50,[ 'EspectaculoPaisName',svchar,40,0,'',0,'Espectaculo Pais Name','',0 ]).
+attri_i(48,[ 'EspectaculoFuncionName',svchar,40,0,'',0,'Espectaculo Funcion Name','',0 ]).
+attri_i(47,[ 'EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Espectaculo Funcion Id','',0 ]).
+attri_i(8,[ 'TipoEspectaculoName',svchar,40,0,'',0,'Tipo Espectaculo Name','',0 ]).
+attri_i(38,[ 'LugarSectorDisponibles',int,4,0,'ZZZ9',0,'Lugar Sector Disponibles','',0 ]).
 attri_i(27,[ 'LugarSectorId',int,4,0,'ZZZ9',0,'Lugar Sector Id','',0 ]).
 attri_i(16,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
 attri_i(2,[ 'EspectaculoName',svchar,40,0,'',0,'Espectaculo Name','',0 ]).
@@ -233,10 +230,10 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ])
  
 table_i(2000,[ 'Entrada',[ 37,1,27,23 ],'Entrada','Entrada' ]).
 table_i(2,[ 'Lugar',[ 4,5 ],'Lugar','Lugar' ]).
-table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
 table_i(18,[ 'EspectaculoFuncion',[ 1,47,48 ],'Funcion','EspectaculoFuncion' ]).
-table_i(9,[ 'Entrada',[ 23,9,27,42,43,44,1,47 ],'Entrada','Entrada' ]).
+table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
+table_i(9,[ 'Entrada',[ 23,9,27,42,1,47,50 ],'Entrada','Entrada' ]).
 table_i(15,[ 'Espectaculo',[ 1,2,16,4,7 ],'Espectaculo','Espectaculo' ]).
  
 index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
@@ -290,7 +287,7 @@ dom_info_i(86,[ 'Id' ]).
 dom_info_i(87,[ 'Name' ]).
  
  
-break_i(2,nvg,1,[],[ [ 23,5,42,1,2,16,27,28,30,38,8,43,44,47,48,9,7,4 ],[],[] ]).
+break_i(2,nvg,1,[],[ [ 23,5,42,1,2,16,27,38,8,47,48,50,28,30,9,7,4 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,14).
@@ -367,17 +364,17 @@ html_sub_i(16,17,html_i(0,comp(errview))).
 html_sub_i(14,18,html_i(1,div(18))).
 html_sub_i(18,19,html_i(0,div(19))).
 html_sub_i(19,20,html_i(0,s(20))).
-html_sub_i(3,38,html_i(2,div(38))).
+html_sub_i(3,37,html_i(2,div(37))).
+html_sub_i(37,38,html_i(0,div(38))).
 html_sub_i(38,39,html_i(0,div(39))).
-html_sub_i(39,40,html_i(0,div(40))).
-html_sub_i(40,41,html_i(0,t(9,2))).
+html_sub_i(39,40,html_i(0,t(9,2))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
 html_tags_i(2,'data-abstract-form','').
 html_tags_i(9,'data-gx-actiongroup-type',toolbar).
 html_tags_i(11,'ControlType','').
-html_tags_i(41,'data-gx-att','att:9').
+html_tags_i(40,'data-gx-att','att:9').
  
 html_comp_i(17,'Backcolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
@@ -762,18 +759,15 @@ html_comp_i(27,'Colvisible',-1,v,[ bool ]).
 html_comp_i(27,'Title','',d,[ str ]).
 html_comp_i(27,'Invitemsg','',d,[ str ]).
 html_comp_i(28,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(28,'Colcount',40,d,[ num ]).
-html_comp_i(28,'Colattid',28,v,[ num ]).
-html_comp_i(28,'Controlname','Lugarsectorname',d,[ str ]).
+html_comp_i(28,'Colcount',4,d,[ num ]).
+html_comp_i(28,'Colattid',38,v,[ num ]).
+html_comp_i(28,'Controlname','Lugarsectordisponibles',d,[ str ]).
 html_comp_i(28,'Class','Attribute',v,[ str ]).
 html_comp_i(28,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(28,'Returnonclick',0,d,[ bool ]).
 html_comp_i(28,'Eventgx','',d,[ str ]).
 html_comp_i(28,'Controltype',2,d,[ num ]).
 html_comp_i(28,'Inputtype',0,d,[ num ]).
-html_comp_i(28,'Editautocomplete',0,d,[ num ]).
-html_comp_i(28,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(28,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(28,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(28,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(28,'Autocomplete',-1,d,[ bool ]).
@@ -784,24 +778,27 @@ html_comp_i(28,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(28,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(28,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(28,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(28,'Coltitle','Lugar Sector Name',d,[ str ]).
+html_comp_i(28,'Coltitle','Lugar Sector Disponibles',d,[ str ]).
 html_comp_i(28,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(28,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(28,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(28,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(28,'Gxformat',0,d,[ num ]).
 html_comp_i(28,'Colvisible',-1,v,[ bool ]).
 html_comp_i(28,'Title','',d,[ str ]).
 html_comp_i(28,'Invitemsg','',d,[ str ]).
 html_comp_i(29,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(29,'Colcount',4,d,[ num ]).
-html_comp_i(29,'Colattid',30,v,[ num ]).
-html_comp_i(29,'Controlname','Lugarsectorprecio',d,[ str ]).
+html_comp_i(29,'Colcount',40,d,[ num ]).
+html_comp_i(29,'Colattid',8,v,[ num ]).
+html_comp_i(29,'Controlname','Tipoespectaculoname',d,[ str ]).
 html_comp_i(29,'Class','Attribute',v,[ str ]).
 html_comp_i(29,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(29,'Returnonclick',0,d,[ bool ]).
 html_comp_i(29,'Eventgx','',d,[ str ]).
 html_comp_i(29,'Controltype',2,d,[ num ]).
 html_comp_i(29,'Inputtype',0,d,[ num ]).
+html_comp_i(29,'Editautocomplete',0,d,[ num ]).
+html_comp_i(29,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(29,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(29,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(29,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(29,'Autocomplete',-1,d,[ bool ]).
@@ -812,18 +809,18 @@ html_comp_i(29,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(29,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(29,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(29,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(29,'Coltitle','Lugar Sector Precio',d,[ str ]).
+html_comp_i(29,'Coltitle','Tipo Espectaculo Name',d,[ str ]).
 html_comp_i(29,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(29,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(29,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(29,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(29,'Gxformat',0,d,[ num ]).
 html_comp_i(29,'Colvisible',-1,v,[ bool ]).
 html_comp_i(29,'Title','',d,[ str ]).
 html_comp_i(29,'Invitemsg','',d,[ str ]).
 html_comp_i(30,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(30,'Colcount',4,d,[ num ]).
-html_comp_i(30,'Colattid',38,v,[ num ]).
-html_comp_i(30,'Controlname','Lugarsectordisponibles',d,[ str ]).
+html_comp_i(30,'Colattid',47,v,[ num ]).
+html_comp_i(30,'Controlname','Espectaculofuncionid',d,[ str ]).
 html_comp_i(30,'Class','Attribute',v,[ str ]).
 html_comp_i(30,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(30,'Returnonclick',0,d,[ bool ]).
@@ -840,7 +837,7 @@ html_comp_i(30,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(30,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(30,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(30,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(30,'Coltitle','Lugar Sector Disponibles',d,[ str ]).
+html_comp_i(30,'Coltitle','Espectaculo Funcion Id',d,[ str ]).
 html_comp_i(30,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(30,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(30,'Horizontalalignment',right,d,[ str ]).
@@ -850,8 +847,8 @@ html_comp_i(30,'Title','',d,[ str ]).
 html_comp_i(30,'Invitemsg','',d,[ str ]).
 html_comp_i(31,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(31,'Colcount',40,d,[ num ]).
-html_comp_i(31,'Colattid',8,v,[ num ]).
-html_comp_i(31,'Controlname','Tipoespectaculoname',d,[ str ]).
+html_comp_i(31,'Colattid',48,v,[ num ]).
+html_comp_i(31,'Controlname','Espectaculofuncionname',d,[ str ]).
 html_comp_i(31,'Class','Attribute',v,[ str ]).
 html_comp_i(31,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(31,'Returnonclick',0,d,[ bool ]).
@@ -871,7 +868,7 @@ html_comp_i(31,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(31,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(31,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(31,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(31,'Coltitle','Tipo Espectaculo Name',d,[ str ]).
+html_comp_i(31,'Coltitle','Espectaculo Funcion Name',d,[ str ]).
 html_comp_i(31,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(31,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(31,'Horizontalalignment',left,d,[ str ]).
@@ -880,15 +877,18 @@ html_comp_i(31,'Colvisible',-1,v,[ bool ]).
 html_comp_i(31,'Title','',d,[ str ]).
 html_comp_i(31,'Invitemsg','',d,[ str ]).
 html_comp_i(32,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(32,'Colcount',4,d,[ num ]).
-html_comp_i(32,'Colattid',43,v,[ num ]).
-html_comp_i(32,'Controlname','Entradapaisorigenid',d,[ str ]).
+html_comp_i(32,'Colcount',40,d,[ num ]).
+html_comp_i(32,'Colattid',50,v,[ num ]).
+html_comp_i(32,'Controlname','Espectaculopaisname',d,[ str ]).
 html_comp_i(32,'Class','Attribute',v,[ str ]).
 html_comp_i(32,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(32,'Returnonclick',0,d,[ bool ]).
 html_comp_i(32,'Eventgx','',d,[ str ]).
 html_comp_i(32,'Controltype',2,d,[ num ]).
 html_comp_i(32,'Inputtype',0,d,[ num ]).
+html_comp_i(32,'Editautocomplete',0,d,[ num ]).
+html_comp_i(32,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(32,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(32,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(32,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(32,'Autocomplete',-1,d,[ bool ]).
@@ -899,18 +899,18 @@ html_comp_i(32,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(32,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(32,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(32,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(32,'Coltitle','Origen Id',d,[ str ]).
+html_comp_i(32,'Coltitle','Pais Name',d,[ str ]).
 html_comp_i(32,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(32,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(32,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(32,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(32,'Gxformat',0,d,[ num ]).
 html_comp_i(32,'Colvisible',-1,v,[ bool ]).
 html_comp_i(32,'Title','',d,[ str ]).
 html_comp_i(32,'Invitemsg','',d,[ str ]).
 html_comp_i(33,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(33,'Colcount',40,d,[ num ]).
-html_comp_i(33,'Colattid',44,v,[ num ]).
-html_comp_i(33,'Controlname','Entradapaisorigenname',d,[ str ]).
+html_comp_i(33,'Colattid',28,v,[ num ]).
+html_comp_i(33,'Controlname','Lugarsectorname',d,[ str ]).
 html_comp_i(33,'Class','Attribute',v,[ str ]).
 html_comp_i(33,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(33,'Returnonclick',0,d,[ bool ]).
@@ -930,7 +930,7 @@ html_comp_i(33,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(33,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(33,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(33,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(33,'Coltitle','Origen Name',d,[ str ]).
+html_comp_i(33,'Coltitle','Lugar Sector Name',d,[ str ]).
 html_comp_i(33,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(33,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(33,'Horizontalalignment',left,d,[ str ]).
@@ -940,8 +940,8 @@ html_comp_i(33,'Title','',d,[ str ]).
 html_comp_i(33,'Invitemsg','',d,[ str ]).
 html_comp_i(34,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(34,'Colcount',4,d,[ num ]).
-html_comp_i(34,'Colattid',47,v,[ num ]).
-html_comp_i(34,'Controlname','Espectaculofuncionid',d,[ str ]).
+html_comp_i(34,'Colattid',30,v,[ num ]).
+html_comp_i(34,'Controlname','Lugarsectorprecio',d,[ str ]).
 html_comp_i(34,'Class','Attribute',v,[ str ]).
 html_comp_i(34,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
 html_comp_i(34,'Returnonclick',0,d,[ bool ]).
@@ -958,7 +958,7 @@ html_comp_i(34,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(34,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(34,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(34,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(34,'Coltitle','Espectaculo Funcion Id',d,[ str ]).
+html_comp_i(34,'Coltitle','Lugar Sector Precio',d,[ str ]).
 html_comp_i(34,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(34,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(34,'Horizontalalignment',right,d,[ str ]).
@@ -967,11 +967,11 @@ html_comp_i(34,'Colvisible',-1,v,[ bool ]).
 html_comp_i(34,'Title','',d,[ str ]).
 html_comp_i(34,'Invitemsg','',d,[ str ]).
 html_comp_i(35,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(35,'Colcount',40,d,[ num ]).
-html_comp_i(35,'Colattid',48,v,[ num ]).
-html_comp_i(35,'Controlname','Espectaculofuncionname',d,[ str ]).
-html_comp_i(35,'Class','Attribute',v,[ str ]).
-html_comp_i(35,'Columnclass','WWColumn WWOptionalColumn',v,[ str ]).
+html_comp_i(35,'Colcount',20,d,[ num ]).
+html_comp_i(35,'Colattid',-13,v,[ num ]).
+html_comp_i(35,'Controlname','&Update',d,[ str ]).
+html_comp_i(35,'Class','TextActionAttribute',v,[ str ]).
+html_comp_i(35,'Columnclass','WWTextActionColumn',v,[ str ]).
 html_comp_i(35,'Returnonclick',0,d,[ bool ]).
 html_comp_i(35,'Eventgx','',d,[ str ]).
 html_comp_i(35,'Controltype',2,d,[ num ]).
@@ -980,7 +980,7 @@ html_comp_i(35,'Editautocomplete',0,d,[ num ]).
 html_comp_i(35,'Autocorrection',-1,d,[ bool ]).
 html_comp_i(35,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(35,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(35,'Colreadonly',-1,d,[ bool ]).
+html_comp_i(35,'Colreadonly',-1,v,[ bool ]).
 html_comp_i(35,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(35,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(35,'Ispassword',0,d,[ bool ]).
@@ -989,18 +989,18 @@ html_comp_i(35,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(35,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(35,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(35,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(35,'Coltitle','Espectaculo Funcion Name',d,[ str ]).
+html_comp_i(35,'Coltitle','',d,[ str ]).
 html_comp_i(35,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(35,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(35,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(35,'Gxformat',0,d,[ num ]).
-html_comp_i(35,'Colvisible',-1,v,[ bool ]).
+html_comp_i(35,'Colvisible',-1,d,[ bool ]).
 html_comp_i(35,'Title','',d,[ str ]).
 html_comp_i(35,'Invitemsg','',d,[ str ]).
 html_comp_i(36,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(36,'Colcount',20,d,[ num ]).
-html_comp_i(36,'Colattid',-13,v,[ num ]).
-html_comp_i(36,'Controlname','&Update',d,[ str ]).
+html_comp_i(36,'Colattid',-14,v,[ num ]).
+html_comp_i(36,'Controlname','&Delete',d,[ str ]).
 html_comp_i(36,'Class','TextActionAttribute',v,[ str ]).
 html_comp_i(36,'Columnclass','WWTextActionColumn',v,[ str ]).
 html_comp_i(36,'Returnonclick',0,d,[ bool ]).
@@ -1029,38 +1029,15 @@ html_comp_i(36,'Colvisible',-1,d,[ bool ]).
 html_comp_i(36,'Title','',d,[ str ]).
 html_comp_i(36,'Invitemsg','',d,[ str ]).
 html_comp_i(37,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(37,'Colcount',20,d,[ num ]).
-html_comp_i(37,'Colattid',-14,v,[ num ]).
-html_comp_i(37,'Controlname','&Delete',d,[ str ]).
-html_comp_i(37,'Class','TextActionAttribute',v,[ str ]).
-html_comp_i(37,'Columnclass','WWTextActionColumn',v,[ str ]).
-html_comp_i(37,'Returnonclick',0,d,[ bool ]).
-html_comp_i(37,'Eventgx','',d,[ str ]).
-html_comp_i(37,'Controltype',2,d,[ num ]).
-html_comp_i(37,'Inputtype',0,d,[ num ]).
-html_comp_i(37,'Editautocomplete',0,d,[ num ]).
-html_comp_i(37,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(37,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(37,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(37,'Colreadonly',-1,v,[ bool ]).
-html_comp_i(37,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(37,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(37,'Ispassword',0,d,[ bool ]).
-html_comp_i(37,'Colautoresize',-1,d,[ bool ]).
-html_comp_i(37,'Colwidth',measure(0,px),d,[ measure ]).
-html_comp_i(37,'Height',measure(17,px),d,[ measure ]).
-html_comp_i(37,'Collinesfont',font('Arial',10,[]),d,[ font ]).
-html_comp_i(37,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(37,'Coltitle','',d,[ str ]).
-html_comp_i(37,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
-html_comp_i(37,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(37,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(37,'Gxformat',0,d,[ num ]).
-html_comp_i(37,'Colvisible',-1,d,[ bool ]).
-html_comp_i(37,'Title','',d,[ str ]).
-html_comp_i(37,'Invitemsg','',d,[ str ]).
+html_comp_i(37,'Class',row,v,[ str ]).
+html_comp_i(37,'Id','',d,[ str ]).
+html_comp_i(37,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(37,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(37,'Semanticcontent',div,d,[ str ]).
+html_comp_i(37,'Align',left,d,[ str ]).
+html_comp_i(37,'Valign',top,d,[ str ]).
 html_comp_i(38,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(38,'Class',row,v,[ str ]).
+html_comp_i(38,'Class','col-xs-12',v,[ str ]).
 html_comp_i(38,'Id','',d,[ str ]).
 html_comp_i(38,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(38,'Width',measure(0,px),d,[ measure ]).
@@ -1068,7 +1045,7 @@ html_comp_i(38,'Semanticcontent',div,d,[ str ]).
 html_comp_i(38,'Align',left,d,[ str ]).
 html_comp_i(38,'Valign',top,d,[ str ]).
 html_comp_i(39,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(39,'Class','col-xs-12',v,[ str ]).
+html_comp_i(39,'Class',' gx-attribute',v,[ str ]).
 html_comp_i(39,'Id','',d,[ str ]).
 html_comp_i(39,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(39,'Width',measure(0,px),d,[ measure ]).
@@ -1076,45 +1053,37 @@ html_comp_i(39,'Semanticcontent',div,d,[ str ]).
 html_comp_i(39,'Align',left,d,[ str ]).
 html_comp_i(39,'Valign',top,d,[ str ]).
 html_comp_i(40,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(40,'Class',' gx-attribute',v,[ str ]).
-html_comp_i(40,'Id','',d,[ str ]).
-html_comp_i(40,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(40,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(40,'Semanticcontent',div,d,[ str ]).
-html_comp_i(40,'Align',left,d,[ str ]).
-html_comp_i(40,'Valign',top,d,[ str ]).
-html_comp_i(41,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(41,'Colcount',4,d,[ num ]).
-html_comp_i(41,'Attid',9,v,[ num ]).
-html_comp_i(41,'Class','Attribute',v,[ str ]).
-html_comp_i(41,'Controlname','Clienteid',d,[ str ]).
-html_comp_i(41,'Returnonclick',0,v,[ bool ]).
-html_comp_i(41,'Eventgx','',d,[ str ]).
-html_comp_i(41,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
-html_comp_i(41,'Captionstyle','',v,[ str ]).
-html_comp_i(41,'Captionposition','None',v,[ str ]).
-html_comp_i(41,'Captionvalue','Cliente Id',d,[ str ]).
-html_comp_i(41,'Layoutclass','',v,[ str ]).
-html_comp_i(41,'Controltype',2,v,[ num ]).
-html_comp_i(41,'Inputtype',0,v,[ num ]).
-html_comp_i(41,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(41,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(41,'Readonly',-1,v,[ bool ]).
-html_comp_i(41,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(41,'Ispassword',0,d,[ bool ]).
-html_comp_i(41,'Autoresize',-1,d,[ bool ]).
-html_comp_i(41,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(41,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(41,'Ismultiline',0,d,[ bool ]).
-html_comp_i(41,'Maxtextnumberlines',0,d,[ num ]).
-html_comp_i(41,'Fill',-1,d,[ bool ]).
-html_comp_i(41,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(41,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(41,'Font',font('Arial',10,[]),d,[ font ]).
-html_comp_i(41,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(41,'Gxformat',0,d,[ num ]).
-html_comp_i(41,'Title','',d,[ str ]).
-html_comp_i(41,'Invitemsg','',v,[ str ]).
+html_comp_i(40,'Colcount',4,d,[ num ]).
+html_comp_i(40,'Attid',9,v,[ num ]).
+html_comp_i(40,'Class','Attribute',v,[ str ]).
+html_comp_i(40,'Controlname','Clienteid',d,[ str ]).
+html_comp_i(40,'Returnonclick',0,v,[ bool ]).
+html_comp_i(40,'Eventgx','',d,[ str ]).
+html_comp_i(40,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
+html_comp_i(40,'Captionstyle','',v,[ str ]).
+html_comp_i(40,'Captionposition','None',v,[ str ]).
+html_comp_i(40,'Captionvalue','Cliente Id',d,[ str ]).
+html_comp_i(40,'Layoutclass','',v,[ str ]).
+html_comp_i(40,'Controltype',2,v,[ num ]).
+html_comp_i(40,'Inputtype',0,v,[ num ]).
+html_comp_i(40,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(40,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(40,'Readonly',-1,v,[ bool ]).
+html_comp_i(40,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(40,'Ispassword',0,d,[ bool ]).
+html_comp_i(40,'Autoresize',-1,d,[ bool ]).
+html_comp_i(40,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(40,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(40,'Ismultiline',0,d,[ bool ]).
+html_comp_i(40,'Maxtextnumberlines',0,d,[ num ]).
+html_comp_i(40,'Fill',-1,d,[ bool ]).
+html_comp_i(40,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(40,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(40,'Font',font('Arial',10,[]),d,[ font ]).
+html_comp_i(40,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(40,'Gxformat',0,d,[ num ]).
+html_comp_i(40,'Title','',d,[ str ]).
+html_comp_i(40,'Invitemsg','',v,[ str ]).
  
  
  
@@ -1142,26 +1111,25 @@ lit_i(24,1,s(t(1,2),20),[ ctlname(1),ctrltype(edit,24),pos(24),readonly,ispwd(0)
 lit_i(25,1,s(t(2,2),20),[ ctlname(2),ctrltype(edit,25),pos(25),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(26,1,s(t(16,2),20),[ ctlname(16),ctrltype(edit,26),pos(26),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(27,1,s(t(27,2),20),[ ctlname(27),ctrltype(edit,27),pos(27),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(28,1,s(t(28,2),20),[ ctlname(28),ctrltype(edit,28),pos(28),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(29,1,s(t(30,2),20),[ ctlname(30),ctrltype(edit,29),pos(29),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(30,1,s(t(38,2),20),[ ctlname(38),ctrltype(edit,30),pos(30),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(31,1,s(t(8,2),20),[ ctlname(8),ctrltype(edit,31),pos(31),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(32,1,s(t(43,2),20),[ ctlname(43),ctrltype(edit,32),pos(32),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(33,1,s(t(44,2),20),[ ctlname(44),ctrltype(edit,33),pos(33),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(34,1,s(t(47,2),20),[ ctlname(47),ctrltype(edit,34),pos(34),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(35,1,s(t(48,2),20),[ ctlname(48),ctrltype(edit,35),pos(35),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(36,1,s(t('Update',23),20),[ ctlname('&Update'),ctrltype(edit,36),pos(36),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(37,1,s(t('Delete',23),20),[ ctlname('&Delete'),ctrltype(edit,37),pos(37),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,s(20),[ ctlname('Grid'),el([ t(23,2),t(5,2),t(42,2),t(1,2),t(2,2),t(16,2),t(27,2),t(28,2),t(30,2),t(38,2),t(8,2),t(43,2),t(44,2),t(47,2),t(48,2),t('Update',23),t('Delete',23) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,s(t(38,2),20),[ ctlname(38),ctrltype(edit,28),pos(28),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(29,1,s(t(8,2),20),[ ctlname(8),ctrltype(edit,29),pos(29),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(30,1,s(t(47,2),20),[ ctlname(47),ctrltype(edit,30),pos(30),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(31,1,s(t(48,2),20),[ ctlname(48),ctrltype(edit,31),pos(31),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(32,1,s(t(50,2),20),[ ctlname(50),ctrltype(edit,32),pos(32),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(33,1,s(t(28,2),20),[ ctlname(28),ctrltype(edit,33),pos(33),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(34,1,s(t(30,2),20),[ ctlname(30),ctrltype(edit,34),pos(34),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(35,1,s(t('Update',23),20),[ ctlname('&Update'),ctrltype(edit,35),pos(35),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(36,1,s(t('Delete',23),20),[ ctlname('&Delete'),ctrltype(edit,36),pos(36),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(20,1,s(20),[ ctlname('Grid'),el([ t(23,2),t(5,2),t(42,2),t(1,2),t(2,2),t(16,2),t(27,2),t(38,2),t(8,2),t(47,2),t(48,2),t(50,2),t(28,2),t(30,2),t('Update',23),t('Delete',23) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(19,1,div(19),[ ctlname('') ]).
 lit_i(18,1,div(18),[ ctlname('') ]).
 lit_i(14,1,div(14),[ ctlname('Gridtable') ]).
 lit_i(13,1,div(13),[ ctlname('Gridcell') ]).
 lit_i(12,1,div(12),[ ctlname('') ]).
-lit_i(41,1,t(9,2),[ ctlname(9),ctrltype(edit,41),pos(41),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(40,1,div(40),[ ctlname('') ]).
+lit_i(40,1,t(9,2),[ ctlname(9),ctrltype(edit,40),pos(40),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(39,1,div(39),[ ctlname('') ]).
 lit_i(38,1,div(38),[ ctlname('') ]).
+lit_i(37,1,div(37),[ ctlname('') ]).
 lit_i(3,1,div(3),[ ctlname('Maintable') ]).
 lit_i(2,1,div(2),[ ctlname('') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
@@ -1257,28 +1225,6 @@ att_prop_i(2,27,'AttValidationFailedMsg','',d).
 att_prop_i(2,27,'DownloadOffline','0',d).
 att_prop_i(2,27,'VarServiceExtName','',d).
 att_prop_i(2,27,'FullName','LugarSectorId',v).
-att_prop_i(2,28,'ExternalName','LugarSectorName',d).
-att_prop_i(2,28,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,28,'EmptyAsNull','Yes',d).
-att_prop_i(2,28,idBasedOn,87,v).
-att_prop_i(2,28,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,28,'DB_NLS_SUPPORT','Yes',d).
-att_prop_i(2,28,'AttRegEx','',d).
-att_prop_i(2,28,'AttValidationFailedMsg','',d).
-att_prop_i(2,28,'DownloadOffline','0',d).
-att_prop_i(2,28,'VarServiceExtName','',d).
-att_prop_i(2,28,'FullName','LugarSectorName',v).
-att_prop_i(2,30,'ExternalName','LugarSectorPrecio',d).
-att_prop_i(2,30,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,30,'EmptyAsNull','Yes',d).
-att_prop_i(2,30,idBasedOn,'',d).
-att_prop_i(2,30,'AUTONUMBER','0',d).
-att_prop_i(2,30,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,30,'AttRegEx','',d).
-att_prop_i(2,30,'AttValidationFailedMsg','',d).
-att_prop_i(2,30,'DownloadOffline','0',d).
-att_prop_i(2,30,'VarServiceExtName','',d).
-att_prop_i(2,30,'FullName','LugarSectorPrecio',v).
 att_prop_i(2,38,'ExternalName','LugarSectorDisponibles',d).
 att_prop_i(2,38,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,38,idBasedOn,'',d).
@@ -1296,28 +1242,6 @@ att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
 att_prop_i(2,8,'VarServiceExtName','',d).
 att_prop_i(2,8,'FullName','TipoEspectaculoName',v).
-att_prop_i(2,43,'ExternalName','EntradaPaisOrigenId',d).
-att_prop_i(2,43,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,43,'EmptyAsNull','Yes',d).
-att_prop_i(2,43,idBasedOn,86,v).
-att_prop_i(2,43,'AUTONUMBER','0',d).
-att_prop_i(2,43,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,43,'AttRegEx','',d).
-att_prop_i(2,43,'AttValidationFailedMsg','',d).
-att_prop_i(2,43,'DownloadOffline','0',d).
-att_prop_i(2,43,'VarServiceExtName','',d).
-att_prop_i(2,43,'FullName','EntradaPaisOrigenId',v).
-att_prop_i(2,44,'ExternalName','EntradaPaisOrigenName',d).
-att_prop_i(2,44,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,44,'EmptyAsNull','Yes',d).
-att_prop_i(2,44,idBasedOn,87,v).
-att_prop_i(2,44,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,44,'DB_NLS_SUPPORT','Yes',d).
-att_prop_i(2,44,'AttRegEx','',d).
-att_prop_i(2,44,'AttValidationFailedMsg','',d).
-att_prop_i(2,44,'DownloadOffline','0',d).
-att_prop_i(2,44,'VarServiceExtName','',d).
-att_prop_i(2,44,'FullName','EntradaPaisOrigenName',v).
 att_prop_i(2,47,'ExternalName','EspectaculoFuncionId',d).
 att_prop_i(2,47,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,47,'EmptyAsNull','Yes',d).
@@ -1340,6 +1264,39 @@ att_prop_i(2,48,'AttValidationFailedMsg','',d).
 att_prop_i(2,48,'DownloadOffline','0',d).
 att_prop_i(2,48,'VarServiceExtName','',d).
 att_prop_i(2,48,'FullName','EspectaculoFuncionName',v).
+att_prop_i(2,50,'ExternalName','EspectaculoPaisName',d).
+att_prop_i(2,50,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,50,'EmptyAsNull','Yes',d).
+att_prop_i(2,50,idBasedOn,87,v).
+att_prop_i(2,50,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,50,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,50,'AttRegEx','',d).
+att_prop_i(2,50,'AttValidationFailedMsg','',d).
+att_prop_i(2,50,'DownloadOffline','0',d).
+att_prop_i(2,50,'VarServiceExtName','',d).
+att_prop_i(2,50,'FullName','EspectaculoPaisName',v).
+att_prop_i(2,28,'ExternalName','LugarSectorName',d).
+att_prop_i(2,28,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,28,'EmptyAsNull','Yes',d).
+att_prop_i(2,28,idBasedOn,87,v).
+att_prop_i(2,28,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,28,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,28,'AttRegEx','',d).
+att_prop_i(2,28,'AttValidationFailedMsg','',d).
+att_prop_i(2,28,'DownloadOffline','0',d).
+att_prop_i(2,28,'VarServiceExtName','',d).
+att_prop_i(2,28,'FullName','LugarSectorName',v).
+att_prop_i(2,30,'ExternalName','LugarSectorPrecio',d).
+att_prop_i(2,30,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,30,'EmptyAsNull','Yes',d).
+att_prop_i(2,30,idBasedOn,'',d).
+att_prop_i(2,30,'AUTONUMBER','0',d).
+att_prop_i(2,30,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,30,'AttRegEx','',d).
+att_prop_i(2,30,'AttValidationFailedMsg','',d).
+att_prop_i(2,30,'DownloadOffline','0',d).
+att_prop_i(2,30,'VarServiceExtName','',d).
+att_prop_i(2,30,'FullName','LugarSectorPrecio',v).
 att_prop_i(2,9,'ExternalName','ClienteId',d).
 att_prop_i(2,9,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,9,'EmptyAsNull','Yes',d).
@@ -1419,10 +1376,9 @@ tbl_att_prop_i(2,9,23,'AUTONUMBER',y).
 tbl_att_prop_i(2,9,9,'AllowNulls',n).
 tbl_att_prop_i(2,9,27,'AllowNulls',n).
 tbl_att_prop_i(2,9,42,'AllowNulls',n).
-tbl_att_prop_i(2,9,43,'AllowNulls',n).
-tbl_att_prop_i(2,9,44,'AllowNulls',n).
 tbl_att_prop_i(2,9,1,'AllowNulls',n).
 tbl_att_prop_i(2,9,47,'AllowNulls',n).
+tbl_att_prop_i(2,9,50,'AllowNulls',n).
 tbl_att_prop_i(2,15,1,'AllowNulls',n).
 tbl_att_prop_i(2,15,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,15,2,'AllowNulls',n).

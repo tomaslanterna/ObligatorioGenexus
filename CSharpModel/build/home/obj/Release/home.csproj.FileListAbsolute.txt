@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\home.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\home\obj\Release\home.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\home\obj\Release\home.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\home.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\home\obj\Release\home.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\home\obj\Release\home.dll
