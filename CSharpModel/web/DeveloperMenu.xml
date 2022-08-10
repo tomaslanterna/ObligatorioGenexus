@@ -23,12 +23,6 @@
    </Object>
    <Object>
       <ObjCls>13</ObjCls>
-      <ObjName>WWEspectaculo</ObjName>
-      <ObjDesc>Espectaculoes</ObjDesc>
-      <ObjLink>wwespectaculo.aspx</ObjLink>
-   </Object>
-   <Object>
-      <ObjCls>13</ObjCls>
       <ObjName>WWPais</ObjName>
       <ObjDesc>Pais</ObjDesc>
       <ObjLink>wwpais.aspx</ObjLink>
@@ -41,12 +35,6 @@
    </Object>
    <Object>
       <ObjCls>13</ObjCls>
-      <ObjName>WWFuncion</ObjName>
-      <ObjDesc>Funcions</ObjDesc>
-      <ObjLink>wwfuncion.aspx</ObjLink>
-   </Object>
-   <Object>
-      <ObjCls>13</ObjCls>
       <ObjName>WWInvitacion</ObjName>
       <ObjDesc>Invitacions</ObjDesc>
       <ObjLink>wwinvitacion.aspx</ObjLink>
@@ -56,5 +44,11 @@
       <ObjName>WWLugar</ObjName>
       <ObjDesc>Lugars</ObjDesc>
       <ObjLink>wwlugar.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WWEspectaculo</ObjName>
+      <ObjDesc>Espectaculoes</ObjDesc>
+      <ObjLink>wwespectaculo.aspx</ObjLink>
    </Object>
 </Objects>

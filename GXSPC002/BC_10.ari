@@ -1,0 +1,29 @@
+bc_dt_elem_i([ 0,10,0 ],'Espectaculoid',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Espectaculoname',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Espectaculofecha',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Paisid',readonly,yes).
+bc_dt_elem_i([ 0,10,0 ],'Paisid',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Paisname',readonly,yes).
+bc_dt_elem_i([ 0,10,0 ],'Paisname',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Lugarid',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Lugarname',readonly,yes).
+bc_dt_elem_i([ 0,10,0 ],'Lugarname',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Tipoespectaculoid',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Tipoespectaculoname',readonly,yes).
+bc_dt_elem_i([ 0,10,0 ],'Tipoespectaculoname',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Espectaculoimagen',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'Espectaculoimagen_gxi',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorid',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorname',readonly,yes).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorname',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorcantidad',readonly,yes).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorcantidad',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorestadosector',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorprecio',readonly,yes).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorprecio',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectorvendidas',readonly,yes).
+bc_dt_elem_i([ 0,10,[ 1,27 ] ],'Lugarsectordisponibles',readonly,yes).
+bc_dt_elem_i([ 0,10,[ 1,47 ] ],'Espectaculofuncionid',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,47 ] ],'Espectaculofuncionname',allownulls,no).
+bc_dt_elem_i([ 0,10,[ 1,47 ] ],'Espectaculofuncionprecio',allownulls,no).
+ 

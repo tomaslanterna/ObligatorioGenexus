@@ -72,18 +72,7 @@
 <Description>Pais Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
 <Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -131,7 +120,7 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
 <Table>
-<TableId>13</TableId>
+<TableId>16</TableId>
 <TableName>EspectaculoLugarSector</TableName>
 <Description>Lugar Sector</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -144,6 +133,21 @@
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table>
 <Table>
 <TableId>9</TableId>
@@ -160,25 +164,14 @@
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute>
-<Attribute>
 <AttriId>1</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
@@ -211,13 +204,17 @@
 <AttriName>ClienteId</AttriName>
 <Description>Cliente Id</Description></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
@@ -242,13 +239,17 @@
 <AttriName>ClienteId</AttriName>
 <Description>Cliente Id</Description></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Lugar Sector Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
@@ -266,22 +267,63 @@
 <Prompts>
 <Prompt>
 <Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
 <Description>Funcion</Description></Table>
+<ProgramName>
+<Token>Gx00I1</Token></ProgramName>
+<InputParameters>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>59</ObjId>
-<ObjName>Gx0070</ObjName>
-<ObjPgmName>Gx0070</ObjPgmName>
+<ObjId>70</ObjId>
+<ObjName>Gx00F0</ObjName>
+<ObjPgmName>Gx00F0</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <InputParameters></InputParameters>
 <OutputParameters>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></OutputParameters>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>71</ObjId>
+<ObjName>Gx00G1</ObjName>
+<ObjPgmName>Gx00G1</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<InputParameters>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>

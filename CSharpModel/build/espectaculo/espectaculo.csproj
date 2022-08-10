@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>espectaculo</AssemblyName>
-		<ProjectGuid>{d2d67add-f392-4e4b-9446-26a37d3bb150}</ProjectGuid>
+		<ProjectGuid>{b25d6d54-a3c9-4b7a-af1f-1e5a4d9e598d}</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<PostgresqlSupport>false</PostgresqlSupport>
 	</PropertyGroup>
@@ -24,8 +24,9 @@
 
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include = "$(WebDirectory)\espectaculo.cs" />
 		<Compile Include = "$(WebDirectory)\isauthorized.cs" />
+		<Compile Include = "$(WebDirectory)\espectaculo.cs" />
+		<Compile Include = "$(WebDirectory)\espectaculo_bc.cs" />
 
 	</ItemGroup>
 	

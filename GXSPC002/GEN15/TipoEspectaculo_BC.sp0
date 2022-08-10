@@ -146,15 +146,19 @@ rule_i(0,prop('ObjDesc','Tipo Espectaculo')).
 rule_i(0,prop('ObjName','TipoEspectaculo')).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(4,rule([ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(8,2),t(')',4) ],[ insert,update,delete,display ],[ 8 ])).
  
-a_i(1,4,t,4,[],[ [ [ [],7,7 ] ],'ITIPOESPECTACULO',[] ]).
+a_i(1,4,b,1,[],[ [],[ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(8,2),t(')',4) ] ]).
+a_i(2,4,t,4,[],[ [ [ [],7,7 ] ],'ITIPOESPECTACULO',[] ]).
  
-v_i(t,i,1,7).
-v_i(t,o,1,8).
+v_i(b,i,1,8).
+v_i(b,o,1,[]).
+v_i(t,i,2,7).
+v_i(t,o,2,8).
  
  
  
-tbl_to_delete_i(4,[ 1,[ [ 4,7,7 ] ],c,'IESPECTACULO3',0,[ 1 ],'' ]).
+tbl_to_delete_i(4,[ 15,[ [ 4,7,7 ] ],c,'IESPECTACULO1',0,[ 1 ],'' ]).
  
  
  
@@ -168,12 +172,12 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ])
 attri_i('Tipoespectaculoid',[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(1,[ 'Espectaculo',[ 1,7 ],'Espectaculo','Espectaculo' ]).
+table_i(15,[ 'Espectaculo',[ 1,7 ],'Espectaculo','Espectaculo' ]).
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
  
 index_i(4,[ 'ITIPOESPECTACULO',u,[ 7 ],'ITipoEspectaculo' ]).
-index_i(1,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
-index_i(1,[ 'IESPECTACULO3',d,[ 7 ],'IEspectaculo3' ]).
+index_i(15,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
+index_i(15,[ 'IESPECTACULO1',d,[ 7 ],'IEspectaculo1' ]).
  
  
  
@@ -282,7 +286,7 @@ att_prop_i(2,8,'FullName','TipoEspectaculoName',v).
 att_prop_i(2,1,'HORIZONTAL_DESCRIPTION','Espectaculo Id',d).
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
 att_prop_i(2,1,'AUTONUMBER','-1',v).
 att_prop_i(2,1,'AUTONUMBER_START','1',d).
@@ -295,20 +299,21 @@ att_prop_i(2,1,'DownloadOffline','0',d).
 att_prop_i(2,1,'VarServiceExtName','',d).
 att_prop_i(2,1,'FullName','EspectaculoId',v).
  
-tbl_prop_i(2,1,'AllDirSuper',[ [ 4,[ 7 ] ] ],v).
-tbl_prop_i(2,4,'DirSubor',[ [ 1,[ 7 ] ] ],v).
-tbl_prop_i(2,1,'DirSuper',[ [ 4,[ 7 ] ] ],v).
+tbl_prop_i(2,15,'AllDirSuper',[ [ 4,[ 7 ] ] ],v).
+tbl_prop_i(2,4,'DirSubor',[ [ 15,[ 7 ] ] ],v).
+tbl_prop_i(2,15,'DirSuper',[ [ 4,[ 7 ] ] ],v).
  
 tbl_att_prop_i(2,4,7,'AllowNulls',n).
 tbl_att_prop_i(2,4,7,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
-tbl_att_prop_i(2,1,7,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AUTONUMBER',y).
+tbl_att_prop_i(2,15,7,'AllowNulls',n).
  
 var_prop_i(2,'Tipoespectaculoid',idBasedOn,'',v).
  
 i_tbl_best_trn(4,[ 4,1,'TipoEspectaculo','Tipo Espectaculo',[] ]).
+i_tbl_best_trn(15,[ 10,1,'Espectaculo','Espectaculo',[] ]).
  
  
  

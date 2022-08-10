@@ -142,7 +142,55 @@
 <AttriId>3</AttriId>
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>4</TableId>
+<TableName>TipoEspectaculo</TableName>
+<Description>Tipo Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>10</TableId>
+<TableName>LugarSectorVendidas navigation</TableName>
+<Description>Invitacion</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

@@ -51,25 +51,6 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description>
-<TakesValueFrom></TakesValueFrom>
-<AttriType>
-<DataType>N</DataType>
-<Presicion>4</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
 <AttriId>45</AttriId>
 <AttriName>InvitacionName</AttriName>
 <Description>Invitacion Name</Description>
@@ -90,7 +71,45 @@
 <Value>Yes</Value></Property>
 <Property>
 <Name>NLS</Name>
-<Value>Yes</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
 <TableIndices>
@@ -110,27 +129,35 @@
 <IndexType>d</IndexType>
 <IndexAttris>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></IndexAttris>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description></Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
 <Attributes>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Invitacion] ([InvitacionId] smallint NOT NULL IDENTITY(1,1), [InvitacionFecha] datetime NOT NULL , [FuncionId] smallint NOT NULL , [InvitacionName] nvarchar(40) NULL , PRIMARY KEY([InvitacionId])) </Statement>
-<Statement>CREATE NONCLUSTERED INDEX [IINVITACION1] ON [Invitacion] ([FuncionId] )</Statement>
-<Statement>ALTER TABLE [Invitacion] ADD CONSTRAINT [IINVITACION1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId])</Statement></Statements>
+<Statement>CREATE TABLE [Invitacion] ([InvitacionId] smallint NOT NULL IDENTITY(1,1), [InvitacionFecha] datetime NOT NULL , [InvitacionName] nvarchar(40) NULL , [LugarSectorId] smallint NOT NULL , [EspectaculoId] smallint NOT NULL , PRIMARY KEY([InvitacionId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IINVITACION1] ON [Invitacion] ([EspectaculoId] ,[LugarSectorId] )</Statement>
+<Statement>ALTER TABLE [Invitacion] ADD CONSTRAINT [IINVITACION1] FOREIGN KEY ([EspectaculoId], [LugarSectorId]) REFERENCES [EspectaculoLugarSector] ([EspectaculoId], [LugarSectorId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

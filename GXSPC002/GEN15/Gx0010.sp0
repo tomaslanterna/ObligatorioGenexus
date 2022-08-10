@@ -1386,12 +1386,9 @@ ctrl_info_i(1,65,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
  
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
-att_prop_i(2,1,'AUTONUMBER','-1',v).
-att_prop_i(2,1,'AUTONUMBER_START','1',d).
-att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'AUTONUMBER','0',v).
 att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
@@ -1471,7 +1468,6 @@ att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,4,'AllowNulls',n).
 tbl_att_prop_i(2,1,7,'AllowNulls',n).

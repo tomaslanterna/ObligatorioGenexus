@@ -1,0 +1,398 @@
+
+<ObjectSpec>
+<SpecVersion>17_0_10-161416</SpecVersion>
+<Object>
+<ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
+<ObjCls>0</ObjCls>
+<ObjId>10</ObjId>
+<ObjName>Espectaculo_BC</ObjName>
+<ObjDesc>Espectaculo</ObjDesc>
+<ObjPgmName>Espectaculo_BC</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (.NET Framework)</GenName></Generator>
+<FormClass>HTML</FormClass>
+<Parameters></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>15</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description></Table></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>2</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>3</TableId>
+<TableName>Pais</TableName>
+<Description>Pais</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table>
+<Table>
+<TableId>4</TableId>
+<TableName>TipoEspectaculo</TableName>
+<Description>Tipo Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<DynamicLoads></DynamicLoads>
+<Rules></Rules>
+<AfterAttributeRules></AfterAttributeRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>2</AttriId>
+<AttriName>EspectaculoName</AttriName>
+<Description>Espectaculo Name</Description></Attribute>
+<Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description></Attribute>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>EspectaculoImagen</AttriName>
+<Description>Espectaculo Imagen</Description></Attribute>
+<Attribute>
+<AttriId>40000</AttriId>
+<AttriName>EspectaculoImagen.Uri  </AttriName>
+<Description></Description></Attribute>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>2</AttriId>
+<AttriName>EspectaculoName</AttriName>
+<Description>Espectaculo Name</Description></Attribute>
+<Attribute>
+<AttriId>16</AttriId>
+<AttriName>EspectaculoFecha</AttriName>
+<Description>Espectaculo Fecha</Description></Attribute>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>EspectaculoImagen</AttriName>
+<Description>Espectaculo Imagen</Description></Attribute>
+<Attribute>
+<AttriId>40000</AttriId>
+<AttriName>EspectaculoImagen.Uri  </AttriName>
+<Description></Description></Attribute>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AfterInsertRules></AfterInsertRules>
+<AfterUpdateRules></AfterUpdateRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete></TablesToControlOnDelete>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>16</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>16</TableId>
+<TableName>LugarSectorVendidas navigation</TableName>
+<Description>Lugar Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<DynamicLoads></DynamicLoads>
+<Rules></Rules>
+<AfterAttributeRules></AfterAttributeRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>LugarSectorEstadoSector</AttriName>
+<Description>Lugar Sector Estado Sector</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>LugarSectorEstadoSector</AttriName>
+<Description>Lugar Sector Estado Sector</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AfterInsertRules></AfterInsertRules>
+<AfterUpdateRules></AfterUpdateRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>10</TableId>
+<TableName>Invitacion</TableName>
+<Description>Invitacion</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes></Table>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels></Levels>
+<AfterLevelRules></AfterLevelRules></Level>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>18</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description></Table></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<DynamicLoads></DynamicLoads>
+<Rules></Rules>
+<AfterAttributeRules></AfterAttributeRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>EspectaculoFuncionName</AttriName>
+<Description>Espectaculo Funcion Name</Description></Attribute>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>EspectaculoFuncionPrecio</AttriName>
+<Description>Espectaculo Funcion Precio</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>EspectaculoFuncionName</AttriName>
+<Description>Espectaculo Funcion Name</Description></Attribute>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>EspectaculoFuncionPrecio</AttriName>
+<Description>Espectaculo Funcion Precio</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AfterInsertRules></AfterInsertRules>
+<AfterUpdateRules></AfterUpdateRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>9</TableId>
+<TableName>Entrada</TableName>
+<Description>Entrada</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels></Levels>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Suggests></Suggests></ObjectSpec>

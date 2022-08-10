@@ -128,7 +128,7 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ])
  
  
  
-function_i(1,'Isauthorized',yes,udp,o(1,'IsAuthorized'),[],46,'Isauthorized',[ [ t('Name',23) ] ]).
+function_i(1,'Isauthorized',yes,udp,o(1,'IsAuthorized'),[],41,'Isauthorized',[ [ t('Name',23) ] ]).
  
  
  
@@ -157,8 +157,8 @@ dom_info_i(32,[ 'GeneXus\Url' ]).
  
 break_i(1,rpt,0,[],[ [],[],[] ]).
  
-b_group_i(1,1,lit,0,1,44).
-b_group_i(1,2,lit,0,45,0).
+b_group_i(1,1,lit,0,1,39).
+b_group_i(1,2,lit,0,40,0).
  
 b_line_i(0,1,1,cmd,0,[]).
 b_line_i(1,1,1,cmd,0,[]).
@@ -179,42 +179,37 @@ b_line_i(15,1,1,cmd,0,[ t('',107,15,0),t('Description',23,0,0),t(=,10,0,0),t('"E
 b_line_i(16,1,1,cmd,0,[ t('',107,16,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWEspectaculo'),28,0,0),t(')',4,0,0) ]).
 b_line_i(17,1,1,cmd,0,[ t('',145,17,0),t('''ADDPROGRAM''',3,17,4) ]).
 b_line_i(18,1,1,cmd,0,[]).
-b_line_i(19,1,1,cmd,0,[ t('',107,19,0),t('Name',23,0,0),t(=,10,0,0),t('"WWFuncion"',3,0,0) ]).
-b_line_i(20,1,1,cmd,0,[ t('',107,20,0),t('Description',23,0,0),t(=,10,0,0),t('"Funcions"',3,0,0) ]).
-b_line_i(21,1,1,cmd,0,[ t('',107,21,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWFuncion'),28,0,0),t(')',4,0,0) ]).
+b_line_i(19,1,1,cmd,0,[ t('',107,19,0),t('Name',23,0,0),t(=,10,0,0),t('"WWInvitacion"',3,0,0) ]).
+b_line_i(20,1,1,cmd,0,[ t('',107,20,0),t('Description',23,0,0),t(=,10,0,0),t('"Invitacions"',3,0,0) ]).
+b_line_i(21,1,1,cmd,0,[ t('',107,21,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWInvitacion'),28,0,0),t(')',4,0,0) ]).
 b_line_i(22,1,1,cmd,0,[ t('',145,22,0),t('''ADDPROGRAM''',3,22,4) ]).
 b_line_i(23,1,1,cmd,0,[]).
-b_line_i(24,1,1,cmd,0,[ t('',107,24,0),t('Name',23,0,0),t(=,10,0,0),t('"WWInvitacion"',3,0,0) ]).
-b_line_i(25,1,1,cmd,0,[ t('',107,25,0),t('Description',23,0,0),t(=,10,0,0),t('"Invitacions"',3,0,0) ]).
-b_line_i(26,1,1,cmd,0,[ t('',107,26,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWInvitacion'),28,0,0),t(')',4,0,0) ]).
+b_line_i(24,1,1,cmd,0,[ t('',107,24,0),t('Name',23,0,0),t(=,10,0,0),t('"WWLugar"',3,0,0) ]).
+b_line_i(25,1,1,cmd,0,[ t('',107,25,0),t('Description',23,0,0),t(=,10,0,0),t('"Lugars"',3,0,0) ]).
+b_line_i(26,1,1,cmd,0,[ t('',107,26,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWLugar'),28,0,0),t(')',4,0,0) ]).
 b_line_i(27,1,1,cmd,0,[ t('',145,27,0),t('''ADDPROGRAM''',3,27,4) ]).
 b_line_i(28,1,1,cmd,0,[]).
-b_line_i(29,1,1,cmd,0,[ t('',107,29,0),t('Name',23,0,0),t(=,10,0,0),t('"WWLugar"',3,0,0) ]).
-b_line_i(30,1,1,cmd,0,[ t('',107,30,0),t('Description',23,0,0),t(=,10,0,0),t('"Lugars"',3,0,0) ]).
-b_line_i(31,1,1,cmd,0,[ t('',107,31,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWLugar'),28,0,0),t(')',4,0,0) ]).
+b_line_i(29,1,1,cmd,0,[ t('',107,29,0),t('Name',23,0,0),t(=,10,0,0),t('"WWPais"',3,0,0) ]).
+b_line_i(30,1,1,cmd,0,[ t('',107,30,0),t('Description',23,0,0),t(=,10,0,0),t('"Pais"',3,0,0) ]).
+b_line_i(31,1,1,cmd,0,[ t('',107,31,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWPais'),28,0,0),t(')',4,0,0) ]).
 b_line_i(32,1,1,cmd,0,[ t('',145,32,0),t('''ADDPROGRAM''',3,32,4) ]).
 b_line_i(33,1,1,cmd,0,[]).
-b_line_i(34,1,1,cmd,0,[ t('',107,34,0),t('Name',23,0,0),t(=,10,0,0),t('"WWPais"',3,0,0) ]).
-b_line_i(35,1,1,cmd,0,[ t('',107,35,0),t('Description',23,0,0),t(=,10,0,0),t('"Pais"',3,0,0) ]).
-b_line_i(36,1,1,cmd,0,[ t('',107,36,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWPais'),28,0,0),t(')',4,0,0) ]).
+b_line_i(34,1,1,cmd,0,[ t('',107,34,0),t('Name',23,0,0),t(=,10,0,0),t('"WWTipoEspectaculo"',3,0,0) ]).
+b_line_i(35,1,1,cmd,0,[ t('',107,35,0),t('Description',23,0,0),t(=,10,0,0),t('"Tipo Espectaculoes"',3,0,0) ]).
+b_line_i(36,1,1,cmd,0,[ t('',107,36,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWTipoEspectaculo'),28,0,0),t(')',4,0,0) ]).
 b_line_i(37,1,1,cmd,0,[ t('',145,37,0),t('''ADDPROGRAM''',3,37,4) ]).
 b_line_i(38,1,1,cmd,0,[]).
-b_line_i(39,1,1,cmd,0,[ t('',107,39,0),t('Name',23,0,0),t(=,10,0,0),t('"WWTipoEspectaculo"',3,0,0) ]).
-b_line_i(40,1,1,cmd,0,[ t('',107,40,0),t('Description',23,0,0),t(=,10,0,0),t('"Tipo Espectaculoes"',3,0,0) ]).
-b_line_i(41,1,1,cmd,0,[ t('',107,41,0),t('Link',23,0,0),t(=,10,0,0),t('link(',1,0,0),t(o(13,'WWTipoEspectaculo'),28,0,0),t(')',4,0,0) ]).
-b_line_i(42,1,1,cmd,0,[ t('',145,42,0),t('''ADDPROGRAM''',3,42,4) ]).
-b_line_i(43,1,1,cmd,0,[]).
-b_line_i(44,1,1,cmd,0,[ t('',143,44,0),t('''ADDPROGRAM''',3,44,5) ]).
-b_line_i(45,1,2,cmd,0,[ t('',107,45,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('TRUE',40,0,0) ]).
-b_line_i(46,1,2,cmd,0,[ t('',107,46,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('udp(',1,0,0),t('Isauthorized',3,0,0),t(46,3,0,0),t('Name',23,0,0),t(')',4,0,0) ]).
-b_line_i(47,1,2,cmd,0,[ t('',109,47,0),t('(',0,0,5),t('Isauthorized',23,0,6),t(')',4,0,19) ]).
-b_line_i(48,1,2,cmd,0,[ t('',107,48,0),t('Programname',23,0,0),t(=,10,0,0),t([ 'ProgramNames.ProgramName',[ t('(',0,48,131),t(')',4,48,132) ],n ],46,0,0) ]).
-b_line_i(49,1,2,cmd,0,[ t('',107,49,0),t([ t('Programname',23,0,0),t('Name',3,0,0) ],29,0,0),t(=,10,0,0),t('Name',23,0,0) ]).
-b_line_i(50,1,2,cmd,0,[ t('',107,50,0),t([ t('Programname',23,0,0),t('Description',3,0,0) ],29,0,0),t(=,10,0,0),t('Description',23,0,0) ]).
-b_line_i(51,1,2,cmd,0,[ t('',107,51,0),t([ t('Programname',23,0,0),t('Link',3,0,0) ],29,0,0),t(=,10,0,0),t('Link',23,0,0) ]).
-b_line_i(52,1,2,cmd,0,[ t('',107,52,0),t([ t('Programnames',23,52,3),t('add(',1,52,17) ],31,52,3),t('Programname',23,0,22),t(')',4,0,34) ]).
-b_line_i(53,1,2,cmd,0,[ t('',111,53,0) ]).
-b_line_i(54,1,2,cmd,0,[ t('',144,54,0) ]).
+b_line_i(39,1,1,cmd,0,[ t('',143,39,0),t('''ADDPROGRAM''',3,39,5) ]).
+b_line_i(40,1,2,cmd,0,[ t('',107,40,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('TRUE',40,0,0) ]).
+b_line_i(41,1,2,cmd,0,[ t('',107,41,0),t('Isauthorized',23,0,0),t(=,10,0,0),t('udp(',1,0,0),t('Isauthorized',3,0,0),t(41,3,0,0),t('Name',23,0,0),t(')',4,0,0) ]).
+b_line_i(42,1,2,cmd,0,[ t('',109,42,0),t('(',0,0,5),t('Isauthorized',23,0,6),t(')',4,0,19) ]).
+b_line_i(43,1,2,cmd,0,[ t('',107,43,0),t('Programname',23,0,0),t(=,10,0,0),t([ 'ProgramNames.ProgramName',[ t('(',0,43,131),t(')',4,43,132) ],n ],46,0,0) ]).
+b_line_i(44,1,2,cmd,0,[ t('',107,44,0),t([ t('Programname',23,0,0),t('Name',3,0,0) ],29,0,0),t(=,10,0,0),t('Name',23,0,0) ]).
+b_line_i(45,1,2,cmd,0,[ t('',107,45,0),t([ t('Programname',23,0,0),t('Description',3,0,0) ],29,0,0),t(=,10,0,0),t('Description',23,0,0) ]).
+b_line_i(46,1,2,cmd,0,[ t('',107,46,0),t([ t('Programname',23,0,0),t('Link',3,0,0) ],29,0,0),t(=,10,0,0),t('Link',23,0,0) ]).
+b_line_i(47,1,2,cmd,0,[ t('',107,47,0),t([ t('Programnames',23,47,3),t('add(',1,47,17) ],31,47,3),t('Programname',23,0,22),t(')',4,0,34) ]).
+b_line_i(48,1,2,cmd,0,[ t('',111,48,0) ]).
+b_line_i(49,1,2,cmd,0,[ t('',144,49,0) ]).
  
  
  
@@ -352,8 +347,7 @@ pgm_parm_i(web,37,'WWTIPOESPECTACULO',[],[]).
 pgm_parm_i(web,32,'WWPAIS',[],[]).
 pgm_parm_i(web,48,'WWLUGAR',[],[]).
 pgm_parm_i(web,45,'WWINVITACION',[],[]).
-pgm_parm_i(web,41,'WWFUNCION',[],[]).
-pgm_parm_i(web,25,'WWESPECTACULO',[],[]).
+pgm_parm_i(web,66,'WWESPECTACULO',[],[]).
 pgm_parm_i(web,22,'WWENTRADA',[],[]).
 pgm_parm_i(web,14,'WWCLIENTE',[],[]).
  
@@ -363,8 +357,7 @@ pgm_callprotocol_i(web,37,'WWTIPOESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,32,'WWPAIS','INTERNAL','Secure').
 pgm_callprotocol_i(web,48,'WWLUGAR','INTERNAL','Secure').
 pgm_callprotocol_i(web,45,'WWINVITACION','INTERNAL','Secure').
-pgm_callprotocol_i(web,41,'WWFUNCION','INTERNAL','Secure').
-pgm_callprotocol_i(web,25,'WWESPECTACULO','INTERNAL','Secure').
+pgm_callprotocol_i(web,66,'WWESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,22,'WWENTRADA','INTERNAL','Secure').
 pgm_callprotocol_i(web,14,'WWCLIENTE','INTERNAL','Secure').
  

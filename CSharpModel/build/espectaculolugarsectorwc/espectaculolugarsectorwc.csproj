@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>espectaculolugarsectorwc</AssemblyName>
-		<ProjectGuid>{7d47a274-75f9-4c14-9fc4-8daf34d90cc0}</ProjectGuid>
+		<ProjectGuid>{a9902ea2-1921-43fc-a201-237b3b88e7c8}</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<PostgresqlSupport>false</PostgresqlSupport>
 	</PropertyGroup>

@@ -21,17 +21,22 @@
 
 	</ItemGroup>
 	<ItemGroup>
+		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo.cs" />
 		<Compile Include = "$(WebDirectory)\GxWebServicesConfig.cs" />
-		<Compile Include = "$(WebDirectory)\type_SdtPais.cs" />
-		<Compile Include = "$(WebDirectory)\type_SdtLugar.cs" />
-		<Compile Include = "$(WebDirectory)\SoapParm.cs" />
-		<Compile Include = "$(WebDirectory)\GxWebStd.cs" />
-		<Compile Include = "$(WebDirectory)\type_SdtTipoEspectaculo.cs" />
-		<Compile Include = "$(WebDirectory)\type_SdtLugar_Sector.cs" />
 		<Compile Include = "$(WebDirectory)\GxFullTextSearchReindexer.cs" />
+		<Compile Include = "$(WebDirectory)\GxWebStd.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtPais.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo_EspectaculoFuncion.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo_Funcion.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtTipoEspectaculo.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo_LugarSector.cs" />
+		<Compile Include = "$(WebDirectory)\SoapParm.cs" />
 		<Compile Include = "$(WebDirectory)\gxdomainpage.cs" />
-		<Compile Include = "$(WebDirectory)\GxModelInfoProvider.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtLugar.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtFuncion.cs" />
+		<Compile Include = "$(WebDirectory)\type_SdtLugar_Sector.cs" />
 		<Compile Include = "$(WebDirectory)\GxObjectCollection.cs" />
+		<Compile Include = "$(WebDirectory)\GxModelInfoProvider.cs" />
 
 	</ItemGroup>
 	

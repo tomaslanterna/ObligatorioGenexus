@@ -179,11 +179,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA0O2( ) ;
+         PA1T2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START0O2( ) ;
+            START1T2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -221,7 +221,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022891326514", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228923464067", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -317,13 +317,13 @@ namespace GeneXus.Programs {
          {
             WebComp_Generalwc.componentjscripts();
          }
-         if ( ! ( WebComp_Funcionwc == null ) )
-         {
-            WebComp_Funcionwc.componentjscripts();
-         }
          if ( ! ( WebComp_Lugarsectorwc == null ) )
          {
             WebComp_Lugarsectorwc.componentjscripts();
+         }
+         if ( ! ( WebComp_Espectaculofuncionwc == null ) )
+         {
+            WebComp_Espectaculofuncionwc.componentjscripts();
          }
       }
 
@@ -335,14 +335,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE0O2( ) ;
+            WE1T2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT0O2( ) ;
+         EVT1T2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -370,7 +370,7 @@ namespace GeneXus.Programs {
          return "View Espectaculo" ;
       }
 
-      protected void WB0O0( )
+      protected void WB1T0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -487,15 +487,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</div>") ;
             context.WriteHtmlText( "<div class=\"gx_usercontrol_child\" id=\""+"TABContainer"+"title2"+"\" style=\"display:none;\">") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblFuncion_title_Internalname, "Funcion", "", "", lblFuncion_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_ViewEspectaculo.htm");
+            GxWebStd.gx_label_ctrl( context, lblLugarsector_title_Internalname, "Lugar Sector", "", "", lblLugarsector_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_ViewEspectaculo.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "Section", "left", "top", "", "display:none;", "div");
-            context.WriteHtmlText( "Funcion") ;
+            context.WriteHtmlText( "LugarSector") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             context.WriteHtmlText( "</div>") ;
             context.WriteHtmlText( "<div class=\"gx_usercontrol_child\" id=\""+"TABContainer"+"panel2"+"\" style=\"display:none;\">") ;
             /* Div Control */
-            GxWebStd.gx_div_start( context, divTablefuncion_Internalname, 1, 0, "px", 0, "px", "TabsFormContainer", "left", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, divTablelugarsector_Internalname, 1, 0, "px", 0, "px", "TabsFormContainer", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
@@ -503,19 +503,19 @@ namespace GeneXus.Programs {
             if ( ! isFullAjaxMode( ) )
             {
                /* WebComponent */
-               GxWebStd.gx_hidden_field( context, "W0038"+"", StringUtil.RTrim( WebComp_Funcionwc_Component));
+               GxWebStd.gx_hidden_field( context, "W0038"+"", StringUtil.RTrim( WebComp_Lugarsectorwc_Component));
                context.WriteHtmlText( "<div") ;
                GxWebStd.ClassAttribute( context, "gxwebcomponent");
                context.WriteHtmlText( " id=\""+"gxHTMLWrpW0038"+""+"\""+"") ;
                context.WriteHtmlText( ">") ;
-               if ( StringUtil.Len( WebComp_Funcionwc_Component) != 0 )
+               if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
                {
-                  if ( StringUtil.StrCmp(StringUtil.Lower( OldFuncionwc), StringUtil.Lower( WebComp_Funcionwc_Component)) != 0 )
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldLugarsectorwc), StringUtil.Lower( WebComp_Lugarsectorwc_Component)) != 0 )
                   {
                      context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0038"+"");
                   }
-                  WebComp_Funcionwc.componentdraw();
-                  if ( StringUtil.StrCmp(StringUtil.Lower( OldFuncionwc), StringUtil.Lower( WebComp_Funcionwc_Component)) != 0 )
+                  WebComp_Lugarsectorwc.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldLugarsectorwc), StringUtil.Lower( WebComp_Lugarsectorwc_Component)) != 0 )
                   {
                      context.httpAjaxContext.ajax_rspEndCmp();
                   }
@@ -528,15 +528,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</div>") ;
             context.WriteHtmlText( "<div class=\"gx_usercontrol_child\" id=\""+"TABContainer"+"title3"+"\" style=\"display:none;\">") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLugarsector_title_Internalname, "Lugar Sector", "", "", lblLugarsector_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_ViewEspectaculo.htm");
+            GxWebStd.gx_label_ctrl( context, lblEspectaculofuncion_title_Internalname, "Espectaculo Funcion", "", "", lblEspectaculofuncion_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_ViewEspectaculo.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "Section", "left", "top", "", "display:none;", "div");
-            context.WriteHtmlText( "LugarSector") ;
+            context.WriteHtmlText( "EspectaculoFuncion") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             context.WriteHtmlText( "</div>") ;
             context.WriteHtmlText( "<div class=\"gx_usercontrol_child\" id=\""+"TABContainer"+"panel3"+"\" style=\"display:none;\">") ;
             /* Div Control */
-            GxWebStd.gx_div_start( context, divTablelugarsector_Internalname, 1, 0, "px", 0, "px", "TabsFormContainer", "left", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, divTableespectaculofuncion_Internalname, 1, 0, "px", 0, "px", "TabsFormContainer", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
@@ -544,19 +544,19 @@ namespace GeneXus.Programs {
             if ( ! isFullAjaxMode( ) )
             {
                /* WebComponent */
-               GxWebStd.gx_hidden_field( context, "W0046"+"", StringUtil.RTrim( WebComp_Lugarsectorwc_Component));
+               GxWebStd.gx_hidden_field( context, "W0046"+"", StringUtil.RTrim( WebComp_Espectaculofuncionwc_Component));
                context.WriteHtmlText( "<div") ;
                GxWebStd.ClassAttribute( context, "gxwebcomponent");
                context.WriteHtmlText( " id=\""+"gxHTMLWrpW0046"+""+"\""+"") ;
                context.WriteHtmlText( ">") ;
-               if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
+               if ( StringUtil.Len( WebComp_Espectaculofuncionwc_Component) != 0 )
                {
-                  if ( StringUtil.StrCmp(StringUtil.Lower( OldLugarsectorwc), StringUtil.Lower( WebComp_Lugarsectorwc_Component)) != 0 )
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldEspectaculofuncionwc), StringUtil.Lower( WebComp_Espectaculofuncionwc_Component)) != 0 )
                   {
                      context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0046"+"");
                   }
-                  WebComp_Lugarsectorwc.componentdraw();
-                  if ( StringUtil.StrCmp(StringUtil.Lower( OldLugarsectorwc), StringUtil.Lower( WebComp_Lugarsectorwc_Component)) != 0 )
+                  WebComp_Espectaculofuncionwc.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldEspectaculofuncionwc), StringUtil.Lower( WebComp_Espectaculofuncionwc_Component)) != 0 )
                   {
                      context.httpAjaxContext.ajax_rspEndCmp();
                   }
@@ -575,7 +575,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START0O2( )
+      protected void START1T2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -595,16 +595,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP0O0( ) ;
+         STRUP1T0( ) ;
       }
 
-      protected void WS0O2( )
+      protected void WS1T2( )
       {
-         START0O2( ) ;
-         EVT0O2( ) ;
+         START1T2( ) ;
+         EVT1T2( ) ;
       }
 
-      protected void EVT0O2( )
+      protected void EVT1T2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -636,14 +636,14 @@ namespace GeneXus.Programs {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: Start */
-                              E110O2 ();
+                              E111T2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: Load */
-                              E120O2 ();
+                              E121T2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -692,23 +692,7 @@ namespace GeneXus.Programs {
                         }
                         else if ( nCmpId == 38 )
                         {
-                           OldFuncionwc = cgiGet( "W0038");
-                           if ( ( StringUtil.Len( OldFuncionwc) == 0 ) || ( StringUtil.StrCmp(OldFuncionwc, WebComp_Funcionwc_Component) != 0 ) )
-                           {
-                              WebComp_Funcionwc = getWebComponent(GetType(), "GeneXus.Programs", OldFuncionwc, new Object[] {context} );
-                              WebComp_Funcionwc.ComponentInit();
-                              WebComp_Funcionwc.Name = "OldFuncionwc";
-                              WebComp_Funcionwc_Component = OldFuncionwc;
-                           }
-                           if ( StringUtil.Len( WebComp_Funcionwc_Component) != 0 )
-                           {
-                              WebComp_Funcionwc.componentprocess("W0038", "", sEvt);
-                           }
-                           WebComp_Funcionwc_Component = OldFuncionwc;
-                        }
-                        else if ( nCmpId == 46 )
-                        {
-                           OldLugarsectorwc = cgiGet( "W0046");
+                           OldLugarsectorwc = cgiGet( "W0038");
                            if ( ( StringUtil.Len( OldLugarsectorwc) == 0 ) || ( StringUtil.StrCmp(OldLugarsectorwc, WebComp_Lugarsectorwc_Component) != 0 ) )
                            {
                               WebComp_Lugarsectorwc = getWebComponent(GetType(), "GeneXus.Programs", OldLugarsectorwc, new Object[] {context} );
@@ -718,9 +702,25 @@ namespace GeneXus.Programs {
                            }
                            if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
                            {
-                              WebComp_Lugarsectorwc.componentprocess("W0046", "", sEvt);
+                              WebComp_Lugarsectorwc.componentprocess("W0038", "", sEvt);
                            }
                            WebComp_Lugarsectorwc_Component = OldLugarsectorwc;
+                        }
+                        else if ( nCmpId == 46 )
+                        {
+                           OldEspectaculofuncionwc = cgiGet( "W0046");
+                           if ( ( StringUtil.Len( OldEspectaculofuncionwc) == 0 ) || ( StringUtil.StrCmp(OldEspectaculofuncionwc, WebComp_Espectaculofuncionwc_Component) != 0 ) )
+                           {
+                              WebComp_Espectaculofuncionwc = getWebComponent(GetType(), "GeneXus.Programs", OldEspectaculofuncionwc, new Object[] {context} );
+                              WebComp_Espectaculofuncionwc.ComponentInit();
+                              WebComp_Espectaculofuncionwc.Name = "OldEspectaculofuncionwc";
+                              WebComp_Espectaculofuncionwc_Component = OldEspectaculofuncionwc;
+                           }
+                           if ( StringUtil.Len( WebComp_Espectaculofuncionwc_Component) != 0 )
+                           {
+                              WebComp_Espectaculofuncionwc.componentprocess("W0046", "", sEvt);
+                           }
+                           WebComp_Espectaculofuncionwc_Component = OldEspectaculofuncionwc;
                         }
                      }
                      context.wbHandled = 1;
@@ -730,7 +730,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE0O2( )
+      protected void WE1T2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -746,7 +746,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA0O2( )
+      protected void PA1T2( )
       {
          if ( nDonePA == 0 )
          {
@@ -800,7 +800,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF0O2( ) ;
+         RF1T2( ) ;
          if ( isFullAjaxMode( ) )
          {
             send_integrity_footer_hashes( ) ;
@@ -814,7 +814,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF0O2( )
+      protected void RF1T2( )
       {
          initialize_formulas( ) ;
          clear_multi_value_controls( ) ;
@@ -832,9 +832,9 @@ namespace GeneXus.Programs {
          {
             if ( 1 != 0 )
             {
-               if ( StringUtil.Len( WebComp_Funcionwc_Component) != 0 )
+               if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
                {
-                  WebComp_Funcionwc.componentstart();
+                  WebComp_Lugarsectorwc.componentstart();
                }
             }
          }
@@ -842,9 +842,9 @@ namespace GeneXus.Programs {
          {
             if ( 1 != 0 )
             {
-               if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
+               if ( StringUtil.Len( WebComp_Espectaculofuncionwc_Component) != 0 )
                {
-                  WebComp_Lugarsectorwc.componentstart();
+                  WebComp_Espectaculofuncionwc.componentstart();
                }
             }
          }
@@ -853,24 +853,24 @@ namespace GeneXus.Programs {
          gxdyncontrolsrefreshing = false;
          if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
          {
-            /* Using cursor H000O2 */
+            /* Using cursor H001T2 */
             pr_default.execute(0, new Object[] {AV12EspectaculoId});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               A1EspectaculoId = H000O2_A1EspectaculoId[0];
-               A2EspectaculoName = H000O2_A2EspectaculoName[0];
+               A1EspectaculoId = H001T2_A1EspectaculoId[0];
+               A2EspectaculoName = H001T2_A2EspectaculoName[0];
                AssignAttri("", false, "A2EspectaculoName", A2EspectaculoName);
                /* Execute user event: Load */
-               E120O2 ();
+               E121T2 ();
                /* Exiting from a For First loop. */
                if (true) break;
             }
             pr_default.close(0);
-            WB0O0( ) ;
+            WB1T0( ) ;
          }
       }
 
-      protected void send_integrity_lvl_hashes0O2( )
+      protected void send_integrity_lvl_hashes1T2( )
       {
       }
 
@@ -881,14 +881,14 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
       }
 
-      protected void STRUP0O0( )
+      protected void STRUP1T0( )
       {
          /* Before Start, stand alone formulas. */
          before_start_formulas( ) ;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
          /* Execute user event: Start */
-         E110O2 ();
+         E111T2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -936,7 +936,7 @@ namespace GeneXus.Programs {
       protected void GXStart( )
       {
          /* Execute user event: Start */
-         E110O2 ();
+         E111T2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -944,7 +944,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E110O2( )
+      protected void E111T2( )
       {
          /* Start Routine */
          returnInSub = false;
@@ -954,12 +954,12 @@ namespace GeneXus.Programs {
             context.wjLocDisableFrm = 1;
          }
          AV16GXLvl6 = 0;
-         /* Using cursor H000O3 */
+         /* Using cursor H001T3 */
          pr_default.execute(1, new Object[] {AV12EspectaculoId});
          while ( (pr_default.getStatus(1) != 101) )
          {
-            A1EspectaculoId = H000O3_A1EspectaculoId[0];
-            A2EspectaculoName = H000O3_A2EspectaculoName[0];
+            A1EspectaculoId = H001T3_A1EspectaculoId[0];
+            A2EspectaculoName = H001T3_A2EspectaculoName[0];
             AssignAttri("", false, "A2EspectaculoName", A2EspectaculoName);
             AV16GXLvl6 = 1;
             Form.Caption = A2EspectaculoName;
@@ -1028,33 +1028,6 @@ namespace GeneXus.Programs {
                context.httpAjaxContext.ajax_rspEndCmp();
             }
          }
-         if ( AV11LoadAllTabs || ( StringUtil.StrCmp(AV7SelectedTabCode, "Funcion") == 0 ) )
-         {
-            /* Object Property */
-            if ( true )
-            {
-               bDynCreated_Funcionwc = true;
-            }
-            if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Funcionwc_Component), StringUtil.Lower( "EspectaculoFuncionWC")) != 0 )
-            {
-               WebComp_Funcionwc = getWebComponent(GetType(), "GeneXus.Programs", "espectaculofuncionwc", new Object[] {context} );
-               WebComp_Funcionwc.ComponentInit();
-               WebComp_Funcionwc.Name = "EspectaculoFuncionWC";
-               WebComp_Funcionwc_Component = "EspectaculoFuncionWC";
-            }
-            if ( StringUtil.Len( WebComp_Funcionwc_Component) != 0 )
-            {
-               WebComp_Funcionwc.setjustcreated();
-               WebComp_Funcionwc.componentprepare(new Object[] {(string)"W0038",(string)"",(short)AV12EspectaculoId});
-               WebComp_Funcionwc.componentbind(new Object[] {(string)""});
-            }
-            if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Funcionwc )
-            {
-               context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0038"+"");
-               WebComp_Funcionwc.componentdraw();
-               context.httpAjaxContext.ajax_rspEndCmp();
-            }
-         }
          if ( AV11LoadAllTabs || ( StringUtil.StrCmp(AV7SelectedTabCode, "LugarSector") == 0 ) )
          {
             /* Object Property */
@@ -1072,13 +1045,40 @@ namespace GeneXus.Programs {
             if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
             {
                WebComp_Lugarsectorwc.setjustcreated();
-               WebComp_Lugarsectorwc.componentprepare(new Object[] {(string)"W0046",(string)"",(short)AV12EspectaculoId});
+               WebComp_Lugarsectorwc.componentprepare(new Object[] {(string)"W0038",(string)"",(short)AV12EspectaculoId});
                WebComp_Lugarsectorwc.componentbind(new Object[] {(string)""});
             }
             if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Lugarsectorwc )
             {
-               context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0046"+"");
+               context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0038"+"");
                WebComp_Lugarsectorwc.componentdraw();
+               context.httpAjaxContext.ajax_rspEndCmp();
+            }
+         }
+         if ( AV11LoadAllTabs || ( StringUtil.StrCmp(AV7SelectedTabCode, "EspectaculoFuncion") == 0 ) )
+         {
+            /* Object Property */
+            if ( true )
+            {
+               bDynCreated_Espectaculofuncionwc = true;
+            }
+            if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Espectaculofuncionwc_Component), StringUtil.Lower( "EspectaculoEspectaculoFuncionWC")) != 0 )
+            {
+               WebComp_Espectaculofuncionwc = getWebComponent(GetType(), "GeneXus.Programs", "espectaculoespectaculofuncionwc", new Object[] {context} );
+               WebComp_Espectaculofuncionwc.ComponentInit();
+               WebComp_Espectaculofuncionwc.Name = "EspectaculoEspectaculoFuncionWC";
+               WebComp_Espectaculofuncionwc_Component = "EspectaculoEspectaculoFuncionWC";
+            }
+            if ( StringUtil.Len( WebComp_Espectaculofuncionwc_Component) != 0 )
+            {
+               WebComp_Espectaculofuncionwc.setjustcreated();
+               WebComp_Espectaculofuncionwc.componentprepare(new Object[] {(string)"W0046",(string)"",(short)AV12EspectaculoId});
+               WebComp_Espectaculofuncionwc.componentbind(new Object[] {(string)""});
+            }
+            if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Espectaculofuncionwc )
+            {
+               context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpW0046"+"");
+               WebComp_Espectaculofuncionwc.componentdraw();
                context.httpAjaxContext.ajax_rspEndCmp();
             }
          }
@@ -1088,7 +1088,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void E120O2( )
+      protected void E121T2( )
       {
          /* Load Routine */
          returnInSub = false;
@@ -1115,9 +1115,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA0O2( ) ;
-         WS0O2( ) ;
-         WE0O2( ) ;
+         PA1T2( ) ;
+         WS1T2( ) ;
+         WE1T2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1138,18 +1138,18 @@ namespace GeneXus.Programs {
                WebComp_Generalwc.componentthemes();
             }
          }
-         if ( ! ( WebComp_Funcionwc == null ) )
-         {
-            if ( StringUtil.Len( WebComp_Funcionwc_Component) != 0 )
-            {
-               WebComp_Funcionwc.componentthemes();
-            }
-         }
          if ( ! ( WebComp_Lugarsectorwc == null ) )
          {
             if ( StringUtil.Len( WebComp_Lugarsectorwc_Component) != 0 )
             {
                WebComp_Lugarsectorwc.componentthemes();
+            }
+         }
+         if ( ! ( WebComp_Espectaculofuncionwc == null ) )
+         {
+            if ( StringUtil.Len( WebComp_Espectaculofuncionwc_Component) != 0 )
+            {
+               WebComp_Espectaculofuncionwc.componentthemes();
             }
          }
          bool outputEnabled = isOutputEnabled( );
@@ -1160,7 +1160,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022891326610", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228923464081", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1176,7 +1176,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("viewespectaculo.js", "?2022891326612", false, true);
+         context.AddJavascriptSource("viewespectaculo.js", "?20228923464081", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -1199,10 +1199,10 @@ namespace GeneXus.Programs {
          divTabtable_1_Internalname = "TABTABLE_1";
          lblGeneral_title_Internalname = "GENERAL_TITLE";
          divTablegeneral_Internalname = "TABLEGENERAL";
-         lblFuncion_title_Internalname = "FUNCION_TITLE";
-         divTablefuncion_Internalname = "TABLEFUNCION";
          lblLugarsector_title_Internalname = "LUGARSECTOR_TITLE";
          divTablelugarsector_Internalname = "TABLELUGARSECTOR";
+         lblEspectaculofuncion_title_Internalname = "ESPECTACULOFUNCION_TITLE";
+         divTableespectaculofuncion_Internalname = "TABLEESPECTACULOFUNCION";
          Tab_Internalname = "TAB";
          divMaintable_Internalname = "MAINTABLE";
          Form.Internalname = "FORM";
@@ -1282,38 +1282,38 @@ namespace GeneXus.Programs {
          lblGeneral_title_Jsonclick = "";
          WebComp_Generalwc_Component = "";
          OldGeneralwc = "";
-         lblFuncion_title_Jsonclick = "";
-         WebComp_Funcionwc_Component = "";
-         OldFuncionwc = "";
          lblLugarsector_title_Jsonclick = "";
          WebComp_Lugarsectorwc_Component = "";
          OldLugarsectorwc = "";
+         lblEspectaculofuncion_title_Jsonclick = "";
+         WebComp_Espectaculofuncionwc_Component = "";
+         OldEspectaculofuncionwc = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
          AV15Pgmname = "";
          scmdbuf = "";
-         H000O2_A1EspectaculoId = new short[1] ;
-         H000O2_A2EspectaculoName = new string[] {""} ;
+         H001T2_A1EspectaculoId = new short[1] ;
+         H001T2_A2EspectaculoName = new string[] {""} ;
          hsh = "";
-         H000O3_A1EspectaculoId = new short[1] ;
-         H000O3_A2EspectaculoName = new string[] {""} ;
+         H001T3_A1EspectaculoId = new short[1] ;
+         H001T3_A2EspectaculoName = new string[] {""} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.viewespectaculo__default(),
             new Object[][] {
                 new Object[] {
-               H000O2_A1EspectaculoId, H000O2_A2EspectaculoName
+               H001T2_A1EspectaculoId, H001T2_A2EspectaculoName
                }
                , new Object[] {
-               H000O3_A1EspectaculoId, H000O3_A2EspectaculoName
+               H001T3_A1EspectaculoId, H001T3_A2EspectaculoName
                }
             }
          );
          WebComp_Generalwc = new GeneXus.Http.GXNullWebComponent();
-         WebComp_Funcionwc = new GeneXus.Http.GXNullWebComponent();
          WebComp_Lugarsectorwc = new GeneXus.Http.GXNullWebComponent();
+         WebComp_Espectaculofuncionwc = new GeneXus.Http.GXNullWebComponent();
          AV15Pgmname = "ViewEspectaculo";
          /* GeneXus formulas. */
          AV15Pgmname = "ViewEspectaculo";
@@ -1369,16 +1369,16 @@ namespace GeneXus.Programs {
       private string divTablegeneral_Internalname ;
       private string WebComp_Generalwc_Component ;
       private string OldGeneralwc ;
-      private string lblFuncion_title_Internalname ;
-      private string lblFuncion_title_Jsonclick ;
-      private string divTablefuncion_Internalname ;
-      private string WebComp_Funcionwc_Component ;
-      private string OldFuncionwc ;
       private string lblLugarsector_title_Internalname ;
       private string lblLugarsector_title_Jsonclick ;
       private string divTablelugarsector_Internalname ;
       private string WebComp_Lugarsectorwc_Component ;
       private string OldLugarsectorwc ;
+      private string lblEspectaculofuncion_title_Internalname ;
+      private string lblEspectaculofuncion_title_Jsonclick ;
+      private string divTableespectaculofuncion_Internalname ;
+      private string WebComp_Espectaculofuncionwc_Component ;
+      private string OldEspectaculofuncionwc ;
       private string sEvt ;
       private string EvtGridId ;
       private string EvtRowId ;
@@ -1397,20 +1397,20 @@ namespace GeneXus.Programs {
       private bool returnInSub ;
       private bool AV10Exists ;
       private bool bDynCreated_Generalwc ;
-      private bool bDynCreated_Funcionwc ;
       private bool bDynCreated_Lugarsectorwc ;
+      private bool bDynCreated_Espectaculofuncionwc ;
       private string A2EspectaculoName ;
       private GXWebComponent WebComp_Generalwc ;
-      private GXWebComponent WebComp_Funcionwc ;
       private GXWebComponent WebComp_Lugarsectorwc ;
+      private GXWebComponent WebComp_Espectaculofuncionwc ;
       private GXProperties forbiddenHiddens ;
       private GXUserControl ucTab ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private short[] H000O2_A1EspectaculoId ;
-      private string[] H000O2_A2EspectaculoName ;
-      private short[] H000O3_A1EspectaculoId ;
-      private string[] H000O3_A2EspectaculoName ;
+      private short[] H001T2_A1EspectaculoId ;
+      private string[] H001T2_A2EspectaculoName ;
+      private short[] H001T3_A1EspectaculoId ;
+      private string[] H001T3_A2EspectaculoName ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
@@ -1432,17 +1432,17 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH000O2;
-          prmH000O2 = new Object[] {
+          Object[] prmH001T2;
+          prmH001T2 = new Object[] {
           new ParDef("@AV12EspectaculoId",GXType.Int16,4,0)
           };
-          Object[] prmH000O3;
-          prmH000O3 = new Object[] {
+          Object[] prmH001T3;
+          prmH001T3 = new Object[] {
           new ParDef("@AV12EspectaculoId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H000O2", "SELECT [EspectaculoId], [EspectaculoName] FROM [Espectaculo] WHERE [EspectaculoId] = @AV12EspectaculoId ORDER BY [EspectaculoId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000O2,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("H000O3", "SELECT [EspectaculoId], [EspectaculoName] FROM [Espectaculo] WHERE [EspectaculoId] = @AV12EspectaculoId ORDER BY [EspectaculoId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000O3,1, GxCacheFrequency.OFF ,false,true )
+              new CursorDef("H001T2", "SELECT [EspectaculoId], [EspectaculoName] FROM [Espectaculo] WHERE [EspectaculoId] = @AV12EspectaculoId ORDER BY [EspectaculoId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001T2,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("H001T3", "SELECT [EspectaculoId], [EspectaculoName] FROM [Espectaculo] WHERE [EspectaculoId] = @AV12EspectaculoId ORDER BY [EspectaculoId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001T3,1, GxCacheFrequency.OFF ,false,true )
           };
        }
     }

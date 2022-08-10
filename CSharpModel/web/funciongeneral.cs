@@ -246,7 +246,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022891326079", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?2022892265422", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -316,6 +316,11 @@ namespace GeneXus.Programs {
       protected void send_integrity_footer_hashes( )
       {
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = new GXProperties();
+         forbiddenHiddens.Add("hshsalt", sPrefix+"hsh"+"FuncionGeneral");
+         forbiddenHiddens.Add("EspectaculoId", context.localUtil.Format( (decimal)(A1EspectaculoId), "ZZZ9"));
+         GxWebStd.gx_hidden_field( context, sPrefix+"hsh", GetEncryptedHash( forbiddenHiddens.ToString(), GXKey));
+         GXUtil.WriteLogInfo("funciongeneral:[ SendSecurityCheck value for]"+forbiddenHiddens.ToJSonString());
       }
 
       protected void SendCloseFormHiddens( )
@@ -494,6 +499,22 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
             GxWebStd.gx_single_line_edit( context, edtFuncionName_Internalname, A22FuncionName, StringUtil.RTrim( context.localUtil.Format( A22FuncionName, "")), "", "'"+sPrefix+"'"+",false,"+"'"+""+"'", "", "", "", "", edtFuncionName_Jsonclick, 0, "ReadonlyAttribute", "", "", "", "", 1, edtFuncionName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 1, -1, -1, true, "Name", "left", true, "", "HLP_FuncionGeneral.htm");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 FormCell", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtEspectaculoName_Internalname+"\"", "", "div");
+            /* Attribute/Variable Label */
+            GxWebStd.gx_label_element( context, edtEspectaculoName_Internalname, "Espectaculo Name", "col-sm-3 ReadonlyAttributeLabel", 1, true, "");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
+            /* Single line edit */
+            GxWebStd.gx_single_line_edit( context, edtEspectaculoName_Internalname, A2EspectaculoName, StringUtil.RTrim( context.localUtil.Format( A2EspectaculoName, "")), "", "'"+sPrefix+"'"+",false,"+"'"+""+"'", edtEspectaculoName_Link, "", "", "", edtEspectaculoName_Jsonclick, 0, "ReadonlyAttribute", "", "", "", "", 1, edtEspectaculoName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 1, -1, -1, true, "Name", "left", true, "", "HLP_FuncionGeneral.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -782,12 +803,16 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A15FuncionId});
             while ( (pr_default.getStatus(0) != 101) )
             {
+               A2EspectaculoName = H00162_A2EspectaculoName[0];
+               AssignAttri(sPrefix, false, "A2EspectaculoName", A2EspectaculoName);
                A22FuncionName = H00162_A22FuncionName[0];
                AssignAttri(sPrefix, false, "A22FuncionName", A22FuncionName);
                A21PrecioFuncion = H00162_A21PrecioFuncion[0];
                AssignAttri(sPrefix, false, "A21PrecioFuncion", StringUtil.LTrimStr( (decimal)(A21PrecioFuncion), 4, 0));
                A1EspectaculoId = H00162_A1EspectaculoId[0];
                AssignAttri(sPrefix, false, "A1EspectaculoId", StringUtil.LTrimStr( (decimal)(A1EspectaculoId), 4, 0));
+               A2EspectaculoName = H00162_A2EspectaculoName[0];
+               AssignAttri(sPrefix, false, "A2EspectaculoName", A2EspectaculoName);
                /* Execute user event: Load */
                E14162 ();
                /* Exiting from a For First loop. */
@@ -833,9 +858,29 @@ namespace GeneXus.Programs {
             AssignAttri(sPrefix, false, "A21PrecioFuncion", StringUtil.LTrimStr( (decimal)(A21PrecioFuncion), 4, 0));
             A22FuncionName = cgiGet( edtFuncionName_Internalname);
             AssignAttri(sPrefix, false, "A22FuncionName", A22FuncionName);
+            A2EspectaculoName = cgiGet( edtEspectaculoName_Internalname);
+            AssignAttri(sPrefix, false, "A2EspectaculoName", A2EspectaculoName);
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+            forbiddenHiddens = new GXProperties();
+            forbiddenHiddens.Add("hshsalt", sPrefix+"hsh"+"FuncionGeneral");
+            A1EspectaculoId = (short)(context.localUtil.CToN( cgiGet( edtEspectaculoId_Internalname), ",", "."));
+            AssignAttri(sPrefix, false, "A1EspectaculoId", StringUtil.LTrimStr( (decimal)(A1EspectaculoId), 4, 0));
+            forbiddenHiddens.Add("EspectaculoId", context.localUtil.Format( (decimal)(A1EspectaculoId), "ZZZ9"));
+            hsh = cgiGet( sPrefix+"hsh");
+            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens.ToString(), hsh, GXKey) )
+            {
+               GXUtil.WriteLogError("funciongeneral:[ SecurityCheckFailed (403 Forbidden) value for]"+forbiddenHiddens.ToJSonString());
+               GxWebError = 1;
+               context.HttpContext.Response.StatusDescription = 403.ToString();
+               context.HttpContext.Response.StatusCode = 403;
+               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+               context.WriteHtmlText( "<p /><hr />") ;
+               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+               return  ;
+            }
          }
          else
          {
@@ -880,6 +925,8 @@ namespace GeneXus.Programs {
       {
          /* Load Routine */
          returnInSub = false;
+         edtEspectaculoName_Link = formatLink("viewespectaculo.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A1EspectaculoId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"EspectaculoId","TabCode"}) ;
+         AssignProp(sPrefix, false, edtEspectaculoName_Internalname, "Link", edtEspectaculoName_Link, true);
       }
 
       protected void S112( )
@@ -1094,7 +1141,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022891326227", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022892265435", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1109,7 +1156,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("funciongeneral.js", "?2022891326227", false, true);
+         context.AddJavascriptSource("funciongeneral.js", "?2022892265435", false, true);
          /* End function include_jscripts */
       }
 
@@ -1126,6 +1173,7 @@ namespace GeneXus.Programs {
          edtEspectaculoId_Internalname = sPrefix+"ESPECTACULOID";
          edtPrecioFuncion_Internalname = sPrefix+"PRECIOFUNCION";
          edtFuncionName_Internalname = sPrefix+"FUNCIONNAME";
+         edtEspectaculoName_Internalname = sPrefix+"ESPECTACULONAME";
          divAttributestable_Internalname = sPrefix+"ATTRIBUTESTABLE";
          divMaintable_Internalname = sPrefix+"MAINTABLE";
          Form.Internalname = sPrefix+"FORM";
@@ -1145,6 +1193,9 @@ namespace GeneXus.Programs {
             }
          }
          init_default_properties( ) ;
+         edtEspectaculoName_Jsonclick = "";
+         edtEspectaculoName_Link = "";
+         edtEspectaculoName_Enabled = 0;
          edtFuncionName_Jsonclick = "";
          edtFuncionName_Enabled = 0;
          edtPrecioFuncion_Jsonclick = "";
@@ -1169,7 +1220,7 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'A15FuncionId',fld:'FUNCIONID',pic:'ZZZ9'}]");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'A15FuncionId',fld:'FUNCIONID',pic:'ZZZ9'},{av:'A1EspectaculoId',fld:'ESPECTACULOID',pic:'ZZZ9'}]");
          setEventMetadata("REFRESH",",oparms:[]}");
          setEventMetadata("'DOUPDATE'","{handler:'E11161',iparms:[{av:'A15FuncionId',fld:'FUNCIONID',pic:'ZZZ9'}]");
          setEventMetadata("'DOUPDATE'",",oparms:[]}");
@@ -1177,6 +1228,8 @@ namespace GeneXus.Programs {
          setEventMetadata("'DODELETE'",",oparms:[]}");
          setEventMetadata("VALID_FUNCIONID","{handler:'Valid_Funcionid',iparms:[]");
          setEventMetadata("VALID_FUNCIONID",",oparms:[]}");
+         setEventMetadata("VALID_ESPECTACULOID","{handler:'Valid_Espectaculoid',iparms:[]");
+         setEventMetadata("VALID_ESPECTACULOID",",oparms:[]}");
          return  ;
       }
 
@@ -1204,6 +1257,7 @@ namespace GeneXus.Programs {
          FormProcess = "";
          bodyStyle = "";
          GXKey = "";
+         forbiddenHiddens = new GXProperties();
          GX_FocusControl = "";
          TempTags = "";
          ClassString = "";
@@ -1211,6 +1265,7 @@ namespace GeneXus.Programs {
          bttBtnupdate_Jsonclick = "";
          bttBtndelete_Jsonclick = "";
          A22FuncionName = "";
+         A2EspectaculoName = "";
          Form = new GXWebForm();
          sXEvt = "";
          sEvt = "";
@@ -1219,9 +1274,11 @@ namespace GeneXus.Programs {
          sEvtType = "";
          scmdbuf = "";
          H00162_A15FuncionId = new short[1] ;
+         H00162_A2EspectaculoName = new string[] {""} ;
          H00162_A22FuncionName = new string[] {""} ;
          H00162_A21PrecioFuncion = new short[1] ;
          H00162_A1EspectaculoId = new short[1] ;
+         hsh = "";
          AV7TrnContext = new SdtTransactionContext(context);
          AV10HTTPRequest = new GxHttpRequest( context);
          AV8TrnContextAtt = new SdtTransactionContext_Attribute(context);
@@ -1232,7 +1289,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.funciongeneral__default(),
             new Object[][] {
                 new Object[] {
-               H00162_A15FuncionId, H00162_A22FuncionName, H00162_A21PrecioFuncion, H00162_A1EspectaculoId
+               H00162_A15FuncionId, H00162_A2EspectaculoName, H00162_A22FuncionName, H00162_A21PrecioFuncion, H00162_A1EspectaculoId
                }
             }
          );
@@ -1248,9 +1305,9 @@ namespace GeneXus.Programs {
       private short GxWebError ;
       private short nDynComponent ;
       private short initialized ;
+      private short A1EspectaculoId ;
       private short wbEnd ;
       private short wbStart ;
-      private short A1EspectaculoId ;
       private short A21PrecioFuncion ;
       private short nDraw ;
       private short nDoneStart ;
@@ -1262,6 +1319,7 @@ namespace GeneXus.Programs {
       private int edtEspectaculoId_Enabled ;
       private int edtPrecioFuncion_Enabled ;
       private int edtFuncionName_Enabled ;
+      private int edtEspectaculoName_Enabled ;
       private int idxLst ;
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
@@ -1291,12 +1349,16 @@ namespace GeneXus.Programs {
       private string edtPrecioFuncion_Jsonclick ;
       private string edtFuncionName_Internalname ;
       private string edtFuncionName_Jsonclick ;
+      private string edtEspectaculoName_Internalname ;
+      private string edtEspectaculoName_Link ;
+      private string edtEspectaculoName_Jsonclick ;
       private string sXEvt ;
       private string sEvt ;
       private string EvtGridId ;
       private string EvtRowId ;
       private string sEvtType ;
       private string scmdbuf ;
+      private string hsh ;
       private string sCtrlA15FuncionId ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
@@ -1306,10 +1368,13 @@ namespace GeneXus.Programs {
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private string A22FuncionName ;
+      private string A2EspectaculoName ;
+      private GXProperties forbiddenHiddens ;
       private GXWebForm Form ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private short[] H00162_A15FuncionId ;
+      private string[] H00162_A2EspectaculoName ;
       private string[] H00162_A22FuncionName ;
       private short[] H00162_A21PrecioFuncion ;
       private short[] H00162_A1EspectaculoId ;
@@ -1341,7 +1406,7 @@ namespace GeneXus.Programs {
           new ParDef("@FuncionId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H00162", "SELECT [FuncionId], [FuncionName], [PrecioFuncion], [EspectaculoId] FROM [Funcion] WHERE [FuncionId] = @FuncionId ORDER BY [FuncionId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00162,1, GxCacheFrequency.OFF ,true,true )
+              new CursorDef("H00162", "SELECT T1.[FuncionId], T2.[EspectaculoName], T1.[FuncionName], T1.[PrecioFuncion], T1.[EspectaculoId] FROM ([Funcion] T1 INNER JOIN [Espectaculo] T2 ON T2.[EspectaculoId] = T1.[EspectaculoId]) WHERE T1.[FuncionId] = @FuncionId ORDER BY T1.[FuncionId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00162,1, GxCacheFrequency.OFF ,true,true )
           };
        }
     }
@@ -1355,8 +1420,9 @@ namespace GeneXus.Programs {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((string[]) buf[1])[0] = rslt.getVarchar(2);
-                ((short[]) buf[2])[0] = rslt.getShort(3);
+                ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
+                ((short[]) buf[4])[0] = rslt.getShort(5);
                 return;
        }
     }

@@ -1,11 +1,9 @@
-current_obj_i(2,web,29).
+current_obj_i(2,web,69).
  
-current_guid('1e99d239-c819-4967-80e2-e4a1295297e1').
- 
- 
-called_tree_i(13,29,1,13).
+current_guid('f7f1e425-164a-4649-bbcf-ce3efde3e287').
  
  
+called_tree_i(13,69,1,13).
  
  
  
@@ -22,7 +20,9 @@ called_tree_i(13,29,1,13).
  
  
  
-ij_object_dependency(espectaculofuncionwc,[],[],[],29).
+ 
+ 
+ij_object_dependency(espectaculofuncionwc,[],[],[],69).
  
  
 obj_parms_i([ 'short aP0_EspectaculoId' ],[ [ 'Espectaculoid',in ] ]).
@@ -33,6 +33,4 @@ obj_parms_i([ 'short aP0_EspectaculoId' ],[ [ 'Espectaculoid',in ] ]).
  
 module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
 module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
-module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
-module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

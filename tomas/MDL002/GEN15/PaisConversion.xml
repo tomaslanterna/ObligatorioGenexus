@@ -7,7 +7,7 @@
 <Description>Pais</Description></Table>
 <ReorgCls>c</ReorgCls>
 <ReorgCode>new</ReorgCode>
-<ReorgMsg>Pais is new (initialize with Pais_DataProvider1)</ReorgMsg>
+<ReorgMsg>Pais is new (initialize with Pais_DataProvider)</ReorgMsg>
 <ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
@@ -73,7 +73,7 @@
 <Name>AllowNulls</Name>
 <Value>Yes</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>40000</AttriId>
+<AttriId>40001</AttriId>
 <AttriName>PaisFlag_GXI</AttriName>
 <Description>PaisFlag_GXI</Description>
 <TakesValueFrom></TakesValueFrom>

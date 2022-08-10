@@ -59,7 +59,25 @@
 <AttriId>3</AttriId>
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></NavigationTree>
+<Tables></Tables></Table>
+<Table>
+<TableId>2</TableId>
+<TableName>count( LugarSectorId )  navigation</TableName>
+<Description>Lugar</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
@@ -110,7 +128,7 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -144,7 +162,26 @@
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></NavigationTree>
+<Tables>
+<Table>
+<TableId>2</TableId>
+<TableName>count( LugarSectorId )  navigation</TableName>
+<Description>Lugar</Description>
+<RecordsToRead>one</RecordsToRead>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>

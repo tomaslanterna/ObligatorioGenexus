@@ -51,25 +51,6 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description>
-<TakesValueFrom></TakesValueFrom>
-<AttriType>
-<DataType>N</DataType>
-<Presicion>4</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
 <AttriId>27</AttriId>
 <AttriName>LugarSectorId</AttriName>
 <Description>Lugar Sector Id</Description>
@@ -147,7 +128,45 @@
 <Value>No</Value></Property>
 <Property>
 <Name>NLS</Name>
-<Value>Yes</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
 <TableIndices>
@@ -163,16 +182,6 @@
 <IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>Yes</Clustered></Index>
 <Index>
-<IndexName>IENTRADA1</IndexName>
-<IndexType>d</IndexType>
-<IndexAttris>
-<Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></IndexAttris>
-<IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>No</Clustered></Index>
-<Index>
 <IndexName>IENTRADA2</IndexName>
 <IndexType>d</IndexType>
 <IndexAttris>
@@ -181,19 +190,66 @@
 <AttriName>ClienteId</AttriName>
 <Description>Cliente Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>IENTRADA1</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>IENTRADA3</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
 <Description>Funcion</Description></Table>
 <Attributes>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></Attributes></FKConstraint>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></Attributes></FKConstraint>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>16</TableId>
+<TableName>EspectaculoLugarSector</TableName>
+<Description>Lugar Sector</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></Attributes></FKConstraint>
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
@@ -206,11 +262,13 @@
 <AttriName>ClienteId</AttriName>
 <Description>Cliente Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Entrada] ([EntradaId] smallint NOT NULL IDENTITY(1,1), [ClienteId] smallint NOT NULL , [FuncionId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [EntradaFecha] datetime NOT NULL , [EntradaPaisOrigenId] smallint NOT NULL , [EntradaPaisOrigenName] nvarchar(40) NOT NULL , PRIMARY KEY([EntradaId])) </Statement>
-<Statement>CREATE NONCLUSTERED INDEX [IENTRADA1] ON [Entrada] ([FuncionId] )</Statement>
+<Statement>CREATE TABLE [Entrada] ([EntradaId] smallint NOT NULL IDENTITY(1,1), [ClienteId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [EntradaFecha] datetime NOT NULL , [EntradaPaisOrigenId] smallint NOT NULL , [EntradaPaisOrigenName] nvarchar(40) NOT NULL , [EspectaculoId] smallint NOT NULL , [EspectaculoFuncionId] smallint NOT NULL , PRIMARY KEY([EntradaId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IENTRADA2] ON [Entrada] ([ClienteId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IENTRADA1] ON [Entrada] ([EspectaculoId] ,[LugarSectorId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IENTRADA3] ON [Entrada] ([EspectaculoId] ,[EspectaculoFuncionId] )</Statement>
 <Statement>ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA2] FOREIGN KEY ([ClienteId]) REFERENCES [Cliente] ([ClienteId])</Statement>
-<Statement>ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA1] FOREIGN KEY ([FuncionId]) REFERENCES [Funcion] ([FuncionId])</Statement></Statements>
+<Statement>ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA1] FOREIGN KEY ([EspectaculoId], [LugarSectorId]) REFERENCES [EspectaculoLugarSector] ([EspectaculoId], [LugarSectorId])</Statement>
+<Statement>ALTER TABLE [Entrada] ADD CONSTRAINT [IENTRADA3] FOREIGN KEY ([EspectaculoId], [EspectaculoFuncionId]) REFERENCES [EspectaculoFuncion] ([EspectaculoId], [EspectaculoFuncionId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

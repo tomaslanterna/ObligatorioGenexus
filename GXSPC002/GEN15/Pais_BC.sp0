@@ -146,13 +146,17 @@ rule_i(0,prop('ObjDesc','Pais')).
 rule_i(0,prop('ObjName','Pais')).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(3,rule([ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(6,2),t(')',4) ],[ insert,update,delete,display ],[ 6 ])).
  
-a_i(1,3,t,3,[],[ [ [ [],3,3 ] ],'IPAIS',[] ]).
+a_i(1,3,b,1,[],[ [],[ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(6,2),t(')',4) ] ]).
+a_i(2,3,t,3,[],[ [ [ [],3,3 ] ],'IPAIS',[] ]).
  
-v_i(t,i,1,3).
-v_i(t,o,1,6).
-v_i(t,o,1,39).
-v_i(t,o,1,40000).
+v_i(b,i,1,6).
+v_i(b,o,1,[]).
+v_i(t,i,2,3).
+v_i(t,o,2,6).
+v_i(t,o,2,39).
+v_i(t,o,2,40000).
  
  
  

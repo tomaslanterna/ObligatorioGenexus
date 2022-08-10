@@ -1,11 +1,9 @@
-current_obj_i(2,web,24).
+current_obj_i(2,web,65).
  
-current_guid('321b82bb-0f04-484b-919c-ade6b15bcdde').
- 
- 
-called_tree_i(13,24,1,13).
+current_guid('93b2fb72-d3e9-44e3-9c84-37fbebd9675f').
  
  
+called_tree_i(13,65,1,13).
  
  
  
@@ -22,7 +20,9 @@ called_tree_i(13,24,1,13).
  
  
  
-ij_object_dependency(viewespectaculo,[],[],[],24).
+ 
+ 
+ij_object_dependency(viewespectaculo,[],[],[],65).
  
  
 obj_parms_i([ 'short aP0_EspectaculoId','string aP1_TabCode' ],[ [ 'Espectaculoid',in ],[ 'Tabcode',in ] ]).

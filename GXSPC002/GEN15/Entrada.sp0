@@ -1,21 +1,21 @@
 spec_i([ trn,8,'Entrada','Entrada',[],spa,'17_0_10-161416' ]).
  
-struct_i(9,0,[ 'Pgmname','Trncontext','Insert_clienteid','Insert_funcionid','GXV1','Trncontextatt','Mode','Entradaid','Websession' ],[]).
+struct_i(9,0,[ 'Pgmname','Trncontext','Insert_clienteid','Insert_espectaculoid','Insert_espectaculofuncionid','Insert_lugarsectorid','GXV1','Trncontextatt','Mode','Entradaid','Websession' ],[]).
  
-level_i(9,[ 9,[ [ 9,many ],[ 5,one ],[ 7,one ],[ 3,one ],[ 1,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 13,one ],[ 2000,one ] ],[ 23 ],[],[],[],[ 23 ],'IENTRADA',[ 9,[] ],[] ]).
+level_i(9,[ 9,[ [ 9,many ],[ 5,one ],[ 16,one ],[ 15,one ],[ 18,one ],[ 3,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 2000,one ] ],[ 23 ],[],[],[],[ 23 ],'IENTRADA',[ 9,[] ],[] ]).
  
-tw_i(9,[ [ 5,[ [ 9,9,9 ] ] ],[ 7,[ [ 9,15,15 ] ] ],[ 3,[ [ 5,3,3 ] ] ],[ 1,[ [ 7,1,1 ] ] ],[ 2,[ [ 1,4,4 ] ] ],[ 4,[ [ 1,7,7 ] ] ],[ 11,[ [ 1,4,4 ],[ 9,27,27 ] ] ],[ 13,[ [ 7,1,1 ],[ 9,27,27 ] ] ],[ 2000,[ [ 9,oe([ t(27,2) ]),27 ],[ 7,oe([ t(1,2) ]),1 ] ] ] ]).
+tw_i(9,[ [ 5,[ [ 9,9,9 ] ] ],[ 16,[ [ 9,1,1 ],[ 9,27,27 ] ] ],[ 15,[ [ 9,1,1 ] ] ],[ 18,[ [ 9,1,1 ],[ 9,47,47 ] ] ],[ 3,[ [ 5,3,3 ] ] ],[ 2,[ [ 15,4,4 ] ] ],[ 4,[ [ 15,7,7 ] ] ],[ 11,[ [ 15,4,4 ],[ 9,27,27 ] ] ],[ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ]).
  
 lwi_i(9,[ [] ]).
  
  
  
  
-ta_i(9,[ [ [ 5,3 ],[ 1,4 ],[ 1,7 ],[ 9,23 ],[ 9,42 ],[ 5,10 ],[ 1,2 ],[ 1,16 ],[ 7,22 ],[ 3,6 ],[ 2,5 ],[ 11,28 ],[ 11,30 ],[ 4,8 ],[ 9,43 ],[ 9,44 ],[ 13,40 ],[ 9,9 ],[ 9,15 ],[ 7,1 ],[ 9,27 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(9,[ [ [ 5,3 ],[ 15,4 ],[ 15,7 ],[ 9,23 ],[ 9,42 ],[ 5,10 ],[ 15,2 ],[ 15,16 ],[ 18,48 ],[ 3,6 ],[ 2,5 ],[ 11,28 ],[ 11,30 ],[ 4,8 ],[ 9,43 ],[ 9,44 ],[ 11,29 ],[ 9,9 ],[ 9,1 ],[ 9,27 ],[ 9,47 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
  
-las_i(9,[ [ 7,4,3,'Pgmname','Trncontext','Insert_clienteid','Insert_funcionid','GXV1','Trncontextatt','Mode','Entradaid','Websession',23,9,15,38,42,10,1,2,16,22,6,5,27,28,30,8,43,44,40,37 ] ]).
+las_i(9,[ [ 7,4,3,'Pgmname','Trncontext','Insert_clienteid','Insert_espectaculoid','Insert_espectaculofuncionid','Insert_lugarsectorid','GXV1','Trncontextatt','Mode','Entradaid','Websession',23,9,1,47,27,38,42,10,2,16,48,6,5,28,30,8,43,44,29,37 ] ]).
  
-lac_i(9,[ [ 23,42,9,15,27,43,44 ] ]).
+lac_i(9,[ [ 23,42,9,1,47,27,43,44 ] ]).
  
  
 lits_i('Entrada',5,10).
@@ -29,8 +29,8 @@ pos_i(10,[ 0,0,0 ]).
 pos_i(1,[ 0,0,0 ]).
 pos_i(2,[ 0,0,0 ]).
 pos_i(16,[ 0,0,0 ]).
-pos_i(15,[ 0,0,0 ]).
-pos_i(22,[ 0,0,0 ]).
+pos_i(47,[ 0,0,0 ]).
+pos_i(48,[ 0,0,0 ]).
 pos_i(6,[ 0,0,0 ]).
 pos_i(5,[ 0,0,0 ]).
 pos_i(27,[ 0,0,0 ]).
@@ -155,8 +155,12 @@ rule_i(0,prop(idBC,'0')).
 rule_i(0,prop('Folder',o(8,'GeneXus'))).
 rule_i(0,prop('ObjDesc','Entrada')).
 rule_i(0,prop('ObjName','Entrada')).
-rule_i(9,prompt([ 7,[ [ 9,15,15 ] ],[ 15 ],[ 15 ],[ t(o(13,'Gx0070'),28),t(15,2) ],[],n,[] ])).
-rule_i(9,rule([ a(23,[ [ 15 ],[ t(o(13,'Gx0070'),28),t(15,2) ] ]) ],[],[],[ 15 ])).
+rule_i(9,prompt([ 18,[ [ 9,1,1 ],[ 9,47,47 ] ],[ 47 ],[ 1,47 ],[ t(o(13,'Gx00I1'),28),t(1,2),t(',',7),t(47,2) ],[ 1 ],n,[] ])).
+rule_i(9,rule([ a(23,[ [ 1,47 ],[ t(o(13,'Gx00I1'),28),t(1,2),t(',',7),t(47,2) ] ]) ],[],[],[ 1,47 ])).
+rule_i(9,prompt([ 15,[ [ 9,1,1 ] ],[ 1 ],[ 1 ],[ t(o(13,'Gx00F0'),28),t(1,2) ],[],n,[] ])).
+rule_i(9,rule([ a(23,[ [ 1 ],[ t(o(13,'Gx00F0'),28),t(1,2) ] ]) ],[],[],[ 1 ])).
+rule_i(9,prompt([ 16,[ [ 9,1,1 ],[ 9,27,27 ] ],[ 27 ],[ 1,27 ],[ t(o(13,'Gx00G1'),28),t(1,2),t(',',7),t(27,2) ],[ 1 ],n,[] ])).
+rule_i(9,rule([ a(23,[ [ 1,27 ],[ t(o(13,'Gx00G1'),28),t(1,2),t(',',7),t(27,2) ] ]) ],[],[],[ 1,27 ])).
 rule_i(9,prompt([ 5,[ [ 9,9,9 ] ],[ 9 ],[ 9 ],[ t(o(13,'Gx0050'),28),t(9,2) ],[],n,[] ])).
 rule_i(9,rule([ a(23,[ [ 9 ],[ t(o(13,'Gx0050'),28),t(9,2) ] ]) ],[],[],[ 9 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
@@ -164,45 +168,57 @@ rule_i(0,maingen(15)).
 rule_i(0,rule([ a(10,[ 'Mode','Entradaid' ]) ],[],[ insert,update,delete,display ],[])).
 rule_i(0,parmio([ [ 'Mode',in ],[ 'Entradaid',in ] ])).
 rule_i(9,rule([ a(1,msg([ t('"Campo Entrada Fecha fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(42,2),t(')',4),t('.OR.',9),t(42,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ],[ insert,update ],[ 42 ])).
-rule_i(9,rule([ a(99,[ [ oe([ t(27,2) ]),oe([ t(1,2) ]) ] ]) ],[],[ insert,update,delete ],[ oe([ t(27,2) ]),oe([ t(1,2) ]) ])).
+rule_i(9,rule([ a(99,[ [ oe([ t(1,2) ]),oe([ t(27,2) ]) ] ]) ],[],[ insert,update,delete ],[ oe([ t(1,2) ]),oe([ t(27,2) ]) ])).
 rule_i(9,rule([ a(3,[ t(23,2) ]) ],[],[ insert,update,delete,display ],[ 23 ])).
 rule_i(9,rule([ a(21,[ [ 23 ] ]) ],[],[ insert,update,delete,display ],[ 23 ])).
 rule_i(9,rule([ a(3,[ t(9,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_clienteid',23),t(')',4) ],[ insert,update,delete,display ],[ 9,'Mode','Insert_clienteid' ])).
-rule_i(9,rule([ a(3,[ t(15,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_funcionid',23),t(')',4) ],[ insert,update,delete,display ],[ 15,'Mode','Insert_funcionid' ])).
+rule_i(9,rule([ a(3,[ t(1,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculoid',23),t(')',4) ],[ insert,update,delete,display ],[ 1,'Mode','Insert_espectaculoid' ])).
+rule_i(9,rule([ a(3,[ t(47,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculofuncionid',23),t(')',4) ],[ insert,update,delete,display ],[ 47,'Mode','Insert_espectaculofuncionid' ])).
+rule_i(9,rule([ a(3,[ t(27,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_lugarsectorid',23),t(')',4) ],[ insert,update,delete,display ],[ 27,'Mode','Insert_lugarsectorid' ])).
+rule_i(9,rule([ a(1,[ t('''No hay lugares disponibles''',3) ]) ],[ t(38,2),t(<,10),t('1',3) ],[ insert,update,delete,display ],[ 38 ])).
+rule_i(9,rule([ a(1,[ t('''Fecha invalida''',3) ]) ],[ t(42,2),t(>,10),t(16,2) ],[ insert,update,delete,display ],[ 42,16 ])).
 rule_i(9,rule([ a(19,[ [ 9 ],msg([ t('"No existe ''Cliente''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 9 ])).
-rule_i(9,rule([ a(19,[ [ 15 ],msg([ t('"No existe ''Funcion''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 15 ])).
-rule_i(9,rule([ a(19,[ [ 3 ],msg([ t('"No existe ''Pais''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 3 ])).
+rule_i(9,rule([ a(19,[ [ 1,27 ],msg([ t('"No existe ''Lugar Sector''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1,27 ])).
 rule_i(9,rule([ a(19,[ [ 1 ],msg([ t('"No existe ''Espectaculo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1 ])).
+rule_i(9,rule([ a(19,[ [ 1,47 ],msg([ t('"No existe ''Funcion''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1,47 ])).
+rule_i(9,rule([ a(19,[ [ 3 ],msg([ t('"No existe ''Pais''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 3 ])).
 rule_i(9,rule([ a(19,[ [ 4 ],msg([ t('"No existe ''Lugar''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 4 ])).
 rule_i(9,rule([ a(19,[ [ 7 ],msg([ t('"No existe ''Tipo Espectaculo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 7 ])).
 rule_i(9,rule([ a(19,[ [ 4,27 ],msg([ t('"No existe ''Sector''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 4,27 ])).
-rule_i(9,rule([ a(19,[ [ 1,27 ],msg([ t('"No existe ''Lugar Sector''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1,27 ])).
  
 a_i(3,9,b,0,[],[ [],[ a(1,msg([ t('"Campo Entrada Fecha fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(42,2),t(')',4),t('.OR.',9),t(42,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ] ]).
-a_i(4,9,f,38,[],[ [],[ t(40,2),t(-,5),t(37,2) ] ]).
+a_i(4,9,f,38,[],[ [],[ t(29,2),t(-,5),t(37,2) ] ]).
 a_i(5,9,f,23,[],[ [],[ t('Entradaid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Entradaid',23),t(')',4),t(';',18) ] ]).
 a_i(6,9,f,[ t(23,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(7,9,f,9,[],[ [],[ t('Insert_clienteid',23),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_clienteid',23),t(')',4),t(';',18) ] ]).
 a_i(8,9,f,[ t(9,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_clienteid',23),t(')',4),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
-a_i(9,9,f,15,[],[ [],[ t('Insert_funcionid',23),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_funcionid',23),t(')',4),t(';',18) ] ]).
-a_i(10,9,f,[ t(15,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_funcionid',23),t(')',4),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
-a_i(11,9,b,6,[],[ [],[ a(3,[ t(9,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_clienteid',23),t(')',4) ] ]).
-a_i(12,9,b,8,[],[ [],[ a(3,[ t(15,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_funcionid',23),t(')',4) ] ]).
-a_i(13,9,t,9,[],[ [ [ [],23,23 ] ],'IENTRADA',[] ]).
-a_i(14,9,r,5,[],[ [ [ 9,9,9 ] ],'ICLIENTE',[] ]).
-a_i(15,9,r,7,[],[ [ [ 9,15,15 ] ],'IFUNCION',[] ]).
-a_i(16,9,r,3,[],[ [ [ 5,3,3 ] ],'IPAIS',[] ]).
-a_i(17,9,r,1,[],[ [ [ 7,1,1 ] ],'IESPECTACULO',[] ]).
-a_i(18,9,r,2,[],[ [ [ 1,4,4 ] ],'ILUGAR',[] ]).
-a_i(19,9,r,4,[],[ [ [ 1,7,7 ] ],'ITIPOESPECTACULO',[] ]).
-a_i(20,9,r,11,[],[ [ [ 1,4,4 ],[ 9,27,27 ] ],'ILUGARSECTOR',[] ]).
-a_i(21,9,r,13,[],[ [ [ 7,1,1 ],[ 9,27,27 ] ],'IESPECTACULOLUGARSECTOR',[] ]).
-a_i(22,9,r,2000,[],[ [ [ 9,oe([ t(27,2) ]),27 ],[ 7,oe([ t(1,2) ]),1 ] ],'IENTRADA',[] ]).
-a_i(23,9,f,'Pgmname',[],[ [],[ t('"Entrada"',3) ] ]).
+a_i(9,9,f,1,[],[ [],[ t('Insert_espectaculoid',23),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculoid',23),t(')',4),t(';',18) ] ]).
+a_i(10,9,f,[ t(1,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculoid',23),t(')',4),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
+a_i(11,9,f,47,[],[ [],[ t('Insert_espectaculofuncionid',23),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculofuncionid',23),t(')',4),t(';',18) ] ]).
+a_i(12,9,f,[ t(47,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculofuncionid',23),t(')',4),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
+a_i(13,9,f,27,[],[ [],[ t('Insert_lugarsectorid',23),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_lugarsectorid',23),t(')',4),t(';',18) ] ]).
+a_i(14,9,f,[ t(27,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_lugarsectorid',23),t(')',4),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
+a_i(15,9,b,6,[],[ [],[ a(3,[ t(9,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_clienteid',23),t(')',4) ] ]).
+a_i(16,9,b,8,[],[ [],[ a(3,[ t(1,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculoid',23),t(')',4) ] ]).
+a_i(17,9,b,10,[],[ [],[ a(3,[ t(47,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_espectaculofuncionid',23),t(')',4) ] ]).
+a_i(18,9,b,12,[],[ [],[ a(3,[ t(27,2) ]) ],[ t('Mode',23),t(=,10),t([ 42,'Insert' ],44),t('.AND.',9),t('.NOT.',8),t('null(',1),t('Insert_lugarsectorid',23),t(')',4) ] ]).
+a_i(19,9,b,13,[],[ [],[ a(1,[ t('''No hay lugares disponibles''',3) ]) ],[ t(38,2),t(<,10),t('1',3) ] ]).
+a_i(20,9,b,14,[],[ [],[ a(1,[ t('''Fecha invalida''',3) ]) ],[ t(42,2),t(>,10),t(16,2) ] ]).
+a_i(21,9,t,9,[],[ [ [ [],23,23 ] ],'IENTRADA',[] ]).
+a_i(22,9,r,5,[],[ [ [ 9,9,9 ] ],'ICLIENTE',[] ]).
+a_i(23,9,r,15,[],[ [ [ 9,1,1 ] ],'IESPECTACULO',[] ]).
+a_i(24,9,r,16,[],[ [ [ 9,1,1 ],[ 9,27,27 ] ],'IESPECTACULOLUGARSECTOR',[] ]).
+a_i(25,9,r,18,[],[ [ [ 9,1,1 ],[ 9,47,47 ] ],'IESPECTACULOFUNCION',[] ]).
+a_i(26,9,r,3,[],[ [ [ 5,3,3 ] ],'IPAIS',[] ]).
+a_i(27,9,r,2,[],[ [ [ 15,4,4 ] ],'ILUGAR',[] ]).
+a_i(28,9,r,4,[],[ [ [ 15,7,7 ] ],'ITIPOESPECTACULO',[] ]).
+a_i(29,9,r,11,[],[ [ [ 15,4,4 ],[ 9,27,27 ] ],'ILUGARSECTOR',[] ]).
+a_i(30,9,r,2000,[],[ [ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ],'IENTRADA',[] ]).
+a_i(31,9,f,'Pgmname',[],[ [],[ t('"Entrada"',3) ] ]).
  
 v_i(b,i,3,42).
 v_i(b,o,3,[]).
-v_i(f,i,4,40).
+v_i(f,i,4,29).
 v_i(f,i,4,37).
 v_i(f,o,4,38).
 v_i(f,i,5,'Entradaid').
@@ -213,87 +229,113 @@ v_i(f,i,7,'Insert_clienteid').
 v_i(f,o,7,9).
 v_i(f,i,8,'Insert_clienteid').
 v_i(f,o,8,[ t(9,2),t('Enabled',3) ]).
-v_i(f,i,9,'Insert_funcionid').
-v_i(f,o,9,15).
-v_i(f,i,10,'Insert_funcionid').
-v_i(f,o,10,[ t(15,2),t('Enabled',3) ]).
-v_i(b,i,11,'Insert_clienteid').
-v_i(b,o,11,[]).
-v_i(b,i,12,'Insert_funcionid').
-v_i(b,o,12,[]).
-v_i(t,i,13,23).
-v_i(t,o,13,42).
-v_i(t,o,13,43).
-v_i(t,o,13,44).
-v_i(t,o,13,9).
-v_i(t,o,13,15).
-v_i(t,o,13,27).
-v_i(r,i,14,9).
-v_i(r,o,14,3).
-v_i(r,o,14,10).
-v_i(r,i,15,15).
-v_i(r,o,15,22).
-v_i(r,o,15,1).
-v_i(r,i,16,3).
-v_i(r,o,16,6).
-v_i(r,i,17,1).
-v_i(r,o,17,4).
-v_i(r,o,17,7).
-v_i(r,o,17,2).
-v_i(r,o,17,16).
-v_i(r,i,18,4).
-v_i(r,o,18,5).
-v_i(r,i,19,7).
-v_i(r,o,19,8).
-v_i(r,i,20,4).
-v_i(r,i,20,27).
-v_i(r,o,20,28).
-v_i(r,o,20,30).
-v_i(r,i,21,1).
-v_i(r,i,21,27).
-v_i(r,o,21,40).
-v_i(r,i,22,27).
-v_i(r,i,22,1).
-v_i(r,o,22,37).
-v_i(f,i,23,[]).
-v_i(f,o,23,'Pgmname').
+v_i(f,i,9,'Insert_espectaculoid').
+v_i(f,o,9,1).
+v_i(f,i,10,'Insert_espectaculoid').
+v_i(f,o,10,[ t(1,2),t('Enabled',3) ]).
+v_i(f,i,11,'Insert_espectaculofuncionid').
+v_i(f,o,11,47).
+v_i(f,i,12,'Insert_espectaculofuncionid').
+v_i(f,o,12,[ t(47,2),t('Enabled',3) ]).
+v_i(f,i,13,'Insert_lugarsectorid').
+v_i(f,o,13,27).
+v_i(f,i,14,'Insert_lugarsectorid').
+v_i(f,o,14,[ t(27,2),t('Enabled',3) ]).
+v_i(b,i,15,'Insert_clienteid').
+v_i(b,o,15,[]).
+v_i(b,i,16,'Insert_espectaculoid').
+v_i(b,o,16,[]).
+v_i(b,i,17,'Insert_espectaculofuncionid').
+v_i(b,o,17,[]).
+v_i(b,i,18,'Insert_lugarsectorid').
+v_i(b,o,18,[]).
+v_i(b,i,19,38).
+v_i(b,o,19,[]).
+v_i(b,i,20,42).
+v_i(b,i,20,16).
+v_i(b,o,20,[]).
+v_i(t,i,21,23).
+v_i(t,o,21,42).
+v_i(t,o,21,43).
+v_i(t,o,21,44).
+v_i(t,o,21,9).
+v_i(t,o,21,1).
+v_i(t,o,21,27).
+v_i(t,o,21,47).
+v_i(r,i,22,9).
+v_i(r,o,22,3).
+v_i(r,o,22,10).
+v_i(r,i,23,1).
+v_i(r,o,23,4).
+v_i(r,o,23,7).
+v_i(r,o,23,2).
+v_i(r,o,23,16).
+v_i(r,i,24,1).
+v_i(r,i,24,27).
+v_i(r,o,24,[]).
+v_i(r,i,25,1).
+v_i(r,i,25,47).
+v_i(r,o,25,48).
+v_i(r,i,26,3).
+v_i(r,o,26,6).
+v_i(r,i,27,4).
+v_i(r,o,27,5).
+v_i(r,i,28,7).
+v_i(r,o,28,8).
+v_i(r,i,29,4).
+v_i(r,i,29,27).
+v_i(r,o,29,28).
+v_i(r,o,29,30).
+v_i(r,o,29,29).
+v_i(r,i,30,1).
+v_i(r,i,30,27).
+v_i(r,o,30,37).
+v_i(f,i,31,[]).
+v_i(f,o,31,'Pgmname').
  
 act_info_i(5,[ [ 23 ] ]).
 act_info_i(7,[ [ 9 ] ]).
-act_info_i(9,[ [ 15 ] ]).
+act_info_i(9,[ [ 1 ] ]).
+act_info_i(11,[ [ 47 ] ]).
+act_info_i(13,[ [ 27 ] ]).
  
-ca_i(9,15).
+ca_i(13,27).
+ca_i(11,47).
+ca_i(9,1).
 ca_i(7,9).
  
  
  
  
 attri_i(37,[ 'LugarSectorVendidas',int,4,0,'ZZZ9',0,'Lugar Sector Vendidas','',0 ]).
-attri_i(40,[ 'LugarSectorCantidadAsientos',int,4,0,'ZZZ9',0,'Lugar Sector Cantidad Asientos','',0 ]).
+attri_i(29,[ 'LugarSectorCantidad',int,4,0,'ZZZ9',0,'Lugar Sector Cantidad','',0 ]).
 attri_i(44,[ 'EntradaPaisOrigenName',svchar,40,0,'',0,'Entrada Pais Origen Name','',0 ]).
 attri_i(43,[ 'EntradaPaisOrigenId',int,4,0,'ZZZ9',0,'Entrada Pais Origen Id','',0 ]).
 attri_i(8,[ 'TipoEspectaculoName',svchar,40,0,'',0,'Tipo Espectaculo Name','',0 ]).
 attri_i(30,[ 'LugarSectorPrecio',int,4,0,'ZZZ9',0,'Lugar Sector Precio','',0 ]).
 attri_i(28,[ 'LugarSectorName',svchar,40,0,'',0,'Lugar Sector Name','',0 ]).
-attri_i(27,[ 'LugarSectorId',int,4,0,'ZZZ9',0,'Lugar Sector Id','',0 ]).
 attri_i(5,[ 'LugarName',svchar,40,0,'',0,'Lugar Name','',0 ]).
 attri_i(6,[ 'PaisName',svchar,40,0,'',0,'Pais Name','',0 ]).
-attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
+attri_i(48,[ 'EspectaculoFuncionName',svchar,40,0,'',0,'Espectaculo Funcion Name','',0 ]).
 attri_i(16,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
 attri_i(2,[ 'EspectaculoName',svchar,40,0,'',0,'Espectaculo Name','',0 ]).
-attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(10,[ 'ClienteName',svchar,40,0,'',0,'Cliente Name','',0 ]).
 attri_i(42,[ 'EntradaFecha',date,8,0,'99/99/99',0,'Entrada Fecha','',0 ]).
-attri_i(15,[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',0 ]).
+attri_i(27,[ 'LugarSectorId',int,4,0,'ZZZ9',0,'Lugar Sector Id','',0 ]).
+attri_i(47,[ 'EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Espectaculo Funcion Id','',0 ]).
+attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(9,[ 'ClienteId',int,4,0,'ZZZ9',0,'Cliente Id','',0 ]).
 attri_i(23,[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
 attri_i(4,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(3,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
 attri_i(38,[ 'LugarSectorDisponibles',int,4,0,'ZZZ9',0,'Lugar Sector Disponibles','',0 ]).
-attri_i('GXV1',[ 'GXV1',int,8,0,'',0,'','',15 ]).
-attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',14 ]).
+attri_i('GXV1',[ 'GXV1',int,8,0,'',0,'','',18 ]).
+attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',17 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Insert_espectaculofuncionid',[ 'Insert_EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Insert_Espectaculo Funcion Id','',16 ]).
+attri_i('Insert_lugarsectorid',[ 'Insert_LugarSectorId',int,4,0,'ZZZ9',0,'Insert_Lugar Sector Id','',15 ]).
+attri_i('Insert_espectaculoid',[ 'Insert_EspectaculoId',int,4,0,'ZZZ9',0,'Insert_Espectaculo Id','',14 ]).
 attri_i('Trncontextatt',[ 'TrnContextAtt',o('TransactionContext.Attribute'),0,0,'',0,'Trn Context Att','',13 ]).
 attri_i('Insert_funcionid',[ 'Insert_FuncionId',int,4,0,'ZZZ9',0,'Insert_Funcion Id','',12 ]).
 attri_i('Insert_clienteid',[ 'Insert_ClienteId',int,4,0,'ZZZ9',0,'Insert_Cliente Id','',11 ]).
@@ -303,26 +345,26 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ])
 attri_i('Entradaid',[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(2000,[ 'Entrada',[ 37,27,23 ],'Entrada','Entrada' ]).
-table_i(13,[ 'EspectaculoLugarSector',[ 1,27,40 ],'Lugar Sector','EspectaculoLugarSector' ]).
+table_i(16,[ 'EspectaculoLugarSector',[ 1,27 ],'Lugar Sector','EspectaculoLugarSector' ]).
+table_i(2000,[ 'Entrada',[ 37,1,27,23 ],'Entrada','Entrada' ]).
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
-table_i(11,[ 'LugarSector',[ 4,27,28,30 ],'Sector','LugarSector' ]).
+table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
 table_i(2,[ 'Lugar',[ 4,5 ],'Lugar','Lugar' ]).
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
-table_i(7,[ 'Funcion',[ 15,1,22 ],'Funcion','Funcion' ]).
-table_i(9,[ 'Entrada',[ 23,9,15,27,42,43,44 ],'Entrada','Entrada' ]).
-table_i(1,[ 'Espectaculo',[ 1,2,4,7,16 ],'Espectaculo','Espectaculo' ]).
+table_i(18,[ 'EspectaculoFuncion',[ 1,47,48 ],'Funcion','EspectaculoFuncion' ]).
+table_i(9,[ 'Entrada',[ 23,9,27,42,43,44,1,47 ],'Entrada','Entrada' ]).
+table_i(15,[ 'Espectaculo',[ 1,2,16,4,7 ],'Espectaculo','Espectaculo' ]).
 table_i(5,[ 'Cliente',[ 9,10,3 ],'Cliente','Cliente' ]).
  
 index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
-index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
 index_i(5,[ 'ICLIENTE',u,[ 9 ],'ICliente' ]).
+index_i(16,[ 'IESPECTACULOLUGARSECTOR',u,[ 1,27 ],'IEspectaculoLugarSector' ]).
+index_i(15,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
+index_i(18,[ 'IESPECTACULOFUNCION',u,[ 1,47 ],'IEspectaculoFuncion' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
-index_i(1,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
 index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
 index_i(4,[ 'ITIPOESPECTACULO',u,[ 7 ],'ITipoEspectaculo' ]).
 index_i(11,[ 'ILUGARSECTOR',u,[ 4,27 ],'ILugarSector' ]).
-index_i(13,[ 'IESPECTACULOLUGARSECTOR',u,[ 1,27 ],'IEspectaculoLugarSector' ]).
 index_i(2000,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
  
 lv_i(2,2000,9).
@@ -330,7 +372,7 @@ lv_i(2,2000,9).
  
  
  
-nav_view_i(2000,[ 37 ],[ 27,1 ],[ 27,1 ],[ [ 2000,[ [ 9,oe([ t(27,2) ]),27 ],[ 7,oe([ t(1,2) ]),1 ] ] ] ],[ [ [ 9,[ 'count(',23 ] ],[ 9,27 ],[ 7,1 ] ],n,[ [ 9,many ],[ 7,one ] ],[ [ 7,[ [ 9,15,15 ] ] ] ],[],[ none ],[],[ 27,1 ],[] ]).
+nav_view_i(2000,[ 37 ],[ 1,27 ],[ 1,27 ],[ [ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ],[ [ [ 9,[ 'count(',23 ] ],[ 9,1 ],[ 9,27 ] ],n,[ [ 9,many ] ],[],[],[ none ],[],[ 1,27 ],[] ]).
  
  
 agg_def_i(37,[ t('0',3) ]).
@@ -339,11 +381,11 @@ agg_def_i(37,[ t('0',3) ]).
  
  
  
-add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40001,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
-upd_i(9,9,i,[ [ 42,43,44,9,15,27 ],[],'IENTRADA',[ [ [],23,23 ] ] ]).
-upd_i(9,9,u,[ [ 42,43,44,9,15,27 ],[],'IENTRADA',[] ]).
+upd_i(9,9,i,[ [ 42,43,44,9,1,27,47 ],[],'IENTRADA',[ [ [],23,23 ] ] ]).
+upd_i(9,9,u,[ [ 42,43,44,9,1,27,47 ],[],'IENTRADA',[] ]).
 upd_i(9,9,d,[ [],[],'IENTRADA',[] ]).
  
  
@@ -370,8 +412,8 @@ dom_info_i(87,[ 'Name' ]).
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
-b_group_i(2,2,lit,0,2,34).
-b_group_i(2,3,lit,0,35,0).
+b_group_i(2,2,lit,0,2,42).
+b_group_i(2,3,lit,0,43,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(5,2,2,cmd,1,[ t('',109,5,0),t('.NOT.',8,1,5),t('udp(',1,5,23),t(o(1,'IsAuthorized'),28,5,11),t(',',7,1,0),t('Pgmname',23,1,24),t(')',4,1,0) ]).
@@ -379,31 +421,37 @@ b_line_i(6,2,2,cmd,1,[ t('',104,6,0),t(o(13,'NotAuthorized'),28,1,3),t('Pgmname'
 b_line_i(7,2,2,cmd,1,[ t('',111,7,0) ]).
 b_line_i(9,2,2,cmd,1,[ t('',107,9,0),t([ t('Trncontext',23,9,2),t('fromxml(',1,9,14) ],31,9,2),t([ t('Websession',23,1,23),t('get(',1,1,35) ],31,9,35),t('"TrnContext"',3,9,40),t(')',4,1,53),t(')',4,1,54) ]).
 b_line_i(10,2,2,cmd,1,[ t('',107,10,0),t([ t('Insert_clienteid',23,10,2),t('setempty(',1,10,20) ],31,10,2),t(')',4,1,30) ]).
-b_line_i(11,2,2,cmd,1,[ t('',107,11,0),t([ t('Insert_funcionid',23,11,2),t('setempty(',1,11,20) ],31,11,2),t(')',4,1,30) ]).
-b_line_i(13,2,2,cmd,1,[ t('',109,13,0),t('(',0,1,5),t([ t('Trncontext',23,13,6),t('Transactionname',3,13,18) ],29,13,18),t(=,10,1,34),t('Pgmname',23,1,36),t('.AND.',9,1,45),t('Mode',23,1,51),t(=,10,1,57),t([ 42,'Insert' ],44,13,59),t(')',4,1,73) ]).
-b_line_i(14,2,2,cmd,1,[ t('',107,14,0),t('GXV1',23,1,0),t(=,10,1,0),t(1,3,1,0) ]).
-b_line_i([ 14,2 ],2,2,cmd,1,[ t('',114,14,0),t('GXV1',23,1,0),t(<=,10,1,0),t([ t('Trncontext',23,14,25),t('Attributes',3,14,37),t('Count',3,14,0) ],29,14,0) ]).
-b_line_i([ 14,3 ],2,2,cmd,1,[ t('',107,14,0),t('Trncontextatt',23,1,0),t(=,10,1,0),t([ t([ t('Trncontext',23,1,0),t('Attributes',3,1,0) ],29,1,0),t('item(',1,1,0) ],31,1,0),t('GXV1',23,1,0),t(')',4,1,0) ]).
-b_line_i(15,2,2,cmd,2,[ t('',152,15,0) ]).
-b_line_i(17,2,2,cmd,2,[ t('',153,17,0),t([ t('Trncontextatt',23,17,10),t('Attributename',3,17,25) ],29,17,25),t(=,10,2,39),t('"ClienteId"',3,17,41) ]).
-b_line_i(18,2,2,cmd,2,[ t('',107,18,0),t('Insert_clienteid',23,18,6),t(=,10,18,6),t('val(',1,18,6),t([ t('Trncontextatt',23,18,36),t('Attributevalue',3,18,51) ],29,18,51),t(')',4,2,65) ]).
-b_line_i(20,2,2,cmd,2,[ t('',153,20,0),t([ t('Trncontextatt',23,20,10),t('Attributename',3,20,25) ],29,20,25),t(=,10,2,39),t('"FuncionId"',3,20,41) ]).
-b_line_i(21,2,2,cmd,2,[ t('',107,21,0),t('Insert_funcionid',23,21,6),t(=,10,21,6),t('val(',1,21,6),t([ t('Trncontextatt',23,21,36),t('Attributevalue',3,21,51) ],29,21,51),t(')',4,2,65) ]).
-b_line_i(22,2,2,cmd,2,[ t('',154,22,0) ]).
-b_line_i([ 23,1 ],2,2,cmd,2,[ t('',107,23,0),t('GXV1',23,2,0),t(=,10,2,0),t('GXV1',23,2,0),t(+,5,2,0),t(1,3,2,0) ]).
-b_line_i([ 23,2 ],2,2,cmd,2,[ t('',115,23,0) ]).
-b_line_i(24,2,2,cmd,3,[ t('',111,24,0) ]).
-b_line_i(26,2,2,cmd,3,[ t('',109,26,0),t('Mode',23,3,5),t(=,10,3,11),t([ 42,'Delete' ],44,26,13) ]).
-b_line_i(27,2,2,cmd,3,[ t('',107,27,0),t([ t('Btn_enter',3,3,0),t('Caption',3,3,0) ],29,3,0),t(=,10,3,0),t('"Eliminar"',3,3,0) ]).
-b_line_i(28,2,2,cmd,3,[ t('',107,28,0),t([ t('Btn_enter',3,3,0),t('Tooltiptext',3,3,0) ],29,3,0),t(=,10,3,0),t('"Eliminar"',3,3,0) ]).
-b_line_i(29,2,2,cmd,3,[ t('',111,29,0) ]).
-b_line_i(32,2,2,cmd,3,[ t('',147,32,0) ]).
-b_line_i(34,2,2,cmd,3,[ t('',146,34,0),t('After Trn',3,34,7) ]).
-b_line_i(38,2,3,cmd,3,[ t('',109,38,0),t('(',0,3,5),t('Mode',23,3,6),t(=,10,3,12),t([ 42,'Delete' ],44,38,14),t('.AND.',9,3,29),t('.NOT.',8,3,35),t([ t('Trncontext',23,38,41),t('Callerondelete',3,38,53) ],29,38,53),t(')',4,3,67) ]).
-b_line_i(39,2,3,cmd,3,[ t('',104,39,0),t(o(13,'WWEntrada'),28,3,3) ]).
-b_line_i(40,2,3,cmd,3,[ t('',111,40,0) ]).
-b_line_i(42,2,3,cmd,3,[ t('',118,42,0) ]).
-b_line_i(45,2,3,cmd,3,[ t('',147,45,0) ]).
+b_line_i(11,2,2,cmd,1,[ t('',107,11,0),t([ t('Insert_espectaculoid',23,11,2),t('setempty(',1,11,24) ],31,11,2),t(')',4,1,34) ]).
+b_line_i(12,2,2,cmd,1,[ t('',107,12,0),t([ t('Insert_espectaculofuncionid',23,12,2),t('setempty(',1,12,31) ],31,12,2),t(')',4,1,41) ]).
+b_line_i(13,2,2,cmd,1,[ t('',107,13,0),t([ t('Insert_lugarsectorid',23,13,2),t('setempty(',1,13,24) ],31,13,2),t(')',4,1,34) ]).
+b_line_i(15,2,2,cmd,1,[ t('',109,15,0),t('(',0,1,5),t([ t('Trncontext',23,15,6),t('Transactionname',3,15,18) ],29,15,18),t(=,10,1,34),t('Pgmname',23,1,36),t('.AND.',9,1,45),t('Mode',23,1,51),t(=,10,1,57),t([ 42,'Insert' ],44,15,59),t(')',4,1,73) ]).
+b_line_i(16,2,2,cmd,1,[ t('',107,16,0),t('GXV1',23,1,0),t(=,10,1,0),t(1,3,1,0) ]).
+b_line_i([ 16,2 ],2,2,cmd,1,[ t('',114,16,0),t('GXV1',23,1,0),t(<=,10,1,0),t([ t('Trncontext',23,16,25),t('Attributes',3,16,37),t('Count',3,16,0) ],29,16,0) ]).
+b_line_i([ 16,3 ],2,2,cmd,1,[ t('',107,16,0),t('Trncontextatt',23,1,0),t(=,10,1,0),t([ t([ t('Trncontext',23,1,0),t('Attributes',3,1,0) ],29,1,0),t('item(',1,1,0) ],31,1,0),t('GXV1',23,1,0),t(')',4,1,0) ]).
+b_line_i(17,2,2,cmd,2,[ t('',152,17,0) ]).
+b_line_i(19,2,2,cmd,2,[ t('',153,19,0),t([ t('Trncontextatt',23,19,10),t('Attributename',3,19,25) ],29,19,25),t(=,10,2,39),t('"ClienteId"',3,19,41) ]).
+b_line_i(20,2,2,cmd,2,[ t('',107,20,0),t('Insert_clienteid',23,20,6),t(=,10,20,6),t('val(',1,20,6),t([ t('Trncontextatt',23,20,36),t('Attributevalue',3,20,51) ],29,20,51),t(')',4,2,65) ]).
+b_line_i(22,2,2,cmd,2,[ t('',153,22,0),t([ t('Trncontextatt',23,22,10),t('Attributename',3,22,25) ],29,22,25),t(=,10,2,39),t('"EspectaculoId"',3,22,41) ]).
+b_line_i(23,2,2,cmd,2,[ t('',107,23,0),t('Insert_espectaculoid',23,23,6),t(=,10,23,6),t('val(',1,23,6),t([ t('Trncontextatt',23,23,40),t('Attributevalue',3,23,55) ],29,23,55),t(')',4,2,69) ]).
+b_line_i(25,2,2,cmd,2,[ t('',153,25,0),t([ t('Trncontextatt',23,25,10),t('Attributename',3,25,25) ],29,25,25),t(=,10,2,39),t('"EspectaculoFuncionId"',3,25,41) ]).
+b_line_i(26,2,2,cmd,2,[ t('',107,26,0),t('Insert_espectaculofuncionid',23,26,6),t(=,10,26,6),t('val(',1,26,6),t([ t('Trncontextatt',23,26,47),t('Attributevalue',3,26,62) ],29,26,62),t(')',4,2,76) ]).
+b_line_i(28,2,2,cmd,2,[ t('',153,28,0),t([ t('Trncontextatt',23,28,10),t('Attributename',3,28,25) ],29,28,25),t(=,10,2,39),t('"LugarSectorId"',3,28,41) ]).
+b_line_i(29,2,2,cmd,2,[ t('',107,29,0),t('Insert_lugarsectorid',23,29,6),t(=,10,29,6),t('val(',1,29,6),t([ t('Trncontextatt',23,29,40),t('Attributevalue',3,29,55) ],29,29,55),t(')',4,2,69) ]).
+b_line_i(30,2,2,cmd,2,[ t('',154,30,0) ]).
+b_line_i([ 31,1 ],2,2,cmd,2,[ t('',107,31,0),t('GXV1',23,2,0),t(=,10,2,0),t('GXV1',23,2,0),t(+,5,2,0),t(1,3,2,0) ]).
+b_line_i([ 31,2 ],2,2,cmd,2,[ t('',115,31,0) ]).
+b_line_i(32,2,2,cmd,3,[ t('',111,32,0) ]).
+b_line_i(34,2,2,cmd,3,[ t('',109,34,0),t('Mode',23,3,5),t(=,10,3,11),t([ 42,'Delete' ],44,34,13) ]).
+b_line_i(35,2,2,cmd,3,[ t('',107,35,0),t([ t('Btn_enter',3,3,0),t('Caption',3,3,0) ],29,3,0),t(=,10,3,0),t('"Eliminar"',3,3,0) ]).
+b_line_i(36,2,2,cmd,3,[ t('',107,36,0),t([ t('Btn_enter',3,3,0),t('Tooltiptext',3,3,0) ],29,3,0),t(=,10,3,0),t('"Eliminar"',3,3,0) ]).
+b_line_i(37,2,2,cmd,3,[ t('',111,37,0) ]).
+b_line_i(40,2,2,cmd,3,[ t('',147,40,0) ]).
+b_line_i(42,2,2,cmd,3,[ t('',146,42,0),t('After Trn',3,42,7) ]).
+b_line_i(46,2,3,cmd,3,[ t('',109,46,0),t('(',0,3,5),t('Mode',23,3,6),t(=,10,3,12),t([ 42,'Delete' ],44,46,14),t('.AND.',9,3,29),t('.NOT.',8,3,35),t([ t('Trncontext',23,46,41),t('Callerondelete',3,46,53) ],29,46,53),t(')',4,3,67) ]).
+b_line_i(47,2,3,cmd,3,[ t('',104,47,0),t(o(13,'WWEntrada'),28,3,3) ]).
+b_line_i(48,2,3,cmd,3,[ t('',111,48,0) ]).
+b_line_i(50,2,3,cmd,3,[ t('',118,50,0) ]).
+b_line_i(53,2,3,cmd,3,[ t('',147,53,0) ]).
  
  
  
@@ -486,12 +534,12 @@ html_sub_i(15,65,html_i(8,div(65))).
 html_sub_i(65,66,html_i(0,div(66))).
 html_sub_i(66,67,html_i(0,div(67))).
 html_sub_i(67,68,html_i(0,div(68))).
-html_sub_i(68,69,html_i(0,t(15,2))).
+html_sub_i(68,69,html_i(0,t(47,2))).
 html_sub_i(15,70,html_i(9,div(70))).
 html_sub_i(70,71,html_i(0,div(71))).
 html_sub_i(71,72,html_i(0,div(72))).
 html_sub_i(72,73,html_i(0,div(73))).
-html_sub_i(73,74,html_i(0,t(22,2))).
+html_sub_i(73,74,html_i(0,t(48,2))).
 html_sub_i(15,75,html_i(10,div(75))).
 html_sub_i(75,76,html_i(0,div(76))).
 html_sub_i(76,77,html_i(0,div(77))).
@@ -571,10 +619,10 @@ html_tags_i(57,'data-gx-att','att:2').
 html_tags_i(59,'data-gx-att','att:2').
 html_tags_i(62,'data-gx-att','att:16').
 html_tags_i(64,'data-gx-att','att:16').
-html_tags_i(67,'data-gx-att','att:15').
-html_tags_i(69,'data-gx-att','att:15').
-html_tags_i(72,'data-gx-att','att:22').
-html_tags_i(74,'data-gx-att','att:22').
+html_tags_i(67,'data-gx-att','att:47').
+html_tags_i(69,'data-gx-att','att:47').
+html_tags_i(72,'data-gx-att','att:48').
+html_tags_i(74,'data-gx-att','att:48').
 html_tags_i(77,'data-gx-att','att:6').
 html_tags_i(79,'data-gx-att','att:6').
 html_tags_i(82,'data-gx-att','att:5').
@@ -1329,14 +1377,14 @@ html_comp_i(68,'Align',left,d,[ str ]).
 html_comp_i(68,'Valign',top,d,[ str ]).
 html_comp_i(69,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(69,'Colcount',4,d,[ num ]).
-html_comp_i(69,'Attid',15,v,[ num ]).
+html_comp_i(69,'Attid',47,v,[ num ]).
 html_comp_i(69,'Class','Attribute',v,[ str ]).
-html_comp_i(69,'Controlname','Funcionid',d,[ str ]).
+html_comp_i(69,'Controlname','Espectaculofuncionid',d,[ str ]).
 html_comp_i(69,'Returnonclick',0,v,[ bool ]).
 html_comp_i(69,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(69,'Captionstyle','',v,[ str ]).
 html_comp_i(69,'Captionposition','Left',v,[ str ]).
-html_comp_i(69,'Captionvalue','Funcion Id',d,[ str ]).
+html_comp_i(69,'Captionvalue','Espectaculo Funcion Id',d,[ str ]).
 html_comp_i(69,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(69,'Controltype',2,d,[ num ]).
 html_comp_i(69,'Inputtype',0,d,[ num ]).
@@ -1392,14 +1440,14 @@ html_comp_i(73,'Align',left,d,[ str ]).
 html_comp_i(73,'Valign',top,d,[ str ]).
 html_comp_i(74,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(74,'Colcount',40,d,[ num ]).
-html_comp_i(74,'Attid',22,v,[ num ]).
+html_comp_i(74,'Attid',48,v,[ num ]).
 html_comp_i(74,'Class','Attribute',v,[ str ]).
-html_comp_i(74,'Controlname','Funcionname',d,[ str ]).
+html_comp_i(74,'Controlname','Espectaculofuncionname',d,[ str ]).
 html_comp_i(74,'Returnonclick',0,v,[ bool ]).
 html_comp_i(74,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(74,'Captionstyle','',v,[ str ]).
 html_comp_i(74,'Captionposition','Left',v,[ str ]).
-html_comp_i(74,'Captionvalue','Funcion Name',d,[ str ]).
+html_comp_i(74,'Captionvalue','Espectaculo Funcion Name',d,[ str ]).
 html_comp_i(74,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(74,'Controltype',2,d,[ num ]).
 html_comp_i(74,'Inputtype',0,d,[ num ]).
@@ -1597,7 +1645,7 @@ html_comp_i(89,'Returnonclick',0,v,[ bool ]).
 html_comp_i(89,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(89,'Captionstyle','',v,[ str ]).
 html_comp_i(89,'Captionposition','Left',v,[ str ]).
-html_comp_i(89,'Captionvalue','Sector Id',d,[ str ]).
+html_comp_i(89,'Captionvalue','Lugar Sector Id',d,[ str ]).
 html_comp_i(89,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(89,'Controltype',2,d,[ num ]).
 html_comp_i(89,'Inputtype',0,d,[ num ]).
@@ -2157,12 +2205,12 @@ lit_i(63,1,div(63),[ ctlname('') ]).
 lit_i(62,1,div(62),[ ctlname('') ]).
 lit_i(61,1,div(61),[ ctlname('') ]).
 lit_i(60,1,div(60),[ ctlname('') ]).
-lit_i(69,1,t(15,2),[ ctlname(15),ctrltype(edit,69),pos(69),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(69,1,t(47,2),[ ctlname(47),ctrltype(edit,69),pos(69),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(68,1,div(68),[ ctlname('') ]).
 lit_i(67,1,div(67),[ ctlname('') ]).
 lit_i(66,1,div(66),[ ctlname('') ]).
 lit_i(65,1,div(65),[ ctlname('') ]).
-lit_i(74,1,t(22,2),[ ctlname(22),ctrltype(edit,74),pos(74),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(74,1,t(48,2),[ ctlname(48),ctrltype(edit,74),pos(74),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(73,1,div(73),[ ctlname('') ]).
 lit_i(72,1,div(72),[ ctlname('') ]).
 lit_i(71,1,div(71),[ ctlname('') ]).
@@ -2288,7 +2336,7 @@ att_prop_i(2,10,'VarServiceExtName','',d).
 att_prop_i(2,10,'FullName','ClienteName',v).
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
 att_prop_i(2,1,'AUTONUMBER','-1',v).
 att_prop_i(2,1,'AUTONUMBER_START','1',d).
@@ -2322,28 +2370,28 @@ att_prop_i(2,16,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,16,'DownloadOffline','0',d).
 att_prop_i(2,16,'VarServiceExtName','',d).
 att_prop_i(2,16,'FullName','EspectaculoFecha',v).
-att_prop_i(2,15,'ExternalName','FuncionId',d).
-att_prop_i(2,15,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,15,'EmptyAsNull','Yes',d).
-att_prop_i(2,15,idBasedOn,86,v).
-att_prop_i(2,15,'AUTONUMBER','0',d).
-att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,15,'AttRegEx','',d).
-att_prop_i(2,15,'AttValidationFailedMsg','',d).
-att_prop_i(2,15,'DownloadOffline','0',d).
-att_prop_i(2,15,'VarServiceExtName','',d).
-att_prop_i(2,15,'FullName','FuncionId',v).
-att_prop_i(2,22,'ExternalName','FuncionName',d).
-att_prop_i(2,22,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
-att_prop_i(2,22,idBasedOn,87,v).
-att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,22,'DB_NLS_SUPPORT','Yes',d).
-att_prop_i(2,22,'AttRegEx','',d).
-att_prop_i(2,22,'AttValidationFailedMsg','',d).
-att_prop_i(2,22,'DownloadOffline','0',d).
-att_prop_i(2,22,'VarServiceExtName','',d).
-att_prop_i(2,22,'FullName','FuncionName',v).
+att_prop_i(2,47,'ExternalName','EspectaculoFuncionId',d).
+att_prop_i(2,47,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,47,'EmptyAsNull','Yes',d).
+att_prop_i(2,47,idBasedOn,86,v).
+att_prop_i(2,47,'AUTONUMBER','0',d).
+att_prop_i(2,47,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,47,'AttRegEx','',d).
+att_prop_i(2,47,'AttValidationFailedMsg','',d).
+att_prop_i(2,47,'DownloadOffline','0',d).
+att_prop_i(2,47,'VarServiceExtName','',d).
+att_prop_i(2,47,'FullName','EspectaculoFuncionId',v).
+att_prop_i(2,48,'ExternalName','EspectaculoFuncionName',d).
+att_prop_i(2,48,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,48,'EmptyAsNull','Yes',d).
+att_prop_i(2,48,idBasedOn,87,v).
+att_prop_i(2,48,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,48,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,48,'AttRegEx','',d).
+att_prop_i(2,48,'AttValidationFailedMsg','',d).
+att_prop_i(2,48,'DownloadOffline','0',d).
+att_prop_i(2,48,'VarServiceExtName','',d).
+att_prop_i(2,48,'FullName','EspectaculoFuncionName',v).
 att_prop_i(2,6,'ExternalName','PaisName',d).
 att_prop_i(2,6,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
@@ -2480,17 +2528,17 @@ att_prop_i(2,7,'AttValidationFailedMsg','',d).
 att_prop_i(2,7,'DownloadOffline','0',d).
 att_prop_i(2,7,'VarServiceExtName','',d).
 att_prop_i(2,7,'FullName','TipoEspectaculoId',v).
-att_prop_i(2,40,'ExternalName','LugarSectorCantidadAsientos',d).
-att_prop_i(2,40,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,40,'EmptyAsNull','Yes',d).
-att_prop_i(2,40,idBasedOn,'',d).
-att_prop_i(2,40,'AUTONUMBER','0',d).
-att_prop_i(2,40,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40,'AttRegEx','',d).
-att_prop_i(2,40,'AttValidationFailedMsg','',d).
-att_prop_i(2,40,'DownloadOffline','0',d).
-att_prop_i(2,40,'VarServiceExtName','',d).
-att_prop_i(2,40,'FullName','LugarSectorCantidadAsientos',v).
+att_prop_i(2,29,'ExternalName','LugarSectorCantidad',d).
+att_prop_i(2,29,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,29,'EmptyAsNull','Yes',d).
+att_prop_i(2,29,idBasedOn,'',d).
+att_prop_i(2,29,'AUTONUMBER','0',d).
+att_prop_i(2,29,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,29,'AttRegEx','',d).
+att_prop_i(2,29,'AttValidationFailedMsg','',d).
+att_prop_i(2,29,'DownloadOffline','0',d).
+att_prop_i(2,29,'VarServiceExtName','',d).
+att_prop_i(2,29,'FullName','LugarSectorCantidad',v).
 att_prop_i(2,37,'ExternalName','LugarSectorVendidas',d).
 att_prop_i(2,37,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,37,idBasedOn,'',d).
@@ -2498,52 +2546,57 @@ att_prop_i(2,37,'DownloadOffline','0',d).
 att_prop_i(2,37,'VarServiceExtName','',d).
 att_prop_i(2,37,'FullName','LugarSectorVendidas',v).
  
-tbl_prop_i(2,13,'AllDirSuper',[ [ 1,[ 1 ] ] ],v).
+tbl_prop_i(2,2000,'AllDirSuper',[ [ 16,[ 1,27 ] ] ],v).
 tbl_prop_i(2,11,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
 tbl_prop_i(2,2,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,1,'AllDirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,18,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,15,'AllDirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,16,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,5,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,7,'AllDirSuper',[ [ 1,[ 1 ] ] ],v).
-tbl_prop_i(2,9,'AllDirSuper',[ [ 7,[ 15 ] ],[ 5,[ 9 ] ] ],v).
-tbl_prop_i(2,4,'DirSubor',[ [ 1,[ 7 ] ] ],v).
-tbl_prop_i(2,2,'DirSubor',[ [ 11,[ 4 ] ],[ 1,[ 4 ] ] ],v).
-tbl_prop_i(2,1,'DirSubor',[ [ 13,[ 1 ] ],[ 7,[ 1 ] ] ],v).
+tbl_prop_i(2,9,'AllDirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
+tbl_prop_i(2,4,'DirSubor',[ [ 15,[ 7 ] ] ],v).
+tbl_prop_i(2,2,'DirSubor',[ [ 11,[ 4 ] ],[ 15,[ 4 ] ] ],v).
 tbl_prop_i(2,3,'DirSubor',[ [ 2,[ 3 ] ],[ 5,[ 3 ] ] ],v).
+tbl_prop_i(2,18,'DirSubor',[ [ 9,[ 1,47 ] ] ],v).
+tbl_prop_i(2,15,'DirSubor',[ [ 16,[ 1 ] ],[ 18,[ 1 ] ] ],v).
+tbl_prop_i(2,16,'DirSubor',[ [ 9,[ 1,27 ] ] ],v).
 tbl_prop_i(2,5,'DirSubor',[ [ 9,[ 9 ] ] ],v).
-tbl_prop_i(2,7,'DirSubor',[ [ 9,[ 15 ] ] ],v).
-tbl_prop_i(2,2000,'DirSuper',[ [ 7,[ 15 ] ],[ 5,[ 9 ] ] ],v).
-tbl_prop_i(2,13,'DirSuper',[ [ 1,[ 1 ] ] ],v).
+tbl_prop_i(2,2000,'DirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
 tbl_prop_i(2,11,'DirSuper',[ [ 2,[ 4 ] ] ],v).
 tbl_prop_i(2,2,'DirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,1,'DirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,18,'DirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,15,'DirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,16,'DirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,5,'DirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,7,'DirSuper',[ [ 1,[ 1 ] ] ],v).
-tbl_prop_i(2,9,'DirSuper',[ [ 7,[ 15 ] ],[ 5,[ 9 ] ] ],v).
+tbl_prop_i(2,9,'DirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
  
 tbl_att_prop_i(2,9,23,'AllowNulls',n).
 tbl_att_prop_i(2,9,23,'AUTONUMBER',y).
 tbl_att_prop_i(2,9,9,'AllowNulls',n).
-tbl_att_prop_i(2,9,15,'AllowNulls',n).
 tbl_att_prop_i(2,9,27,'AllowNulls',n).
 tbl_att_prop_i(2,9,42,'AllowNulls',n).
 tbl_att_prop_i(2,9,43,'AllowNulls',n).
 tbl_att_prop_i(2,9,44,'AllowNulls',n).
-tbl_att_prop_i(2,7,15,'AllowNulls',n).
-tbl_att_prop_i(2,7,1,'AllowNulls',n).
-tbl_att_prop_i(2,7,22,'AllowNulls',n).
+tbl_att_prop_i(2,9,1,'AllowNulls',n).
+tbl_att_prop_i(2,9,47,'AllowNulls',n).
 tbl_att_prop_i(2,5,9,'AllowNulls',n).
 tbl_att_prop_i(2,5,9,'AUTONUMBER',y).
 tbl_att_prop_i(2,5,10,'AllowNulls',n).
 tbl_att_prop_i(2,5,3,'AllowNulls',n).
+tbl_att_prop_i(2,16,1,'AllowNulls',n).
+tbl_att_prop_i(2,16,27,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AUTONUMBER',y).
+tbl_att_prop_i(2,15,2,'AllowNulls',n).
+tbl_att_prop_i(2,15,16,'AllowNulls',n).
+tbl_att_prop_i(2,15,4,'AllowNulls',n).
+tbl_att_prop_i(2,15,7,'AllowNulls',n).
+tbl_att_prop_i(2,18,1,'AllowNulls',n).
+tbl_att_prop_i(2,18,47,'AllowNulls',n).
+tbl_att_prop_i(2,18,48,'AllowNulls',n).
 tbl_att_prop_i(2,3,3,'AllowNulls',n).
 tbl_att_prop_i(2,3,3,'AUTONUMBER',y).
 tbl_att_prop_i(2,3,6,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
-tbl_att_prop_i(2,1,2,'AllowNulls',n).
-tbl_att_prop_i(2,1,4,'AllowNulls',n).
-tbl_att_prop_i(2,1,7,'AllowNulls',n).
-tbl_att_prop_i(2,1,16,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AUTONUMBER',y).
 tbl_att_prop_i(2,2,5,'AllowNulls',n).
@@ -2553,23 +2606,24 @@ tbl_att_prop_i(2,4,8,'AllowNulls',n).
 tbl_att_prop_i(2,11,4,'AllowNulls',n).
 tbl_att_prop_i(2,11,27,'AllowNulls',n).
 tbl_att_prop_i(2,11,28,'AllowNulls',n).
+tbl_att_prop_i(2,11,29,'AllowNulls',n).
 tbl_att_prop_i(2,11,30,'AllowNulls',n).
-tbl_att_prop_i(2,13,1,'AllowNulls',n).
-tbl_att_prop_i(2,13,27,'AllowNulls',n).
-tbl_att_prop_i(2,13,40,'AllowNulls',n).
 tbl_att_prop_i(2,2000,23,'AllowNulls',n).
 tbl_att_prop_i(2,2000,23,'AUTONUMBER',y).
  
 var_prop_i(2,'Entradaid',idBasedOn,'',v).
 var_prop_i(2,'Insert_clienteid',idBasedOn,'',v).
 var_prop_i(2,'Insert_funcionid',idBasedOn,'',v).
+var_prop_i(2,'Insert_espectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Insert_lugarsectorid',idBasedOn,'',v).
+var_prop_i(2,'Insert_espectaculofuncionid',idBasedOn,'',v).
  
  
  
 a_alias_i([ 'count(',23 ],'LugarSectorVendidas').
 a_alias_i(se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]),'LugarSectorVendidas').
  
-trn_level_i(9,[ [ 23,42,9,10,1,2,16,15,22,6,5,27,28,30,38,8,43,44 ],'Entrada','Entrada','Entrada','',42 ]).
+trn_level_i(9,[ [ 23,42,9,10,1,2,16,47,48,6,5,27,28,30,38,8,43,44 ],'Entrada','Entrada','Entrada','',42 ]).
  
 struct_dt_i([ 26,58,0 ],name,'TransactionContext').
 struct_dt_i([ 26,58,0 ],namespace,'Obligatorio1v2').
@@ -2703,18 +2757,21 @@ struct_dt_elem_i([ 26,58,86 ],2,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,32,[ [ 'Pgmname','Websession','Mode' ],[ 'Trncontext','Insert_clienteid','Insert_funcionid','GXV1','Trncontextatt',[ t('Btn_enter',3),t('Caption',3) ],[ t('Btn_enter',3),t('Tooltiptext',3) ] ] ]).
-sub_info_i(146,'After Trn',34,45,[ [ 'Mode','Trncontext' ],[] ]).
+sub_info_i(146,'Start',1,40,[ [ 'Pgmname','Websession','Mode' ],[ 'Trncontext','Insert_clienteid','Insert_espectaculoid','Insert_espectaculofuncionid','Insert_lugarsectorid','GXV1','Trncontextatt',[ t('Btn_enter',3),t('Caption',3) ],[ t('Btn_enter',3),t('Tooltiptext',3) ] ] ]).
+sub_info_i(146,'After Trn',42,53,[ [ 'Mode','Trncontext' ],[] ]).
  
 pgm_parm_i(web,58,'GX0050',[ [ int,4,0,0 ] ],[ [ pClienteId,out,[] ] ]).
-pgm_parm_i(web,59,'GX0070',[ [ int,4,0,0 ] ],[ [ pFuncionId,out,[] ] ]).
+pgm_parm_i(web,71,'GX00G1',[ [ int,4,0,0 ],[ int,4,0,0 ] ],[ [ pEspectaculoId,in,[] ],[ pLugarSectorId,out,[] ] ]).
+pgm_parm_i(web,70,'GX00F0',[ [ int,4,0,0 ] ],[ [ pEspectaculoId,out,[] ] ]).
+pgm_parm_i(web,0,'GX00I1',[ [ int,4,0,0 ],[ int,4,0,0 ] ],[ [ 'EspectaculoId',in,[] ],[ 'V47',out,[] ] ]).
 pgm_parm_i(web,22,'WWENTRADA',[],[]).
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
 pgm_callprotocol_i(trn,8,'ENTRADA','INTERNAL','Secure').
 pgm_callprotocol_i(web,58,'GX0050','INTERNAL','Secure').
-pgm_callprotocol_i(web,59,'GX0070','INTERNAL','Secure').
+pgm_callprotocol_i(web,71,'GX00G1','INTERNAL','Secure').
+pgm_callprotocol_i(web,70,'GX00F0','INTERNAL','Secure').
 pgm_callprotocol_i(web,22,'WWENTRADA','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').

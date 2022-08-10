@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>viewespectaculo</AssemblyName>
-		<ProjectGuid>{321b82bb-0f04-484b-919c-ade6b15bcdde}</ProjectGuid>
+		<ProjectGuid>{93b2fb72-d3e9-44e3-9c84-37fbebd9675f}</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<PostgresqlSupport>false</PostgresqlSupport>
 	</PropertyGroup>

@@ -24,8 +24,9 @@
 
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include = "$(WebDirectory)\funcion.cs" />
 		<Compile Include = "$(WebDirectory)\isauthorized.cs" />
+		<Compile Include = "$(WebDirectory)\funcion.cs" />
+		<Compile Include = "$(WebDirectory)\funcion_bc.cs" />
 
 	</ItemGroup>
 	

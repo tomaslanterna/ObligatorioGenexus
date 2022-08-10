@@ -2,9 +2,9 @@ spec_i([ web,39,'Tipo Espectaculo Espectaculo WC','TipoEspectaculoEspectaculoWC'
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 1,[ [ 1,many ],[ 2,one ],[ 3,one ] ],[],[],[ [ [ 1,2,3 ],[ 7,16,26,40000,5,4,6,3,2,1 ] ] ],[ [ [ 1,2,3 ],[] ] ],[ 7 ],'IESPECTACULO3',[ 1,[ [ [],'Tipoespectaculoid',7 ] ] ],[] ]).
+level_i(2,[ 15,[ [ 15,many ],[ 2,one ],[ 3,one ] ],[],[],[ [ [ 15,2,3 ],[ 7,16,26,40000,5,4,6,3,2,1 ] ] ],[ [ [ 15,2,3 ],[] ] ],[ 7 ],'IESPECTACULO1',[ 15,[ [ [],'Tipoespectaculoid',7 ] ] ],[] ]).
  
-tw_i(2,[ [ 2,[ [ 1,4,4 ] ] ],[ 3,[ [ 2,3,3 ] ] ] ]).
+tw_i(2,[ [ 2,[ [ 15,4,4 ] ] ],[ 3,[ [ 2,3,3 ] ] ] ]).
  
 lwi_i(2,[ [] ]).
  
@@ -12,7 +12,7 @@ lwi_i(2,[ [] ]).
  
 level_option_i(2,server_paging,[ y,[] ]).
  
-ta_i(2,[ [ [ 1,7 ],[ 1,16 ],[ 1,26 ],[ 1,40000 ],[ 2,5 ],[ 1,4 ],[ 3,6 ],[ 2,3 ],[ 1,2 ],[ 1,1 ] ] ]).
+ta_i(2,[ [ [ 15,7 ],[ 15,16 ],[ 15,26 ],[ 15,40000 ],[ 2,5 ],[ 15,4 ],[ 3,6 ],[ 2,3 ],[ 15,2 ],[ 15,1 ] ] ]).
  
 las_i(2,[ [ 'Tipoespectaculoid','Update','Delete',7,16,26,40000,5,4,6,3,2,1 ] ]).
  
@@ -133,8 +133,8 @@ rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"TipoEspectaculoEspectaculoWC"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,1,[],[ [ [ [],'Tipoespectaculoid',7 ] ],'IESPECTACULO3',[] ]).
-a_i(4,2,r,2,[],[ [ [ 1,4,4 ] ],'ILUGAR',[] ]).
+a_i(3,2,t,15,[],[ [ [ [],'Tipoespectaculoid',7 ] ],'IESPECTACULO1',[] ]).
+a_i(4,2,r,2,[],[ [ [ 15,4,4 ] ],'ILUGAR',[] ]).
 a_i(5,2,r,3,[],[ [ [ 2,3,3 ] ],'IPAIS',[] ]).
 a_i(6,1,f,[ t('&Update',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(7,1,f,[ t('&Delete',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
@@ -192,10 +192,10 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ])
  
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
 table_i(2,[ 'Lugar',[ 4,5,3 ],'Lugar','Lugar' ]).
-table_i(1,[ 'Espectaculo',[ 1,2,4,7,26,40000,16 ],'Espectaculo','Espectaculo' ]).
+table_i(15,[ 'Espectaculo',[ 1,2,16,4,7,26,40000 ],'Espectaculo','Espectaculo' ]).
  
-index_i(1,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
-index_i(1,[ 'IESPECTACULO3',d,[ 7 ],'IEspectaculo3' ]).
+index_i(15,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
+index_i(15,[ 'IESPECTACULO1',d,[ 7 ],'IEspectaculo1' ]).
 index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
  
@@ -906,7 +906,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
 att_prop_i(2,1,'AUTONUMBER','-1',v).
 att_prop_i(2,1,'AUTONUMBER_START','1',d).
@@ -1026,20 +1026,20 @@ att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName','',v).
  
 tbl_prop_i(2,2,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,1,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,15,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
 tbl_prop_i(2,3,'DirSubor',[ [ 2,[ 3 ] ] ],v).
-tbl_prop_i(2,2,'DirSubor',[ [ 1,[ 4 ] ] ],v).
+tbl_prop_i(2,2,'DirSubor',[ [ 15,[ 4 ] ] ],v).
 tbl_prop_i(2,2,'DirSuper',[ [ 3,[ 3 ] ] ],v).
-tbl_prop_i(2,1,'DirSuper',[ [ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,15,'DirSuper',[ [ 2,[ 4 ] ] ],v).
  
-tbl_att_prop_i(2,1,1,'AllowNulls',n).
-tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
-tbl_att_prop_i(2,1,2,'AllowNulls',n).
-tbl_att_prop_i(2,1,4,'AllowNulls',n).
-tbl_att_prop_i(2,1,7,'AllowNulls',n).
-tbl_att_prop_i(2,1,26,'AllowNulls',n).
-tbl_att_prop_i(2,1,40000,'AllowNulls',n).
-tbl_att_prop_i(2,1,16,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AUTONUMBER',y).
+tbl_att_prop_i(2,15,2,'AllowNulls',n).
+tbl_att_prop_i(2,15,16,'AllowNulls',n).
+tbl_att_prop_i(2,15,4,'AllowNulls',n).
+tbl_att_prop_i(2,15,7,'AllowNulls',n).
+tbl_att_prop_i(2,15,26,'AllowNulls',n).
+tbl_att_prop_i(2,15,40000,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AUTONUMBER',y).
 tbl_att_prop_i(2,2,5,'AllowNulls',n).
@@ -1287,16 +1287,16 @@ sub_info_i(146,'''DoInsert''',22,24,[ [ 1 ],[] ]).
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
 pgm_parm_i(web,47,'VIEWLUGAR',[ [ int,4,0,0 ],[ char,50,0,0 ] ],[ [ 'LugarId',in,[] ],[ 'TabCode',in,[] ] ]).
 pgm_parm_i(web,31,'VIEWPAIS',[ [ int,4,0,0 ],[ char,50,0,0 ] ],[ [ 'PaisId',in,[] ],[ 'TabCode',in,[] ] ]).
-pgm_parm_i(web,24,'VIEWESPECTACULO',[ [ int,4,0,0 ],[ char,50,0,0 ] ],[ [ 'EspectaculoId',in,[] ],[ 'TabCode',in,[] ] ]).
-pgm_parm_i(trn,1,'ESPECTACULO',[ [ char,3,0,0 ],[ int,4,0,0 ] ],[ [ 'Mode',in,[] ],[ 'EspectaculoId',in,[] ] ]).
+pgm_parm_i(web,65,'VIEWESPECTACULO',[ [ int,4,0,0 ],[ char,50,0,0 ] ],[ [ 'EspectaculoId',in,[] ],[ 'TabCode',in,[] ] ]).
+pgm_parm_i(trn,10,'ESPECTACULO',[ [ char,3,0,0 ],[ int,4,0,0 ] ],[ [ 'Mode',in,[] ],[ 'EspectaculoId',in,[] ] ]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
 pgm_callprotocol_i(web,39,'TIPOESPECTACULOESPECTACULOWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
 pgm_callprotocol_i(web,47,'VIEWLUGAR','INTERNAL','Secure').
 pgm_callprotocol_i(web,31,'VIEWPAIS','INTERNAL','Secure').
-pgm_callprotocol_i(web,24,'VIEWESPECTACULO','INTERNAL','Secure').
-pgm_callprotocol_i(trn,1,'ESPECTACULO','INTERNAL','Secure').
+pgm_callprotocol_i(web,65,'VIEWESPECTACULO','INTERNAL','Secure').
+pgm_callprotocol_i(trn,10,'ESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').
  
  

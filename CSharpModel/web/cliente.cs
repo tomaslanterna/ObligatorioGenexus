@@ -55,7 +55,7 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_9") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_10") == 0 )
          {
             A3PaisId = (short)(NumberUtil.Val( GetPar( "PaisId"), "."));
             AssignAttri("", false, "A3PaisId", StringUtil.LTrimStr( (decimal)(A3PaisId), 4, 0));
@@ -65,7 +65,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_9( A3PaisId) ;
+            gxLoad_10( A3PaisId) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -809,7 +809,7 @@ namespace GeneXus.Programs {
 
       protected void ZM055( short GX_JID )
       {
-         if ( ( GX_JID == 8 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 9 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
@@ -822,7 +822,7 @@ namespace GeneXus.Programs {
                Z3PaisId = A3PaisId;
             }
          }
-         if ( GX_JID == -8 )
+         if ( GX_JID == -9 )
          {
             Z9ClienteId = A9ClienteId;
             Z10ClienteName = A10ClienteName;
@@ -899,7 +899,7 @@ namespace GeneXus.Programs {
             AssignAttri("", false, "A6PaisName", A6PaisName);
             A3PaisId = T00055_A3PaisId[0];
             AssignAttri("", false, "A3PaisId", StringUtil.LTrimStr( (decimal)(A3PaisId), 4, 0));
-            ZM055( -8) ;
+            ZM055( -9) ;
          }
          pr_default.close(3);
          OnLoadActions055( ) ;
@@ -918,6 +918,13 @@ namespace GeneXus.Programs {
          standaloneModal( ) ;
          AV13Pgmname = "Cliente";
          AssignAttri("", false, "AV13Pgmname", AV13Pgmname);
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A10ClienteName)) )
+         {
+            GX_msglist.addItem("Se debe ingresar un nombre", 1, "CLIENTENAME");
+            AnyError = 1;
+            GX_FocusControl = edtClienteName_Internalname;
+            AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+         }
          /* Using cursor T00054 */
          pr_default.execute(2, new Object[] {A3PaisId});
          if ( (pr_default.getStatus(2) == 101) )
@@ -941,7 +948,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_9( short A3PaisId )
+      protected void gxLoad_10( short A3PaisId )
       {
          /* Using cursor T00056 */
          pr_default.execute(4, new Object[] {A3PaisId});
@@ -988,7 +995,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A9ClienteId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM055( 8) ;
+            ZM055( 9) ;
             RcdFound5 = 1;
             A9ClienteId = T00053_A9ClienteId[0];
             AssignAttri("", false, "A9ClienteId", StringUtil.LTrimStr( (decimal)(A9ClienteId), 4, 0));
@@ -1572,7 +1579,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022891326274", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228921381551", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1749,7 +1756,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2022891326277", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228921381556", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1765,7 +1772,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("cliente.js", "?2022891326277", false, true);
+         context.AddJavascriptSource("cliente.js", "?20228921381556", false, true);
          /* End function include_jscripts */
       }
 
@@ -1896,6 +1903,8 @@ namespace GeneXus.Programs {
          setEventMetadata("AFTER TRN",",oparms:[]}");
          setEventMetadata("VALID_CLIENTEID","{handler:'Valid_Clienteid',iparms:[]");
          setEventMetadata("VALID_CLIENTEID",",oparms:[]}");
+         setEventMetadata("VALID_CLIENTENAME","{handler:'Valid_Clientename',iparms:[]");
+         setEventMetadata("VALID_CLIENTENAME",",oparms:[]}");
          setEventMetadata("VALID_PAISID","{handler:'Valid_Paisid',iparms:[{av:'A3PaisId',fld:'PAISID',pic:'ZZZ9'},{av:'A6PaisName',fld:'PAISNAME',pic:''}]");
          setEventMetadata("VALID_PAISID",",oparms:[{av:'A6PaisName',fld:'PAISNAME',pic:''}]}");
          return  ;

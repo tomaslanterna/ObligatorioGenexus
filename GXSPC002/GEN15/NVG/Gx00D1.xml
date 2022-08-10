@@ -35,8 +35,6 @@
 <Event>
 <EventName>Lbllugarsectoridfilter.Click</EventName></Event>
 <Event>
-<EventName>Lbllugarsectorcantidadasientosfilter.Click</EventName></Event>
-<Event>
 <EventName>Lbllugarsectorestadosectorfilter.Click</EventName></Event>
 <Event>
 <EventName>Load</EventName>
@@ -102,27 +100,6 @@
 <VarId>Pespectaculoid</VarId>
 <VarName>&amp;pEspectaculoId</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
 <NonOptimizedWhere>
-<ConditionalConstraint>
-<Constraint>
-<Attribute>
-<AttriId>40</AttriId>
-<AttriName>LugarSectorCantidadAsientos</AttriName>
-<Description>Lugar Sector Cantidad Asientos</Description></Attribute>
-<Sp></Sp>
-<Token>&gt;=</Token>
-<Sp></Sp>
-<Variable>
-<VarId>Clugarsectorcantidadasientos</VarId>
-<VarName>&amp;cLugarSectorCantidadAsientos</VarName></Variable></Constraint>
-<Condition>
-<Token>not</Token>
-<Sp></Sp>
-<Variable>
-<VarId>Clugarsectorcantidadasientos</VarId>
-<VarName>&amp;cLugarSectorCantidadAsientos</VarName></Variable>
-<Token>.</Token>
-<Token>isempty(</Token>
-<Token>)</Token></Condition></ConditionalConstraint>
 <ConditionalConstraint>
 <Constraint>
 <Attribute>

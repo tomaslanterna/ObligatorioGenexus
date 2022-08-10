@@ -2,18 +2,18 @@ spec_i([ web,42,'Funcion General','FuncionGeneral',0,spa,'17_0_10-161416' ]).
  
 struct_i(2,1,[ 'Pgmname',15 ],[]).
  
-level_i(2,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 15,22,21,1 ] ] ],[ [ [ 7 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],15,15 ] ] ],[] ]).
+level_i(2,[ 7,[ [ 7,many ],[ 1,one ] ],[],[],[ [ [ 7,1 ],[ 15,2,22,21,1 ] ] ],[ [ [ 7,1 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],15,15 ] ] ],[] ]).
  
-tw_i(2,[]).
+tw_i(2,[ [ 1,[ [ 7,1,1 ] ] ] ]).
  
 lwi_i(2,[ [] ]).
  
  
  
  
-ta_i(2,[ [ [ 7,15 ],[ 7,22 ],[ 7,21 ],[ 7,1 ] ] ]).
+ta_i(2,[ [ [ 7,15 ],[ 1,2 ],[ 7,22 ],[ 7,21 ],[ 7,1 ] ] ]).
  
-las_i(2,[ [ 15,22,21,1 ] ]).
+las_i(2,[ [ 15,2,22,21,1 ] ]).
  
 lac_i(2,[ [] ]).
  
@@ -25,6 +25,7 @@ pos_i(15,[ 0,0,0 ]).
 pos_i(1,[ 0,0,0 ]).
 pos_i(21,[ 0,0,0 ]).
 pos_i(22,[ 0,0,0 ]).
+pos_i(2,[ 0,0,0 ]).
  
  
 default_i(e('Pgmname',2,2,'"FuncionGeneral"')).
@@ -126,6 +127,7 @@ rule_i(0,rule([ a(22,[ '''DoDelete''','''DoDelete''','' ]) ],[],[],[])).
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"FuncionGeneral"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(3,2,t,7,[],[ [ [ [],15,15 ] ],'IFUNCION',[] ]).
+a_i(4,2,r,1,[],[ [ [ 7,1,1 ] ],'IESPECTACULO',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Pgmname').
@@ -135,12 +137,15 @@ v_i(t,i,3,15).
 v_i(t,o,3,22).
 v_i(t,o,3,21).
 v_i(t,o,3,1).
+v_i(r,i,4,1).
+v_i(r,o,4,2).
  
  
  
  
  
  
+attri_i(2,[ 'EspectaculoName',svchar,40,0,'',0,'Espectaculo Name','',0 ]).
 attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
 attri_i(21,[ 'PrecioFuncion',int,4,0,'ZZZ9',0,'Precio Funcion','',0 ]).
 attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
@@ -155,9 +160,11 @@ attri_i('Trncontext',[ 'TrnContext',o('TransactionContext'),0,0,'',0,'Trn Contex
 attri_i('Funcionid',[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',6 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ]).
  
+table_i(1,[ 'Espectaculo',[ 1,2 ],'Espectaculo','Espectaculo' ]).
 table_i(7,[ 'Funcion',[ 15,1,21,22 ],'Funcion','Funcion' ]).
  
 index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
+index_i(1,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
  
  
  
@@ -197,14 +204,14 @@ dom_info_i(86,[ 'Id' ]).
 dom_info_i(87,[ 'Name' ]).
  
  
-break_i(2,nvg,1,[],[ [ 15,1,21,22 ],[],[] ]).
+break_i(2,nvg,1,[],[ [ 15,1,21,22,2 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,8).
-b_group_i(2,3,lit,0,9,11).
-b_group_i(2,4,lit,0,12,15).
-b_group_i(2,5,lit,0,16,19).
-b_group_i(2,6,lit,0,20,0).
+b_group_i(2,3,lit,0,9,12).
+b_group_i(2,4,lit,0,13,16).
+b_group_i(2,5,lit,0,17,20).
+b_group_i(2,6,lit,0,21,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',109,2,0),t('.NOT.',8,1,5),t('udp(',1,2,23),t(o(1,'IsAuthorized'),28,2,11),t(',',7,1,0),t('Pgmname',23,1,24),t(')',4,1,0) ]).
@@ -213,26 +220,27 @@ b_line_i(4,2,2,cmd,1,[ t('',111,4,0) ]).
 b_line_i(5,2,2,cmd,1,[ t('',145,5,0),t('''PREPARETRANSACTION''',3,5,5) ]).
 b_line_i(6,2,2,cmd,1,[ t('',147,6,0) ]).
 b_line_i(8,2,2,cmd,1,[ t('',146,8,0),t('Load',3,8,7) ]).
-b_line_i(9,2,3,cmd,1,[ t('',155,9,0) ]).
-b_line_i(9,2,3,cmd,1,[ t('',147,9,0) ]).
-b_line_i(11,2,3,cmd,1,[ t('',146,11,0),t('''DoUpdate''',3,11,7) ]).
-b_line_i(12,2,4,cmd,1,[ t('',104,12,0),t(o(0,'Funcion'),28,1,2),t([ 42,'Update' ],44,12,10),t(',',7,1,0),t(15,2,1,26) ]).
-b_line_i(13,2,4,cmd,1,[ t('',147,13,0) ]).
-b_line_i(15,2,4,cmd,1,[ t('',146,15,0),t('''DoDelete''',3,15,7) ]).
-b_line_i(16,2,5,cmd,1,[ t('',104,16,0),t(o(0,'Funcion'),28,1,2),t([ 42,'Delete' ],44,16,10),t(',',7,1,0),t(15,2,1,26) ]).
-b_line_i(17,2,5,cmd,1,[ t('',147,17,0) ]).
-b_line_i(19,2,5,cmd,1,[ t('',143,19,0),t('''PREPARETRANSACTION''',3,19,5) ]).
-b_line_i(20,2,6,cmd,1,[ t('',107,20,0),t('Trncontext',23,1,0),t(=,10,1,0),t([ 'TransactionContext',[ t('(',0,20,19),t(')',4,20,20) ],n ],46,1,0) ]).
-b_line_i(21,2,6,cmd,1,[ t('',107,21,0),t([ t('Trncontext',23,1,0),t('Callerobject',3,1,0) ],29,1,0),t(=,10,1,0),t('Pgmname',23,1,0) ]).
-b_line_i(22,2,6,cmd,1,[ t('',107,22,0),t([ t('Trncontext',23,1,0),t('Callerondelete',3,1,0) ],29,1,0),t(=,10,1,0),t('FALSE',41,1,0) ]).
-b_line_i(23,2,6,cmd,1,[ t('',107,23,0),t([ t('Trncontext',23,1,0),t('Callerurl',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Httprequest',23,1,0),t('Scriptname',3,1,0) ],29,1,0),t(+,5,1,0),t('"?"',3,1,0),t(+,5,1,0),t([ t('Httprequest',23,1,0),t('Querystring',3,1,0) ],29,1,0) ]).
-b_line_i(24,2,6,cmd,1,[ t('',107,24,0),t([ t('Trncontext',23,1,0),t('Transactionname',3,1,0) ],29,1,0),t(=,10,1,0),t('"Funcion"',3,1,0) ]).
-b_line_i(26,2,6,cmd,1,[ t('',107,26,0),t('Trncontextatt',23,1,0),t(=,10,1,0),t([ 'TransactionContext.Attribute',[ t('(',0,26,22),t(')',4,26,23) ],n ],46,1,0) ]).
-b_line_i(27,2,6,cmd,1,[ t('',107,27,0),t([ t('Trncontextatt',23,1,0),t('Attributename',3,1,0) ],29,1,0),t(=,10,1,0),t('"FuncionId"',3,1,0) ]).
-b_line_i(28,2,6,cmd,1,[ t('',107,28,0),t([ t('Trncontextatt',23,1,0),t('Attributevalue',3,1,0) ],29,1,0),t(=,10,1,0),t('str(',1,1,0),t('Funcionid',23,1,0),t(',',7,1,0),t(4,3,1,0),t(',',7,1,0),t(0,3,1,0),t(')',4,1,0) ]).
-b_line_i(29,2,6,cmd,1,[ t('',107,29,0),t([ t('Trncontext',23,29,13),t('Attributes',3,29,25),t('add(',1,29,36) ],31,29,13),t('Trncontextatt',23,1,41),t(')',4,1,55) ]).
-b_line_i(31,2,6,cmd,1,[ t('',107,31,0),t([ t('Session',23,31,2),t('set(',1,31,11) ],31,31,2),t('"TrnContext"',3,31,16),t(',',7,1,29),t([ t('Trncontext',23,1,31),t('toxml(',1,1,43) ],31,31,43),t(')',4,1,50),t(')',4,1,51) ]).
-b_line_i(32,2,6,cmd,1,[ t('',144,32,0) ]).
+b_line_i(9,2,3,cmd,1,[ t('',107,9,0),t([ t(2,2,1,0),t('Link',3,1,0) ],29,1,0),t(=,10,1,0),t('link(',1,1,0),t(o(13,'ViewEspectaculo'),28,1,0),t(',',7,1,0),t(1,2,1,0),t(',',7,1,0),t('""',3,1,0),t(')',4,1,0) ]).
+b_line_i(10,2,3,cmd,1,[ t('',155,10,0) ]).
+b_line_i(10,2,3,cmd,1,[ t('',147,10,0) ]).
+b_line_i(12,2,3,cmd,1,[ t('',146,12,0),t('''DoUpdate''',3,12,7) ]).
+b_line_i(13,2,4,cmd,1,[ t('',104,13,0),t(o(0,'Funcion'),28,1,2),t([ 42,'Update' ],44,13,10),t(',',7,1,0),t(15,2,1,26) ]).
+b_line_i(14,2,4,cmd,1,[ t('',147,14,0) ]).
+b_line_i(16,2,4,cmd,1,[ t('',146,16,0),t('''DoDelete''',3,16,7) ]).
+b_line_i(17,2,5,cmd,1,[ t('',104,17,0),t(o(0,'Funcion'),28,1,2),t([ 42,'Delete' ],44,17,10),t(',',7,1,0),t(15,2,1,26) ]).
+b_line_i(18,2,5,cmd,1,[ t('',147,18,0) ]).
+b_line_i(20,2,5,cmd,1,[ t('',143,20,0),t('''PREPARETRANSACTION''',3,20,5) ]).
+b_line_i(21,2,6,cmd,1,[ t('',107,21,0),t('Trncontext',23,1,0),t(=,10,1,0),t([ 'TransactionContext',[ t('(',0,21,19),t(')',4,21,20) ],n ],46,1,0) ]).
+b_line_i(22,2,6,cmd,1,[ t('',107,22,0),t([ t('Trncontext',23,1,0),t('Callerobject',3,1,0) ],29,1,0),t(=,10,1,0),t('Pgmname',23,1,0) ]).
+b_line_i(23,2,6,cmd,1,[ t('',107,23,0),t([ t('Trncontext',23,1,0),t('Callerondelete',3,1,0) ],29,1,0),t(=,10,1,0),t('FALSE',41,1,0) ]).
+b_line_i(24,2,6,cmd,1,[ t('',107,24,0),t([ t('Trncontext',23,1,0),t('Callerurl',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Httprequest',23,1,0),t('Scriptname',3,1,0) ],29,1,0),t(+,5,1,0),t('"?"',3,1,0),t(+,5,1,0),t([ t('Httprequest',23,1,0),t('Querystring',3,1,0) ],29,1,0) ]).
+b_line_i(25,2,6,cmd,1,[ t('',107,25,0),t([ t('Trncontext',23,1,0),t('Transactionname',3,1,0) ],29,1,0),t(=,10,1,0),t('"Funcion"',3,1,0) ]).
+b_line_i(27,2,6,cmd,1,[ t('',107,27,0),t('Trncontextatt',23,1,0),t(=,10,1,0),t([ 'TransactionContext.Attribute',[ t('(',0,27,22),t(')',4,27,23) ],n ],46,1,0) ]).
+b_line_i(28,2,6,cmd,1,[ t('',107,28,0),t([ t('Trncontextatt',23,1,0),t('Attributename',3,1,0) ],29,1,0),t(=,10,1,0),t('"FuncionId"',3,1,0) ]).
+b_line_i(29,2,6,cmd,1,[ t('',107,29,0),t([ t('Trncontextatt',23,1,0),t('Attributevalue',3,1,0) ],29,1,0),t(=,10,1,0),t('str(',1,1,0),t('Funcionid',23,1,0),t(',',7,1,0),t(4,3,1,0),t(',',7,1,0),t(0,3,1,0),t(')',4,1,0) ]).
+b_line_i(30,2,6,cmd,1,[ t('',107,30,0),t([ t('Trncontext',23,30,13),t('Attributes',3,30,25),t('add(',1,30,36) ],31,30,13),t('Trncontextatt',23,1,41),t(')',4,1,55) ]).
+b_line_i(32,2,6,cmd,1,[ t('',107,32,0),t([ t('Session',23,32,2),t('set(',1,32,11) ],31,32,2),t('"TrnContext"',3,32,16),t(',',7,1,29),t([ t('Trncontext',23,1,31),t('toxml(',1,1,43) ],31,32,43),t(')',4,1,50),t(')',4,1,51) ]).
+b_line_i(33,2,6,cmd,1,[ t('',144,33,0) ]).
  
  
  
@@ -280,6 +288,11 @@ html_sub_i(29,30,html_i(0,div(30))).
 html_sub_i(30,31,html_i(0,div(31))).
 html_sub_i(31,32,html_i(0,div(32))).
 html_sub_i(32,33,html_i(0,t(22,2))).
+html_sub_i(13,34,html_i(4,div(34))).
+html_sub_i(34,35,html_i(0,div(35))).
+html_sub_i(35,36,html_i(0,div(36))).
+html_sub_i(36,37,html_i(0,div(37))).
+html_sub_i(37,38,html_i(0,t(2,2))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
@@ -295,6 +308,8 @@ html_tags_i(26,'data-gx-att','att:21').
 html_tags_i(28,'data-gx-att','att:21').
 html_tags_i(31,'data-gx-att','att:22').
 html_tags_i(33,'data-gx-att','att:22').
+html_tags_i(36,'data-gx-att','att:2').
+html_tags_i(38,'data-gx-att','att:2').
  
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(2,'Class','Section',d,[ str ]).
@@ -659,6 +674,73 @@ html_comp_i(33,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(33,'Gxformat',0,d,[ num ]).
 html_comp_i(33,'Title','',d,[ str ]).
 html_comp_i(33,'Invitemsg','',v,[ str ]).
+html_comp_i(34,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(34,'Class',row,v,[ str ]).
+html_comp_i(34,'Id','',d,[ str ]).
+html_comp_i(34,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(34,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(34,'Semanticcontent',div,d,[ str ]).
+html_comp_i(34,'Align',left,d,[ str ]).
+html_comp_i(34,'Valign',top,d,[ str ]).
+html_comp_i(35,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(35,'Class','col-xs-12 FormCell',v,[ str ]).
+html_comp_i(35,'Id','',d,[ str ]).
+html_comp_i(35,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(35,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(35,'Semanticcontent',div,d,[ str ]).
+html_comp_i(35,'Align',left,d,[ str ]).
+html_comp_i(35,'Valign',top,d,[ str ]).
+html_comp_i(36,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(36,'Class','form-group gx-form-group ',v,[ str ]).
+html_comp_i(36,'Id','',d,[ str ]).
+html_comp_i(36,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(36,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(36,'Semanticcontent',div,d,[ str ]).
+html_comp_i(36,'Align',left,d,[ str ]).
+html_comp_i(36,'Valign',top,d,[ str ]).
+html_comp_i(37,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(37,'Class','col-sm-9 gx-attribute',v,[ str ]).
+html_comp_i(37,'Id','',d,[ str ]).
+html_comp_i(37,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(37,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(37,'Semanticcontent',div,d,[ str ]).
+html_comp_i(37,'Align',left,d,[ str ]).
+html_comp_i(37,'Valign',top,d,[ str ]).
+html_comp_i(38,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(38,'Colcount',40,d,[ num ]).
+html_comp_i(38,'Attid',2,v,[ num ]).
+html_comp_i(38,'Class','ReadonlyAttribute',v,[ str ]).
+html_comp_i(38,'Controlname','Espectaculoname',d,[ str ]).
+html_comp_i(38,'Returnonclick',0,v,[ bool ]).
+html_comp_i(38,'Eventgx','',d,[ str ]).
+html_comp_i(38,'Captionclass','col-sm-3 ReadonlyAttributeLabel',v,[ str ]).
+html_comp_i(38,'Captionstyle','',v,[ str ]).
+html_comp_i(38,'Captionposition','Left',v,[ str ]).
+html_comp_i(38,'Captionvalue','Espectaculo Name',d,[ str ]).
+html_comp_i(38,'Layoutclass','col-sm-9',v,[ str ]).
+html_comp_i(38,'Controltype',2,d,[ num ]).
+html_comp_i(38,'Inputtype',0,d,[ num ]).
+html_comp_i(38,'Editautocomplete',0,d,[ num ]).
+html_comp_i(38,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(38,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(38,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(38,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(38,'Readonly',-1,v,[ bool ]).
+html_comp_i(38,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(38,'Ispassword',0,d,[ bool ]).
+html_comp_i(38,'Autoresize',-1,d,[ bool ]).
+html_comp_i(38,'Gxwidth',measure(40,chr),d,[ measure ]).
+html_comp_i(38,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(38,'Ismultiline',0,d,[ bool ]).
+html_comp_i(38,'Maxtextnumberlines',0,d,[ num ]).
+html_comp_i(38,'Fill',-1,d,[ bool ]).
+html_comp_i(38,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(38,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(38,'Font',font('Arial',10,[]),d,[ font ]).
+html_comp_i(38,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(38,'Gxformat',0,d,[ num ]).
+html_comp_i(38,'Title','',d,[ str ]).
+html_comp_i(38,'Invitemsg','',v,[ str ]).
  
  
  
@@ -695,6 +777,11 @@ lit_i(32,1,div(32),[ ctlname('') ]).
 lit_i(31,1,div(31),[ ctlname('') ]).
 lit_i(30,1,div(30),[ ctlname('') ]).
 lit_i(29,1,div(29),[ ctlname('') ]).
+lit_i(38,1,t(2,2),[ ctlname(2),ctrltype(edit,38),pos(38),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(37,1,div(37),[ ctlname('') ]).
+lit_i(36,1,div(36),[ ctlname('') ]).
+lit_i(35,1,div(35),[ ctlname('') ]).
+lit_i(34,1,div(34),[ ctlname('') ]).
 lit_i(13,1,div(13),[ ctlname('Attributestable') ]).
 lit_i(12,1,div(12),[ ctlname('') ]).
 lit_i(11,1,div(11),[ ctlname('') ]).
@@ -714,7 +801,10 @@ att_prop_i(2,15,'ExternalName','FuncionId',d).
 att_prop_i(2,15,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,15,'EmptyAsNull','Yes',d).
 att_prop_i(2,15,idBasedOn,86,v).
-att_prop_i(2,15,'AUTONUMBER','0',d).
+att_prop_i(2,15,'AUTONUMBER','-1',v).
+att_prop_i(2,15,'AUTONUMBER_START','1',d).
+att_prop_i(2,15,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,15,'AUTONUMBER_FORREPLICATION','-1',d).
 att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,15,'AttRegEx','',d).
 att_prop_i(2,15,'AttValidationFailedMsg','',d).
@@ -723,12 +813,9 @@ att_prop_i(2,15,'VarServiceExtName','',d).
 att_prop_i(2,15,'FullName','FuncionId',v).
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
-att_prop_i(2,1,'AUTONUMBER','-1',v).
-att_prop_i(2,1,'AUTONUMBER_START','1',d).
-att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'AUTONUMBER','0',v).
 att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
@@ -757,12 +844,29 @@ att_prop_i(2,22,'AttValidationFailedMsg','',d).
 att_prop_i(2,22,'DownloadOffline','0',d).
 att_prop_i(2,22,'VarServiceExtName','',d).
 att_prop_i(2,22,'FullName','FuncionName',v).
+att_prop_i(2,2,'ExternalName','EspectaculoName',d).
+att_prop_i(2,2,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,2,'EmptyAsNull','Yes',d).
+att_prop_i(2,2,idBasedOn,87,v).
+att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,2,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,2,'AttRegEx','',d).
+att_prop_i(2,2,'AttValidationFailedMsg','',d).
+att_prop_i(2,2,'DownloadOffline','0',d).
+att_prop_i(2,2,'VarServiceExtName','',d).
+att_prop_i(2,2,'FullName','EspectaculoName',v).
  
+tbl_prop_i(2,7,'AllDirSuper',[ [ 1,[ 1 ] ] ],v).
+tbl_prop_i(2,1,'DirSubor',[ [ 7,[ 1 ] ] ],v).
+tbl_prop_i(2,7,'DirSuper',[ [ 1,[ 1 ] ] ],v).
  
 tbl_att_prop_i(2,7,15,'AllowNulls',n).
+tbl_att_prop_i(2,7,15,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,1,'AllowNulls',n).
 tbl_att_prop_i(2,7,21,'AllowNulls',n).
 tbl_att_prop_i(2,7,22,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,2,'AllowNulls',n).
  
 var_prop_i(2,'Funcionid',idBasedOn,'',v).
  
@@ -903,17 +1007,19 @@ struct_dt_elem_i([ 26,58,86 ],2,'JsonInclude',idJsonEmpty).
  
  
 sub_info_i(146,'Start',1,6,[ [ 'Pgmname',[ t('Httprequest',23),t('Querystring',3) ],[ t('Httprequest',23),t('Scriptname',3) ],'Funcionid' ],[] ]).
-sub_info_i(146,'Load',8,9,[ [],[] ]).
-sub_info_i(146,'''DoUpdate''',11,13,[ [ 15 ],[] ]).
-sub_info_i(146,'''DoDelete''',15,17,[ [ 15 ],[] ]).
+sub_info_i(146,'Load',8,10,[ [ 1 ],[ [ t(2,2),t('Link',3) ] ] ]).
+sub_info_i(146,'''DoUpdate''',12,14,[ [ 15 ],[] ]).
+sub_info_i(146,'''DoDelete''',16,18,[ [ 15 ],[] ]).
  
 pgm_parm_i(trn,7,'FUNCION',[ [ char,3,0,0 ],[ int,4,0,0 ] ],[ [ 'Mode',in,[] ],[ 'FuncionId',in,[] ] ]).
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
+pgm_parm_i(web,24,'VIEWESPECTACULO',[ [ int,4,0,0 ],[ char,50,0,0 ] ],[ [ 'EspectaculoId',in,[] ],[ 'TabCode',in,[] ] ]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
 pgm_callprotocol_i(web,42,'FUNCIONGENERAL','INTERNAL','Secure').
 pgm_callprotocol_i(trn,7,'FUNCION','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
+pgm_callprotocol_i(web,24,'VIEWESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').
  
  

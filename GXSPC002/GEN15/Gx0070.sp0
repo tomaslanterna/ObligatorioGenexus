@@ -1010,14 +1010,14 @@ html_comp_i(58,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(58,'Colcount',4,d,[ num ]).
 html_comp_i(58,'Colattid',21,v,[ num ]).
 html_comp_i(58,'Controlname','Preciofuncion',d,[ str ]).
-html_comp_i(58,'Class','DescriptionAttribute',v,[ str ]).
-html_comp_i(58,'Columnclass','WWColumn',v,[ str ]).
-html_comp_i(58,'Returnonclick',-1,v,[ bool ]).
+html_comp_i(58,'Class','Attribute',v,[ str ]).
+html_comp_i(58,'Columnclass','WWColumn OptionalColumn',v,[ str ]).
+html_comp_i(58,'Returnonclick',0,d,[ bool ]).
 html_comp_i(58,'Eventgx','',d,[ str ]).
 html_comp_i(58,'Controltype',2,d,[ num ]).
 html_comp_i(58,'Inputtype',0,d,[ num ]).
 html_comp_i(58,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(58,'Colreadonly',-1,v,[ bool ]).
+html_comp_i(58,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(58,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(58,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(58,'Ispassword',0,d,[ bool ]).
@@ -1038,9 +1038,9 @@ html_comp_i(59,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(59,'Colcount',40,d,[ num ]).
 html_comp_i(59,'Colattid',22,v,[ num ]).
 html_comp_i(59,'Controlname','Funcionname',d,[ str ]).
-html_comp_i(59,'Class','Attribute',v,[ str ]).
-html_comp_i(59,'Columnclass','WWColumn OptionalColumn',v,[ str ]).
-html_comp_i(59,'Returnonclick',0,d,[ bool ]).
+html_comp_i(59,'Class','DescriptionAttribute',v,[ str ]).
+html_comp_i(59,'Columnclass','WWColumn',v,[ str ]).
+html_comp_i(59,'Returnonclick',-1,v,[ bool ]).
 html_comp_i(59,'Eventgx','',d,[ str ]).
 html_comp_i(59,'Controltype',2,d,[ num ]).
 html_comp_i(59,'Inputtype',0,d,[ num ]).
@@ -1048,7 +1048,7 @@ html_comp_i(59,'Editautocomplete',0,d,[ num ]).
 html_comp_i(59,'Autocorrection',-1,d,[ bool ]).
 html_comp_i(59,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(59,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(59,'Colreadonly',-1,d,[ bool ]).
+html_comp_i(59,'Colreadonly',-1,v,[ bool ]).
 html_comp_i(59,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(59,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(59,'Ispassword',0,d,[ bool ]).
@@ -1178,7 +1178,10 @@ att_prop_i(2,15,'ExternalName','FuncionId',d).
 att_prop_i(2,15,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,15,'EmptyAsNull','Yes',d).
 att_prop_i(2,15,idBasedOn,86,v).
-att_prop_i(2,15,'AUTONUMBER','0',d).
+att_prop_i(2,15,'AUTONUMBER','-1',v).
+att_prop_i(2,15,'AUTONUMBER_START','1',d).
+att_prop_i(2,15,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,15,'AUTONUMBER_FORREPLICATION','-1',d).
 att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,15,'AttRegEx','',d).
 att_prop_i(2,15,'AttValidationFailedMsg','',d).
@@ -1187,12 +1190,9 @@ att_prop_i(2,15,'VarServiceExtName','',d).
 att_prop_i(2,15,'FullName','FuncionId',v).
 att_prop_i(2,1,'ExternalName','EspectaculoId',d).
 att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
 att_prop_i(2,1,idBasedOn,86,v).
-att_prop_i(2,1,'AUTONUMBER','-1',v).
-att_prop_i(2,1,'AUTONUMBER_START','1',d).
-att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'AUTONUMBER','0',v).
 att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
@@ -1224,6 +1224,7 @@ att_prop_i(2,22,'FullName','FuncionName',v).
  
  
 tbl_att_prop_i(2,7,15,'AllowNulls',n).
+tbl_att_prop_i(2,7,15,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,1,'AllowNulls',n).
 tbl_att_prop_i(2,7,21,'AllowNulls',n).
 tbl_att_prop_i(2,7,22,'AllowNulls',n).

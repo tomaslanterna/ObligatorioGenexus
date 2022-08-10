@@ -1,0 +1,7 @@
+bc_dt_elem_i([ 0,7,0 ],'Funcionid',allownulls,no).
+bc_dt_elem_i([ 0,7,0 ],'Funcionname',allownulls,no).
+bc_dt_elem_i([ 0,7,0 ],'Preciofuncion',allownulls,no).
+bc_dt_elem_i([ 0,7,0 ],'Espectaculoid',allownulls,no).
+bc_dt_elem_i([ 0,7,0 ],'Espectaculoname',readonly,yes).
+bc_dt_elem_i([ 0,7,0 ],'Espectaculoname',allownulls,no).
+ 

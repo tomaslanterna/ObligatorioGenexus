@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>espectaculofuncionwc</AssemblyName>
-		<ProjectGuid>{1e99d239-c819-4967-80e2-e4a1295297e1}</ProjectGuid>
+		<ProjectGuid>{f7f1e425-164a-4649-bbcf-ce3efde3e287}</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<PostgresqlSupport>false</PostgresqlSupport>
 	</PropertyGroup>

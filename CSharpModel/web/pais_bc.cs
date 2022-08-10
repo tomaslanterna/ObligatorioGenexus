@@ -130,11 +130,11 @@ namespace GeneXus.Programs {
 
       protected void ZM033( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 2 ) || ( GX_JID == 0 ) )
          {
             Z6PaisName = A6PaisName;
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -2 )
          {
             Z3PaisId = A3PaisId;
             Z6PaisName = A6PaisName;
@@ -163,7 +163,7 @@ namespace GeneXus.Programs {
             n40000PaisFlag_GXI = BC00034_n40000PaisFlag_GXI[0];
             A39PaisFlag = BC00034_A39PaisFlag[0];
             n39PaisFlag = BC00034_n39PaisFlag[0];
-            ZM033( -1) ;
+            ZM033( -2) ;
          }
          pr_default.close(2);
          OnLoadActions033( ) ;
@@ -177,6 +177,11 @@ namespace GeneXus.Programs {
       {
          nIsDirty_3 = 0;
          standaloneModal( ) ;
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A6PaisName)) )
+         {
+            GX_msglist.addItem("Debe ingresar un nombre", 1, "");
+            AnyError = 1;
+         }
       }
 
       protected void CloseExtendedTableCursors033( )
@@ -208,7 +213,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A3PaisId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM033( 1) ;
+            ZM033( 2) ;
             RcdFound3 = 1;
             A3PaisId = BC00033_A3PaisId[0];
             A6PaisName = BC00033_A6PaisName[0];
@@ -700,7 +705,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z3PaisId = A3PaisId;
          }
-         ZM033( -1) ;
+         ZM033( -2) ;
          OnLoadActions033( ) ;
          AddRow033( ) ;
          ScanKeyEnd033( ) ;
@@ -729,7 +734,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z3PaisId = A3PaisId;
          }
-         ZM033( -1) ;
+         ZM033( -2) ;
          OnLoadActions033( ) ;
          AddRow033( ) ;
          ScanKeyEnd033( ) ;

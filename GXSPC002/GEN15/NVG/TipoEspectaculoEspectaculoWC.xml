@@ -46,7 +46,7 @@
 <LevelBeginRow>0</LevelBeginRow>
 <BaseTable>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description></Table></BaseTable>
 <Order>
@@ -55,7 +55,7 @@
 <AttriName>TipoEspectaculoId</AttriName>
 <Description>Tipo Espectaculo Id</Description></Attribute></Order>
 <Condition></Condition>
-<IndexName>IESPECTACULO3</IndexName>
+<IndexName>IESPECTACULO1</IndexName>
 <LevelOptions></LevelOptions>
 <Optimizations>
 <Optimization>
@@ -89,7 +89,7 @@
 <JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>many</RecordsToRead>
@@ -131,7 +131,7 @@
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
-<ObjId>1</ObjId>
+<ObjId>10</ObjId>
 <ObjName>Espectaculo</ObjName>
 <ObjPgmName>Espectaculo</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>

@@ -130,11 +130,11 @@ namespace GeneXus.Programs {
 
       protected void ZM044( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 2 ) || ( GX_JID == 0 ) )
          {
             Z8TipoEspectaculoName = A8TipoEspectaculoName;
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -2 )
          {
             Z7TipoEspectaculoId = A7TipoEspectaculoId;
             Z8TipoEspectaculoName = A8TipoEspectaculoName;
@@ -157,7 +157,7 @@ namespace GeneXus.Programs {
          {
             RcdFound4 = 1;
             A8TipoEspectaculoName = BC00044_A8TipoEspectaculoName[0];
-            ZM044( -1) ;
+            ZM044( -2) ;
          }
          pr_default.close(2);
          OnLoadActions044( ) ;
@@ -171,6 +171,11 @@ namespace GeneXus.Programs {
       {
          nIsDirty_4 = 0;
          standaloneModal( ) ;
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A8TipoEspectaculoName)) )
+         {
+            GX_msglist.addItem("Debe ingresar un nombre", 1, "");
+            AnyError = 1;
+         }
       }
 
       protected void CloseExtendedTableCursors044( )
@@ -202,7 +207,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A7TipoEspectaculoId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM044( 1) ;
+            ZM044( 2) ;
             RcdFound4 = 1;
             A7TipoEspectaculoId = BC00043_A7TipoEspectaculoId[0];
             A8TipoEspectaculoName = BC00043_A8TipoEspectaculoName[0];
@@ -651,7 +656,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z7TipoEspectaculoId = A7TipoEspectaculoId;
          }
-         ZM044( -1) ;
+         ZM044( -2) ;
          OnLoadActions044( ) ;
          AddRow044( ) ;
          ScanKeyEnd044( ) ;
@@ -680,7 +685,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z7TipoEspectaculoId = A7TipoEspectaculoId;
          }
-         ZM044( -1) ;
+         ZM044( -2) ;
          OnLoadActions044( ) ;
          AddRow044( ) ;
          ScanKeyEnd044( ) ;

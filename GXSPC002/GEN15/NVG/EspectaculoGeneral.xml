@@ -4,12 +4,12 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>26</ObjId>
+<ObjId>67</ObjId>
 <ObjName>EspectaculoGeneral</ObjName>
 <ObjDesc>Espectaculo General</ObjDesc>
 <ObjPgmName>EspectaculoGeneral</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -47,7 +47,7 @@
 <LevelBeginRow>0</LevelBeginRow>
 <BaseTable>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description></Table></BaseTable>
 <Order>
@@ -89,7 +89,7 @@
 <JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>many</RecordsToRead>
@@ -142,7 +142,7 @@
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
-<ObjId>1</ObjId>
+<ObjId>10</ObjId>
 <ObjName>Espectaculo</ObjName>
 <ObjPgmName>Espectaculo</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
@@ -162,7 +162,7 @@
 <Object>
 <ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
 <ObjCls>0</ObjCls>
-<ObjId>1</ObjId>
+<ObjId>10</ObjId>
 <ObjName>Espectaculo</ObjName>
 <ObjPgmName>Espectaculo</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>

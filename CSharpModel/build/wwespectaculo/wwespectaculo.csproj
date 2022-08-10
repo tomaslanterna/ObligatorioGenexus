@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>wwespectaculo</AssemblyName>
-		<ProjectGuid>{c22a727a-c416-47ac-be45-5ae9596434bd}</ProjectGuid>
+		<ProjectGuid>{4afca5d5-e3b2-45c5-8dee-011d5d5bf404}</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<PostgresqlSupport>false</PostgresqlSupport>
 	</PropertyGroup>

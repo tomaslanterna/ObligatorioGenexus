@@ -3,8 +3,8 @@ spec_i([ web,40,'View Funcion','ViewFuncion',0,spa,'17_0_10-161416' ]).
 struct_i(2,1,[ 'Pgmname','Exists','GXLvl6' ],[]).
 struct_i(3,1,[],[]).
  
-level_i(2,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 15,21 ] ] ],[ [ [ 7 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],'Funcionid',15 ] ] ],[] ]).
-level_i(3,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 15,21 ] ] ],[ [ [ 7 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],'Funcionid',15 ] ] ],[] ]).
+level_i(2,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 15,22 ] ] ],[ [ [ 7 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],'Funcionid',15 ] ] ],[] ]).
+level_i(3,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 15,22 ] ] ],[ [ [ 7 ],[] ] ],[ 15 ],'IFUNCION',[ 7,[ [ [],'Funcionid',15 ] ] ],[] ]).
  
 tw_i(2,[]).
 tw_i(3,[]).
@@ -16,11 +16,11 @@ lwi_i(3,[ [] ]).
  
 level_option_i(3,when_none,'GXLvl6').
  
-ta_i(2,[ [ [ 7,15 ],[ 7,21 ] ] ]).
-ta_i(3,[ [ [ 7,15 ],[ 7,21 ] ] ]).
+ta_i(2,[ [ [ 7,15 ],[ 7,22 ] ] ]).
+ta_i(3,[ [ [ 7,15 ],[ 7,22 ] ] ]).
  
-las_i(2,[ [ 'Funcionid','Tabcode',15,21 ] ]).
-las_i(3,[ [ 'Funcionid','Tabcode',15,21 ] ]).
+las_i(2,[ [ 'Funcionid','Tabcode',15,22 ] ]).
+las_i(3,[ [ 'Funcionid','Tabcode',15,22 ] ]).
  
 lac_i(2,[ [] ]).
 lac_i(3,[ [] ]).
@@ -29,12 +29,11 @@ lac_i(3,[ [] ]).
 lits_i('Funcion Information',5,10).
 lits_i('Funcions',5,10).
 lits_i('General',5,10).
-lits_i('Entrada',5,10).
 lits_i('Invitacion',5,10).
  
-cls_i([ 0,0 ],[ 5,28 ]).
+cls_i([ 0,0 ],[ 5,39 ]).
  
-pos_i(21,[ 0,0,0 ]).
+pos_i(22,[ 0,0,0 ]).
  
  
 default_i(e('Pgmname',2,2,'"ViewFuncion"')).
@@ -142,10 +141,10 @@ v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
 v_i(t,i,3,'Funcionid').
 v_i(t,o,3,15).
-v_i(t,o,3,21).
+v_i(t,o,3,22).
 v_i(t,i,4,'Funcionid').
 v_i(t,o,4,15).
-v_i(t,o,4,21).
+v_i(t,o,4,22).
  
  
  
@@ -153,7 +152,7 @@ v_i(t,o,4,21).
  
  
 attri_i(15,[ 'FuncionId',int,4,0,'ZZZ9',0,'Funcion Id','',0 ]).
-attri_i(21,[ 'PrecioFuncion',int,4,0,'ZZZ9',0,'Precio Funcion','',0 ]).
+attri_i(22,[ 'FuncionName',svchar,40,0,'',0,'Funcion Name','',0 ]).
 attri_i('GXLvl6',[ 'GXLvl6',int,1,0,'',0,'',[],16 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',15 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
@@ -167,7 +166,7 @@ attri_i('Selectedtabcode',[ 'SelectedTabCode',char,50,0,'',0,'Selected Tab Code'
 attri_i('Tabcode',[ 'TabCode',char,50,0,'',0,'Tab Code','',6 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ]).
  
-table_i(7,[ 'Funcion',[ 15,21 ],'Funcion','Funcion' ]).
+table_i(7,[ 'Funcion',[ 15,22 ],'Funcion','Funcion' ]).
  
 index_i(7,[ 'IFUNCION',u,[ 15 ],'IFuncion' ]).
  
@@ -201,13 +200,13 @@ end_i(3,0,0,[ [ [ t(15,2),t(=,10),t('Funcionid',23) ] ] ]).
  
  
  
-dom_info_i(86,[ 'Id' ]).
 dom_info_i(87,[ 'Name' ]).
+dom_info_i(86,[ 'Id' ]).
 dom_info_i(89,[ 'TabCode' ]).
  
  
-break_i(3,nvg,1,[],[ [ 21 ],[ 15 ],[] ]).
-break_i(2,nvg,1,[],[ [ 21 ],[],[] ]).
+break_i(3,nvg,1,[],[ [ 22 ],[ 15 ],[] ]).
+break_i(2,nvg,1,[],[ [ 22 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,1).
@@ -224,7 +223,7 @@ b_line_i(4,2,2,cmd,1,[ t('',111,4,0) ]).
 b_line_i([ 6,0 ],2,2,cmd,1,[ t('',107,6,0),t('GXLvl6',23,1,0),t(=,10,1,0),t('0',3,1,0) ]).
 b_line_i(6,3,1,cmd,7,[ t('',121,6,0) ]).
 b_line_i([ 6,1 ],3,1,cmd,6,[ t('',107,6,0),t('GXLvl6',23,6,0),t(=,10,6,0),t('1',3,6,0) ]).
-b_line_i(8,3,1,cmd,7,[ t('',107,8,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t('str(',1,7,0),t(21,2,7,0),t(',',7,7,0),t(4,3,7,0),t(',',7,7,0),t(0,3,7,0),t(')',4,7,0) ]).
+b_line_i(8,3,1,cmd,7,[ t('',107,8,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t(22,2,7,0) ]).
 b_line_i(9,3,1,cmd,7,[ t('',107,9,0),t([ t('Viewall',3,7,0),t('Link',3,7,0) ],29,7,0),t(=,10,7,0),t('link(',1,7,0),t(o(13,'WWFuncion'),28,7,0),t(')',4,7,0) ]).
 b_line_i(10,3,1,cmd,7,[ t('',107,10,0),t('Exists',23,7,0),t(=,10,7,0),t('TRUE',40,7,0) ]).
 b_line_i(12,3,1,cmd,7,[ t('',128,12,0) ]).
@@ -249,13 +248,10 @@ b_line_i(32,2,5,cmd,8,[ t('',143,32,0),t('''LOAD TAB''',3,32,5) ]).
 b_line_i(33,2,6,cmd,8,[ t('',109,33,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('''''',3,33,42),t('.OR.',9,8,45),t('Selectedtabcode',23,8,49),t(=,10,8,66),t('"General"',3,33,68) ]).
 b_line_i(34,2,6,cmd,8,[ t('',107,34,0),t([ t('Generalwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'FuncionGeneral'),28,8,0),t(',',7,8,0),t('Funcionid',23,8,0),t(')',4,8,0) ]).
 b_line_i(35,2,6,cmd,8,[ t('',111,35,0) ]).
-b_line_i(36,2,6,cmd,8,[ t('',109,36,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Entrada"',3,36,42) ]).
-b_line_i(37,2,6,cmd,8,[ t('',107,37,0),t([ t('Entradawc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'FuncionEntradaWC'),28,8,0),t(',',7,8,0),t('Funcionid',23,8,0),t(')',4,8,0) ]).
+b_line_i(36,2,6,cmd,8,[ t('',109,36,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Invitacion"',3,36,42) ]).
+b_line_i(37,2,6,cmd,8,[ t('',107,37,0),t([ t('Invitacionwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'FuncionInvitacionWC'),28,8,0),t(',',7,8,0),t('Funcionid',23,8,0),t(')',4,8,0) ]).
 b_line_i(38,2,6,cmd,8,[ t('',111,38,0) ]).
-b_line_i(39,2,6,cmd,8,[ t('',109,39,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Invitacion"',3,39,42) ]).
-b_line_i(40,2,6,cmd,8,[ t('',107,40,0),t([ t('Invitacionwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'FuncionInvitacionWC'),28,8,0),t(',',7,8,0),t('Funcionid',23,8,0),t(')',4,8,0) ]).
-b_line_i(41,2,6,cmd,8,[ t('',111,41,0) ]).
-b_line_i(42,2,6,cmd,8,[ t('',144,42,0) ]).
+b_line_i(39,2,6,cmd,8,[ t('',144,39,0) ]).
 b_line_i(1000,2,6,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,6,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,6,cmd,0,[ t('',147,0,0) ]).
@@ -291,7 +287,7 @@ html_sub_i(14,15,html_i(0,div(15))).
 html_sub_i(15,16,html_i(0,div(16))).
 html_sub_i(16,17,html_i(0,div(17))).
 html_sub_i(17,18,html_i(0,div(18))).
-html_sub_i(18,19,html_i(0,t(21,2))).
+html_sub_i(18,19,html_i(0,t(22,2))).
 html_sub_i(3,20,html_i(2,div(20))).
 html_sub_i(20,21,html_i(0,div(21))).
 html_sub_i(21,22,html_i(0,usercontrol(22))).
@@ -305,37 +301,26 @@ html_sub_i(27,28,html_i(0,div(28))).
 html_sub_i(28,29,html_i(0,div(29))).
 html_sub_i(29,30,html_i(0,comp(webcomp))).
 html_sub_i(22,31,html_i(2,container(31))).
-html_sub_i(31,32,html_i(0,t('Entrada',3))).
+html_sub_i(31,32,html_i(0,t('Invitacion',3))).
 html_sub_i(31,33,html_i(1,div(33))).
-html_sub_i(33,0,html_i(0,html('Entrada'))).
+html_sub_i(33,0,html_i(0,html('Invitacion'))).
 html_sub_i(22,34,html_i(3,container(34))).
 html_sub_i(34,35,html_i(0,div(35))).
 html_sub_i(35,36,html_i(0,div(36))).
 html_sub_i(36,37,html_i(0,div(37))).
 html_sub_i(37,38,html_i(0,comp(webcomp))).
-html_sub_i(22,39,html_i(4,container(39))).
-html_sub_i(39,40,html_i(0,t('Invitacion',3))).
-html_sub_i(39,41,html_i(1,div(41))).
-html_sub_i(41,0,html_i(0,html('Invitacion'))).
-html_sub_i(22,42,html_i(5,container(42))).
-html_sub_i(42,43,html_i(0,div(43))).
-html_sub_i(43,44,html_i(0,div(44))).
-html_sub_i(44,45,html_i(0,div(45))).
-html_sub_i(45,46,html_i(0,comp(webcomp))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
 html_tags_i(2,'data-abstract-form','').
 html_tags_i(9,'ControlType','').
 html_tags_i(11,'ControlType','').
-html_tags_i(17,'data-gx-att','att:21').
-html_tags_i(19,'data-gx-att','att:21').
+html_tags_i(17,'data-gx-att','att:22').
+html_tags_i(19,'data-gx-att','att:22').
 html_tags_i(25,style,'display:none;').
 html_tags_i(30,'Object','').
 html_tags_i(33,style,'display:none;').
 html_tags_i(38,'Object','').
-html_tags_i(41,style,'display:none;').
-html_tags_i(46,'Object','').
  
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(2,'Class','Section',d,[ str ]).
@@ -482,26 +467,29 @@ html_comp_i(18,'Semanticcontent',div,d,[ str ]).
 html_comp_i(18,'Align',left,d,[ str ]).
 html_comp_i(18,'Valign',top,d,[ str ]).
 html_comp_i(19,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(19,'Colcount',4,d,[ num ]).
-html_comp_i(19,'Attid',21,v,[ num ]).
+html_comp_i(19,'Colcount',40,d,[ num ]).
+html_comp_i(19,'Attid',22,v,[ num ]).
 html_comp_i(19,'Class','ReadonlyAttribute',v,[ str ]).
-html_comp_i(19,'Controlname','Preciofuncion',d,[ str ]).
+html_comp_i(19,'Controlname','Funcionname',d,[ str ]).
 html_comp_i(19,'Returnonclick',0,v,[ bool ]).
 html_comp_i(19,'Eventgx','',d,[ str ]).
 html_comp_i(19,'Captionclass','col-sm-3 ReadonlyAttributeLabel',v,[ str ]).
 html_comp_i(19,'Captionstyle','',v,[ str ]).
 html_comp_i(19,'Captionposition','Left',v,[ str ]).
-html_comp_i(19,'Captionvalue','Funcion',d,[ str ]).
+html_comp_i(19,'Captionvalue','Name',d,[ str ]).
 html_comp_i(19,'Layoutclass','col-sm-9',v,[ str ]).
 html_comp_i(19,'Controltype',2,d,[ num ]).
 html_comp_i(19,'Inputtype',0,d,[ num ]).
+html_comp_i(19,'Editautocomplete',0,d,[ num ]).
+html_comp_i(19,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(19,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(19,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(19,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(19,'Readonly',-1,v,[ bool ]).
 html_comp_i(19,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(19,'Ispassword',0,d,[ bool ]).
 html_comp_i(19,'Autoresize',-1,d,[ bool ]).
-html_comp_i(19,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(19,'Gxwidth',measure(40,chr),d,[ measure ]).
 html_comp_i(19,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(19,'Ismultiline',0,d,[ bool ]).
 html_comp_i(19,'Maxtextnumberlines',0,d,[ num ]).
@@ -509,7 +497,7 @@ html_comp_i(19,'Fill',-1,d,[ bool ]).
 html_comp_i(19,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(19,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(19,'Font',font('Arial',10,[]),d,[ font ]).
-html_comp_i(19,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(19,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(19,'Gxformat',0,d,[ num ]).
 html_comp_i(19,'Title','',d,[ str ]).
 html_comp_i(19,'Invitemsg','',v,[ str ]).
@@ -533,7 +521,7 @@ html_comp_i(22,'Usercontroltype','Tab',d,[ str ]).
 html_comp_i(22,'Constructorname','gx.ui.controls.Tab',d,[ str ]).
 html_comp_i(22,'Showmethodname',show,d,[ str ]).
 html_comp_i(22,'Controlname','Tab',v,[ str ]).
-html_comp_i(22,'Pagecount',3,v,[ num ]).
+html_comp_i(22,'Pagecount',2,v,[ num ]).
 html_comp_i(22,'Class','WWTab',v,[ str ]).
 html_comp_i(22,'Historymanagement',-1,v,[ bool ]).
 html_comp_i(22,'Visible',-1,d,[ bool ]).
@@ -592,8 +580,8 @@ html_comp_i(30,'Controlname','Generalwc',v,[ str ]).
 html_comp_i(30,'Params',[],v,[ params ]).
 html_comp_i(31,'Containerid',title2,v,[ str ]).
 html_comp_i(32,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(32,'Caption','Entrada',d,[ str ]).
-html_comp_i(32,'Id','Entrada_title',v,[ str ]).
+html_comp_i(32,'Caption','Invitacion',d,[ str ]).
+html_comp_i(32,'Id','Invitacion_title',v,[ str ]).
 html_comp_i(32,'Class','TextBlock',d,[ str ]).
 html_comp_i(32,'Event','',d,[ str ]).
 html_comp_i(32,'Returnonclick',0,d,[ bool ]).
@@ -614,7 +602,7 @@ html_comp_i(33,'Valign',top,d,[ str ]).
 html_comp_i(34,'Containerid',panel2,v,[ str ]).
 html_comp_i(35,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(35,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(35,'Id','Tableentrada',v,[ str ]).
+html_comp_i(35,'Id','Tableinvitacion',v,[ str ]).
 html_comp_i(35,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(35,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(35,'Semanticcontent',div,d,[ str ]).
@@ -637,57 +625,8 @@ html_comp_i(37,'Semanticcontent',div,d,[ str ]).
 html_comp_i(37,'Align',left,d,[ str ]).
 html_comp_i(37,'Valign',top,d,[ str ]).
 html_comp_i(38,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(38,'Controlname','Entradawc',v,[ str ]).
+html_comp_i(38,'Controlname','Invitacionwc',v,[ str ]).
 html_comp_i(38,'Params',[],v,[ params ]).
-html_comp_i(39,'Containerid',title3,v,[ str ]).
-html_comp_i(40,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(40,'Caption','Invitacion',d,[ str ]).
-html_comp_i(40,'Id','Invitacion_title',v,[ str ]).
-html_comp_i(40,'Class','TextBlock',d,[ str ]).
-html_comp_i(40,'Event','',d,[ str ]).
-html_comp_i(40,'Returnonclick',0,d,[ bool ]).
-html_comp_i(40,'Gxformat',0,v,[ num ]).
-html_comp_i(40,'Title','',d,[ str ]).
-html_comp_i(40,'Fill',-1,d,[ bool ]).
-html_comp_i(40,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(40,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(40,'Font','',d,[ str ]).
-html_comp_i(41,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(41,'Class','Section',d,[ str ]).
-html_comp_i(41,'Id','',d,[ str ]).
-html_comp_i(41,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(41,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(41,'Semanticcontent',div,d,[ str ]).
-html_comp_i(41,'Align',left,d,[ str ]).
-html_comp_i(41,'Valign',top,d,[ str ]).
-html_comp_i(42,'Containerid',panel3,v,[ str ]).
-html_comp_i(43,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(43,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(43,'Id','Tableinvitacion',v,[ str ]).
-html_comp_i(43,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(43,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(43,'Semanticcontent',div,d,[ str ]).
-html_comp_i(43,'Align',left,d,[ str ]).
-html_comp_i(43,'Valign',top,d,[ str ]).
-html_comp_i(44,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(44,'Class',row,v,[ str ]).
-html_comp_i(44,'Id','',d,[ str ]).
-html_comp_i(44,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(44,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(44,'Semanticcontent',div,d,[ str ]).
-html_comp_i(44,'Align',left,d,[ str ]).
-html_comp_i(44,'Valign',top,d,[ str ]).
-html_comp_i(45,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(45,'Class','col-xs-12',v,[ str ]).
-html_comp_i(45,'Id','',d,[ str ]).
-html_comp_i(45,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(45,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(45,'Semanticcontent',div,d,[ str ]).
-html_comp_i(45,'Align',left,d,[ str ]).
-html_comp_i(45,'Valign',top,d,[ str ]).
-html_comp_i(46,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(46,'Controlname','Invitacionwc',v,[ str ]).
-html_comp_i(46,'Params',[],v,[ params ]).
  
  
  
@@ -705,7 +644,7 @@ lit_i(7,1,div(7),[ ctlname('') ]).
 lit_i(6,1,div(6),[ ctlname('Tabletop') ]).
 lit_i(5,1,div(5),[ ctlname('') ]).
 lit_i(4,1,div(4),[ ctlname('') ]).
-lit_i(19,1,t(21,2),[ ctlname(21),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(19,1,t(22,2),[ ctlname(22),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(18,1,div(18),[ ctlname('') ]).
 lit_i(17,1,div(17),[ ctlname('') ]).
 lit_i(16,1,div(16),[ ctlname('') ]).
@@ -719,19 +658,13 @@ lit_i(30,1,comp(webcomp),[ ctlname('Generalwc'),width(0),rect(0,0,10,10),title('
 lit_i(29,1,div(29),[ ctlname('') ]).
 lit_i(28,1,div(28),[ ctlname('') ]).
 lit_i(27,1,div(27),[ ctlname('Tablegeneral') ]).
-lit_i(32,1,t('Entrada',3),[ ctlname('Entrada_title') ]).
+lit_i(32,1,t('Invitacion',3),[ ctlname('Invitacion_title') ]).
 lit_i(33,1,div(33),[ ctlname('') ]).
-lit_i(38,1,comp(webcomp),[ ctlname('Entradawc'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(38,1,comp(webcomp),[ ctlname('Invitacionwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(37,1,div(37),[ ctlname('') ]).
 lit_i(36,1,div(36),[ ctlname('') ]).
-lit_i(35,1,div(35),[ ctlname('Tableentrada') ]).
-lit_i(40,1,t('Invitacion',3),[ ctlname('Invitacion_title') ]).
-lit_i(41,1,div(41),[ ctlname('') ]).
-lit_i(46,1,comp(webcomp),[ ctlname('Invitacionwc'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(45,1,div(45),[ ctlname('') ]).
-lit_i(44,1,div(44),[ ctlname('') ]).
-lit_i(43,1,div(43),[ ctlname('Tableinvitacion') ]).
-lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34),container(39),container(42) ]) ]).
+lit_i(35,1,div(35),[ ctlname('Tableinvitacion') ]).
+lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34) ]) ]).
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(3,1,div(3),[ ctlname('Maintable') ]).
@@ -746,22 +679,25 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
-att_prop_i(2,21,'ExternalName','PrecioFuncion',d).
-att_prop_i(2,21,'ExternalNamespace','Obligatorio1v2',d).
-att_prop_i(2,21,'EmptyAsNull','Yes',d).
-att_prop_i(2,21,idBasedOn,'',d).
-att_prop_i(2,21,'AUTONUMBER','0',v).
-att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,21,'AttRegEx','',d).
-att_prop_i(2,21,'AttValidationFailedMsg','',d).
-att_prop_i(2,21,'DownloadOffline','0',d).
-att_prop_i(2,21,'VarServiceExtName','',d).
-att_prop_i(2,21,'FullName','PrecioFuncion',v).
+att_prop_i(2,22,'ExternalName','FuncionName',d).
+att_prop_i(2,22,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,22,'EmptyAsNull','Yes',d).
+att_prop_i(2,22,idBasedOn,87,v).
+att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,22,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,22,'AttRegEx','',d).
+att_prop_i(2,22,'AttValidationFailedMsg','',d).
+att_prop_i(2,22,'DownloadOffline','0',d).
+att_prop_i(2,22,'VarServiceExtName','',d).
+att_prop_i(2,22,'FullName','FuncionName',v).
 att_prop_i(2,15,'ExternalName','FuncionId',d).
 att_prop_i(2,15,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,15,'EmptyAsNull','Yes',d).
 att_prop_i(2,15,idBasedOn,86,v).
-att_prop_i(2,15,'AUTONUMBER','0',d).
+att_prop_i(2,15,'AUTONUMBER','-1',v).
+att_prop_i(2,15,'AUTONUMBER_START','1',d).
+att_prop_i(2,15,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,15,'AUTONUMBER_FORREPLICATION','-1',d).
 att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,15,'AttRegEx','',d).
 att_prop_i(2,15,'AttValidationFailedMsg','',d).
@@ -771,7 +707,8 @@ att_prop_i(2,15,'FullName','FuncionId',v).
  
  
 tbl_att_prop_i(2,7,15,'AllowNulls',n).
-tbl_att_prop_i(2,7,21,'AllowNulls',n).
+tbl_att_prop_i(2,7,15,'AUTONUMBER',y).
+tbl_att_prop_i(2,7,22,'AllowNulls',n).
  
 var_prop_i(2,'Tabcode',idBasedOn,89,v).
 var_prop_i(2,'Selectedtabcode',idBasedOn,89,v).
@@ -875,12 +812,11 @@ struct_dt_elem_i([ 26,57,84 ],4,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,24,[ [ 'Pgmname',15,'Funcionid',21,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Entradawc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
-sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Funcionid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Entradawc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',1,24,[ [ 'Pgmname',15,'Funcionid',22,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Funcionid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Invitacionwc',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
 pgm_parm_i(web,62,'FUNCIONINVITACIONWC',[ [ int,4,0,0 ] ],[ [ 'FuncionId',in,[] ] ]).
-pgm_parm_i(web,43,'FUNCIONENTRADAWC',[ [ int,4,0,0 ] ],[ [ 'FuncionId',in,[] ] ]).
 pgm_parm_i(web,42,'FUNCIONGENERAL',[ [ int,4,0,0 ] ],[ [ 'FuncionId',in,[] ] ]).
 pgm_parm_i(web,41,'WWFUNCION',[],[]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
@@ -888,7 +824,6 @@ pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ '
 pgm_callprotocol_i(web,40,'VIEWFUNCION','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
 pgm_callprotocol_i(web,62,'FUNCIONINVITACIONWC','INTERNAL','Secure').
-pgm_callprotocol_i(web,43,'FUNCIONENTRADAWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,42,'FUNCIONGENERAL','INTERNAL','Secure').
 pgm_callprotocol_i(web,41,'WWFUNCION','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').

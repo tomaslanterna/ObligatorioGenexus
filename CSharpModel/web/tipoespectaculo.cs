@@ -720,7 +720,7 @@ namespace GeneXus.Programs {
 
       protected void ZM044( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 4 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
@@ -731,7 +731,7 @@ namespace GeneXus.Programs {
                Z8TipoEspectaculoName = A8TipoEspectaculoName;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -4 )
          {
             Z7TipoEspectaculoId = A7TipoEspectaculoId;
             Z8TipoEspectaculoName = A8TipoEspectaculoName;
@@ -776,7 +776,7 @@ namespace GeneXus.Programs {
             RcdFound4 = 1;
             A8TipoEspectaculoName = T00044_A8TipoEspectaculoName[0];
             AssignAttri("", false, "A8TipoEspectaculoName", A8TipoEspectaculoName);
-            ZM044( -3) ;
+            ZM044( -4) ;
          }
          pr_default.close(2);
          OnLoadActions044( ) ;
@@ -795,6 +795,13 @@ namespace GeneXus.Programs {
          standaloneModal( ) ;
          AV11Pgmname = "TipoEspectaculo";
          AssignAttri("", false, "AV11Pgmname", AV11Pgmname);
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A8TipoEspectaculoName)) )
+         {
+            GX_msglist.addItem("Debe ingresar un nombre", 1, "TIPOESPECTACULONAME");
+            AnyError = 1;
+            GX_FocusControl = edtTipoEspectaculoName_Internalname;
+            AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+         }
       }
 
       protected void CloseExtendedTableCursors044( )
@@ -826,7 +833,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A7TipoEspectaculoId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM044( 3) ;
+            ZM044( 4) ;
             RcdFound4 = 1;
             A7TipoEspectaculoId = T00043_A7TipoEspectaculoId[0];
             AssignAttri("", false, "A7TipoEspectaculoId", StringUtil.LTrimStr( (decimal)(A7TipoEspectaculoId), 4, 0));
@@ -1391,7 +1398,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228913255567", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228923292132", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1560,7 +1567,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228913255571", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228923292134", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1576,7 +1583,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("tipoespectaculo.js", "?20228913255571", false, true);
+         context.AddJavascriptSource("tipoespectaculo.js", "?20228923292134", false, true);
          /* End function include_jscripts */
       }
 
@@ -1681,6 +1688,8 @@ namespace GeneXus.Programs {
          setEventMetadata("AFTER TRN",",oparms:[]}");
          setEventMetadata("VALID_TIPOESPECTACULOID","{handler:'Valid_Tipoespectaculoid',iparms:[]");
          setEventMetadata("VALID_TIPOESPECTACULOID",",oparms:[]}");
+         setEventMetadata("VALID_TIPOESPECTACULONAME","{handler:'Valid_Tipoespectaculoname',iparms:[]");
+         setEventMetadata("VALID_TIPOESPECTACULONAME",",oparms:[]}");
          return  ;
       }
 

@@ -100,18 +100,7 @@
 <Description>Entrada Id</Description></Attribute></KeyAttributes>
 <Tables>
 <Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -159,9 +148,9 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
 <Table>
-<TableId>13</TableId>
-<TableName>EspectaculoLugarSector</TableName>
-<Description>Lugar Sector</Description>
+<TableId>18</TableId>
+<TableName>EspectaculoFuncion</TableName>
+<Description>Funcion</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
@@ -169,9 +158,9 @@
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<AttriId>47</AttriId>
+<AttriName>EspectaculoFuncionId</AttriName>
+<Description>Espectaculo Funcion Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table>
 <Table>
 <TableId>9</TableId>
@@ -187,25 +176,14 @@
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute>
-<Attribute>
 <AttriId>1</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

@@ -180,8 +180,8 @@ index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
  
  
  
-add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40001,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  

@@ -55,7 +55,20 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_9") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_15") == 0 )
+         {
+            A4LugarId = (short)(NumberUtil.Val( GetPar( "LugarId"), "."));
+            AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
+            setAjaxCallMode();
+            if ( ! IsValidAjaxCall( true) )
+            {
+               GxWebError = 1;
+               return  ;
+            }
+            gxLoad_15( A4LugarId) ;
+            return  ;
+         }
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_14") == 0 )
          {
             A3PaisId = (short)(NumberUtil.Val( GetPar( "PaisId"), "."));
             AssignAttri("", false, "A3PaisId", StringUtil.LTrimStr( (decimal)(A3PaisId), 4, 0));
@@ -65,7 +78,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_9( A3PaisId) ;
+            gxLoad_14( A3PaisId) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -169,7 +182,6 @@ namespace GeneXus.Programs {
          nRC_GXsfl_58 = (int)(NumberUtil.Val( GetPar( "nRC_GXsfl_58"), "."));
          nGXsfl_58_idx = (int)(NumberUtil.Val( GetPar( "nGXsfl_58_idx"), "."));
          sGXsfl_58_idx = GetPar( "sGXsfl_58_idx");
-         Gx_mode = GetPar( "Mode");
          setAjaxCallMode();
          if ( ! IsValidAjaxCall( true) )
          {
@@ -522,6 +534,9 @@ namespace GeneXus.Programs {
          else if ( ( nKeyPressed == 3 ) || ( nKeyPressed == 4 ) || ( ( nKeyPressed == 1 ) && ( AnyError != 0 ) ) )
          {
             /* Button check  or addlines. */
+            B40000GXC1 = A40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
             standaloneNotModal0211( ) ;
             standaloneModal0211( ) ;
             sMode11 = Gx_mode;
@@ -548,6 +563,9 @@ namespace GeneXus.Programs {
             }
             Gx_mode = sMode11;
             AssignAttri("", false, "Gx_mode", Gx_mode);
+            A40000GXC1 = B40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          }
          else
          {
@@ -581,6 +599,9 @@ namespace GeneXus.Programs {
             SubsflControlProps_5811( ) ;
             InitAll0211( ) ;
             init_level_properties11( ) ;
+            B40000GXC1 = A40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
             nRcdExists_11 = 0;
             nIsMod_11 = 0;
             nRcdDeleted_11 = 0;
@@ -594,13 +615,16 @@ namespace GeneXus.Programs {
                if ( ( nKeyPressed == 4 ) && ( fRowAdded == 0 ) )
                {
                   fRowAdded = 1;
-                  GX_FocusControl = edtLugarSectorId_Internalname;
+                  GX_FocusControl = edtLugarSectorName_Internalname;
                   AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                }
                nBlankRcdCount11 = (short)(nBlankRcdCount11-1);
             }
             Gx_mode = sMode11;
             AssignAttri("", false, "Gx_mode", Gx_mode);
+            A40000GXC1 = B40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          }
          sStyleString = "";
          context.WriteHtmlText( "<div id=\""+"Gridlugar_sectorContainer"+"Div\" "+sStyleString+">"+"</div>") ;
@@ -658,6 +682,7 @@ namespace GeneXus.Programs {
                Z4LugarId = (short)(context.localUtil.CToN( cgiGet( "Z4LugarId"), ",", "."));
                Z5LugarName = cgiGet( "Z5LugarName");
                Z3PaisId = (short)(context.localUtil.CToN( cgiGet( "Z3PaisId"), ",", "."));
+               O40000GXC1 = (int)(context.localUtil.CToN( cgiGet( "O40000GXC1"), ",", "."));
                IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ",", "."));
                IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ",", "."));
                Gx_mode = cgiGet( "Mode");
@@ -665,6 +690,7 @@ namespace GeneXus.Programs {
                N3PaisId = (short)(context.localUtil.CToN( cgiGet( "N3PaisId"), ",", "."));
                AV7LugarId = (short)(context.localUtil.CToN( cgiGet( "vLUGARID"), ",", "."));
                AV11Insert_PaisId = (short)(context.localUtil.CToN( cgiGet( "vINSERT_PAISID"), ",", "."));
+               A40000GXC1 = (int)(context.localUtil.CToN( cgiGet( "GXC1"), ",", "."));
                AV13Pgmname = cgiGet( "vPGMNAME");
                /* Read variables values. */
                A4LugarId = (short)(context.localUtil.CToN( cgiGet( edtLugarId_Internalname), ",", "."));
@@ -937,6 +963,9 @@ namespace GeneXus.Programs {
 
       protected void CONFIRM_0211( )
       {
+         s40000GXC1 = O40000GXC1;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          nGXsfl_58_idx = 0;
          while ( nGXsfl_58_idx < nRC_GXsfl_58 )
          {
@@ -960,15 +989,15 @@ namespace GeneXus.Programs {
                            IsConfirmed = 1;
                            AssignAttri("", false, "IsConfirmed", StringUtil.LTrimStr( (decimal)(IsConfirmed), 4, 0));
                         }
+                        O40000GXC1 = A40000GXC1;
+                        n40000GXC1 = false;
+                        AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                      }
                   }
                   else
                   {
-                     GXCCtl = "LUGARSECTORID_" + sGXsfl_58_idx;
-                     GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, GXCCtl);
+                     GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
                      AnyError = 1;
-                     GX_FocusControl = edtLugarSectorId_Internalname;
-                     AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                   }
                }
                else
@@ -985,6 +1014,9 @@ namespace GeneXus.Programs {
                         if ( AnyError == 0 )
                         {
                            OnDeleteControls0211( ) ;
+                           O40000GXC1 = A40000GXC1;
+                           n40000GXC1 = false;
+                           AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                         }
                      }
                      else
@@ -1003,6 +1035,9 @@ namespace GeneXus.Programs {
                                  IsConfirmed = 1;
                                  AssignAttri("", false, "IsConfirmed", StringUtil.LTrimStr( (decimal)(IsConfirmed), 4, 0));
                               }
+                              O40000GXC1 = A40000GXC1;
+                              n40000GXC1 = false;
+                              AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                            }
                         }
                      }
@@ -1011,11 +1046,8 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_11 == 0 )
                      {
-                        GXCCtl = "LUGARSECTORID_" + sGXsfl_58_idx;
-                        GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
+                        GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, "");
                         AnyError = 1;
-                        GX_FocusControl = edtLugarSectorId_Internalname;
-                        AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                      }
                   }
                }
@@ -1039,7 +1071,28 @@ namespace GeneXus.Programs {
                ChangePostValue( "LUGARSECTORPRECIO_"+sGXsfl_58_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtLugarSectorPrecio_Enabled), 5, 0, ".", ""))) ;
             }
          }
+         O40000GXC1 = s40000GXC1;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          /* Start of After( level) rules */
+         /* Using cursor T00025 */
+         pr_default.execute(2, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(2) != 101) )
+         {
+            A40000GXC1 = T00025_A40000GXC1[0];
+            n40000GXC1 = T00025_n40000GXC1[0];
+         }
+         else
+         {
+            A40000GXC1 = 0;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
+         if ( A40000GXC1 < 0 )
+         {
+            GX_msglist.addItem("El lugar debe tener al menos un sector", 1, "");
+            AnyError = 1;
+         }
          /* End of After( level) rules */
       }
 
@@ -1097,20 +1150,21 @@ namespace GeneXus.Programs {
          context.setWebReturnParmsMetadata(new Object[] {});
          context.wjLocDisableFrm = 1;
          context.nUserReturn = 1;
-         pr_default.close(3);
          pr_default.close(4);
+         pr_default.close(5);
+         pr_default.close(2);
          returnInSub = true;
          if (true) return;
       }
 
       protected void ZM022( short GX_JID )
       {
-         if ( ( GX_JID == 8 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 13 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
-               Z5LugarName = T00025_A5LugarName[0];
-               Z3PaisId = T00025_A3PaisId[0];
+               Z5LugarName = T00027_A5LugarName[0];
+               Z3PaisId = T00027_A3PaisId[0];
             }
             else
             {
@@ -1118,11 +1172,12 @@ namespace GeneXus.Programs {
                Z3PaisId = A3PaisId;
             }
          }
-         if ( GX_JID == -8 )
+         if ( GX_JID == -13 )
          {
             Z4LugarId = A4LugarId;
             Z5LugarName = A5LugarName;
             Z3PaisId = A3PaisId;
+            Z40000GXC1 = A40000GXC1;
             Z6PaisName = A6PaisName;
          }
       }
@@ -1172,37 +1227,59 @@ namespace GeneXus.Programs {
          }
          if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ( Gx_BScreen == 0 ) )
          {
+            /* Using cursor T00025 */
+            pr_default.execute(2, new Object[] {A4LugarId});
+            if ( (pr_default.getStatus(2) != 101) )
+            {
+               A40000GXC1 = T00025_A40000GXC1[0];
+               n40000GXC1 = T00025_n40000GXC1[0];
+            }
+            else
+            {
+               A40000GXC1 = 0;
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            }
+            O40000GXC1 = A40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            pr_default.close(2);
             AV13Pgmname = "Lugar";
             AssignAttri("", false, "AV13Pgmname", AV13Pgmname);
-            /* Using cursor T00026 */
-            pr_default.execute(4, new Object[] {A3PaisId});
-            A6PaisName = T00026_A6PaisName[0];
+            /* Using cursor T00028 */
+            pr_default.execute(5, new Object[] {A3PaisId});
+            A6PaisName = T00028_A6PaisName[0];
             AssignAttri("", false, "A6PaisName", A6PaisName);
-            pr_default.close(4);
+            pr_default.close(5);
          }
       }
 
       protected void Load022( )
       {
-         /* Using cursor T00027 */
-         pr_default.execute(5, new Object[] {A4LugarId});
-         if ( (pr_default.getStatus(5) != 101) )
+         /* Using cursor T000210 */
+         pr_default.execute(6, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(6) != 101) )
          {
             RcdFound2 = 1;
-            A5LugarName = T00027_A5LugarName[0];
+            A5LugarName = T000210_A5LugarName[0];
             AssignAttri("", false, "A5LugarName", A5LugarName);
-            A6PaisName = T00027_A6PaisName[0];
+            A6PaisName = T000210_A6PaisName[0];
             AssignAttri("", false, "A6PaisName", A6PaisName);
-            A3PaisId = T00027_A3PaisId[0];
+            A3PaisId = T000210_A3PaisId[0];
             AssignAttri("", false, "A3PaisId", StringUtil.LTrimStr( (decimal)(A3PaisId), 4, 0));
-            ZM022( -8) ;
+            A40000GXC1 = T000210_A40000GXC1[0];
+            n40000GXC1 = T000210_n40000GXC1[0];
+            ZM022( -13) ;
          }
-         pr_default.close(5);
+         pr_default.close(6);
          OnLoadActions022( ) ;
       }
 
       protected void OnLoadActions022( )
       {
+         O40000GXC1 = A40000GXC1;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          AV13Pgmname = "Lugar";
          AssignAttri("", false, "AV13Pgmname", AV13Pgmname);
       }
@@ -1214,34 +1291,36 @@ namespace GeneXus.Programs {
          standaloneModal( ) ;
          AV13Pgmname = "Lugar";
          AssignAttri("", false, "AV13Pgmname", AV13Pgmname);
-         /* Using cursor T00026 */
-         pr_default.execute(4, new Object[] {A3PaisId});
-         if ( (pr_default.getStatus(4) == 101) )
+         /* Using cursor T00025 */
+         pr_default.execute(2, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(2) != 101) )
          {
-            GX_msglist.addItem("No existe 'Pais'.", "ForeignKeyNotFound", 1, "PAISID");
+            A40000GXC1 = T00025_A40000GXC1[0];
+            n40000GXC1 = T00025_n40000GXC1[0];
+         }
+         else
+         {
+            nIsDirty_2 = 1;
+            A40000GXC1 = 0;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
+         pr_default.close(2);
+         if ( A40000GXC1 < 0 )
+         {
+            GX_msglist.addItem("El lugar debe tener al menos un sector", 1, "");
             AnyError = 1;
-            GX_FocusControl = edtPaisId_Internalname;
+         }
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A5LugarName)) )
+         {
+            GX_msglist.addItem("Ingrese un nombre.", 1, "LUGARNAME");
+            AnyError = 1;
+            GX_FocusControl = edtLugarName_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
-         A6PaisName = T00026_A6PaisName[0];
-         AssignAttri("", false, "A6PaisName", A6PaisName);
-         pr_default.close(4);
-      }
-
-      protected void CloseExtendedTableCursors022( )
-      {
-         pr_default.close(4);
-      }
-
-      protected void enableDisable( )
-      {
-      }
-
-      protected void gxLoad_9( short A3PaisId )
-      {
          /* Using cursor T00028 */
-         pr_default.execute(6, new Object[] {A3PaisId});
-         if ( (pr_default.getStatus(6) == 101) )
+         pr_default.execute(5, new Object[] {A3PaisId});
+         if ( (pr_default.getStatus(5) == 101) )
          {
             GX_msglist.addItem("No existe 'Pais'.", "ForeignKeyNotFound", 1, "PAISID");
             AnyError = 1;
@@ -1250,24 +1329,78 @@ namespace GeneXus.Programs {
          }
          A6PaisName = T00028_A6PaisName[0];
          AssignAttri("", false, "A6PaisName", A6PaisName);
+         pr_default.close(5);
+      }
+
+      protected void CloseExtendedTableCursors022( )
+      {
+         pr_default.close(2);
+         pr_default.close(5);
+      }
+
+      protected void enableDisable( )
+      {
+      }
+
+      protected void gxLoad_15( short A4LugarId )
+      {
+         /* Using cursor T000212 */
+         pr_default.execute(7, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(7) != 101) )
+         {
+            A40000GXC1 = T000212_A40000GXC1[0];
+            n40000GXC1 = T000212_n40000GXC1[0];
+         }
+         else
+         {
+            A40000GXC1 = 0;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
          GxWebStd.set_html_headers( context, 0, "", "");
          AddString( "[[") ;
-         AddString( "\""+GXUtil.EncodeJSConstant( A6PaisName)+"\"") ;
+         AddString( "\""+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ".", "")))+"\"") ;
          AddString( "]") ;
-         if ( (pr_default.getStatus(6) == 101) )
+         if ( (pr_default.getStatus(7) == 101) )
          {
             AddString( ",") ;
             AddString( "101") ;
          }
          AddString( "]") ;
-         pr_default.close(6);
+         pr_default.close(7);
+      }
+
+      protected void gxLoad_14( short A3PaisId )
+      {
+         /* Using cursor T000213 */
+         pr_default.execute(8, new Object[] {A3PaisId});
+         if ( (pr_default.getStatus(8) == 101) )
+         {
+            GX_msglist.addItem("No existe 'Pais'.", "ForeignKeyNotFound", 1, "PAISID");
+            AnyError = 1;
+            GX_FocusControl = edtPaisId_Internalname;
+            AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+         }
+         A6PaisName = T000213_A6PaisName[0];
+         AssignAttri("", false, "A6PaisName", A6PaisName);
+         GxWebStd.set_html_headers( context, 0, "", "");
+         AddString( "[[") ;
+         AddString( "\""+GXUtil.EncodeJSConstant( A6PaisName)+"\"") ;
+         AddString( "]") ;
+         if ( (pr_default.getStatus(8) == 101) )
+         {
+            AddString( ",") ;
+            AddString( "101") ;
+         }
+         AddString( "]") ;
+         pr_default.close(8);
       }
 
       protected void GetKey022( )
       {
-         /* Using cursor T00029 */
-         pr_default.execute(7, new Object[] {A4LugarId});
-         if ( (pr_default.getStatus(7) != 101) )
+         /* Using cursor T000214 */
+         pr_default.execute(9, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound2 = 1;
          }
@@ -1275,22 +1408,22 @@ namespace GeneXus.Programs {
          {
             RcdFound2 = 0;
          }
-         pr_default.close(7);
+         pr_default.close(9);
       }
 
       protected void getByPrimaryKey( )
       {
-         /* Using cursor T00025 */
-         pr_default.execute(3, new Object[] {A4LugarId});
-         if ( (pr_default.getStatus(3) != 101) )
+         /* Using cursor T00027 */
+         pr_default.execute(4, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(4) != 101) )
          {
-            ZM022( 8) ;
+            ZM022( 13) ;
             RcdFound2 = 1;
-            A4LugarId = T00025_A4LugarId[0];
+            A4LugarId = T00027_A4LugarId[0];
             AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
-            A5LugarName = T00025_A5LugarName[0];
+            A5LugarName = T00027_A5LugarName[0];
             AssignAttri("", false, "A5LugarName", A5LugarName);
-            A3PaisId = T00025_A3PaisId[0];
+            A3PaisId = T00027_A3PaisId[0];
             AssignAttri("", false, "A3PaisId", StringUtil.LTrimStr( (decimal)(A3PaisId), 4, 0));
             Z4LugarId = A4LugarId;
             sMode2 = Gx_mode;
@@ -1316,7 +1449,7 @@ namespace GeneXus.Programs {
             Gx_mode = sMode2;
             AssignAttri("", false, "Gx_mode", Gx_mode);
          }
-         pr_default.close(3);
+         pr_default.close(4);
       }
 
       protected void getEqualNoModal( )
@@ -1334,43 +1467,43 @@ namespace GeneXus.Programs {
       protected void move_next( )
       {
          RcdFound2 = 0;
-         /* Using cursor T000210 */
-         pr_default.execute(8, new Object[] {A4LugarId});
-         if ( (pr_default.getStatus(8) != 101) )
+         /* Using cursor T000215 */
+         pr_default.execute(10, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(10) != 101) )
          {
-            while ( (pr_default.getStatus(8) != 101) && ( ( T000210_A4LugarId[0] < A4LugarId ) ) )
+            while ( (pr_default.getStatus(10) != 101) && ( ( T000215_A4LugarId[0] < A4LugarId ) ) )
             {
-               pr_default.readNext(8);
+               pr_default.readNext(10);
             }
-            if ( (pr_default.getStatus(8) != 101) && ( ( T000210_A4LugarId[0] > A4LugarId ) ) )
+            if ( (pr_default.getStatus(10) != 101) && ( ( T000215_A4LugarId[0] > A4LugarId ) ) )
             {
-               A4LugarId = T000210_A4LugarId[0];
+               A4LugarId = T000215_A4LugarId[0];
                AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
                RcdFound2 = 1;
             }
          }
-         pr_default.close(8);
+         pr_default.close(10);
       }
 
       protected void move_previous( )
       {
          RcdFound2 = 0;
-         /* Using cursor T000211 */
-         pr_default.execute(9, new Object[] {A4LugarId});
-         if ( (pr_default.getStatus(9) != 101) )
+         /* Using cursor T000216 */
+         pr_default.execute(11, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(11) != 101) )
          {
-            while ( (pr_default.getStatus(9) != 101) && ( ( T000211_A4LugarId[0] > A4LugarId ) ) )
+            while ( (pr_default.getStatus(11) != 101) && ( ( T000216_A4LugarId[0] > A4LugarId ) ) )
             {
-               pr_default.readNext(9);
+               pr_default.readNext(11);
             }
-            if ( (pr_default.getStatus(9) != 101) && ( ( T000211_A4LugarId[0] < A4LugarId ) ) )
+            if ( (pr_default.getStatus(11) != 101) && ( ( T000216_A4LugarId[0] < A4LugarId ) ) )
             {
-               A4LugarId = T000211_A4LugarId[0];
+               A4LugarId = T000216_A4LugarId[0];
                AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
                RcdFound2 = 1;
             }
          }
-         pr_default.close(9);
+         pr_default.close(11);
       }
 
       protected void btn_enter( )
@@ -1380,6 +1513,9 @@ namespace GeneXus.Programs {
          if ( IsIns( ) )
          {
             /* Insert record */
+            A40000GXC1 = O40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
             GX_FocusControl = edtLugarName_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
             Insert022( ) ;
@@ -1404,6 +1540,9 @@ namespace GeneXus.Programs {
                }
                else if ( IsDlt( ) )
                {
+                  A40000GXC1 = O40000GXC1;
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                   delete( ) ;
                   AfterTrn( ) ;
                   GX_FocusControl = edtLugarName_Internalname;
@@ -1412,6 +1551,9 @@ namespace GeneXus.Programs {
                else
                {
                   /* Update record */
+                  A40000GXC1 = O40000GXC1;
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                   Update022( ) ;
                   GX_FocusControl = edtLugarName_Internalname;
                   AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1422,6 +1564,9 @@ namespace GeneXus.Programs {
                if ( A4LugarId != Z4LugarId )
                {
                   /* Insert record */
+                  A40000GXC1 = O40000GXC1;
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                   GX_FocusControl = edtLugarName_Internalname;
                   AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                   Insert022( ) ;
@@ -1443,6 +1588,9 @@ namespace GeneXus.Programs {
                   else
                   {
                      /* Insert record */
+                     A40000GXC1 = O40000GXC1;
+                     n40000GXC1 = false;
+                     AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                      GX_FocusControl = edtLugarName_Internalname;
                      AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                      Insert022( ) ;
@@ -1478,6 +1626,9 @@ namespace GeneXus.Programs {
          }
          else
          {
+            A40000GXC1 = O40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
             delete( ) ;
             AfterTrn( ) ;
             GX_FocusControl = edtLugarName_Internalname;
@@ -1492,27 +1643,27 @@ namespace GeneXus.Programs {
       {
          if ( ! IsIns( ) )
          {
-            /* Using cursor T00024 */
-            pr_default.execute(2, new Object[] {A4LugarId});
-            if ( (pr_default.getStatus(2) == 103) )
+            /* Using cursor T00026 */
+            pr_default.execute(3, new Object[] {A4LugarId});
+            if ( (pr_default.getStatus(3) == 103) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"Lugar"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
-            if ( (pr_default.getStatus(2) == 101) || ( StringUtil.StrCmp(Z5LugarName, T00024_A5LugarName[0]) != 0 ) || ( Z3PaisId != T00024_A3PaisId[0] ) )
+            if ( (pr_default.getStatus(3) == 101) || ( StringUtil.StrCmp(Z5LugarName, T00026_A5LugarName[0]) != 0 ) || ( Z3PaisId != T00026_A3PaisId[0] ) )
             {
-               if ( StringUtil.StrCmp(Z5LugarName, T00024_A5LugarName[0]) != 0 )
+               if ( StringUtil.StrCmp(Z5LugarName, T00026_A5LugarName[0]) != 0 )
                {
                   GXUtil.WriteLog("lugar:[seudo value changed for attri]"+"LugarName");
                   GXUtil.WriteLogRaw("Old: ",Z5LugarName);
-                  GXUtil.WriteLogRaw("Current: ",T00024_A5LugarName[0]);
+                  GXUtil.WriteLogRaw("Current: ",T00026_A5LugarName[0]);
                }
-               if ( Z3PaisId != T00024_A3PaisId[0] )
+               if ( Z3PaisId != T00026_A3PaisId[0] )
                {
                   GXUtil.WriteLog("lugar:[seudo value changed for attri]"+"PaisId");
                   GXUtil.WriteLogRaw("Old: ",Z3PaisId);
-                  GXUtil.WriteLogRaw("Current: ",T00024_A3PaisId[0]);
+                  GXUtil.WriteLogRaw("Current: ",T00026_A3PaisId[0]);
                }
                GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"Lugar"}), "RecordWasChanged", 1, "");
                AnyError = 1;
@@ -1540,11 +1691,11 @@ namespace GeneXus.Programs {
                   BeforeInsert022( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000212 */
-                     pr_default.execute(10, new Object[] {A5LugarName, A3PaisId});
-                     A4LugarId = T000212_A4LugarId[0];
+                     /* Using cursor T000217 */
+                     pr_default.execute(12, new Object[] {A5LugarName, A3PaisId});
+                     A4LugarId = T000217_A4LugarId[0];
                      AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
-                     pr_default.close(10);
+                     pr_default.close(12);
                      dsDefault.SmartCacheProvider.SetUpdated("Lugar");
                      if ( AnyError == 0 )
                      {
@@ -1597,11 +1748,11 @@ namespace GeneXus.Programs {
                   BeforeUpdate022( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000213 */
-                     pr_default.execute(11, new Object[] {A5LugarName, A3PaisId, A4LugarId});
-                     pr_default.close(11);
+                     /* Using cursor T000218 */
+                     pr_default.execute(13, new Object[] {A5LugarName, A3PaisId, A4LugarId});
+                     pr_default.close(13);
                      dsDefault.SmartCacheProvider.SetUpdated("Lugar");
-                     if ( (pr_default.getStatus(11) == 103) )
+                     if ( (pr_default.getStatus(13) == 103) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"Lugar"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
@@ -1659,19 +1810,25 @@ namespace GeneXus.Programs {
                BeforeDelete022( ) ;
                if ( AnyError == 0 )
                {
+                  A40000GXC1 = O40000GXC1;
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                   ScanStart0211( ) ;
                   while ( RcdFound11 != 0 )
                   {
                      getByPrimaryKey0211( ) ;
                      Delete0211( ) ;
                      ScanNext0211( ) ;
+                     O40000GXC1 = A40000GXC1;
+                     n40000GXC1 = false;
+                     AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
                   }
                   ScanEnd0211( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000214 */
-                     pr_default.execute(12, new Object[] {A4LugarId});
-                     pr_default.close(12);
+                     /* Using cursor T000219 */
+                     pr_default.execute(14, new Object[] {A4LugarId});
+                     pr_default.close(14);
                      dsDefault.SmartCacheProvider.SetUpdated("Lugar");
                      if ( AnyError == 0 )
                      {
@@ -1713,27 +1870,44 @@ namespace GeneXus.Programs {
             /* Delete mode formulas */
             AV13Pgmname = "Lugar";
             AssignAttri("", false, "AV13Pgmname", AV13Pgmname);
-            /* Using cursor T000215 */
-            pr_default.execute(13, new Object[] {A3PaisId});
-            A6PaisName = T000215_A6PaisName[0];
+            /* Using cursor T000221 */
+            pr_default.execute(15, new Object[] {A4LugarId});
+            if ( (pr_default.getStatus(15) != 101) )
+            {
+               A40000GXC1 = T000221_A40000GXC1[0];
+               n40000GXC1 = T000221_n40000GXC1[0];
+            }
+            else
+            {
+               A40000GXC1 = 0;
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            }
+            pr_default.close(15);
+            /* Using cursor T000222 */
+            pr_default.execute(16, new Object[] {A3PaisId});
+            A6PaisName = T000222_A6PaisName[0];
             AssignAttri("", false, "A6PaisName", A6PaisName);
-            pr_default.close(13);
+            pr_default.close(16);
          }
          if ( AnyError == 0 )
          {
-            /* Using cursor T000216 */
-            pr_default.execute(14, new Object[] {A4LugarId});
-            if ( (pr_default.getStatus(14) != 101) )
+            /* Using cursor T000223 */
+            pr_default.execute(17, new Object[] {A4LugarId});
+            if ( (pr_default.getStatus(17) != 101) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Espectaculo"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
-            pr_default.close(14);
+            pr_default.close(17);
          }
       }
 
       protected void ProcessNestedLevel0211( )
       {
+         s40000GXC1 = O40000GXC1;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          nGXsfl_58_idx = 0;
          while ( nGXsfl_58_idx < nRC_GXsfl_58 )
          {
@@ -1772,14 +1946,14 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_11 == 0 )
                      {
-                        GXCCtl = "LUGARSECTORID_" + sGXsfl_58_idx;
-                        GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
+                        GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, "");
                         AnyError = 1;
-                        GX_FocusControl = edtLugarSectorId_Internalname;
-                        AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
                      }
                   }
                }
+               O40000GXC1 = A40000GXC1;
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
             }
             ChangePostValue( edtLugarSectorId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A27LugarSectorId), 4, 0, ",", ""))) ;
             ChangePostValue( edtLugarSectorName_Internalname, A28LugarSectorName) ;
@@ -1801,10 +1975,31 @@ namespace GeneXus.Programs {
             }
          }
          /* Start of After( level) rules */
+         /* Using cursor T000221 */
+         pr_default.execute(15, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(15) != 101) )
+         {
+            A40000GXC1 = T000221_A40000GXC1[0];
+            n40000GXC1 = T000221_n40000GXC1[0];
+         }
+         else
+         {
+            A40000GXC1 = 0;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
+         if ( A40000GXC1 < 0 )
+         {
+            GX_msglist.addItem("El lugar debe tener al menos un sector", 1, "");
+            AnyError = 1;
+         }
          /* End of After( level) rules */
          InitAll0211( ) ;
          if ( AnyError != 0 )
          {
+            O40000GXC1 = s40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          }
          nRcdExists_11 = 0;
          nIsMod_11 = 0;
@@ -1818,6 +2013,9 @@ namespace GeneXus.Programs {
          ProcessNestedLevel0211( ) ;
          if ( AnyError != 0 )
          {
+            O40000GXC1 = s40000GXC1;
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          }
          /* Restore parent mode. */
          Gx_mode = sMode2;
@@ -1829,7 +2027,7 @@ namespace GeneXus.Programs {
       {
          if ( ! IsIns( ) )
          {
-            pr_default.close(2);
+            pr_default.close(3);
          }
          if ( AnyError == 0 )
          {
@@ -1837,10 +2035,11 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(3);
+            pr_default.close(4);
             pr_default.close(1);
             pr_default.close(0);
-            pr_default.close(13);
+            pr_default.close(16);
+            pr_default.close(15);
             context.CommitDataStores("lugar",pr_default);
             if ( AnyError == 0 )
             {
@@ -1852,10 +2051,11 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(3);
+            pr_default.close(4);
             pr_default.close(1);
             pr_default.close(0);
-            pr_default.close(13);
+            pr_default.close(16);
+            pr_default.close(15);
             context.RollbackDataStores("lugar",pr_default);
          }
          IsModified = 0;
@@ -1869,13 +2069,13 @@ namespace GeneXus.Programs {
       public void ScanStart022( )
       {
          /* Scan By routine */
-         /* Using cursor T000217 */
-         pr_default.execute(15);
+         /* Using cursor T000224 */
+         pr_default.execute(18);
          RcdFound2 = 0;
-         if ( (pr_default.getStatus(15) != 101) )
+         if ( (pr_default.getStatus(18) != 101) )
          {
             RcdFound2 = 1;
-            A4LugarId = T000217_A4LugarId[0];
+            A4LugarId = T000224_A4LugarId[0];
             AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
          }
          /* Load Subordinate Levels */
@@ -1884,19 +2084,19 @@ namespace GeneXus.Programs {
       protected void ScanNext022( )
       {
          /* Scan next routine */
-         pr_default.readNext(15);
+         pr_default.readNext(18);
          RcdFound2 = 0;
-         if ( (pr_default.getStatus(15) != 101) )
+         if ( (pr_default.getStatus(18) != 101) )
          {
             RcdFound2 = 1;
-            A4LugarId = T000217_A4LugarId[0];
+            A4LugarId = T000224_A4LugarId[0];
             AssignAttri("", false, "A4LugarId", StringUtil.LTrimStr( (decimal)(A4LugarId), 4, 0));
          }
       }
 
       protected void ScanEnd022( )
       {
-         pr_default.close(15);
+         pr_default.close(18);
       }
 
       protected void AfterConfirm022( )
@@ -1943,7 +2143,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0211( short GX_JID )
       {
-         if ( ( GX_JID == 10 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 16 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
@@ -1958,7 +2158,7 @@ namespace GeneXus.Programs {
                Z30LugarSectorPrecio = A30LugarSectorPrecio;
             }
          }
-         if ( GX_JID == -10 )
+         if ( GX_JID == -16 )
          {
             Z4LugarId = A4LugarId;
             Z27LugarSectorId = A27LugarSectorId;
@@ -1970,40 +2170,56 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal0211( )
       {
+         edtLugarSectorId_Enabled = 0;
+         AssignProp("", false, edtLugarSectorId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtLugarSectorId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
       }
 
       protected void standaloneModal0211( )
       {
-         if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
-         {
-            edtLugarSectorId_Enabled = 0;
-            AssignProp("", false, edtLugarSectorId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtLugarSectorId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
-         }
-         else
-         {
-            edtLugarSectorId_Enabled = 1;
-            AssignProp("", false, edtLugarSectorId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtLugarSectorId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
-         }
       }
 
       protected void Load0211( )
       {
-         /* Using cursor T000218 */
-         pr_default.execute(16, new Object[] {A4LugarId, A27LugarSectorId});
-         if ( (pr_default.getStatus(16) != 101) )
+         /* Using cursor T000225 */
+         pr_default.execute(19, new Object[] {A4LugarId, A27LugarSectorId});
+         if ( (pr_default.getStatus(19) != 101) )
          {
             RcdFound11 = 1;
-            A28LugarSectorName = T000218_A28LugarSectorName[0];
-            A29LugarSectorCantidad = T000218_A29LugarSectorCantidad[0];
-            A30LugarSectorPrecio = T000218_A30LugarSectorPrecio[0];
-            ZM0211( -10) ;
+            A28LugarSectorName = T000225_A28LugarSectorName[0];
+            A29LugarSectorCantidad = T000225_A29LugarSectorCantidad[0];
+            A30LugarSectorPrecio = T000225_A30LugarSectorPrecio[0];
+            ZM0211( -16) ;
          }
-         pr_default.close(16);
+         pr_default.close(19);
          OnLoadActions0211( ) ;
       }
 
       protected void OnLoadActions0211( )
       {
+         if ( IsIns( )  )
+         {
+            A40000GXC1 = (int)(O40000GXC1+1);
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
+         else
+         {
+            if ( IsUpd( )  )
+            {
+               A40000GXC1 = O40000GXC1;
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            }
+            else
+            {
+               if ( IsDlt( )  )
+               {
+                  A40000GXC1 = (int)(O40000GXC1-1);
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+               }
+            }
+         }
       }
 
       protected void CheckExtendedTable0211( )
@@ -2011,6 +2227,38 @@ namespace GeneXus.Programs {
          nIsDirty_11 = 0;
          Gx_BScreen = 1;
          standaloneModal0211( ) ;
+         if ( IsIns( )  )
+         {
+            nIsDirty_11 = 1;
+            A40000GXC1 = (int)(O40000GXC1+1);
+            n40000GXC1 = false;
+            AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         }
+         else
+         {
+            if ( IsUpd( )  )
+            {
+               nIsDirty_11 = 1;
+               A40000GXC1 = O40000GXC1;
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            }
+            else
+            {
+               if ( IsDlt( )  )
+               {
+                  nIsDirty_11 = 1;
+                  A40000GXC1 = (int)(O40000GXC1-1);
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+               }
+            }
+         }
+         if ( A40000GXC1 < 0 )
+         {
+            GX_msglist.addItem("El lugar debe tener al menos un sector", 1, "");
+            AnyError = 1;
+         }
       }
 
       protected void CloseExtendedTableCursors0211( )
@@ -2023,9 +2271,9 @@ namespace GeneXus.Programs {
 
       protected void GetKey0211( )
       {
-         /* Using cursor T000219 */
-         pr_default.execute(17, new Object[] {A4LugarId, A27LugarSectorId});
-         if ( (pr_default.getStatus(17) != 101) )
+         /* Using cursor T000226 */
+         pr_default.execute(20, new Object[] {A4LugarId, A27LugarSectorId});
+         if ( (pr_default.getStatus(20) != 101) )
          {
             RcdFound11 = 1;
          }
@@ -2033,7 +2281,7 @@ namespace GeneXus.Programs {
          {
             RcdFound11 = 0;
          }
-         pr_default.close(17);
+         pr_default.close(20);
       }
 
       protected void getByPrimaryKey0211( )
@@ -2042,7 +2290,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A4LugarId, A27LugarSectorId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0211( 10) ;
+            ZM0211( 16) ;
             RcdFound11 = 1;
             InitializeNonKey0211( ) ;
             A27LugarSectorId = T00023_A27LugarSectorId[0];
@@ -2134,11 +2382,11 @@ namespace GeneXus.Programs {
                   BeforeInsert0211( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000220 */
-                     pr_default.execute(18, new Object[] {A4LugarId, A27LugarSectorId, A28LugarSectorName, A29LugarSectorCantidad, A30LugarSectorPrecio});
-                     pr_default.close(18);
+                     /* Using cursor T000227 */
+                     pr_default.execute(21, new Object[] {A4LugarId, A27LugarSectorId, A28LugarSectorName, A29LugarSectorCantidad, A30LugarSectorPrecio});
+                     pr_default.close(21);
                      dsDefault.SmartCacheProvider.SetUpdated("LugarSector");
-                     if ( (pr_default.getStatus(18) == 1) )
+                     if ( (pr_default.getStatus(21) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
                         AnyError = 1;
@@ -2189,11 +2437,11 @@ namespace GeneXus.Programs {
                      BeforeUpdate0211( ) ;
                      if ( AnyError == 0 )
                      {
-                        /* Using cursor T000221 */
-                        pr_default.execute(19, new Object[] {A28LugarSectorName, A29LugarSectorCantidad, A30LugarSectorPrecio, A4LugarId, A27LugarSectorId});
-                        pr_default.close(19);
+                        /* Using cursor T000228 */
+                        pr_default.execute(22, new Object[] {A28LugarSectorName, A29LugarSectorCantidad, A30LugarSectorPrecio, A4LugarId, A27LugarSectorId});
+                        pr_default.close(22);
                         dsDefault.SmartCacheProvider.SetUpdated("LugarSector");
-                        if ( (pr_default.getStatus(19) == 103) )
+                        if ( (pr_default.getStatus(22) == 103) )
                         {
                            GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"LugarSector"}), "RecordIsLocked", 1, "");
                            AnyError = 1;
@@ -2245,9 +2493,9 @@ namespace GeneXus.Programs {
                if ( AnyError == 0 )
                {
                   /* No cascading delete specified. */
-                  /* Using cursor T000222 */
-                  pr_default.execute(20, new Object[] {A4LugarId, A27LugarSectorId});
-                  pr_default.close(20);
+                  /* Using cursor T000229 */
+                  pr_default.execute(23, new Object[] {A4LugarId, A27LugarSectorId});
+                  pr_default.close(23);
                   dsDefault.SmartCacheProvider.SetUpdated("LugarSector");
                   if ( AnyError == 0 )
                   {
@@ -2273,7 +2521,34 @@ namespace GeneXus.Programs {
       protected void OnDeleteControls0211( )
       {
          standaloneModal0211( ) ;
-         /* No delete mode formulas found. */
+         if ( AnyError == 0 )
+         {
+            /* Delete mode formulas */
+            if ( IsIns( )  )
+            {
+               A40000GXC1 = (int)(O40000GXC1+1);
+               n40000GXC1 = false;
+               AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+            }
+            else
+            {
+               if ( IsUpd( )  )
+               {
+                  A40000GXC1 = O40000GXC1;
+                  n40000GXC1 = false;
+                  AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+               }
+               else
+               {
+                  if ( IsDlt( )  )
+                  {
+                     A40000GXC1 = (int)(O40000GXC1-1);
+                     n40000GXC1 = false;
+                     AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+                  }
+               }
+            }
+         }
       }
 
       protected void EndLevel0211( )
@@ -2292,13 +2567,13 @@ namespace GeneXus.Programs {
       public void ScanStart0211( )
       {
          /* Scan By routine */
-         /* Using cursor T000223 */
-         pr_default.execute(21, new Object[] {A4LugarId});
+         /* Using cursor T000230 */
+         pr_default.execute(24, new Object[] {A4LugarId});
          RcdFound11 = 0;
-         if ( (pr_default.getStatus(21) != 101) )
+         if ( (pr_default.getStatus(24) != 101) )
          {
             RcdFound11 = 1;
-            A27LugarSectorId = T000223_A27LugarSectorId[0];
+            A27LugarSectorId = T000230_A27LugarSectorId[0];
          }
          /* Load Subordinate Levels */
       }
@@ -2306,18 +2581,18 @@ namespace GeneXus.Programs {
       protected void ScanNext0211( )
       {
          /* Scan next routine */
-         pr_default.readNext(21);
+         pr_default.readNext(24);
          RcdFound11 = 0;
-         if ( (pr_default.getStatus(21) != 101) )
+         if ( (pr_default.getStatus(24) != 101) )
          {
             RcdFound11 = 1;
-            A27LugarSectorId = T000223_A27LugarSectorId[0];
+            A27LugarSectorId = T000230_A27LugarSectorId[0];
          }
       }
 
       protected void ScanEnd0211( )
       {
-         pr_default.close(21);
+         pr_default.close(24);
       }
 
       protected void AfterConfirm0211( )
@@ -2449,9 +2724,8 @@ namespace GeneXus.Programs {
          }
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_11_" + sGXsfl_58_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 59,'',false,'" + sGXsfl_58_idx + "',58)\"";
          ROClassString = "Attribute";
-         Gridlugar_sectorRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtLugarSectorId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A27LugarSectorId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A27LugarSectorId), "ZZZ9"))," inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,59);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtLugarSectorId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"",(string)"",(short)-1,(int)edtLugarSectorId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
+         Gridlugar_sectorRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtLugarSectorId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A27LugarSectorId), 4, 0, ",", "")),StringUtil.LTrim( ((edtLugarSectorId_Enabled!=0) ? context.localUtil.Format( (decimal)(A27LugarSectorId), "ZZZ9") : context.localUtil.Format( (decimal)(A27LugarSectorId), "ZZZ9"))),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtLugarSectorId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"",(string)"",(short)-1,(int)edtLugarSectorId_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
          TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_11_" + sGXsfl_58_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 60,'',false,'" + sGXsfl_58_idx + "',58)\"";
@@ -2513,19 +2787,7 @@ namespace GeneXus.Programs {
          edtLugarSectorName_Enabled = (int)(context.localUtil.CToN( cgiGet( "LUGARSECTORNAME_"+sGXsfl_58_idx+"Enabled"), ",", "."));
          edtLugarSectorCantidad_Enabled = (int)(context.localUtil.CToN( cgiGet( "LUGARSECTORCANTIDAD_"+sGXsfl_58_idx+"Enabled"), ",", "."));
          edtLugarSectorPrecio_Enabled = (int)(context.localUtil.CToN( cgiGet( "LUGARSECTORPRECIO_"+sGXsfl_58_idx+"Enabled"), ",", "."));
-         if ( ( ( context.localUtil.CToN( cgiGet( edtLugarSectorId_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtLugarSectorId_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
-         {
-            GXCCtl = "LUGARSECTORID_" + sGXsfl_58_idx;
-            GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, GXCCtl);
-            AnyError = 1;
-            GX_FocusControl = edtLugarSectorId_Internalname;
-            wbErr = true;
-            A27LugarSectorId = 0;
-         }
-         else
-         {
-            A27LugarSectorId = (short)(context.localUtil.CToN( cgiGet( edtLugarSectorId_Internalname), ",", "."));
-         }
+         A27LugarSectorId = (short)(context.localUtil.CToN( cgiGet( edtLugarSectorId_Internalname), ",", "."));
          A28LugarSectorName = cgiGet( edtLugarSectorName_Internalname);
          if ( ( ( context.localUtil.CToN( cgiGet( edtLugarSectorCantidad_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtLugarSectorCantidad_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
          {
@@ -2625,7 +2887,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228913591990", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228923291989", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -2679,6 +2941,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "Z4LugarId", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z4LugarId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z5LugarName", Z5LugarName);
          GxWebStd.gx_hidden_field( context, "Z3PaisId", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z3PaisId), 4, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "O40000GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(O40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
@@ -2699,6 +2962,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vLUGARID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7LugarId), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vLUGARID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV7LugarId), "ZZZ9"), context));
          GxWebStd.gx_hidden_field( context, "vINSERT_PAISID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV11Insert_PaisId), 4, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV13Pgmname));
       }
 
@@ -2777,6 +3041,12 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "A5LugarName", A5LugarName);
          A6PaisName = "";
          AssignAttri("", false, "A6PaisName", A6PaisName);
+         A40000GXC1 = 0;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
+         O40000GXC1 = A40000GXC1;
+         n40000GXC1 = false;
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrimStr( (decimal)(A40000GXC1), 9, 0));
          Z5LugarName = "";
          Z3PaisId = 0;
       }
@@ -2823,7 +3093,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228913591994", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228923291994", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2839,7 +3109,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("lugar.js", "?20228913591994", false, true);
+         context.AddJavascriptSource("lugar.js", "?20228923291994", false, true);
          /* End function include_jscripts */
       }
 
@@ -2939,7 +3209,7 @@ namespace GeneXus.Programs {
          edtLugarSectorPrecio_Enabled = 1;
          edtLugarSectorCantidad_Enabled = 1;
          edtLugarSectorName_Enabled = 1;
-         edtLugarSectorId_Enabled = 1;
+         edtLugarSectorId_Enabled = 0;
          bttBtn_delete_Enabled = 0;
          bttBtn_delete_Visible = 1;
          bttBtn_cancel_Visible = 1;
@@ -3022,18 +3292,45 @@ namespace GeneXus.Programs {
          return ((StringUtil.StrCmp(Gx_mode, "DSP")==0) ? true : false) ;
       }
 
+      public void Valid_Lugarid( )
+      {
+         n40000GXC1 = false;
+         /* Using cursor T000221 */
+         pr_default.execute(15, new Object[] {A4LugarId});
+         if ( (pr_default.getStatus(15) != 101) )
+         {
+            A40000GXC1 = T000221_A40000GXC1[0];
+            n40000GXC1 = T000221_n40000GXC1[0];
+         }
+         else
+         {
+            A40000GXC1 = 0;
+            n40000GXC1 = false;
+         }
+         pr_default.close(15);
+         if ( A40000GXC1 < 0 )
+         {
+            GX_msglist.addItem("El lugar debe tener al menos un sector", 1, "LUGARID");
+            AnyError = 1;
+            GX_FocusControl = edtLugarId_Internalname;
+         }
+         dynload_actions( ) ;
+         /*  Sending validation outputs */
+         AssignAttri("", false, "A40000GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ".", "")));
+      }
+
       public void Valid_Paisid( )
       {
-         /* Using cursor T000215 */
-         pr_default.execute(13, new Object[] {A3PaisId});
-         if ( (pr_default.getStatus(13) == 101) )
+         /* Using cursor T000222 */
+         pr_default.execute(16, new Object[] {A3PaisId});
+         if ( (pr_default.getStatus(16) == 101) )
          {
             GX_msglist.addItem("No existe 'Pais'.", "ForeignKeyNotFound", 1, "PAISID");
             AnyError = 1;
             GX_FocusControl = edtPaisId_Internalname;
          }
-         A6PaisName = T000215_A6PaisName[0];
-         pr_default.close(13);
+         A6PaisName = T000222_A6PaisName[0];
+         pr_default.close(16);
          dynload_actions( ) ;
          /*  Sending validation outputs */
          AssignAttri("", false, "A6PaisName", A6PaisName);
@@ -3052,8 +3349,10 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH",",oparms:[]}");
          setEventMetadata("AFTER TRN","{handler:'E12022',iparms:[{av:'Gx_mode',fld:'vMODE',pic:'@!',hsh:true},{av:'AV9TrnContext',fld:'vTRNCONTEXT',pic:'',hsh:true}]");
          setEventMetadata("AFTER TRN",",oparms:[]}");
-         setEventMetadata("VALID_LUGARID","{handler:'Valid_Lugarid',iparms:[]");
-         setEventMetadata("VALID_LUGARID",",oparms:[]}");
+         setEventMetadata("VALID_LUGARID","{handler:'Valid_Lugarid',iparms:[{av:'A4LugarId',fld:'LUGARID',pic:'ZZZ9'},{av:'A40000GXC1',fld:'GXC1',pic:'999999999'}]");
+         setEventMetadata("VALID_LUGARID",",oparms:[{av:'A40000GXC1',fld:'GXC1',pic:'999999999'}]}");
+         setEventMetadata("VALID_LUGARNAME","{handler:'Valid_Lugarname',iparms:[]");
+         setEventMetadata("VALID_LUGARNAME",",oparms:[]}");
          setEventMetadata("VALID_PAISID","{handler:'Valid_Paisid',iparms:[{av:'A3PaisId',fld:'PAISID',pic:'ZZZ9'},{av:'A6PaisName',fld:'PAISNAME',pic:''}]");
          setEventMetadata("VALID_PAISID",",oparms:[{av:'A6PaisName',fld:'PAISNAME',pic:''}]}");
          setEventMetadata("VALID_LUGARSECTORID","{handler:'Valid_Lugarsectorid',iparms:[]");
@@ -3076,8 +3375,9 @@ namespace GeneXus.Programs {
       protected void CloseOpenCursors( )
       {
          pr_default.close(1);
-         pr_default.close(3);
-         pr_default.close(13);
+         pr_default.close(4);
+         pr_default.close(16);
+         pr_default.close(15);
       }
 
       public override void initialize( )
@@ -3123,38 +3423,45 @@ namespace GeneXus.Programs {
          sEvtType = "";
          endTrnMsgTxt = "";
          endTrnMsgCod = "";
-         GXCCtl = "";
          A28LugarSectorName = "";
+         T00025_A40000GXC1 = new int[1] ;
+         T00025_n40000GXC1 = new bool[] {false} ;
          AV9TrnContext = new SdtTransactionContext(context);
          AV10WebSession = context.GetSession();
          AV12TrnContextAtt = new SdtTransactionContext_Attribute(context);
          Z6PaisName = "";
-         T00026_A6PaisName = new string[] {""} ;
+         T00028_A6PaisName = new string[] {""} ;
+         T000210_A4LugarId = new short[1] ;
+         T000210_A5LugarName = new string[] {""} ;
+         T000210_A6PaisName = new string[] {""} ;
+         T000210_A3PaisId = new short[1] ;
+         T000210_A40000GXC1 = new int[1] ;
+         T000210_n40000GXC1 = new bool[] {false} ;
+         T000212_A40000GXC1 = new int[1] ;
+         T000212_n40000GXC1 = new bool[] {false} ;
+         T000213_A6PaisName = new string[] {""} ;
+         T000214_A4LugarId = new short[1] ;
          T00027_A4LugarId = new short[1] ;
          T00027_A5LugarName = new string[] {""} ;
-         T00027_A6PaisName = new string[] {""} ;
          T00027_A3PaisId = new short[1] ;
-         T00028_A6PaisName = new string[] {""} ;
-         T00029_A4LugarId = new short[1] ;
-         T00025_A4LugarId = new short[1] ;
-         T00025_A5LugarName = new string[] {""} ;
-         T00025_A3PaisId = new short[1] ;
-         T000210_A4LugarId = new short[1] ;
-         T000211_A4LugarId = new short[1] ;
-         T00024_A4LugarId = new short[1] ;
-         T00024_A5LugarName = new string[] {""} ;
-         T00024_A3PaisId = new short[1] ;
-         T000212_A4LugarId = new short[1] ;
-         T000215_A6PaisName = new string[] {""} ;
-         T000216_A1EspectaculoId = new short[1] ;
+         T000215_A4LugarId = new short[1] ;
+         T000216_A4LugarId = new short[1] ;
+         T00026_A4LugarId = new short[1] ;
+         T00026_A5LugarName = new string[] {""} ;
+         T00026_A3PaisId = new short[1] ;
          T000217_A4LugarId = new short[1] ;
-         T000218_A4LugarId = new short[1] ;
-         T000218_A27LugarSectorId = new short[1] ;
-         T000218_A28LugarSectorName = new string[] {""} ;
-         T000218_A29LugarSectorCantidad = new short[1] ;
-         T000218_A30LugarSectorPrecio = new short[1] ;
-         T000219_A4LugarId = new short[1] ;
-         T000219_A27LugarSectorId = new short[1] ;
+         T000221_A40000GXC1 = new int[1] ;
+         T000221_n40000GXC1 = new bool[] {false} ;
+         T000222_A6PaisName = new string[] {""} ;
+         T000223_A1EspectaculoId = new short[1] ;
+         T000224_A4LugarId = new short[1] ;
+         T000225_A4LugarId = new short[1] ;
+         T000225_A27LugarSectorId = new short[1] ;
+         T000225_A28LugarSectorName = new string[] {""} ;
+         T000225_A29LugarSectorCantidad = new short[1] ;
+         T000225_A30LugarSectorPrecio = new short[1] ;
+         T000226_A4LugarId = new short[1] ;
+         T000226_A27LugarSectorId = new short[1] ;
          T00023_A4LugarId = new short[1] ;
          T00023_A27LugarSectorId = new short[1] ;
          T00023_A28LugarSectorName = new string[] {""} ;
@@ -3165,11 +3472,12 @@ namespace GeneXus.Programs {
          T00022_A28LugarSectorName = new string[] {""} ;
          T00022_A29LugarSectorCantidad = new short[1] ;
          T00022_A30LugarSectorPrecio = new short[1] ;
-         T000223_A4LugarId = new short[1] ;
-         T000223_A27LugarSectorId = new short[1] ;
+         T000230_A4LugarId = new short[1] ;
+         T000230_A27LugarSectorId = new short[1] ;
          Gridlugar_sectorRow = new GXWebRow();
          subGridlugar_sector_Linesclass = "";
          ROClassString = "";
+         GXCCtl = "";
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -3183,59 +3491,68 @@ namespace GeneXus.Programs {
                T00023_A4LugarId, T00023_A27LugarSectorId, T00023_A28LugarSectorName, T00023_A29LugarSectorCantidad, T00023_A30LugarSectorPrecio
                }
                , new Object[] {
-               T00024_A4LugarId, T00024_A5LugarName, T00024_A3PaisId
+               T00025_A40000GXC1, T00025_n40000GXC1
                }
                , new Object[] {
-               T00025_A4LugarId, T00025_A5LugarName, T00025_A3PaisId
+               T00026_A4LugarId, T00026_A5LugarName, T00026_A3PaisId
                }
                , new Object[] {
-               T00026_A6PaisName
-               }
-               , new Object[] {
-               T00027_A4LugarId, T00027_A5LugarName, T00027_A6PaisName, T00027_A3PaisId
+               T00027_A4LugarId, T00027_A5LugarName, T00027_A3PaisId
                }
                , new Object[] {
                T00028_A6PaisName
                }
                , new Object[] {
-               T00029_A4LugarId
+               T000210_A4LugarId, T000210_A5LugarName, T000210_A6PaisName, T000210_A3PaisId, T000210_A40000GXC1, T000210_n40000GXC1
                }
                , new Object[] {
-               T000210_A4LugarId
+               T000212_A40000GXC1, T000212_n40000GXC1
                }
                , new Object[] {
-               T000211_A4LugarId
+               T000213_A6PaisName
                }
                , new Object[] {
-               T000212_A4LugarId
+               T000214_A4LugarId
                }
                , new Object[] {
+               T000215_A4LugarId
                }
                , new Object[] {
-               }
-               , new Object[] {
-               T000215_A6PaisName
-               }
-               , new Object[] {
-               T000216_A1EspectaculoId
+               T000216_A4LugarId
                }
                , new Object[] {
                T000217_A4LugarId
                }
                , new Object[] {
-               T000218_A4LugarId, T000218_A27LugarSectorId, T000218_A28LugarSectorName, T000218_A29LugarSectorCantidad, T000218_A30LugarSectorPrecio
-               }
-               , new Object[] {
-               T000219_A4LugarId, T000219_A27LugarSectorId
                }
                , new Object[] {
                }
                , new Object[] {
+               T000221_A40000GXC1, T000221_n40000GXC1
+               }
+               , new Object[] {
+               T000222_A6PaisName
+               }
+               , new Object[] {
+               T000223_A1EspectaculoId
+               }
+               , new Object[] {
+               T000224_A4LugarId
+               }
+               , new Object[] {
+               T000225_A4LugarId, T000225_A27LugarSectorId, T000225_A28LugarSectorName, T000225_A29LugarSectorCantidad, T000225_A30LugarSectorPrecio
+               }
+               , new Object[] {
+               T000226_A4LugarId, T000226_A27LugarSectorId
                }
                , new Object[] {
                }
                , new Object[] {
-               T000223_A4LugarId, T000223_A27LugarSectorId
+               }
+               , new Object[] {
+               }
+               , new Object[] {
+               T000230_A4LugarId, T000230_A27LugarSectorId
                }
             }
          );
@@ -3253,6 +3570,7 @@ namespace GeneXus.Programs {
       private short nRcdExists_11 ;
       private short nIsMod_11 ;
       private short GxWebError ;
+      private short A4LugarId ;
       private short A3PaisId ;
       private short AV7LugarId ;
       private short gxcookieaux ;
@@ -3261,7 +3579,6 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short nKeyPressed ;
       private short initialized ;
-      private short A4LugarId ;
       private short nBlankRcdCount11 ;
       private short RcdFound11 ;
       private short nBlankRcdUsr11 ;
@@ -3281,6 +3598,7 @@ namespace GeneXus.Programs {
       private short subGridlugar_sector_Allowhovering ;
       private short subGridlugar_sector_Allowcollapsing ;
       private short subGridlugar_sector_Collapsed ;
+      private int O40000GXC1 ;
       private int nRC_GXsfl_58 ;
       private int nGXsfl_58_idx=1 ;
       private int trnEnded ;
@@ -3299,12 +3617,16 @@ namespace GeneXus.Programs {
       private int bttBtn_cancel_Visible ;
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
+      private int B40000GXC1 ;
+      private int A40000GXC1 ;
       private int edtLugarSectorId_Enabled ;
       private int edtLugarSectorName_Enabled ;
       private int edtLugarSectorCantidad_Enabled ;
       private int edtLugarSectorPrecio_Enabled ;
       private int fRowAdded ;
+      private int s40000GXC1 ;
       private int AV14GXV1 ;
+      private int Z40000GXC1 ;
       private int subGridlugar_sector_Backcolor ;
       private int subGridlugar_sector_Allbackcolor ;
       private int defedtLugarSectorId_Enabled ;
@@ -3381,7 +3703,6 @@ namespace GeneXus.Programs {
       private string sEvtType ;
       private string endTrnMsgTxt ;
       private string endTrnMsgCod ;
-      private string GXCCtl ;
       private string sGXsfl_58_fel_idx="0001" ;
       private string subGridlugar_sector_Class ;
       private string subGridlugar_sector_Linesclass ;
@@ -3390,6 +3711,7 @@ namespace GeneXus.Programs {
       private string edtLugarSectorName_Jsonclick ;
       private string edtLugarSectorCantidad_Jsonclick ;
       private string edtLugarSectorPrecio_Jsonclick ;
+      private string GXCCtl ;
       private string sDynURL ;
       private string FormProcess ;
       private string bodyStyle ;
@@ -3397,6 +3719,7 @@ namespace GeneXus.Programs {
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbErr ;
+      private bool n40000GXC1 ;
       private bool bGXsfl_58_Refreshing=false ;
       private bool returnInSub ;
       private string Z5LugarName ;
@@ -3412,32 +3735,40 @@ namespace GeneXus.Programs {
       private GXWebColumn Gridlugar_sectorColumn ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private string[] T00026_A6PaisName ;
+      private int[] T00025_A40000GXC1 ;
+      private bool[] T00025_n40000GXC1 ;
+      private string[] T00028_A6PaisName ;
+      private short[] T000210_A4LugarId ;
+      private string[] T000210_A5LugarName ;
+      private string[] T000210_A6PaisName ;
+      private short[] T000210_A3PaisId ;
+      private int[] T000210_A40000GXC1 ;
+      private bool[] T000210_n40000GXC1 ;
+      private int[] T000212_A40000GXC1 ;
+      private bool[] T000212_n40000GXC1 ;
+      private string[] T000213_A6PaisName ;
+      private short[] T000214_A4LugarId ;
       private short[] T00027_A4LugarId ;
       private string[] T00027_A5LugarName ;
-      private string[] T00027_A6PaisName ;
       private short[] T00027_A3PaisId ;
-      private string[] T00028_A6PaisName ;
-      private short[] T00029_A4LugarId ;
-      private short[] T00025_A4LugarId ;
-      private string[] T00025_A5LugarName ;
-      private short[] T00025_A3PaisId ;
-      private short[] T000210_A4LugarId ;
-      private short[] T000211_A4LugarId ;
-      private short[] T00024_A4LugarId ;
-      private string[] T00024_A5LugarName ;
-      private short[] T00024_A3PaisId ;
-      private short[] T000212_A4LugarId ;
-      private string[] T000215_A6PaisName ;
-      private short[] T000216_A1EspectaculoId ;
+      private short[] T000215_A4LugarId ;
+      private short[] T000216_A4LugarId ;
+      private short[] T00026_A4LugarId ;
+      private string[] T00026_A5LugarName ;
+      private short[] T00026_A3PaisId ;
       private short[] T000217_A4LugarId ;
-      private short[] T000218_A4LugarId ;
-      private short[] T000218_A27LugarSectorId ;
-      private string[] T000218_A28LugarSectorName ;
-      private short[] T000218_A29LugarSectorCantidad ;
-      private short[] T000218_A30LugarSectorPrecio ;
-      private short[] T000219_A4LugarId ;
-      private short[] T000219_A27LugarSectorId ;
+      private int[] T000221_A40000GXC1 ;
+      private bool[] T000221_n40000GXC1 ;
+      private string[] T000222_A6PaisName ;
+      private short[] T000223_A1EspectaculoId ;
+      private short[] T000224_A4LugarId ;
+      private short[] T000225_A4LugarId ;
+      private short[] T000225_A27LugarSectorId ;
+      private string[] T000225_A28LugarSectorName ;
+      private short[] T000225_A29LugarSectorCantidad ;
+      private short[] T000225_A30LugarSectorPrecio ;
+      private short[] T000226_A4LugarId ;
+      private short[] T000226_A27LugarSectorId ;
       private short[] T00023_A4LugarId ;
       private short[] T00023_A27LugarSectorId ;
       private string[] T00023_A28LugarSectorName ;
@@ -3448,8 +3779,8 @@ namespace GeneXus.Programs {
       private string[] T00022_A28LugarSectorName ;
       private short[] T00022_A29LugarSectorCantidad ;
       private short[] T00022_A30LugarSectorPrecio ;
-      private short[] T000223_A4LugarId ;
-      private short[] T000223_A27LugarSectorId ;
+      private short[] T000230_A4LugarId ;
+      private short[] T000230_A27LugarSectorId ;
       private GXWebForm Form ;
       private SdtTransactionContext AV9TrnContext ;
       private SdtTransactionContext_Attribute AV12TrnContextAtt ;
@@ -3472,17 +3803,20 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[8])
          ,new ForEachCursor(def[9])
          ,new ForEachCursor(def[10])
-         ,new UpdateCursor(def[11])
-         ,new UpdateCursor(def[12])
-         ,new ForEachCursor(def[13])
-         ,new ForEachCursor(def[14])
+         ,new ForEachCursor(def[11])
+         ,new ForEachCursor(def[12])
+         ,new UpdateCursor(def[13])
+         ,new UpdateCursor(def[14])
          ,new ForEachCursor(def[15])
          ,new ForEachCursor(def[16])
          ,new ForEachCursor(def[17])
-         ,new UpdateCursor(def[18])
-         ,new UpdateCursor(def[19])
-         ,new UpdateCursor(def[20])
-         ,new ForEachCursor(def[21])
+         ,new ForEachCursor(def[18])
+         ,new ForEachCursor(def[19])
+         ,new ForEachCursor(def[20])
+         ,new UpdateCursor(def[21])
+         ,new UpdateCursor(def[22])
+         ,new UpdateCursor(def[23])
+         ,new ForEachCursor(def[24])
        };
     }
 
@@ -3491,67 +3825,75 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmT00027;
-          prmT00027 = new Object[] {
-          new ParDef("@LugarId",GXType.Int16,4,0)
-          };
-          Object[] prmT00026;
-          prmT00026 = new Object[] {
-          new ParDef("@PaisId",GXType.Int16,4,0)
-          };
-          Object[] prmT00028;
-          prmT00028 = new Object[] {
-          new ParDef("@PaisId",GXType.Int16,4,0)
-          };
-          Object[] prmT00029;
-          prmT00029 = new Object[] {
+          Object[] prmT000210;
+          prmT000210 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0)
           };
           Object[] prmT00025;
           prmT00025 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0)
           };
-          Object[] prmT000210;
-          prmT000210 = new Object[] {
-          new ParDef("@LugarId",GXType.Int16,4,0)
-          };
-          Object[] prmT000211;
-          prmT000211 = new Object[] {
-          new ParDef("@LugarId",GXType.Int16,4,0)
-          };
-          Object[] prmT00024;
-          prmT00024 = new Object[] {
-          new ParDef("@LugarId",GXType.Int16,4,0)
+          Object[] prmT00028;
+          prmT00028 = new Object[] {
+          new ParDef("@PaisId",GXType.Int16,4,0)
           };
           Object[] prmT000212;
           prmT000212 = new Object[] {
-          new ParDef("@LugarName",GXType.NVarChar,40,0) ,
-          new ParDef("@PaisId",GXType.Int16,4,0)
+          new ParDef("@LugarId",GXType.Int16,4,0)
           };
           Object[] prmT000213;
           prmT000213 = new Object[] {
-          new ParDef("@LugarName",GXType.NVarChar,40,0) ,
-          new ParDef("@PaisId",GXType.Int16,4,0) ,
-          new ParDef("@LugarId",GXType.Int16,4,0)
+          new ParDef("@PaisId",GXType.Int16,4,0)
           };
           Object[] prmT000214;
           prmT000214 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
+          Object[] prmT00027;
+          prmT00027 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
+          Object[] prmT000215;
+          prmT000215 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0)
           };
           Object[] prmT000216;
           prmT000216 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0)
           };
+          Object[] prmT00026;
+          prmT00026 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
           Object[] prmT000217;
           prmT000217 = new Object[] {
+          new ParDef("@LugarName",GXType.NVarChar,40,0) ,
+          new ParDef("@PaisId",GXType.Int16,4,0)
           };
           Object[] prmT000218;
           prmT000218 = new Object[] {
-          new ParDef("@LugarId",GXType.Int16,4,0) ,
-          new ParDef("@LugarSectorId",GXType.Int16,4,0)
+          new ParDef("@LugarName",GXType.NVarChar,40,0) ,
+          new ParDef("@PaisId",GXType.Int16,4,0) ,
+          new ParDef("@LugarId",GXType.Int16,4,0)
           };
           Object[] prmT000219;
           prmT000219 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
+          Object[] prmT000223;
+          prmT000223 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
+          Object[] prmT000224;
+          prmT000224 = new Object[] {
+          };
+          Object[] prmT000225;
+          prmT000225 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0) ,
+          new ParDef("@LugarSectorId",GXType.Int16,4,0)
+          };
+          Object[] prmT000226;
+          prmT000226 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorId",GXType.Int16,4,0)
           };
@@ -3565,58 +3907,65 @@ namespace GeneXus.Programs {
           new ParDef("@LugarId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorId",GXType.Int16,4,0)
           };
-          Object[] prmT000220;
-          prmT000220 = new Object[] {
+          Object[] prmT000227;
+          prmT000227 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorName",GXType.NVarChar,40,0) ,
           new ParDef("@LugarSectorCantidad",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorPrecio",GXType.Int16,4,0)
           };
-          Object[] prmT000221;
-          prmT000221 = new Object[] {
+          Object[] prmT000228;
+          prmT000228 = new Object[] {
           new ParDef("@LugarSectorName",GXType.NVarChar,40,0) ,
           new ParDef("@LugarSectorCantidad",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorPrecio",GXType.Int16,4,0) ,
           new ParDef("@LugarId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorId",GXType.Int16,4,0)
           };
-          Object[] prmT000222;
-          prmT000222 = new Object[] {
+          Object[] prmT000229;
+          prmT000229 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0) ,
           new ParDef("@LugarSectorId",GXType.Int16,4,0)
           };
-          Object[] prmT000223;
-          prmT000223 = new Object[] {
+          Object[] prmT000230;
+          prmT000230 = new Object[] {
           new ParDef("@LugarId",GXType.Int16,4,0)
           };
-          Object[] prmT000215;
-          prmT000215 = new Object[] {
+          Object[] prmT000221;
+          prmT000221 = new Object[] {
+          new ParDef("@LugarId",GXType.Int16,4,0)
+          };
+          Object[] prmT000222;
+          prmT000222 = new Object[] {
           new ParDef("@PaisId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
               new CursorDef("T00022", "SELECT [LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio] FROM [LugarSector] WITH (UPDLOCK) WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00022,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T00023", "SELECT [LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio] FROM [LugarSector] WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00023,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00024", "SELECT [LugarId], [LugarName], [PaisId] FROM [Lugar] WITH (UPDLOCK) WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00024,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00025", "SELECT [LugarId], [LugarName], [PaisId] FROM [Lugar] WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00025,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00026", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00026,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00027", "SELECT TM1.[LugarId], TM1.[LugarName], T2.[PaisName], TM1.[PaisId] FROM ([Lugar] TM1 INNER JOIN [Pais] T2 ON T2.[PaisId] = TM1.[PaisId]) WHERE TM1.[LugarId] = @LugarId ORDER BY TM1.[LugarId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00027,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T00025", "SELECT COALESCE( T1.[GXC1], 0) AS GXC1 FROM (SELECT COUNT(*) AS GXC1, [LugarId] FROM [LugarSector] WITH (UPDLOCK) GROUP BY [LugarId] ) T1 WHERE T1.[LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00025,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T00026", "SELECT [LugarId], [LugarName], [PaisId] FROM [Lugar] WITH (UPDLOCK) WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00026,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T00027", "SELECT [LugarId], [LugarName], [PaisId] FROM [Lugar] WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00027,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T00028", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT00028,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00029", "SELECT [LugarId] FROM [Lugar] WHERE [LugarId] = @LugarId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00029,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000210", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE ( [LugarId] > @LugarId) ORDER BY [LugarId]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000210,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000211", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE ( [LugarId] < @LugarId) ORDER BY [LugarId] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000211,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000212", "INSERT INTO [Lugar]([LugarName], [PaisId]) VALUES(@LugarName, @PaisId); SELECT SCOPE_IDENTITY()",true, GxErrorMask.GX_NOMASK, false, this,prmT000212,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000213", "UPDATE [Lugar] SET [LugarName]=@LugarName, [PaisId]=@PaisId  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmT000213)
-             ,new CursorDef("T000214", "DELETE FROM [Lugar]  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmT000214)
-             ,new CursorDef("T000215", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000215,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000216", "SELECT TOP 1 [EspectaculoId] FROM [Espectaculo] WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000216,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T000217", "SELECT [LugarId] FROM [Lugar] ORDER BY [LugarId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000217,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000218", "SELECT [LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio] FROM [LugarSector] WHERE [LugarId] = @LugarId and [LugarSectorId] = @LugarSectorId ORDER BY [LugarId], [LugarSectorId] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000218,11, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000219", "SELECT [LugarId], [LugarSectorId] FROM [LugarSector] WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000219,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T000220", "INSERT INTO [LugarSector]([LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio]) VALUES(@LugarId, @LugarSectorId, @LugarSectorName, @LugarSectorCantidad, @LugarSectorPrecio)", GxErrorMask.GX_NOMASK,prmT000220)
-             ,new CursorDef("T000221", "UPDATE [LugarSector] SET [LugarSectorName]=@LugarSectorName, [LugarSectorCantidad]=@LugarSectorCantidad, [LugarSectorPrecio]=@LugarSectorPrecio  WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId", GxErrorMask.GX_NOMASK,prmT000221)
-             ,new CursorDef("T000222", "DELETE FROM [LugarSector]  WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId", GxErrorMask.GX_NOMASK,prmT000222)
-             ,new CursorDef("T000223", "SELECT [LugarId], [LugarSectorId] FROM [LugarSector] WHERE [LugarId] = @LugarId ORDER BY [LugarId], [LugarSectorId] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000223,11, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000210", "SELECT TM1.[LugarId], TM1.[LugarName], T3.[PaisName], TM1.[PaisId], COALESCE( T2.[GXC1], 0) AS GXC1 FROM (([Lugar] TM1 LEFT JOIN (SELECT COUNT(*) AS GXC1, [LugarId] FROM [LugarSector] GROUP BY [LugarId] ) T2 ON T2.[LugarId] = TM1.[LugarId]) INNER JOIN [Pais] T3 ON T3.[PaisId] = TM1.[PaisId]) WHERE TM1.[LugarId] = @LugarId ORDER BY TM1.[LugarId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000210,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000212", "SELECT COALESCE( T1.[GXC1], 0) AS GXC1 FROM (SELECT COUNT(*) AS GXC1, [LugarId] FROM [LugarSector] WITH (UPDLOCK) GROUP BY [LugarId] ) T1 WHERE T1.[LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000212,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000213", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000213,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000214", "SELECT [LugarId] FROM [Lugar] WHERE [LugarId] = @LugarId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000214,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000215", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE ( [LugarId] > @LugarId) ORDER BY [LugarId]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000215,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000216", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE ( [LugarId] < @LugarId) ORDER BY [LugarId] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000216,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000217", "INSERT INTO [Lugar]([LugarName], [PaisId]) VALUES(@LugarName, @PaisId); SELECT SCOPE_IDENTITY()",true, GxErrorMask.GX_NOMASK, false, this,prmT000217,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000218", "UPDATE [Lugar] SET [LugarName]=@LugarName, [PaisId]=@PaisId  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmT000218)
+             ,new CursorDef("T000219", "DELETE FROM [Lugar]  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmT000219)
+             ,new CursorDef("T000221", "SELECT COALESCE( T1.[GXC1], 0) AS GXC1 FROM (SELECT COUNT(*) AS GXC1, [LugarId] FROM [LugarSector] WITH (UPDLOCK) GROUP BY [LugarId] ) T1 WHERE T1.[LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000221,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000222", "SELECT [PaisName] FROM [Pais] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000222,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000223", "SELECT TOP 1 [EspectaculoId] FROM [Espectaculo] WHERE [LugarId] = @LugarId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000223,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000224", "SELECT [LugarId] FROM [Lugar] ORDER BY [LugarId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000224,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000225", "SELECT [LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio] FROM [LugarSector] WHERE [LugarId] = @LugarId and [LugarSectorId] = @LugarSectorId ORDER BY [LugarId], [LugarSectorId] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000225,11, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000226", "SELECT [LugarId], [LugarSectorId] FROM [LugarSector] WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000226,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000227", "INSERT INTO [LugarSector]([LugarId], [LugarSectorId], [LugarSectorName], [LugarSectorCantidad], [LugarSectorPrecio]) VALUES(@LugarId, @LugarSectorId, @LugarSectorName, @LugarSectorCantidad, @LugarSectorPrecio)", GxErrorMask.GX_NOMASK,prmT000227)
+             ,new CursorDef("T000228", "UPDATE [LugarSector] SET [LugarSectorName]=@LugarSectorName, [LugarSectorCantidad]=@LugarSectorCantidad, [LugarSectorPrecio]=@LugarSectorPrecio  WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId", GxErrorMask.GX_NOMASK,prmT000228)
+             ,new CursorDef("T000229", "DELETE FROM [LugarSector]  WHERE [LugarId] = @LugarId AND [LugarSectorId] = @LugarSectorId", GxErrorMask.GX_NOMASK,prmT000229)
+             ,new CursorDef("T000230", "SELECT [LugarId], [LugarSectorId] FROM [LugarSector] WHERE [LugarId] = @LugarId ORDER BY [LugarId], [LugarSectorId] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000230,11, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -3642,9 +3991,8 @@ namespace GeneXus.Programs {
                 ((short[]) buf[4])[0] = rslt.getShort(5);
                 return;
              case 2 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((string[]) buf[1])[0] = rslt.getVarchar(2);
-                ((short[]) buf[2])[0] = rslt.getShort(3);
+                ((int[]) buf[0])[0] = rslt.getInt(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 3 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
@@ -3652,22 +4000,27 @@ namespace GeneXus.Programs {
                 ((short[]) buf[2])[0] = rslt.getShort(3);
                 return;
              case 4 :
-                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((string[]) buf[1])[0] = rslt.getVarchar(2);
+                ((short[]) buf[2])[0] = rslt.getShort(3);
                 return;
              case 5 :
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                return;
+             case 6 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((string[]) buf[1])[0] = rslt.getVarchar(2);
                 ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
-                return;
-             case 6 :
-                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                ((int[]) buf[4])[0] = rslt.getInt(5);
+                ((bool[]) buf[5])[0] = rslt.wasNull(5);
                 return;
              case 7 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((int[]) buf[0])[0] = rslt.getInt(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 8 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
                 return;
              case 9 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
@@ -3675,27 +4028,37 @@ namespace GeneXus.Programs {
              case 10 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
-             case 13 :
-                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+             case 11 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
-             case 14 :
+             case 12 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 15 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((int[]) buf[0])[0] = rslt.getInt(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 16 :
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                return;
+             case 17 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                return;
+             case 18 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                return;
+             case 19 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
                 ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 ((short[]) buf[3])[0] = rslt.getShort(4);
                 ((short[]) buf[4])[0] = rslt.getShort(5);
                 return;
-             case 17 :
+             case 20 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
                 return;
-             case 21 :
+             case 24 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
                 return;

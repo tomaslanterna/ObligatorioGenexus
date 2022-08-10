@@ -10,9 +10,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include=".\..\apais_dataprovider1\apais_dataprovider1.csproj" />
+		<ProjectReference Include=".\..\apais_dataprovider\apais_dataprovider.csproj" />
 		<ProjectReference Include=".\..\atipoespectaculo_dataprovider\atipoespectaculo_dataprovider.csproj" />
 		<ProjectReference Include=".\..\alugar_dataprovider\alugar_dataprovider.csproj" />
+		<ProjectReference Include=".\..\aespectaculo_dataprovider\aespectaculo_dataprovider.csproj" />
 		<ProjectReference Include=".\..\appmasterpage\appmasterpage.csproj" />
 		<ProjectReference Include=".\..\recentlinks\recentlinks.csproj" />
 		<ProjectReference Include=".\..\promptmasterpage\promptmasterpage.csproj" />
@@ -30,10 +31,6 @@
 		<ProjectReference Include=".\..\viewentrada\viewentrada.csproj" />
 		<ProjectReference Include=".\..\wwentrada\wwentrada.csproj" />
 		<ProjectReference Include=".\..\entradageneral\entradageneral.csproj" />
-		<ProjectReference Include=".\..\viewespectaculo\viewespectaculo.csproj" />
-		<ProjectReference Include=".\..\wwespectaculo\wwespectaculo.csproj" />
-		<ProjectReference Include=".\..\espectaculogeneral\espectaculogeneral.csproj" />
-		<ProjectReference Include=".\..\espectaculofuncionwc\espectaculofuncionwc.csproj" />
 		<ProjectReference Include=".\..\viewpais\viewpais.csproj" />
 		<ProjectReference Include=".\..\wwpais\wwpais.csproj" />
 		<ProjectReference Include=".\..\paisgeneral\paisgeneral.csproj" />
@@ -43,10 +40,6 @@
 		<ProjectReference Include=".\..\wwtipoespectaculo\wwtipoespectaculo.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculogeneral\tipoespectaculogeneral.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculoespectaculowc\tipoespectaculoespectaculowc.csproj" />
-		<ProjectReference Include=".\..\viewfuncion\viewfuncion.csproj" />
-		<ProjectReference Include=".\..\wwfuncion\wwfuncion.csproj" />
-		<ProjectReference Include=".\..\funciongeneral\funciongeneral.csproj" />
-		<ProjectReference Include=".\..\funcionentradawc\funcionentradawc.csproj" />
 		<ProjectReference Include=".\..\viewinvitacion\viewinvitacion.csproj" />
 		<ProjectReference Include=".\..\wwinvitacion\wwinvitacion.csproj" />
 		<ProjectReference Include=".\..\invitaciongeneral\invitaciongeneral.csproj" />
@@ -59,20 +52,22 @@
 		<ProjectReference Include=".\..\gx0040\gx0040.csproj" />
 		<ProjectReference Include=".\..\gx0030\gx0030.csproj" />
 		<ProjectReference Include=".\..\gx00b1\gx00b1.csproj" />
-		<ProjectReference Include=".\..\gx0010\gx0010.csproj" />
 		<ProjectReference Include=".\..\gx0050\gx0050.csproj" />
-		<ProjectReference Include=".\..\gx0070\gx0070.csproj" />
+		<ProjectReference Include=".\..\viewespectaculo\viewespectaculo.csproj" />
+		<ProjectReference Include=".\..\wwespectaculo\wwespectaculo.csproj" />
+		<ProjectReference Include=".\..\espectaculogeneral\espectaculogeneral.csproj" />
 		<ProjectReference Include=".\..\espectaculolugarsectorwc\espectaculolugarsectorwc.csproj" />
-		<ProjectReference Include=".\..\funcioninvitacionwc\funcioninvitacionwc.csproj" />
-		<ProjectReference Include=".\..\gx00d1\gx00d1.csproj" />
-		<ProjectReference Include=".\..\espectaculo\espectaculo.csproj" />
+		<ProjectReference Include=".\..\gx00f0\gx00f0.csproj" />
+		<ProjectReference Include=".\..\gx00g1\gx00g1.csproj" />
+		<ProjectReference Include=".\..\gx00i1\gx00i1.csproj" />
+		<ProjectReference Include=".\..\espectaculoespectaculofuncionwc\espectaculoespectaculofuncionwc.csproj" />
 		<ProjectReference Include=".\..\lugar\lugar.csproj" />
 		<ProjectReference Include=".\..\pais\pais.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculo\tipoespectaculo.csproj" />
 		<ProjectReference Include=".\..\cliente\cliente.csproj" />
-		<ProjectReference Include=".\..\funcion\funcion.csproj" />
 		<ProjectReference Include=".\..\entrada\entrada.csproj" />
 		<ProjectReference Include=".\..\invitacion\invitacion.csproj" />
+		<ProjectReference Include=".\..\espectaculo\espectaculo.csproj" />
 		<ProjectReference Include=".\..\GeneXus.Programs.Common\GeneXus.Programs.Common.csproj" />
 
 	</ItemGroup>

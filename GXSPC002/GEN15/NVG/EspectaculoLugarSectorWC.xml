@@ -4,12 +4,12 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>60</ObjId>
+<ObjId>68</ObjId>
 <ObjName>EspectaculoLugarSectorWC</ObjName>
 <ObjDesc>Espectaculo Lugar Sector WC</ObjDesc>
 <ObjPgmName>EspectaculoLugarSectorWC</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -46,7 +46,7 @@
 <LevelBeginRow>0</LevelBeginRow>
 <BaseTable>
 <Table>
-<TableId>13</TableId>
+<TableId>16</TableId>
 <TableName>EspectaculoLugarSector</TableName>
 <Description>Lugar Sector</Description></Table></BaseTable>
 <Order>
@@ -89,7 +89,7 @@
 <JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>
-<TableId>13</TableId>
+<TableId>16</TableId>
 <TableName>EspectaculoLugarSector</TableName>
 <Description>Lugar Sector</Description>
 <RecordsToRead>many</RecordsToRead>
@@ -104,7 +104,7 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -130,7 +130,7 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
 <Table>
-<TableId>13</TableId>
+<TableId>16</TableId>
 <TableName>LugarSectorVendidas navigation</TableName>
 <Description>Lugar Sector</Description>
 <RecordsToRead>one</RecordsToRead>
@@ -143,25 +143,14 @@
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute>
-<Attribute>
 <AttriId>1</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>7</TableId>
-<TableName>Funcion</TableName>
-<Description>Funcion</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>15</AttriId>
-<AttriName>FuncionId</AttriName>
-<Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

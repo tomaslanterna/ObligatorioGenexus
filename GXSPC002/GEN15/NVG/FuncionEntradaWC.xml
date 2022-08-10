@@ -181,21 +181,6 @@
 <Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table>
 <Table>
-<TableId>13</TableId>
-<TableName>EspectaculoLugarSector</TableName>
-<Description>Lugar Sector</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>1</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>LugarSectorId</AttriName>
-<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
 <TableId>9</TableId>
 <TableName>LugarSectorVendidas navigation</TableName>
 <Description>Entrada</Description>

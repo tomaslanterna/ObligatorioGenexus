@@ -2,12 +2,12 @@
 <ReorgSpec>
 <SpecVersion>17_0_10-161416</SpecVersion>
 <Table>
-<TableId>13</TableId>
+<TableId>16</TableId>
 <TableName>EspectaculoLugarSector</TableName>
 <Description>Lugar Sector</Description></Table>
 <ReorgCls>c</ReorgCls>
 <ReorgCode>new</ReorgCode>
-<ReorgMsg>EspectaculoLugarSector is new</ReorgMsg>
+<ReorgMsg>EspectaculoLugarSector is new (initialize with Espectaculo_DataProvider)</ReorgMsg>
 <ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
@@ -52,31 +52,12 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>40</AttriId>
-<AttriName>LugarSectorCantidadAsientos</AttriName>
-<Description>Lugar Sector Cantidad Asientos</Description>
-<TakesValueFrom></TakesValueFrom>
-<AttriType>
-<DataType>N</DataType>
-<Presicion>4</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
 <AttriId>41</AttriId>
 <AttriName>LugarSectorEstadoSector</AttriName>
 <Description>Lugar Sector Estado Sector</Description>
 <TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>N</DataType>
+<DataType>1</DataType>
 <Presicion>4</Presicion>
 <Scale>0</Scale>
 <Properties>
@@ -111,7 +92,7 @@
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
-<TableId>1</TableId>
+<TableId>15</TableId>
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description></Table>
 <Attributes>
@@ -120,7 +101,7 @@
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [EspectaculoLugarSector] ([EspectaculoId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorCantidadAsientos] smallint NOT NULL , [LugarSectorEstadoSector] smallint NOT NULL , PRIMARY KEY([EspectaculoId], [LugarSectorId])) </Statement>
+<Statement>CREATE TABLE [EspectaculoLugarSector] ([EspectaculoId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorEstadoSector] BIT NOT NULL , PRIMARY KEY([EspectaculoId], [LugarSectorId])) </Statement>
 <Statement>ALTER TABLE [EspectaculoLugarSector] ADD CONSTRAINT [IESPECTACULOLUGARSECTOR1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

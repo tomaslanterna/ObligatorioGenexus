@@ -111,16 +111,6 @@ namespace GeneXus.Programs {
             this.cleanup();
             if (true) return;
          }
-         AV11name = "WWFuncion";
-         AV12description = "Funcions";
-         AV13link = formatLink("wwfuncion.aspx") ;
-         /* Execute user subroutine: 'ADDPROGRAM' */
-         S111 ();
-         if ( returnInSub )
-         {
-            this.cleanup();
-            if (true) return;
-         }
          AV11name = "WWInvitacion";
          AV12description = "Invitacions";
          AV13link = formatLink("wwinvitacion.aspx") ;

@@ -1,8 +1,24 @@
 domain_i(88,'gxdomainpage.cs').
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,1,[ 1,15 ] ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,1,[ 1,27 ] ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,1,0 ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,10,[ 1,27 ] ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,10,[ 1,47 ] ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,10,0 ]).
 ext_sdt_map_i(15,'GeneXus.dll',[ 0,2,[ 4,27 ] ]).
 ext_sdt_map_i(15,'GeneXus.dll',[ 0,2,0 ]).
 ext_sdt_map_i(15,'GeneXus.dll',[ 0,3,0 ]).
 ext_sdt_map_i(15,'GeneXus.dll',[ 0,4,0 ]).
+ext_sdt_map_i(15,'GeneXus.dll',[ 0,7,0 ]).
+sdt_map_i(15,'Espectaculo',[ 0,1,0 ]).
+sdt_map_i(15,'Espectaculo',[ 0,10,0 ]).
+sdt_map_i(15,'Espectaculo.EspectaculoFuncion',[ 0,10,[ 1,47 ] ]).
+sdt_map_i(15,'Espectaculo.Funcion',[ 0,1,[ 1,15 ] ]).
+sdt_map_i(15,'Espectaculo.Funcion',[ 0,10,[ 1,15 ] ]).
+sdt_map_i(15,'Espectaculo.Funcion',[ 0,10,[ 1,47 ] ]).
+sdt_map_i(15,'Espectaculo.LugarSector',[ 0,1,[ 1,27 ] ]).
+sdt_map_i(15,'Espectaculo.LugarSector',[ 0,10,[ 1,27 ] ]).
+sdt_map_i(15,'Funcion',[ 0,7,0 ]).
 sdt_map_i(15,'Lugar',[ 0,2,0 ]).
 sdt_map_i(15,'Lugar.Sector',[ 0,2,[ 4,27 ] ]).
 sdt_map_i(15,'Pais',[ 0,3,0 ]).

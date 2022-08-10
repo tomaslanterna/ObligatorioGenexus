@@ -1,0 +1,81 @@
+ 
+spec_i([ sdt,[ 0,7,0 ],'Funcion','Funcion',0,spa,'17_0_10-161416' ]).
+ 
+struct_dt_i([ 0,7,0 ],name,'Funcion').
+struct_dt_i([ 0,7,0 ],namespace,'Obligatorio1v2').
+struct_dt_i([ 0,7,0 ],significantName,'Funcion').
+struct_dt_i([ 0,7,0 ],'ObjName','Funcion').
+struct_dt_i([ 0,7,0 ],'ObjDesc','Funcion').
+struct_dt_i([ 0,7,0 ],'ExternalName','Funcion').
+struct_dt_i([ 0,7,0 ],'ExternalNamespace','Obligatorio1v2').
+struct_dt_i([ 0,7,0 ],key,[ 15 ]).
+struct_dt_i([ 0,7,0 ],lvl,7).
+struct_dt_i([ 0,7,0 ],fullname,'Funcion').
+ 
+struct_dt_elem_i([ 0,7,0 ],1,name,'Funcionid').
+struct_dt_elem_i([ 0,7,0 ],1,camelname,'FuncionId').
+struct_dt_elem_i([ 0,7,0 ],1,basedon,86).
+struct_dt_elem_i([ 0,7,0 ],1,length,4).
+struct_dt_elem_i([ 0,7,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],1,sign,0).
+struct_dt_elem_i([ 0,7,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,7,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,7,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],1,attributeid,'15').
+struct_dt_elem_i([ 0,7,0 ],1,'ExternalName','FuncionId').
+struct_dt_elem_i([ 0,7,0 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,7,0 ],2,name,'Funcionname').
+struct_dt_elem_i([ 0,7,0 ],2,camelname,'FuncionName').
+struct_dt_elem_i([ 0,7,0 ],2,basedon,87).
+struct_dt_elem_i([ 0,7,0 ],2,length,40).
+struct_dt_elem_i([ 0,7,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],2,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,7,0 ],2,pic,'').
+struct_dt_elem_i([ 0,7,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],2,attributeid,'22').
+struct_dt_elem_i([ 0,7,0 ],2,'ExternalName','FuncionName').
+struct_dt_elem_i([ 0,7,0 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,7,0 ],3,name,'Preciofuncion').
+struct_dt_elem_i([ 0,7,0 ],3,camelname,'PrecioFuncion').
+struct_dt_elem_i([ 0,7,0 ],3,length,4).
+struct_dt_elem_i([ 0,7,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],3,sign,0).
+struct_dt_elem_i([ 0,7,0 ],3,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,7,0 ],3,pic,'ZZZ9').
+struct_dt_elem_i([ 0,7,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],3,attributeid,'21').
+struct_dt_elem_i([ 0,7,0 ],3,'ExternalName','PrecioFuncion').
+struct_dt_elem_i([ 0,7,0 ],3,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,7,0 ],4,name,'Espectaculoid').
+struct_dt_elem_i([ 0,7,0 ],4,camelname,'EspectaculoId').
+struct_dt_elem_i([ 0,7,0 ],4,basedon,86).
+struct_dt_elem_i([ 0,7,0 ],4,length,4).
+struct_dt_elem_i([ 0,7,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],4,sign,0).
+struct_dt_elem_i([ 0,7,0 ],4,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,7,0 ],4,pic,'ZZZ9').
+struct_dt_elem_i([ 0,7,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],4,attributeid,'1').
+struct_dt_elem_i([ 0,7,0 ],4,'ExternalName','EspectaculoId').
+struct_dt_elem_i([ 0,7,0 ],4,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,7,0 ],5,name,'Espectaculoname').
+struct_dt_elem_i([ 0,7,0 ],5,camelname,'EspectaculoName').
+struct_dt_elem_i([ 0,7,0 ],5,basedon,87).
+struct_dt_elem_i([ 0,7,0 ],5,length,40).
+struct_dt_elem_i([ 0,7,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],5,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,7,0 ],5,pic,'').
+struct_dt_elem_i([ 0,7,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],5,attributeid,'2').
+struct_dt_elem_i([ 0,7,0 ],5,'ExternalName','EspectaculoName').
+struct_dt_elem_i([ 0,7,0 ],5,'ExternalNamespace','Obligatorio1v2').
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus','AssemblyName','GeneXus.dll').

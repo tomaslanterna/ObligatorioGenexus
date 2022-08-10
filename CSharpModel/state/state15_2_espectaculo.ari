@@ -1,12 +1,10 @@
-current_obj_i(2,trn,1).
+current_obj_i(2,trn,10).
  
-current_guid('d2d67add-f392-4e4b-9446-26a37d3bb150').
- 
- 
-called_tree_i(0,1,1,13).
+current_guid('b25d6d54-a3c9-4b7a-af1f-1e5a4d9e598d').
  
  
- 
+called_tree_i(0,10,1,13).
+called_tree_i(0,10,1000,10).
  
  
  
@@ -22,15 +20,21 @@ called_tree_i(0,1,1,13).
  
  
  
-ij_object_dependency(espectaculo,[],[],[],1).
+ 
+ 
+ 
+ij_object_dependency(espectaculo,[],[],[],10).
  
  
 obj_parms_i([ 'string aP0_Gx_mode','short aP1_EspectaculoId' ],[ [ 'Mode',in ],[ 'Espectaculoid',in ] ]).
  
  
+has_silent_trn_i(espectaculo_bc).
  
  
  
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
 module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
 module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

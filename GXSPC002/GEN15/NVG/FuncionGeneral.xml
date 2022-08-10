@@ -9,7 +9,7 @@
 <ObjDesc>Funcion General</ObjDesc>
 <ObjPgmName>FuncionGeneral</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -86,6 +86,7 @@
 <AttriName>@FuncionId</AttriName>
 <Description>Funcion Id</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
 <NonOptimizedWhere></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>
 <TableId>7</TableId>
@@ -97,7 +98,18 @@
 <AttriId>15</AttriId>
 <AttriName>FuncionId</AttriName>
 <Description>Funcion Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></NavigationTree>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
