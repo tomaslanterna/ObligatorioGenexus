@@ -123,7 +123,7 @@ namespace GeneXus.Programs {
          {
             if ( context.ExposeMetadata( ) )
             {
-               Form.Meta.addItem("generator", "GeneXus .NET Framework 17_0_10-162473", 0) ;
+               Form.Meta.addItem("generator", "GeneXus .NET Framework 17_0_10-161416", 0) ;
             }
             Form.Meta.addItem("description", "Tipo Espectaculo", 0) ;
          }
@@ -375,7 +375,7 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 44,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", bttBtn_enter_Caption, bttBtn_enter_Jsonclick, 5, bttBtn_enter_Tooltiptext, "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TipoEspectaculo.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirmar", bttBtn_enter_Jsonclick, 5, "Confirmar", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TipoEspectaculo.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
@@ -390,6 +390,13 @@ namespace GeneXus.Programs {
          ClassString = "BtnDelete";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Eliminar", bttBtn_delete_Jsonclick, 5, "Eliminar", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TipoEspectaculo.htm");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 50,'',false,'',0)\"";
+         ClassString = "Button";
+         StyleString = "";
+         GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Imprimir Espectaculos por Tipos", bttButton1_Jsonclick, 5, "Imprimir Espectaculos por Tipos", "", StyleString, ClassString, bttButton1_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'IMPRIMIR ESPECTACULOS POR TIPOS\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_TipoEspectaculo.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "Center", "top", "div");
@@ -560,6 +567,14 @@ namespace GeneXus.Programs {
                            /* Execute user event: After Trn */
                            E12042 ();
                         }
+                        else if ( StringUtil.StrCmp(sEvt, "'IMPRIMIR ESPECTACULOS POR TIPOS'") == 0 )
+                        {
+                           context.wbHandled = 1;
+                           dynload_actions( ) ;
+                           /* Execute user event: 'Imprimir Espectaculos por Tipos' */
+                           E13042 ();
+                           nKeyPressed = 3;
+                        }
                         else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                         {
                            context.wbHandled = 1;
@@ -692,13 +707,6 @@ namespace GeneXus.Programs {
             context.wjLocDisableFrm = 1;
          }
          AV9TrnContext.FromXml(AV10WebSession.Get("TrnContext"), null, "", "");
-         if ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 )
-         {
-            bttBtn_enter_Caption = "Eliminar";
-            AssignProp("", false, bttBtn_enter_Internalname, "Caption", bttBtn_enter_Caption, true);
-            bttBtn_enter_Tooltiptext = "Eliminar";
-            AssignProp("", false, bttBtn_enter_Internalname, "Tooltiptext", bttBtn_enter_Tooltiptext, true);
-         }
       }
 
       protected void E12042( )
@@ -716,6 +724,14 @@ namespace GeneXus.Programs {
          context.nUserReturn = 1;
          returnInSub = true;
          if (true) return;
+      }
+
+      protected void E13042( )
+      {
+         /* 'Imprimir Espectaculos por Tipos' Routine */
+         returnInSub = false;
+         CallWebObject(formatLink("aimpresionespectaculosportipo.aspx") );
+         context.wjLocDisableFrm = 2;
       }
 
       protected void ZM044( short GX_JID )
@@ -1394,11 +1410,11 @@ namespace GeneXus.Programs {
          MasterPageObj.master_styles();
          if ( ( ( context.GetBrowserType( ) == 1 ) || ( context.GetBrowserType( ) == 5 ) ) && ( StringUtil.StrCmp(context.GetBrowserVersion( ), "7.0") == 0 ) )
          {
-            context.AddJavascriptSource("json2.js", "?"+context.GetBuildNumber( 511400), false, true);
+            context.AddJavascriptSource("json2.js", "?"+context.GetBuildNumber( 552120), false, true);
          }
-         context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 511400), false, true);
-         context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 511400), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20228101227241", false, true);
+         context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
+         context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228102351388", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1567,7 +1583,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228101227245", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228102351391", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1583,7 +1599,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("tipoespectaculo.js", "?20228101227245", false, true);
+         context.AddJavascriptSource("tipoespectaculo.js", "?20228102351391", false, true);
          /* End function include_jscripts */
       }
 
@@ -1603,6 +1619,7 @@ namespace GeneXus.Programs {
          bttBtn_enter_Internalname = "BTN_ENTER";
          bttBtn_cancel_Internalname = "BTN_CANCEL";
          bttBtn_delete_Internalname = "BTN_DELETE";
+         bttButton1_Internalname = "BUTTON1";
          divMaintable_Internalname = "MAINTABLE";
          Form.Internalname = "FORM";
       }
@@ -1620,11 +1637,10 @@ namespace GeneXus.Programs {
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
          Form.Caption = "Tipo Espectaculo";
+         bttButton1_Visible = 1;
          bttBtn_delete_Enabled = 0;
          bttBtn_delete_Visible = 1;
          bttBtn_cancel_Visible = 1;
-         bttBtn_enter_Tooltiptext = "Confirmar";
-         bttBtn_enter_Caption = "Confirmar";
          bttBtn_enter_Enabled = 1;
          bttBtn_enter_Visible = 1;
          edtTipoEspectaculoName_Jsonclick = "";
@@ -1686,6 +1702,8 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH",",oparms:[]}");
          setEventMetadata("AFTER TRN","{handler:'E12042',iparms:[{av:'Gx_mode',fld:'vMODE',pic:'@!',hsh:true},{av:'AV9TrnContext',fld:'vTRNCONTEXT',pic:'',hsh:true}]");
          setEventMetadata("AFTER TRN",",oparms:[]}");
+         setEventMetadata("'IMPRIMIR ESPECTACULOS POR TIPOS'","{handler:'E13042',iparms:[]");
+         setEventMetadata("'IMPRIMIR ESPECTACULOS POR TIPOS'",",oparms:[]}");
          setEventMetadata("VALID_TIPOESPECTACULOID","{handler:'Valid_Tipoespectaculoid',iparms:[]");
          setEventMetadata("VALID_TIPOESPECTACULOID",",oparms:[]}");
          setEventMetadata("VALID_TIPOESPECTACULONAME","{handler:'Valid_Tipoespectaculoname',iparms:[]");
@@ -1734,6 +1752,7 @@ namespace GeneXus.Programs {
          bttBtn_enter_Jsonclick = "";
          bttBtn_cancel_Jsonclick = "";
          bttBtn_delete_Jsonclick = "";
+         bttButton1_Jsonclick = "";
          AV11Pgmname = "";
          forbiddenHiddens = new GXProperties();
          hsh = "";
@@ -1828,6 +1847,7 @@ namespace GeneXus.Programs {
       private int bttBtn_cancel_Visible ;
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
+      private int bttButton1_Visible ;
       private int idxLst ;
       private string sPrefix ;
       private string wcpOGx_mode ;
@@ -1863,13 +1883,13 @@ namespace GeneXus.Programs {
       private string edtTipoEspectaculoId_Jsonclick ;
       private string edtTipoEspectaculoName_Jsonclick ;
       private string bttBtn_enter_Internalname ;
-      private string bttBtn_enter_Caption ;
       private string bttBtn_enter_Jsonclick ;
-      private string bttBtn_enter_Tooltiptext ;
       private string bttBtn_cancel_Internalname ;
       private string bttBtn_cancel_Jsonclick ;
       private string bttBtn_delete_Internalname ;
       private string bttBtn_delete_Jsonclick ;
+      private string bttButton1_Internalname ;
+      private string bttButton1_Jsonclick ;
       private string AV11Pgmname ;
       private string hsh ;
       private string sMode4 ;

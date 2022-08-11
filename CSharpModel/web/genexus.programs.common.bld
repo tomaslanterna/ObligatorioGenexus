@@ -10,9 +10,9 @@ type_SdtPais.cs
 type_SdtFuncion.cs
 type_SdtLugar.cs
 type_SdtLugar_Sector.cs
-type_SdtTipoEspectaculo.cs
 type_SdtEspectaculo.cs
 type_SdtEspectaculo_EspectaculoFuncion.cs
 type_SdtEspectaculo_Funcion.cs
 type_SdtEspectaculo_LugarSector.cs
+type_SdtTipoEspectaculo.cs
 gxdomainpage.cs

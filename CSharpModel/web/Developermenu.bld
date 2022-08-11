@@ -4,6 +4,12 @@ alugar_dataprovider
 aespectaculo_dataprovider
 aimpresionentrada
 aimpresionentrada
+aimpresionespectaculosportipo
+aimpresionespectaculosportipo
+aimpresionespectaculos
+aimpresionespectaculos
+aimpresionespectaculosfecha
+aimpresionespectaculosfecha
 appmasterpage
 recentlinks
 promptmasterpage
@@ -51,6 +57,8 @@ gx00f0
 gx00g1
 gx00i1
 espectaculoespectaculofuncionwc
+espectaculos
+wpespectaculostipo
 lugar
 pais
 tipoespectaculo

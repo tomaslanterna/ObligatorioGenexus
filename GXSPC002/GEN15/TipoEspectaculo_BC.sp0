@@ -1,4 +1,4 @@
-spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo_BC',[],spa,'17_0_10-162473' ]).
+spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo_BC',[],spa,'17_0_10-161416' ]).
  
 struct_i(4,0,[ 'Websession' ],[]).
  
@@ -147,6 +147,7 @@ rule_i(0,prop('ObjName','TipoEspectaculo')).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
 rule_i(4,rule([ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(8,2),t(')',4) ],[ insert,update,delete,display ],[ 8 ])).
+rule_i(0,rule([ a(22,[ '''Imprimir Espectaculos por Tipos''','''Imprimir Espectaculos por Tipos''','' ]) ],[],[],[])).
  
 a_i(1,4,b,1,[],[ [],[ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(8,2),t(')',4) ] ]).
 a_i(2,4,t,4,[],[ [ [ [],7,7 ] ],'ITIPOESPECTACULO',[] ]).
@@ -214,13 +215,17 @@ dom_info_i(87,[ 'Name' ]).
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
-b_group_i(2,2,lit,0,2,19).
-b_group_i(2,3,lit,0,20,0).
+b_group_i(2,2,lit,0,2,15).
+b_group_i(2,3,lit,0,16,29).
+b_group_i(2,4,lit,0,30,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
-b_line_i(17,2,2,cmd,1,[ t('',147,17,0) ]).
-b_line_i(19,2,2,cmd,1,[ t('',146,19,0),t('After Trn',3,19,7) ]).
-b_line_i(30,2,3,cmd,1,[ t('',147,30,0) ]).
+b_line_i(13,2,2,cmd,1,[ t('',147,13,0) ]).
+b_line_i(15,2,2,cmd,1,[ t('',146,15,0),t('After Trn',3,15,7) ]).
+b_line_i(26,2,3,cmd,1,[ t('',147,26,0) ]).
+b_line_i(29,2,3,cmd,1,[ t('',146,29,0),t('''Imprimir Espectaculos por Tipos''',3,29,7) ]).
+b_line_i(30,2,4,cmd,1,[ t('',104,30,0),t(o(1,'ImpresionEspectaculosPorTipo'),28,1,2) ]).
+b_line_i(31,2,4,cmd,1,[ t('',147,31,0) ]).
  
  
  
@@ -556,13 +561,17 @@ struct_dt_elem_i([ 26,13,30 ],3,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,17,[ [],[] ]).
-sub_info_i(146,'After Trn',19,30,[ [],[] ]).
+sub_info_i(146,'Start',1,13,[ [],[] ]).
+sub_info_i(146,'After Trn',15,26,[ [],[] ]).
+sub_info_i(146,'''Imprimir Espectaculos por Tipos''',29,31,[ [],[] ]).
  
+pgm_parm_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[],[]).
  
 pgm_callprotocol_i(trn,4,'TIPOESPECTACULO_BC','INTERNAL','Secure').
+pgm_callprotocol_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO','HTTP','Secure').
  
  
+pgm_main_info_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[ 15,'AIMPRESIONESPECTACULOSPORTIPO','','','','','HTTP' ]).
  
  
 module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').

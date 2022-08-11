@@ -1,4 +1,4 @@
-spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo',[],spa,'17_0_10-162473' ]).
+spec_i([ trn,4,'Tipo Espectaculo','TipoEspectaculo',[],spa,'17_0_10-161416' ]).
  
 struct_i(4,0,[ 'Pgmname','Trncontext','Mode','Tipoespectaculoid','Websession' ],[]).
  
@@ -154,6 +154,7 @@ rule_i(0,parmio([ [ 'Mode',in ],[ 'Tipoespectaculoid',in ] ])).
 rule_i(4,rule([ a(3,[ t(7,2) ]) ],[],[ insert,update,delete,display ],[ 7 ])).
 rule_i(4,rule([ a(21,[ [ 7 ] ]) ],[],[ insert,update,delete,display ],[ 7 ])).
 rule_i(4,rule([ a(1,[ t('''Debe ingresar un nombre''',3) ]) ],[ t('null(',1),t(8,2),t(')',4) ],[ insert,update,delete,display ],[ 8 ])).
+rule_i(0,rule([ a(22,[ '''Imprimir Espectaculos por Tipos''','''Imprimir Espectaculos por Tipos''','' ]) ],[],[],[])).
  
 a_i(1,4,f,7,[],[ [],[ t('Tipoespectaculoid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Tipoespectaculoid',23),t(')',4),t(';',18) ] ]).
 a_i(2,4,f,[ t(7,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
@@ -238,25 +239,25 @@ dom_info_i(87,[ 'Name' ]).
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
-b_group_i(2,2,lit,0,2,19).
-b_group_i(2,3,lit,0,20,0).
+b_group_i(2,2,lit,0,2,15).
+b_group_i(2,3,lit,0,16,29).
+b_group_i(2,4,lit,0,30,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(5,2,2,cmd,1,[ t('',109,5,0),t('.NOT.',8,1,5),t('udp(',1,5,23),t(o(1,'IsAuthorized'),28,5,11),t(',',7,1,0),t('Pgmname',23,1,24),t(')',4,1,0) ]).
 b_line_i(6,2,2,cmd,1,[ t('',104,6,0),t(o(13,'NotAuthorized'),28,1,3),t('Pgmname',23,1,17) ]).
 b_line_i(7,2,2,cmd,1,[ t('',111,7,0) ]).
 b_line_i(9,2,2,cmd,1,[ t('',107,9,0),t([ t('Trncontext',23,9,2),t('fromxml(',1,9,14) ],31,9,2),t([ t('Websession',23,1,23),t('get(',1,1,35) ],31,9,35),t('"TrnContext"',3,9,40),t(')',4,1,53),t(')',4,1,54) ]).
-b_line_i(11,2,2,cmd,1,[ t('',109,11,0),t('Mode',23,1,5),t(=,10,1,11),t([ 42,'Delete' ],44,11,13) ]).
-b_line_i(12,2,2,cmd,1,[ t('',107,12,0),t([ t('Btn_enter',3,1,0),t('Caption',3,1,0) ],29,1,0),t(=,10,1,0),t('"Eliminar"',3,1,0) ]).
-b_line_i(13,2,2,cmd,1,[ t('',107,13,0),t([ t('Btn_enter',3,1,0),t('Tooltiptext',3,1,0) ],29,1,0),t(=,10,1,0),t('"Eliminar"',3,1,0) ]).
-b_line_i(14,2,2,cmd,1,[ t('',111,14,0) ]).
-b_line_i(17,2,2,cmd,1,[ t('',147,17,0) ]).
-b_line_i(19,2,2,cmd,1,[ t('',146,19,0),t('After Trn',3,19,7) ]).
-b_line_i(23,2,3,cmd,1,[ t('',109,23,0),t('(',0,1,5),t('Mode',23,1,6),t(=,10,1,12),t([ 42,'Delete' ],44,23,14),t('.AND.',9,1,29),t('.NOT.',8,1,35),t([ t('Trncontext',23,23,41),t('Callerondelete',3,23,53) ],29,23,53),t(')',4,1,67) ]).
-b_line_i(24,2,3,cmd,1,[ t('',104,24,0),t(o(13,'WWTipoEspectaculo'),28,1,3) ]).
-b_line_i(25,2,3,cmd,1,[ t('',111,25,0) ]).
-b_line_i(27,2,3,cmd,1,[ t('',118,27,0) ]).
-b_line_i(30,2,3,cmd,1,[ t('',147,30,0) ]).
+b_line_i(13,2,2,cmd,1,[ t('',147,13,0) ]).
+b_line_i(15,2,2,cmd,1,[ t('',146,15,0),t('After Trn',3,15,7) ]).
+b_line_i(19,2,3,cmd,1,[ t('',109,19,0),t('(',0,1,5),t('Mode',23,1,6),t(=,10,1,12),t([ 42,'Delete' ],44,19,14),t('.AND.',9,1,29),t('.NOT.',8,1,35),t([ t('Trncontext',23,19,41),t('Callerondelete',3,19,53) ],29,19,53),t(')',4,1,67) ]).
+b_line_i(20,2,3,cmd,1,[ t('',104,20,0),t(o(13,'WWTipoEspectaculo'),28,1,3) ]).
+b_line_i(21,2,3,cmd,1,[ t('',111,21,0) ]).
+b_line_i(23,2,3,cmd,1,[ t('',118,23,0) ]).
+b_line_i(26,2,3,cmd,1,[ t('',147,26,0) ]).
+b_line_i(29,2,3,cmd,1,[ t('',146,29,0),t('''Imprimir Espectaculos por Tipos''',3,29,7) ]).
+b_line_i(30,2,4,cmd,1,[ t('',104,30,0),t(o(1,'ImpresionEspectaculosPorTipo'),28,1,2) ]).
+b_line_i(31,2,4,cmd,1,[ t('',147,31,0) ]).
  
  
  
@@ -319,6 +320,8 @@ html_sub_i(42,45,html_i(1,div(45))).
 html_sub_i(45,46,html_i(0,button('Cancel'))).
 html_sub_i(42,47,html_i(2,div(47))).
 html_sub_i(47,48,html_i(0,button('Delete'))).
+html_sub_i(42,49,html_i(3,div(49))).
+html_sub_i(49,50,html_i(0,button('''Imprimir Espectaculos por Tipos'''))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
@@ -338,6 +341,7 @@ html_tags_i(42,'data-gx-actiongroup-type',toolbar).
 html_tags_i(44,'ControlType','').
 html_tags_i(46,'ControlType','').
 html_tags_i(48,'ControlType','').
+html_tags_i(50,'ControlType','').
  
 html_comp_i(12,'Backcolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
@@ -800,6 +804,26 @@ html_comp_i(48,'Backcolor',rgb(240,240,240),d,[ color ]).
 html_comp_i(48,'Border','2',d,[ str ]).
 html_comp_i(48,'Bordercolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(48,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(49,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(49,'Class','gx-button',v,[ str ]).
+html_comp_i(49,'Id','',d,[ str ]).
+html_comp_i(49,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(49,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(49,'Semanticcontent',div,d,[ str ]).
+html_comp_i(49,'Align',left,d,[ str ]).
+html_comp_i(49,'Valign',top,d,[ str ]).
+html_comp_i(50,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(50,'Controlname','Button1',v,[ str ]).
+html_comp_i(50,'Class','Button',v,[ str ]).
+html_comp_i(50,'Event','''Imprimir Espectaculos por Tipos''',v,[ str ]).
+html_comp_i(50,'Caption','Imprimir Espectaculos por Tipos',d,[ str ]).
+html_comp_i(50,'Title','Imprimir Espectaculos por Tipos',d,[ str ]).
+html_comp_i(50,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(50,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(50,'Backcolor',rgb(240,240,240),d,[ color ]).
+html_comp_i(50,'Border','2',d,[ str ]).
+html_comp_i(50,'Bordercolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(50,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -851,6 +875,8 @@ lit_i(46,1,button('Cancel'),[ ctlname('Btn_cancel'),width(0),rect(0,0,10,10),tit
 lit_i(45,1,div(45),[ ctlname('') ]).
 lit_i(48,1,button('Delete'),[ ctlname('Btn_delete'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(47,1,div(47),[ ctlname('') ]).
+lit_i(50,1,button('''Imprimir Espectaculos por Tipos'''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(49,1,div(49),[ ctlname('') ]).
 lit_i(42,1,div(42),[ ctlname('') ]).
 lit_i(41,1,div(41),[ ctlname('') ]).
 lit_i(40,1,div(40),[ ctlname('') ]).
@@ -1164,19 +1190,23 @@ struct_dt_elem_i([ 26,13,30 ],3,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,17,[ [ 'Pgmname','Websession','Mode' ],[ 'Trncontext',[ t('Btn_enter',3),t('Caption',3) ],[ t('Btn_enter',3),t('Tooltiptext',3) ] ] ]).
-sub_info_i(146,'After Trn',19,30,[ [ 'Mode','Trncontext' ],[] ]).
+sub_info_i(146,'Start',1,13,[ [ 'Pgmname','Websession' ],[ 'Trncontext' ] ]).
+sub_info_i(146,'After Trn',15,26,[ [ 'Mode','Trncontext' ],[] ]).
+sub_info_i(146,'''Imprimir Espectaculos por Tipos''',29,31,[ [],[] ]).
  
+pgm_parm_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[],[]).
 pgm_parm_i(web,37,'WWTIPOESPECTACULO',[],[]).
 pgm_parm_i(web,11,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
 pgm_parm_i(proc,13,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
 pgm_callprotocol_i(trn,4,'TIPOESPECTACULO','INTERNAL','Secure').
+pgm_callprotocol_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO','HTTP','Secure').
 pgm_callprotocol_i(web,37,'WWTIPOESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,11,'NOTAUTHORIZED','INTERNAL','Secure').
 pgm_callprotocol_i(proc,13,'ISAUTHORIZED','INTERNAL','Secure').
  
  
+pgm_main_info_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[ 15,'AIMPRESIONESPECTACULOSPORTIPO','','','','','HTTP' ]).
  
  
 module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').

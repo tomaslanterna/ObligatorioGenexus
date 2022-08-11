@@ -49,4 +49,16 @@
     <ObjDesc>Espectaculoes</ObjDesc>
     <ObjLink>wwespectaculo.aspx</ObjLink>
   </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>Espectaculos</ObjName>
+    <ObjDesc>Espectaculos</ObjDesc>
+    <ObjLink>espectaculos.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>WPEspectaculosTipo</ObjName>
+    <ObjDesc>WPEspectaculos Tipo</ObjDesc>
+    <ObjLink>wpespectaculostipo.aspx</ObjLink>
+  </Object>
 </Objects>

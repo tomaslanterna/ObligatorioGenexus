@@ -179,6 +179,7 @@ namespace GeneXus.Programs {
                sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( A26EspectaculoImagen)) ? A40000EspectaculoImagen_GXI : A26EspectaculoImagen);
                getPrinter().GxDrawBitMap(sImgUrl, 22, Gx_line+22, 200, Gx_line+67) ;
                getPrinter().GxDrawText("Entrada", 344, Gx_line+33, 422, Gx_line+56, 0, 0, 0, 0) ;
+               getPrinter().GxDrawText("Fecha emision", 500, Gx_line+11, 634, Gx_line+33, 0, 0, 0, 0) ;
                Gx_OldLine = Gx_line;
                Gx_line = (int)(Gx_line+100);
                H0F0( false, 362) ;

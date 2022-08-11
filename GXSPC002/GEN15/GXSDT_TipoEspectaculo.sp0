@@ -1,5 +1,5 @@
  
-spec_i([ sdt,[ 0,4,0 ],'TipoEspectaculo','TipoEspectaculo',0,spa,'17_0_10-162473' ]).
+spec_i([ sdt,[ 0,4,0 ],'TipoEspectaculo','TipoEspectaculo',0,spa,'17_0_10-161416' ]).
  
 struct_dt_i([ 0,4,0 ],name,'TipoEspectaculo').
 struct_dt_i([ 0,4,0 ],namespace,'Obligatorio1v2').

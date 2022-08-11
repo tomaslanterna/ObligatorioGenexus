@@ -16,6 +16,12 @@
 		<ProjectReference Include=".\..\aespectaculo_dataprovider\aespectaculo_dataprovider.csproj" />
 		<ProjectReference Include=".\..\aimpresionentrada\aimpresionentrada.csproj" />
 		<ProjectReference Include=".\..\aimpresionentrada\aimpresionentrada.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculosportipo\aimpresionespectaculosportipo.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculosportipo\aimpresionespectaculosportipo.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculos\aimpresionespectaculos.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculos\aimpresionespectaculos.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculosfecha\aimpresionespectaculosfecha.csproj" />
+		<ProjectReference Include=".\..\aimpresionespectaculosfecha\aimpresionespectaculosfecha.csproj" />
 		<ProjectReference Include=".\..\appmasterpage\appmasterpage.csproj" />
 		<ProjectReference Include=".\..\recentlinks\recentlinks.csproj" />
 		<ProjectReference Include=".\..\promptmasterpage\promptmasterpage.csproj" />
@@ -63,6 +69,8 @@
 		<ProjectReference Include=".\..\gx00g1\gx00g1.csproj" />
 		<ProjectReference Include=".\..\gx00i1\gx00i1.csproj" />
 		<ProjectReference Include=".\..\espectaculoespectaculofuncionwc\espectaculoespectaculofuncionwc.csproj" />
+		<ProjectReference Include=".\..\espectaculos\espectaculos.csproj" />
+		<ProjectReference Include=".\..\wpespectaculostipo\wpespectaculostipo.csproj" />
 		<ProjectReference Include=".\..\lugar\lugar.csproj" />
 		<ProjectReference Include=".\..\pais\pais.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculo\tipoespectaculo.csproj" />

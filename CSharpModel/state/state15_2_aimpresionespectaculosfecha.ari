@@ -1,0 +1,36 @@
+current_obj_i(2,proc,18).
+ 
+current_guid('85615c23-252a-4471-8726-bf327f0422c9').
+ 
+ 
+ 
+is_webproc_i(aimpresionespectaculosfecha).
+ 
+ 
+is_pdf_i.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(aimpresionespectaculosfecha,'Impresion Espectaculos Fecha','','""','HTTP',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(aimpresionespectaculosfecha,[],[],[],18).
+ 
+ 
+obj_parms_i([ 'DateTime aP0_FechaRecibida' ],[ [ 'Fecharecibida',inout ] ]).
+ 
+ 
+ 
+ 
+ 
+ 

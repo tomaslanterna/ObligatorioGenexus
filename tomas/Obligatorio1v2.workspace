@@ -1,49 +1,4 @@
 <Objects>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>2</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
-  </Object>
-  <Object>
-    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
-    <Id>4</Id>
-    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
-  </Object>
-  <Object>
-    <Type>280c149c-48b2-4284-a532-0c999df9e006</Type>
-    <Id>3</Id>
-    <Part>a5e6a251-2df0-44d8-adab-1da237574326</Part>
-  </Object>
-  <Object>
-    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
-    <Id>8</Id>
-    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>5</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>10</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>9</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
-  </Object>
-  <Object>
-    <Type>84a12160-f59b-4ad7-a683-ea4481ac23e9</Type>
-    <Id>15</Id>
-    <Part>528d1c06-a9c2-420d-bd35-21dca83f12ff</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>8</Id>
-    <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
-  </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>

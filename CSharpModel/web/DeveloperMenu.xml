@@ -51,4 +51,28 @@
       <ObjDesc>Espectaculoes</ObjDesc>
       <ObjLink>wwespectaculo.aspx</ObjLink>
    </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>Espectaculos</ObjName>
+      <ObjDesc>Espectaculos</ObjDesc>
+      <ObjLink>espectaculos.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WPEspectaculosTipo</ObjName>
+      <ObjDesc>WPEspectaculos Tipo</ObjDesc>
+      <ObjLink>wpespectaculostipo.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>1</ObjCls>
+      <ObjName>ImpresionEspectaculosPorTipo</ObjName>
+      <ObjDesc>Impresion Espectaculos Por Tipo</ObjDesc>
+      <ObjLink>aimpresionespectaculosportipo.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>1</ObjCls>
+      <ObjName>ImpresionEspectaculos</ObjName>
+      <ObjDesc>Impresion Espectaculos</ObjDesc>
+      <ObjLink>aimpresionespectaculos.aspx</ObjLink>
+   </Object>
 </Objects>

@@ -128,6 +128,14 @@ namespace GeneXus.Programs {
          returnInSub = false;
       }
 
+      protected void E13042( )
+      {
+         /* 'Imprimir Espectaculos por Tipos' Routine */
+         returnInSub = false;
+         CallWebObject(formatLink("aimpresionespectaculosportipo.aspx") );
+         context.wjLocDisableFrm = 2;
+      }
+
       protected void ZM044( short GX_JID )
       {
          if ( ( GX_JID == 2 ) || ( GX_JID == 0 ) )

@@ -53,7 +53,7 @@
       <add  key="EXPOSE_METADATA" value="0"/>
       <add  key="SMART_CACHING" value="0"/>
       <add  key="wcf:serviceHostingEnvironment:useClassicReadEntityBodyMode" value="true"/>
-      <add  key="CACHE_INVALIDATION_TOKEN" value="202281021295938"/>
+      <add  key="CACHE_INVALIDATION_TOKEN" value="2022810234805"/>
    </appSettings>
    <languages >
       <Spanish  code="spa" time_fmt="24" decimal_point="," thousand_sep="." date_fmt="DMY" culture="es-ES"/>

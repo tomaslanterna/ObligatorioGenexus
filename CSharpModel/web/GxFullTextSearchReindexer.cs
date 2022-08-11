@@ -30,10 +30,10 @@ namespace GeneXus.Programs {
          obj = new SdtLugar(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
-         obj = new SdtTipoEspectaculo(context);
+         obj = new SdtEspectaculo(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
-         obj = new SdtEspectaculo(context);
+         obj = new SdtTipoEspectaculo(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          return 1 ;

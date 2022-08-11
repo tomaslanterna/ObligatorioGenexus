@@ -26,6 +26,7 @@
 	<ItemGroup>
 		<Compile Include = "$(WebDirectory)\tipoespectaculo_bc.cs" />
 		<Compile Include = "$(WebDirectory)\atipoespectaculo_dataprovider.cs" />
+		<Compile Include = "$(WebDirectory)\impresionespectaculosportipo.cs" />
 
 	</ItemGroup>
 	
