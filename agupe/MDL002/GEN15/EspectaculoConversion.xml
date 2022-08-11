@@ -181,6 +181,16 @@
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>UESPECTACULO</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>2</AttriId>
+<AttriName>EspectaculoName</AttriName>
+<Description>Espectaculo Name</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
@@ -209,6 +219,7 @@
 <Statement>CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [EspectaculoFecha] datetime NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NOT NULL , PRIMARY KEY([EspectaculoId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IESPECTACULO1] ON [Espectaculo] ([TipoEspectaculoId] )</Statement>
 <Statement>CREATE NONCLUSTERED INDEX [IESPECTACULO2] ON [Espectaculo] ([LugarId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [UESPECTACULO] ON [Espectaculo] ([EspectaculoName] )</Statement>
 <Statement>ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO2] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId])</Statement>
 <Statement>ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO1] FOREIGN KEY ([TipoEspectaculoId]) REFERENCES [TipoEspectaculo] ([TipoEspectaculoId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>

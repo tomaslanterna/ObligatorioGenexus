@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\aimpresionespectaculosportipo.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionespectaculosportipo\obj\Release\aimpresionespectaculosportipo.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionespectaculosportipo\obj\Release\aimpresionespectaculosportipo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\aimpresionespectaculosportipo.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionespectaculosportipo\obj\Release\aimpresionespectaculosportipo.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionespectaculosportipo\obj\Release\aimpresionespectaculosportipo.dll

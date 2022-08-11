@@ -1,8 +1,8 @@
-spec_i([ web,37,'Tipo Espectaculoes','WWTipoEspectaculo',0,spa,'17_0_10-161416' ]).
+spec_i([ web,37,'Tipo Espectaculoes','WWTipoEspectaculo',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 4,[ [ 4,many ] ],[],[],[ [ [ 4 ],[ 8,7 ] ] ],[ [ [ 4 ],[] ] ],[ 8 ],'',[],[] ]).
+level_i(2,[ 4,[ [ 4,many ] ],[],[],[ [ [ 4 ],[ 8,7 ] ] ],[ [ [ 4 ],[] ] ],[ 8 ],'UTIPOESPECTACULO',[],[] ]).
  
 tw_i(2,[]).
  
@@ -127,7 +127,7 @@ rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"WWTipoEspectaculo"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,4,[],[ [],'',[] ]).
+a_i(3,2,t,4,[],[ [],'UTIPOESPECTACULO',[] ]).
 a_i(4,1,f,[ t('&Update',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(5,1,f,[ t('&Delete',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
@@ -166,8 +166,8 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ])
  
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
  
-index_i(4,[ '',a,[ 8 ],'' ]).
 index_i(4,[ 'ITIPOESPECTACULO',u,[ 7 ],'ITipoEspectaculo' ]).
+index_i(4,[ 'UTIPOESPECTACULO',d,[ 8 ],'UTipoEspectaculo' ]).
  
  
  
@@ -668,7 +668,6 @@ html_comp_i(29,'Invitemsg','',d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0038,[ 'There is no index for order ',[ att(2,8) ],'; poor performance may be noticed',[ ' in grid ''','Grid','''' ],'.' ])).
  
  
  

@@ -1,0 +1,1216 @@
+spec_i([ trn,8,'Entrada','Entrada_BC',[],spa,'17_0_10-162473' ]).
+ 
+struct_i(9,0,[ 'Websession' ],[]).
+ 
+level_i(9,[ 9,[ [ 9,many ],[ 5,one ],[ 16,one ],[ 15,one ],[ 18,one ],[ 3,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 2000,one ] ],[ 23 ],[],[],[],[ 23 ],'IENTRADA',[ 9,[] ],[] ]).
+ 
+tw_i(9,[ [ 5,[ [ 9,9,9 ] ] ],[ 16,[ [ 9,1,1 ],[ 9,27,27 ] ] ],[ 15,[ [ 9,1,1 ] ] ],[ 18,[ [ 9,1,1 ],[ 9,47,47 ] ] ],[ 3,[ [ 5,3,3 ] ] ],[ 2,[ [ 15,4,4 ] ] ],[ 4,[ [ 15,7,7 ] ] ],[ 11,[ [ 15,4,4 ],[ 9,27,27 ] ] ],[ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ]).
+ 
+lwi_i(9,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(9,[ [ [ 15,4 ],[ 15,7 ],[ 9,23 ],[ 9,42 ],[ 3,6 ],[ 5,10 ],[ 15,2 ],[ 15,16 ],[ 18,48 ],[ 15,26 ],[ 15,40000 ],[ 9,50 ],[ 2,5 ],[ 11,28 ],[ 11,30 ],[ 4,8 ],[ 11,29 ],[ 9,9 ],[ 9,1 ],[ 9,27 ],[ 9,47 ],[ 5,3 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ 
+las_i(9,[ [ 7,4,'Websession',23,38,42,3,6,9,10,1,2,16,47,48,26,40000,50,5,27,28,30,8,29,37 ] ]).
+ 
+lac_i(9,[ [ 23,42,9,1,47,50,27 ] ]).
+ 
+ 
+ 
+cls_i([ 25,80 ],[ 0,0 ]).
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'ISOLATION_LEVEL','CR')).
+rule_i(0,datastore(1,'SQLSERVER_VERSION','10')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
+rule_i(0,datastore(1,'JRN400','QSQJRN')).
+rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
+rule_i(0,datastore(1,'PGMLIB','')).
+rule_i(0,datastore(1,'DTALIB','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','Timeout=120')).
+rule_i(0,datastore(1,'USER_PASSWORD','utvO󋦌饪JPYOYv|�0z')).
+rule_i(0,datastore(1,'USER_ID',utvOAX3PnaOYxlLt)).
+rule_i(0,datastore(1,'TRUSTED_CONNECTION','No')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','')).
+rule_i(0,datastore(1,'CS_SERVER','trialapps3.genexus.com')).
+rule_i(0,datastore(1,'CS_DBNAME','Idd69881c306d30e8b003dc536cf48b9dc')).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','com.microsoft.sqlserver.jdbc.SQLServerDriver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PKSupFKs',[])).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','Entrada')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER',o(13,'ViewEntrada'))).
+rule_i(0,prop('SEARCHABLE','UMPV')).
+rule_i(0,prop('MTIER_OPT','Yes')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('KEY_MOREKEYS','UMPV')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_LAST','UMPV')).
+rule_i(0,prop('KEY_FIRST','UMPV')).
+rule_i(0,prop('KEY_SELECT','UMPV')).
+rule_i(0,prop('KEY_DISPLAY','UMPV')).
+rule_i(0,prop('KEY_DELETE','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_UPDATE','UMPV')).
+rule_i(0,prop('KEY_MENU','UMPV')).
+rule_i(0,prop('KEY_RETRIEVE','UMPV')).
+rule_i(0,prop('KEY_NEXT','UMPV')).
+rule_i(0,prop('KEY_PREVIOUS','UMPV')).
+rule_i(0,prop('KEY_INSERT','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_PROMPT','UMPV')).
+rule_i(0,prop('KEY_EXIT','UMPV')).
+rule_i(0,prop('KEY_CHECK','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebFormDefaults','0')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('FIELD_TO_FIELD','UMPV')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('CFMTRN','No')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idDynTrnUpdatePolicy,idDynTrnUpdatePolicy_UPDATABLE)).
+rule_i(0,prop(idDynTrnExecTime,idDynTrnExecTime_CREATION)).
+rule_i(0,prop(idIsDynTrn,'-1')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Secure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('ExternalNamespace','Obligatorio1v2')).
+rule_i(0,prop('ExternalName','Entrada')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop(sessiontype,'RW')).
+rule_i(0,prop(idISBUSINESSCOMPONENT,'-1')).
+rule_i(0,prop('Folder',o(8,'GeneXus'))).
+rule_i(0,prop('ObjDesc','Entrada')).
+rule_i(0,prop('ObjName','Entrada')).
+rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
+rule_i(0,maingen(15)).
+rule_i(9,rule([ a(1,msg([ t('"Campo Entrada Fecha fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(42,2),t(')',4),t('.OR.',9),t(42,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ],[ insert,update ],[ 42 ])).
+rule_i(9,rule([ a(99,[ [ oe([ t(1,2) ]),oe([ t(27,2) ]) ] ]) ],[],[ insert,update,delete ],[ oe([ t(1,2) ]),oe([ t(27,2) ]) ])).
+rule_i(9,rule([ a(8,[ t(o(1,'ImpresionEntrada'),28),t(23,2) ]) ],[ t(insert,1),t('.OR.',9),t(update,1) ],[ insert,update ],[ 23 ])).
+rule_i(9,rule([ a(1,[ t('''No hay lugares disponibles''',3) ]) ],[ t(38,2),t(<,10),t('1',3) ],[ insert,update,delete,display ],[ 38 ])).
+rule_i(9,rule([ a(1,[ t('''Fecha invalida''',3) ]) ],[ t(42,2),t(>,10),t(16,2) ],[ insert,update,delete,display ],[ 42,16 ])).
+rule_i(9,rule([ a(19,[ [ 9 ],msg([ t('"No existe ''Cliente''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 9 ])).
+rule_i(9,rule([ a(19,[ [ 1,27 ],msg([ t('"No existe ''Lugar Sector''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1,27 ])).
+rule_i(9,rule([ a(19,[ [ 1 ],msg([ t('"No existe ''Espectaculo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1 ])).
+rule_i(9,rule([ a(19,[ [ 1,47 ],msg([ t('"No existe ''Funcion''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 1,47 ])).
+rule_i(9,rule([ a(19,[ [ 3 ],msg([ t('"No existe ''Pais''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 3 ])).
+rule_i(9,rule([ a(19,[ [ 4 ],msg([ t('"No existe ''Lugar''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 4 ])).
+rule_i(9,rule([ a(19,[ [ 7 ],msg([ t('"No existe ''Tipo Espectaculo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 7 ])).
+rule_i(9,rule([ a(19,[ [ 4,27 ],msg([ t('"No existe ''Sector''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 4,27 ])).
+ 
+a_i(1,9,b,0,[],[ [],[ a(1,msg([ t('"Campo Entrada Fecha fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(42,2),t(')',4),t('.OR.',9),t(42,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ] ]).
+a_i(2,9,f,38,[],[ [],[ t(29,2),t(-,5),t(37,2) ] ]).
+a_i(3,9,b,1,[ trn ],[ [ insert,update ],[ a(8,[ t(o(1,'ImpresionEntrada'),28),t(23,2) ]) ],[ t(insert,1),t('.OR.',9),t(update,1) ] ]).
+a_i(4,9,b,2,[],[ [],[ a(1,[ t('''No hay lugares disponibles''',3) ]) ],[ t(38,2),t(<,10),t('1',3) ] ]).
+a_i(5,9,b,3,[],[ [],[ a(1,[ t('''Fecha invalida''',3) ]) ],[ t(42,2),t(>,10),t(16,2) ] ]).
+a_i(6,9,t,9,[],[ [ [ [],23,23 ] ],'IENTRADA',[] ]).
+a_i(7,9,r,5,[],[ [ [ 9,9,9 ] ],'ICLIENTE',[] ]).
+a_i(8,9,r,15,[],[ [ [ 9,1,1 ] ],'IESPECTACULO',[] ]).
+a_i(9,9,r,16,[],[ [ [ 9,1,1 ],[ 9,27,27 ] ],'IESPECTACULOLUGARSECTOR',[] ]).
+a_i(10,9,r,18,[],[ [ [ 9,1,1 ],[ 9,47,47 ] ],'IESPECTACULOFUNCION',[] ]).
+a_i(11,9,r,3,[],[ [ [ 5,3,3 ] ],'IPAIS',[] ]).
+a_i(12,9,r,2,[],[ [ [ 15,4,4 ] ],'ILUGAR',[] ]).
+a_i(13,9,r,4,[],[ [ [ 15,7,7 ] ],'ITIPOESPECTACULO',[] ]).
+a_i(14,9,r,11,[],[ [ [ 15,4,4 ],[ 9,27,27 ] ],'ILUGARSECTOR',[] ]).
+a_i(15,9,r,2000,[],[ [ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ],'IENTRADA',[] ]).
+ 
+v_i(b,i,1,42).
+v_i(b,o,1,[]).
+v_i(f,i,2,29).
+v_i(f,i,2,37).
+v_i(f,o,2,38).
+v_i(b,i,3,23).
+v_i(b,o,3,[]).
+v_i(b,i,4,38).
+v_i(b,o,4,[]).
+v_i(b,i,5,42).
+v_i(b,i,5,16).
+v_i(b,o,5,[]).
+v_i(t,i,6,23).
+v_i(t,o,6,42).
+v_i(t,o,6,50).
+v_i(t,o,6,9).
+v_i(t,o,6,1).
+v_i(t,o,6,27).
+v_i(t,o,6,47).
+v_i(r,i,7,9).
+v_i(r,o,7,10).
+v_i(r,o,7,3).
+v_i(r,i,8,1).
+v_i(r,o,8,4).
+v_i(r,o,8,7).
+v_i(r,o,8,2).
+v_i(r,o,8,16).
+v_i(r,o,8,26).
+v_i(r,o,8,40000).
+v_i(r,i,9,1).
+v_i(r,i,9,27).
+v_i(r,o,9,[]).
+v_i(r,i,10,1).
+v_i(r,i,10,47).
+v_i(r,o,10,48).
+v_i(r,i,11,3).
+v_i(r,o,11,6).
+v_i(r,i,12,4).
+v_i(r,o,12,5).
+v_i(r,i,13,7).
+v_i(r,o,13,8).
+v_i(r,i,14,4).
+v_i(r,i,14,27).
+v_i(r,o,14,28).
+v_i(r,o,14,30).
+v_i(r,o,14,29).
+v_i(r,i,15,1).
+v_i(r,i,15,27).
+v_i(r,o,15,37).
+ 
+act_info_i(3,[ [ 23 ] ]).
+ 
+ 
+ 
+ 
+ 
+attri_i(37,[ 'LugarSectorVendidas',int,4,0,'ZZZ9',0,'Lugar Sector Vendidas','',0 ]).
+attri_i(29,[ 'LugarSectorCantidad',int,4,0,'ZZZ9',0,'Lugar Sector Cantidad','',0 ]).
+attri_i(8,[ 'TipoEspectaculoName',svchar,40,0,'',0,'Tipo Espectaculo Name','',0 ]).
+attri_i(30,[ 'LugarSectorPrecio',int,4,0,'ZZZ9',0,'Lugar Sector Precio','',0 ]).
+attri_i(28,[ 'LugarSectorName',svchar,40,0,'',0,'Lugar Sector Name','',0 ]).
+attri_i(27,[ 'LugarSectorId',int,4,0,'ZZZ9',0,'Lugar Sector Id','',0 ]).
+attri_i(5,[ 'LugarName',svchar,40,0,'',0,'Lugar Name','',0 ]).
+attri_i(50,[ 'EspectaculoPaisName',svchar,40,0,'',0,'Espectaculo Pais Name','',0 ]).
+attri_i(26,[ 'EspectaculoImagen',bits,4,0,'',0,'Espectaculo Imagen','',0 ]).
+attri_i(48,[ 'EspectaculoFuncionName',svchar,40,0,'',0,'Espectaculo Funcion Name','',0 ]).
+attri_i(47,[ 'EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Espectaculo Funcion Id','',0 ]).
+attri_i(16,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
+attri_i(2,[ 'EspectaculoName',svchar,40,0,'',0,'Espectaculo Name','',0 ]).
+attri_i(1,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
+attri_i(10,[ 'ClienteName',svchar,40,0,'',0,'Cliente Name','',0 ]).
+attri_i(9,[ 'ClienteId',int,4,0,'ZZZ9',0,'Cliente Id','',0 ]).
+attri_i(6,[ 'PaisName',svchar,40,0,'',0,'Pais Name','',0 ]).
+attri_i(3,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
+attri_i(42,[ 'EntradaFecha',date,8,0,'99/99/99',0,'Entrada Fecha','',0 ]).
+attri_i(23,[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',0 ]).
+attri_i(7,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
+attri_i(4,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
+attri_i(38,[ 'LugarSectorDisponibles',int,4,0,'ZZZ9',0,'Lugar Sector Disponibles','',0 ]).
+attri_i(40000,[ 'EspectaculoImagen_GXI',svchar,2048,0,'',0,'',[],0 ]).
+attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Insert_espectaculofuncionid',[ 'Insert_EspectaculoFuncionId',int,4,0,'ZZZ9',0,'Insert_Espectaculo Funcion Id','',16 ]).
+attri_i('Insert_lugarsectorid',[ 'Insert_LugarSectorId',int,4,0,'ZZZ9',0,'Insert_Lugar Sector Id','',15 ]).
+attri_i('Insert_espectaculoid',[ 'Insert_EspectaculoId',int,4,0,'ZZZ9',0,'Insert_Espectaculo Id','',14 ]).
+attri_i('Trncontextatt',[ 'TrnContextAtt',o('TransactionContext.Attribute'),0,0,'',0,'Trn Context Att','',13 ]).
+attri_i('Insert_funcionid',[ 'Insert_FuncionId',int,4,0,'ZZZ9',0,'Insert_Funcion Id','',12 ]).
+attri_i('Insert_clienteid',[ 'Insert_ClienteId',int,4,0,'ZZZ9',0,'Insert_Cliente Id','',11 ]).
+attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',10 ]).
+attri_i('Trncontext',[ 'TrnContext',o('TransactionContext'),0,0,'',0,'Trn Context','',9 ]).
+attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ]).
+attri_i('Entradaid',[ 'EntradaId',int,4,0,'ZZZ9',0,'Entrada Id','',7 ]).
+attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
+ 
+table_i(16,[ 'EspectaculoLugarSector',[ 1,27 ],'Lugar Sector','EspectaculoLugarSector' ]).
+table_i(2000,[ 'Entrada',[ 37,1,27,23 ],'Entrada','Entrada' ]).
+table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
+table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
+table_i(2,[ 'Lugar',[ 4,5 ],'Lugar','Lugar' ]).
+table_i(18,[ 'EspectaculoFuncion',[ 1,47,48 ],'Funcion','EspectaculoFuncion' ]).
+table_i(5,[ 'Cliente',[ 9,10,3 ],'Cliente','Cliente' ]).
+table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
+table_i(9,[ 'Entrada',[ 23,9,27,42,1,47,50 ],'Entrada','Entrada' ]).
+table_i(15,[ 'Espectaculo',[ 1,2,16,4,7,26,40000 ],'Espectaculo','Espectaculo' ]).
+ 
+index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
+index_i(5,[ 'ICLIENTE',u,[ 9 ],'ICliente' ]).
+index_i(16,[ 'IESPECTACULOLUGARSECTOR',u,[ 1,27 ],'IEspectaculoLugarSector' ]).
+index_i(15,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
+index_i(18,[ 'IESPECTACULOFUNCION',u,[ 1,47 ],'IEspectaculoFuncion' ]).
+index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
+index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
+index_i(4,[ 'ITIPOESPECTACULO',u,[ 7 ],'ITipoEspectaculo' ]).
+index_i(11,[ 'ILUGARSECTOR',u,[ 4,27 ],'ILugarSector' ]).
+index_i(2000,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
+ 
+lv_i(2,2000,9).
+ 
+ 
+ 
+ 
+nav_view_i(2000,[ 37 ],[ 1,27 ],[ 1,27 ],[ [ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ],[ [ [ 9,[ 'count(',23 ] ],[ 9,1 ],[ 9,27 ] ],n,[ [ 9,many ] ],[],[],[ none ],[],[ 1,27 ],[] ]).
+ 
+ 
+agg_def_i(37,[ t('0',3) ]).
+ 
+ 
+ 
+ 
+ 
+add_att_i(bits,2,40000,26,'EspectaculoImagen_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
+ 
+upd_i(9,9,i,[ [ 42,50,9,1,27,47 ],[],'IENTRADA',[ [ [],23,23 ] ] ]).
+upd_i(9,9,u,[ [ 42,50,9,1,27,47 ],[],'IENTRADA',[] ]).
+upd_i(9,9,d,[ [],[],'IENTRADA',[] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+dom_info_i(86,[ 'Id' ]).
+dom_info_i(87,[ 'Name' ]).
+ 
+ 
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,1).
+b_group_i(2,2,lit,0,2,42).
+b_group_i(2,3,lit,0,43,0).
+ 
+b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
+b_line_i(40,2,2,cmd,1,[ t('',147,40,0) ]).
+b_line_i(42,2,2,cmd,1,[ t('',146,42,0),t('After Trn',3,42,7) ]).
+b_line_i(54,2,3,cmd,1,[ t('',147,54,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,23,'HORIZONTAL_DESCRIPTION','Entrada Id',d).
+att_prop_i(2,23,'ExternalName','EntradaId',d).
+att_prop_i(2,23,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,23,'EmptyAsNull','Yes',d).
+att_prop_i(2,23,idBasedOn,86,v).
+att_prop_i(2,23,'AUTONUMBER','-1',v).
+att_prop_i(2,23,'AUTONUMBER_START','1',d).
+att_prop_i(2,23,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,23,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,23,'AttRegEx','',d).
+att_prop_i(2,23,'AttValidationFailedMsg','',d).
+att_prop_i(2,23,'DownloadOffline','0',d).
+att_prop_i(2,23,'VarServiceExtName','',d).
+att_prop_i(2,23,'FullName','EntradaId',v).
+att_prop_i(2,42,'HORIZONTAL_DESCRIPTION','Entrada Fecha',d).
+att_prop_i(2,42,'ExternalName','EntradaFecha',d).
+att_prop_i(2,42,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,42,'EmptyAsNull','Yes',d).
+att_prop_i(2,42,idBasedOn,'',d).
+att_prop_i(2,42,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,42,'AttRegEx','',d).
+att_prop_i(2,42,'AttValidationFailedMsg','',d).
+att_prop_i(2,42,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,42,'DownloadOffline','0',d).
+att_prop_i(2,42,'VarServiceExtName','',d).
+att_prop_i(2,42,'FullName','EntradaFecha',v).
+att_prop_i(2,3,'HORIZONTAL_DESCRIPTION','Pais Id',d).
+att_prop_i(2,3,'ExternalName','PaisId',d).
+att_prop_i(2,3,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,3,'EmptyAsNull','Yes',d).
+att_prop_i(2,3,idBasedOn,86,v).
+att_prop_i(2,3,'AUTONUMBER','-1',v).
+att_prop_i(2,3,'AUTONUMBER_START','1',d).
+att_prop_i(2,3,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,3,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,3,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,3,'AttRegEx','',d).
+att_prop_i(2,3,'AttValidationFailedMsg','',d).
+att_prop_i(2,3,'DownloadOffline','0',d).
+att_prop_i(2,3,'VarServiceExtName','',d).
+att_prop_i(2,3,'FullName','PaisId',v).
+att_prop_i(2,6,'HORIZONTAL_DESCRIPTION','Pais Name',d).
+att_prop_i(2,6,'ExternalName','PaisName',d).
+att_prop_i(2,6,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,6,'EmptyAsNull','Yes',d).
+att_prop_i(2,6,idBasedOn,87,v).
+att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,6,'AttRegEx','',d).
+att_prop_i(2,6,'AttValidationFailedMsg','',d).
+att_prop_i(2,6,'DownloadOffline','0',d).
+att_prop_i(2,6,'VarServiceExtName','',d).
+att_prop_i(2,6,'FullName','PaisName',v).
+att_prop_i(2,9,'HORIZONTAL_DESCRIPTION','Cliente Id',d).
+att_prop_i(2,9,'ExternalName','ClienteId',d).
+att_prop_i(2,9,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,9,'EmptyAsNull','Yes',d).
+att_prop_i(2,9,idBasedOn,86,v).
+att_prop_i(2,9,'AUTONUMBER','-1',v).
+att_prop_i(2,9,'AUTONUMBER_START','1',d).
+att_prop_i(2,9,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,9,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,9,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,9,'AttRegEx','',d).
+att_prop_i(2,9,'AttValidationFailedMsg','',d).
+att_prop_i(2,9,'DownloadOffline','0',d).
+att_prop_i(2,9,'VarServiceExtName','',d).
+att_prop_i(2,9,'FullName','ClienteId',v).
+att_prop_i(2,10,'HORIZONTAL_DESCRIPTION','Cliente Name',d).
+att_prop_i(2,10,'ExternalName','ClienteName',d).
+att_prop_i(2,10,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,10,'EmptyAsNull','Yes',d).
+att_prop_i(2,10,idBasedOn,87,v).
+att_prop_i(2,10,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,10,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,10,'AttRegEx','',d).
+att_prop_i(2,10,'AttValidationFailedMsg','',d).
+att_prop_i(2,10,'DownloadOffline','0',d).
+att_prop_i(2,10,'VarServiceExtName','',d).
+att_prop_i(2,10,'FullName','ClienteName',v).
+att_prop_i(2,1,'HORIZONTAL_DESCRIPTION','Espectaculo Id',d).
+att_prop_i(2,1,'ExternalName','EspectaculoId',d).
+att_prop_i(2,1,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',v).
+att_prop_i(2,1,idBasedOn,86,v).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AttRegEx','',d).
+att_prop_i(2,1,'AttValidationFailedMsg','',d).
+att_prop_i(2,1,'DownloadOffline','0',d).
+att_prop_i(2,1,'VarServiceExtName','',d).
+att_prop_i(2,1,'FullName','EspectaculoId',v).
+att_prop_i(2,2,'HORIZONTAL_DESCRIPTION','Espectaculo Name',d).
+att_prop_i(2,2,'ExternalName','EspectaculoName',d).
+att_prop_i(2,2,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,2,'EmptyAsNull','Yes',d).
+att_prop_i(2,2,idBasedOn,87,v).
+att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,2,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,2,'AttRegEx','',d).
+att_prop_i(2,2,'AttValidationFailedMsg','',d).
+att_prop_i(2,2,'DownloadOffline','0',d).
+att_prop_i(2,2,'VarServiceExtName','',d).
+att_prop_i(2,2,'FullName','EspectaculoName',v).
+att_prop_i(2,16,'HORIZONTAL_DESCRIPTION','Espectaculo Fecha',d).
+att_prop_i(2,16,'ExternalName','EspectaculoFecha',d).
+att_prop_i(2,16,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,16,'EmptyAsNull','Yes',d).
+att_prop_i(2,16,idBasedOn,'',d).
+att_prop_i(2,16,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,16,'AttRegEx','',d).
+att_prop_i(2,16,'AttValidationFailedMsg','',d).
+att_prop_i(2,16,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,16,'DownloadOffline','0',d).
+att_prop_i(2,16,'VarServiceExtName','',d).
+att_prop_i(2,16,'FullName','EspectaculoFecha',v).
+att_prop_i(2,47,'HORIZONTAL_DESCRIPTION','Espectaculo Funcion Id',d).
+att_prop_i(2,47,'ExternalName','EspectaculoFuncionId',d).
+att_prop_i(2,47,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,47,'EmptyAsNull','Yes',d).
+att_prop_i(2,47,idBasedOn,86,v).
+att_prop_i(2,47,'AUTONUMBER','0',d).
+att_prop_i(2,47,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,47,'AttRegEx','',d).
+att_prop_i(2,47,'AttValidationFailedMsg','',d).
+att_prop_i(2,47,'DownloadOffline','0',d).
+att_prop_i(2,47,'VarServiceExtName','',d).
+att_prop_i(2,47,'FullName','EspectaculoFuncionId',v).
+att_prop_i(2,48,'HORIZONTAL_DESCRIPTION','Espectaculo Funcion Name',d).
+att_prop_i(2,48,'ExternalName','EspectaculoFuncionName',d).
+att_prop_i(2,48,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,48,'EmptyAsNull','Yes',d).
+att_prop_i(2,48,idBasedOn,87,v).
+att_prop_i(2,48,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,48,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,48,'AttRegEx','',d).
+att_prop_i(2,48,'AttValidationFailedMsg','',d).
+att_prop_i(2,48,'DownloadOffline','0',d).
+att_prop_i(2,48,'VarServiceExtName','',d).
+att_prop_i(2,48,'FullName','EspectaculoFuncionName',v).
+att_prop_i(2,26,'HORIZONTAL_DESCRIPTION','Espectaculo Imagen',d).
+att_prop_i(2,26,'ExternalName','EspectaculoImagen',d).
+att_prop_i(2,26,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,26,'EmptyAsNull','Yes',d).
+att_prop_i(2,26,'ExternalStorage','-1',d).
+att_prop_i(2,26,idBasedOn,'',d).
+att_prop_i(2,26,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,26,'AttRegEx','',d).
+att_prop_i(2,26,'AttValidationFailedMsg','',d).
+att_prop_i(2,26,'DownloadOffline','0',d).
+att_prop_i(2,26,'VarServiceExtName','',d).
+att_prop_i(2,26,'FullName','EspectaculoImagen',v).
+att_prop_i(2,50,'HORIZONTAL_DESCRIPTION','Espectaculo Pais Name',d).
+att_prop_i(2,50,'ExternalName','EspectaculoPaisName',d).
+att_prop_i(2,50,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,50,'EmptyAsNull','Yes',d).
+att_prop_i(2,50,idBasedOn,87,v).
+att_prop_i(2,50,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,50,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,50,'AttRegEx','',d).
+att_prop_i(2,50,'AttValidationFailedMsg','',d).
+att_prop_i(2,50,'DownloadOffline','0',d).
+att_prop_i(2,50,'VarServiceExtName','',d).
+att_prop_i(2,50,'FullName','EspectaculoPaisName',v).
+att_prop_i(2,5,'HORIZONTAL_DESCRIPTION','Lugar Name',d).
+att_prop_i(2,5,'ExternalName','LugarName',d).
+att_prop_i(2,5,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,5,'EmptyAsNull','Yes',d).
+att_prop_i(2,5,idBasedOn,87,v).
+att_prop_i(2,5,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,5,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,5,'AttRegEx','',d).
+att_prop_i(2,5,'AttValidationFailedMsg','',d).
+att_prop_i(2,5,'DownloadOffline','0',d).
+att_prop_i(2,5,'VarServiceExtName','',d).
+att_prop_i(2,5,'FullName','LugarName',v).
+att_prop_i(2,27,'HORIZONTAL_DESCRIPTION','Lugar Sector Id',d).
+att_prop_i(2,27,'ExternalName','LugarSectorId',d).
+att_prop_i(2,27,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,27,'EmptyAsNull','Yes',d).
+att_prop_i(2,27,idBasedOn,86,v).
+att_prop_i(2,27,'AUTONUMBER','0',v).
+att_prop_i(2,27,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,27,'AttRegEx','',d).
+att_prop_i(2,27,'AttValidationFailedMsg','',d).
+att_prop_i(2,27,'DownloadOffline','0',d).
+att_prop_i(2,27,'VarServiceExtName','',d).
+att_prop_i(2,27,'FullName','LugarSectorId',v).
+att_prop_i(2,28,'HORIZONTAL_DESCRIPTION','Lugar Sector Name',d).
+att_prop_i(2,28,'ExternalName','LugarSectorName',d).
+att_prop_i(2,28,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,28,'EmptyAsNull','Yes',d).
+att_prop_i(2,28,idBasedOn,87,v).
+att_prop_i(2,28,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,28,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,28,'AttRegEx','',d).
+att_prop_i(2,28,'AttValidationFailedMsg','',d).
+att_prop_i(2,28,'DownloadOffline','0',d).
+att_prop_i(2,28,'VarServiceExtName','',d).
+att_prop_i(2,28,'FullName','LugarSectorName',v).
+att_prop_i(2,30,'HORIZONTAL_DESCRIPTION','Lugar Sector Precio',d).
+att_prop_i(2,30,'ExternalName','LugarSectorPrecio',d).
+att_prop_i(2,30,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,30,'EmptyAsNull','Yes',d).
+att_prop_i(2,30,idBasedOn,'',d).
+att_prop_i(2,30,'AUTONUMBER','0',d).
+att_prop_i(2,30,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,30,'AttRegEx','',d).
+att_prop_i(2,30,'AttValidationFailedMsg','',d).
+att_prop_i(2,30,'DownloadOffline','0',d).
+att_prop_i(2,30,'VarServiceExtName','',d).
+att_prop_i(2,30,'FullName','LugarSectorPrecio',v).
+att_prop_i(2,38,'HORIZONTAL_DESCRIPTION','Lugar Sector Disponibles',d).
+att_prop_i(2,38,'ExternalName','LugarSectorDisponibles',d).
+att_prop_i(2,38,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,38,idBasedOn,'',d).
+att_prop_i(2,38,'DownloadOffline','0',d).
+att_prop_i(2,38,'VarServiceExtName','',d).
+att_prop_i(2,38,'FullName','LugarSectorDisponibles',v).
+att_prop_i(2,8,'HORIZONTAL_DESCRIPTION','Tipo Espectaculo Name',d).
+att_prop_i(2,8,'ExternalName','TipoEspectaculoName',d).
+att_prop_i(2,8,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,8,'EmptyAsNull','Yes',d).
+att_prop_i(2,8,idBasedOn,87,v).
+att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,8,'AttRegEx','',d).
+att_prop_i(2,8,'AttValidationFailedMsg','',d).
+att_prop_i(2,8,'DownloadOffline','0',d).
+att_prop_i(2,8,'VarServiceExtName','',d).
+att_prop_i(2,8,'FullName','TipoEspectaculoName',v).
+att_prop_i(2,4,'HORIZONTAL_DESCRIPTION','Lugar Id',d).
+att_prop_i(2,4,'ExternalName','LugarId',d).
+att_prop_i(2,4,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,4,'EmptyAsNull','Yes',d).
+att_prop_i(2,4,idBasedOn,86,v).
+att_prop_i(2,4,'AUTONUMBER','-1',v).
+att_prop_i(2,4,'AUTONUMBER_START','1',d).
+att_prop_i(2,4,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,4,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,4,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,4,'AttRegEx','',d).
+att_prop_i(2,4,'AttValidationFailedMsg','',d).
+att_prop_i(2,4,'DownloadOffline','0',d).
+att_prop_i(2,4,'VarServiceExtName','',d).
+att_prop_i(2,4,'FullName','LugarId',v).
+att_prop_i(2,7,'HORIZONTAL_DESCRIPTION','Tipo Espectaculo Id',d).
+att_prop_i(2,7,'ExternalName','TipoEspectaculoId',d).
+att_prop_i(2,7,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,7,'EmptyAsNull','Yes',d).
+att_prop_i(2,7,idBasedOn,86,v).
+att_prop_i(2,7,'AUTONUMBER','-1',v).
+att_prop_i(2,7,'AUTONUMBER_START','1',d).
+att_prop_i(2,7,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,7,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,7,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,7,'AttRegEx','',d).
+att_prop_i(2,7,'AttValidationFailedMsg','',d).
+att_prop_i(2,7,'DownloadOffline','0',d).
+att_prop_i(2,7,'VarServiceExtName','',d).
+att_prop_i(2,7,'FullName','TipoEspectaculoId',v).
+att_prop_i(2,29,'HORIZONTAL_DESCRIPTION','Lugar Sector Cantidad',d).
+att_prop_i(2,29,'ExternalName','LugarSectorCantidad',d).
+att_prop_i(2,29,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,29,'EmptyAsNull','Yes',d).
+att_prop_i(2,29,idBasedOn,'',d).
+att_prop_i(2,29,'AUTONUMBER','0',d).
+att_prop_i(2,29,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,29,'AttRegEx','',d).
+att_prop_i(2,29,'AttValidationFailedMsg','',d).
+att_prop_i(2,29,'DownloadOffline','0',d).
+att_prop_i(2,29,'VarServiceExtName','',d).
+att_prop_i(2,29,'FullName','LugarSectorCantidad',v).
+att_prop_i(2,37,'HORIZONTAL_DESCRIPTION','Lugar Sector Vendidas',d).
+att_prop_i(2,37,'ExternalName','LugarSectorVendidas',d).
+att_prop_i(2,37,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,37,idBasedOn,'',d).
+att_prop_i(2,37,'DownloadOffline','0',d).
+att_prop_i(2,37,'VarServiceExtName','',d).
+att_prop_i(2,37,'FullName','LugarSectorVendidas',v).
+att_prop_i(2,40000,'ExternalName','',d).
+att_prop_i(2,40000,'ExternalNamespace','',d).
+att_prop_i(2,40000,'EmptyAsNull','Yes',d).
+att_prop_i(2,40000,idBasedOn,'',d).
+att_prop_i(2,40000,'AUTONUMBER','0',d).
+att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
+att_prop_i(2,40000,'AttValidationFailedMsg','',d).
+att_prop_i(2,40000,'FullName','',v).
+ 
+tbl_prop_i(2,2000,'AllDirSuper',[ [ 16,[ 1,27 ] ] ],v).
+tbl_prop_i(2,11,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,2,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
+tbl_prop_i(2,18,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,15,'AllDirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,16,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,5,'AllDirSuper',[ [ 3,[ 3 ] ] ],v).
+tbl_prop_i(2,9,'AllDirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
+tbl_prop_i(2,4,'DirSubor',[ [ 15,[ 7 ] ] ],v).
+tbl_prop_i(2,2,'DirSubor',[ [ 11,[ 4 ] ],[ 15,[ 4 ] ] ],v).
+tbl_prop_i(2,3,'DirSubor',[ [ 2,[ 3 ] ],[ 5,[ 3 ] ] ],v).
+tbl_prop_i(2,18,'DirSubor',[ [ 9,[ 1,47 ] ] ],v).
+tbl_prop_i(2,15,'DirSubor',[ [ 16,[ 1 ] ],[ 18,[ 1 ] ] ],v).
+tbl_prop_i(2,16,'DirSubor',[ [ 9,[ 1,27 ] ] ],v).
+tbl_prop_i(2,5,'DirSubor',[ [ 9,[ 9 ] ] ],v).
+tbl_prop_i(2,2000,'DirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
+tbl_prop_i(2,11,'DirSuper',[ [ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,2,'DirSuper',[ [ 3,[ 3 ] ] ],v).
+tbl_prop_i(2,18,'DirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,15,'DirSuper',[ [ 4,[ 7 ] ],[ 2,[ 4 ] ] ],v).
+tbl_prop_i(2,16,'DirSuper',[ [ 15,[ 1 ] ] ],v).
+tbl_prop_i(2,5,'DirSuper',[ [ 3,[ 3 ] ] ],v).
+tbl_prop_i(2,9,'DirSuper',[ [ 18,[ 1,47 ] ],[ 16,[ 1,27 ] ],[ 5,[ 9 ] ] ],v).
+ 
+tbl_att_prop_i(2,9,23,'AllowNulls',n).
+tbl_att_prop_i(2,9,23,'AUTONUMBER',y).
+tbl_att_prop_i(2,9,9,'AllowNulls',n).
+tbl_att_prop_i(2,9,27,'AllowNulls',n).
+tbl_att_prop_i(2,9,42,'AllowNulls',n).
+tbl_att_prop_i(2,9,1,'AllowNulls',n).
+tbl_att_prop_i(2,9,47,'AllowNulls',n).
+tbl_att_prop_i(2,9,50,'AllowNulls',n).
+tbl_att_prop_i(2,5,9,'AllowNulls',n).
+tbl_att_prop_i(2,5,9,'AUTONUMBER',y).
+tbl_att_prop_i(2,5,10,'AllowNulls',n).
+tbl_att_prop_i(2,5,3,'AllowNulls',n).
+tbl_att_prop_i(2,16,1,'AllowNulls',n).
+tbl_att_prop_i(2,16,27,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AllowNulls',n).
+tbl_att_prop_i(2,15,1,'AUTONUMBER',y).
+tbl_att_prop_i(2,15,2,'AllowNulls',n).
+tbl_att_prop_i(2,15,16,'AllowNulls',n).
+tbl_att_prop_i(2,15,4,'AllowNulls',n).
+tbl_att_prop_i(2,15,7,'AllowNulls',n).
+tbl_att_prop_i(2,15,26,'AllowNulls',n).
+tbl_att_prop_i(2,15,40000,'AllowNulls',n).
+tbl_att_prop_i(2,18,1,'AllowNulls',n).
+tbl_att_prop_i(2,18,47,'AllowNulls',n).
+tbl_att_prop_i(2,18,48,'AllowNulls',n).
+tbl_att_prop_i(2,3,3,'AllowNulls',n).
+tbl_att_prop_i(2,3,3,'AUTONUMBER',y).
+tbl_att_prop_i(2,3,6,'AllowNulls',n).
+tbl_att_prop_i(2,2,4,'AllowNulls',n).
+tbl_att_prop_i(2,2,4,'AUTONUMBER',y).
+tbl_att_prop_i(2,2,5,'AllowNulls',n).
+tbl_att_prop_i(2,4,7,'AllowNulls',n).
+tbl_att_prop_i(2,4,7,'AUTONUMBER',y).
+tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,11,4,'AllowNulls',n).
+tbl_att_prop_i(2,11,27,'AllowNulls',n).
+tbl_att_prop_i(2,11,28,'AllowNulls',n).
+tbl_att_prop_i(2,11,29,'AllowNulls',n).
+tbl_att_prop_i(2,11,30,'AllowNulls',n).
+tbl_att_prop_i(2,2000,23,'AllowNulls',n).
+tbl_att_prop_i(2,2000,23,'AUTONUMBER',y).
+ 
+var_prop_i(2,'Entradaid',idBasedOn,'',v).
+var_prop_i(2,'Insert_clienteid',idBasedOn,'',v).
+var_prop_i(2,'Insert_funcionid',idBasedOn,'',v).
+var_prop_i(2,'Insert_espectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Insert_lugarsectorid',idBasedOn,'',v).
+var_prop_i(2,'Insert_espectaculofuncionid',idBasedOn,'',v).
+ 
+i_tbl_best_trn(9,[ 8,1,'Entrada','Entrada',[] ]).
+i_tbl_best_trn(5,[ 5,1,'Cliente','Cliente',[] ]).
+i_tbl_best_trn(15,[ 10,1,'Espectaculo','Espectaculo',[] ]).
+i_tbl_best_trn(16,[ 10,2,'Espectaculo','Espectaculo',[ 37,38 ] ]).
+i_tbl_best_trn(18,[ 10,3,'Espectaculo','Espectaculo',[] ]).
+i_tbl_best_trn(3,[ 3,1,'Pais','Pais',[] ]).
+i_tbl_best_trn(2,[ 2,1,'Lugar','Lugar',[] ]).
+i_tbl_best_trn(4,[ 4,1,'TipoEspectaculo','Tipo Espectaculo',[] ]).
+i_tbl_best_trn(11,[ 2,2,'Lugar','Lugar',[] ]).
+i_tbl_best_trn(2000,[ 8,1,'Entrada','Entrada',[] ]).
+ 
+ 
+a_alias_i([ 'count(',23 ],'LugarSectorVendidas').
+a_alias_i(se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]),'LugarSectorVendidas').
+ 
+trn_level_i(9,[ [ 23,42,3,6,9,10,1,2,16,47,48,26,40000,50,5,27,28,30,38,8 ],'Entrada','Entrada','Entrada','',42 ]).
+ 
+struct_dt_i([ 26,58,0 ],name,'TransactionContext').
+struct_dt_i([ 26,58,0 ],namespace,'Obligatorio1v2').
+struct_dt_i([ 26,58,0 ],'ObjName','TransactionContext').
+struct_dt_i([ 26,58,0 ],'ObjDesc','Transaction Context').
+struct_dt_i([ 26,58,0 ],'ExternalName','TransactionContext').
+struct_dt_i([ 26,58,0 ],'ExternalNamespace','Obligatorio1v2').
+struct_dt_i([ 26,58,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,58,86 ],name,'Attribute').
+struct_dt_i([ 26,58,86 ],namespace,'Obligatorio1v2.TransactionContext').
+struct_dt_i([ 0,8,0 ],name,'Entrada').
+struct_dt_i([ 0,8,0 ],namespace,'Obligatorio1v2').
+struct_dt_i([ 0,8,0 ],significantName,'Entrada').
+struct_dt_i([ 0,8,0 ],'ObjName','Entrada').
+struct_dt_i([ 0,8,0 ],'ObjDesc','Entrada').
+struct_dt_i([ 0,8,0 ],'ExternalName','Entrada').
+struct_dt_i([ 0,8,0 ],'ExternalNamespace','Obligatorio1v2').
+struct_dt_i([ 0,8,0 ],key,[ 23 ]).
+struct_dt_i([ 0,8,0 ],lvl,9).
+struct_dt_i([ 26,13,0 ],name,'GeneXus\Common\Messages').
+struct_dt_i([ 26,13,0 ],namespace,'GeneXus').
+struct_dt_i([ 26,13,0 ],'ObjName','Messages').
+struct_dt_i([ 26,13,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,13,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,13,0 ],'ExternalNamespace','GeneXus').
+struct_dt_i([ 26,13,0 ],collection,'True').
+struct_dt_i([ 26,13,0 ],datatype,[ 26,13,30 ]).
+struct_dt_i([ 26,13,0 ],'CollectionItemName','Message').
+struct_dt_i([ 26,13,0 ],'XmlName','').
+struct_dt_i([ 26,13,0 ],'XmlCollectionItemName','').
+struct_dt_i([ 26,13,0 ],'XmlNamespace','').
+struct_dt_i([ 26,13,0 ],'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,13,0 ],'XmlInclude',idXmlIncludeAlways).
+struct_dt_i([ 26,13,0 ],'JsonName','').
+struct_dt_i([ 26,13,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,13,0 ],'JsonCollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,13,0 ],isexternal,'True').
+struct_dt_i([ 26,13,30 ],name,'Message').
+struct_dt_i([ 26,13,30 ],namespace,'GeneXus.Messages').
+struct_dt_i([ 26,58,0 ],fullname,'TransactionContext').
+struct_dt_i([ 26,58,86 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 0,8,0 ],fullname,'Entrada').
+struct_dt_i([ 26,13,0 ],fullname,'GeneXus\Common\Messages').
+struct_dt_i([ 26,13,30 ],fullname,'GeneXus\Common\Messages.Message').
+ 
+struct_dt_elem_i([ 26,58,0 ],1,name,'Callerobject').
+struct_dt_elem_i([ 26,58,0 ],1,camelname,'CallerObject').
+struct_dt_elem_i([ 26,58,0 ],1,basedon,53).
+struct_dt_elem_i([ 26,58,0 ],1,length,256).
+struct_dt_elem_i([ 26,58,0 ],1,decimals,0).
+struct_dt_elem_i([ 26,58,0 ],1,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,58,0 ],1,pic,'').
+struct_dt_elem_i([ 26,58,0 ],1,collection,'False').
+struct_dt_elem_i([ 26,58,0 ],1,'ExternalName','CallerObject').
+struct_dt_elem_i([ 26,58,0 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,0 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,58,0 ],1,'XmlName','').
+struct_dt_elem_i([ 26,58,0 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,0 ],1,soaptype,'').
+struct_dt_elem_i([ 26,58,0 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,0 ],1,'JsonName','').
+struct_dt_elem_i([ 26,58,0 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,58,0 ],2,name,'Callerondelete').
+struct_dt_elem_i([ 26,58,0 ],2,camelname,'CallerOnDelete').
+struct_dt_elem_i([ 26,58,0 ],2,length,4).
+struct_dt_elem_i([ 26,58,0 ],2,decimals,0).
+struct_dt_elem_i([ 26,58,0 ],2,type,[ 15,4,0 ]).
+struct_dt_elem_i([ 26,58,0 ],2,pic,'').
+struct_dt_elem_i([ 26,58,0 ],2,collection,'False').
+struct_dt_elem_i([ 26,58,0 ],2,'ExternalName','CallerOnDelete').
+struct_dt_elem_i([ 26,58,0 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,0 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,58,0 ],2,'XmlName','').
+struct_dt_elem_i([ 26,58,0 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,0 ],2,soaptype,'').
+struct_dt_elem_i([ 26,58,0 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,0 ],2,'JsonName','').
+struct_dt_elem_i([ 26,58,0 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,58,0 ],3,name,'Callerurl').
+struct_dt_elem_i([ 26,58,0 ],3,camelname,'CallerURL').
+struct_dt_elem_i([ 26,58,0 ],3,basedon,32).
+struct_dt_elem_i([ 26,58,0 ],3,length,1000).
+struct_dt_elem_i([ 26,58,0 ],3,decimals,0).
+struct_dt_elem_i([ 26,58,0 ],3,type,[ 13,1000,0 ]).
+struct_dt_elem_i([ 26,58,0 ],3,pic,'').
+struct_dt_elem_i([ 26,58,0 ],3,collection,'False').
+struct_dt_elem_i([ 26,58,0 ],3,'ExternalName','CallerURL').
+struct_dt_elem_i([ 26,58,0 ],3,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,0 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,58,0 ],3,'XmlName','').
+struct_dt_elem_i([ 26,58,0 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,0 ],3,soaptype,'').
+struct_dt_elem_i([ 26,58,0 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,0 ],3,'JsonName','').
+struct_dt_elem_i([ 26,58,0 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,58,0 ],4,name,'Transactionname').
+struct_dt_elem_i([ 26,58,0 ],4,camelname,'TransactionName').
+struct_dt_elem_i([ 26,58,0 ],4,basedon,53).
+struct_dt_elem_i([ 26,58,0 ],4,length,256).
+struct_dt_elem_i([ 26,58,0 ],4,decimals,0).
+struct_dt_elem_i([ 26,58,0 ],4,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,58,0 ],4,pic,'').
+struct_dt_elem_i([ 26,58,0 ],4,collection,'False').
+struct_dt_elem_i([ 26,58,0 ],4,'ExternalName','TransactionName').
+struct_dt_elem_i([ 26,58,0 ],4,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,0 ],4,'XmlType','Element').
+struct_dt_elem_i([ 26,58,0 ],4,'XmlName','').
+struct_dt_elem_i([ 26,58,0 ],4,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,0 ],4,soaptype,'').
+struct_dt_elem_i([ 26,58,0 ],4,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,0 ],4,'JsonName','').
+struct_dt_elem_i([ 26,58,0 ],4,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,58,0 ],5,name,'Attributes').
+struct_dt_elem_i([ 26,58,0 ],5,camelname,'Attributes').
+struct_dt_elem_i([ 26,58,0 ],5,type,[ [ 26,58,86 ],0,0 ]).
+struct_dt_elem_i([ 26,58,0 ],5,pic,'').
+struct_dt_elem_i([ 26,58,0 ],5,collection,'True').
+struct_dt_elem_i([ 26,58,0 ],5,'ObjName','Attributes').
+struct_dt_elem_i([ 26,58,0 ],5,'ObjDesc','Attributes').
+struct_dt_elem_i([ 26,58,0 ],5,'CollectionItemName','Attribute').
+struct_dt_elem_i([ 26,58,0 ],5,'XmlName','').
+struct_dt_elem_i([ 26,58,0 ],5,'XmlCollectionItemName','').
+struct_dt_elem_i([ 26,58,0 ],5,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,0 ],5,'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_elem_i([ 26,58,0 ],5,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,0 ],5,'JsonName','').
+struct_dt_elem_i([ 26,58,0 ],5,'JsonInclude',idJsonNoProperty).
+struct_dt_elem_i([ 26,58,0 ],5,'JsonCollectionSerialization',idXmlCollectionWrapped).
+struct_dt_elem_i([ 26,58,86 ],1,name,'Attributename').
+struct_dt_elem_i([ 26,58,86 ],1,camelname,'AttributeName').
+struct_dt_elem_i([ 26,58,86 ],1,length,128).
+struct_dt_elem_i([ 26,58,86 ],1,decimals,0).
+struct_dt_elem_i([ 26,58,86 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,58,86 ],1,pic,'').
+struct_dt_elem_i([ 26,58,86 ],1,collection,'False').
+struct_dt_elem_i([ 26,58,86 ],1,'ExternalName','AttributeName').
+struct_dt_elem_i([ 26,58,86 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,86 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,58,86 ],1,'XmlName','').
+struct_dt_elem_i([ 26,58,86 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,86 ],1,soaptype,'').
+struct_dt_elem_i([ 26,58,86 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,86 ],1,'JsonName','').
+struct_dt_elem_i([ 26,58,86 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,58,86 ],2,name,'Attributevalue').
+struct_dt_elem_i([ 26,58,86 ],2,camelname,'AttributeValue').
+struct_dt_elem_i([ 26,58,86 ],2,length,1000).
+struct_dt_elem_i([ 26,58,86 ],2,decimals,0).
+struct_dt_elem_i([ 26,58,86 ],2,type,[ 13,1000,0 ]).
+struct_dt_elem_i([ 26,58,86 ],2,pic,'').
+struct_dt_elem_i([ 26,58,86 ],2,collection,'False').
+struct_dt_elem_i([ 26,58,86 ],2,'ExternalName','AttributeValue').
+struct_dt_elem_i([ 26,58,86 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,58,86 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,58,86 ],2,'XmlName','').
+struct_dt_elem_i([ 26,58,86 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,58,86 ],2,soaptype,'').
+struct_dt_elem_i([ 26,58,86 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,58,86 ],2,'JsonName','').
+struct_dt_elem_i([ 26,58,86 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 0,8,0 ],1,name,'Entradaid').
+struct_dt_elem_i([ 0,8,0 ],1,camelname,'EntradaId').
+struct_dt_elem_i([ 0,8,0 ],1,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],1,length,4).
+struct_dt_elem_i([ 0,8,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],1,sign,0).
+struct_dt_elem_i([ 0,8,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],1,attributeid,'23').
+struct_dt_elem_i([ 0,8,0 ],1,'ExternalName','EntradaId').
+struct_dt_elem_i([ 0,8,0 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],2,name,'Entradafecha').
+struct_dt_elem_i([ 0,8,0 ],2,camelname,'EntradaFecha').
+struct_dt_elem_i([ 0,8,0 ],2,length,8).
+struct_dt_elem_i([ 0,8,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],2,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,8,0 ],2,pic,'99/99/99').
+struct_dt_elem_i([ 0,8,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],2,attributeid,'42').
+struct_dt_elem_i([ 0,8,0 ],2,'ExternalName','EntradaFecha').
+struct_dt_elem_i([ 0,8,0 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],3,name,'Paisid').
+struct_dt_elem_i([ 0,8,0 ],3,camelname,'PaisId').
+struct_dt_elem_i([ 0,8,0 ],3,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],3,length,4).
+struct_dt_elem_i([ 0,8,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],3,sign,0).
+struct_dt_elem_i([ 0,8,0 ],3,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],3,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],3,attributeid,'3').
+struct_dt_elem_i([ 0,8,0 ],3,'ExternalName','PaisId').
+struct_dt_elem_i([ 0,8,0 ],3,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],4,name,'Paisname').
+struct_dt_elem_i([ 0,8,0 ],4,camelname,'PaisName').
+struct_dt_elem_i([ 0,8,0 ],4,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],4,length,40).
+struct_dt_elem_i([ 0,8,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],4,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],4,pic,'').
+struct_dt_elem_i([ 0,8,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],4,attributeid,'6').
+struct_dt_elem_i([ 0,8,0 ],4,'ExternalName','PaisName').
+struct_dt_elem_i([ 0,8,0 ],4,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],5,name,'Clienteid').
+struct_dt_elem_i([ 0,8,0 ],5,camelname,'ClienteId').
+struct_dt_elem_i([ 0,8,0 ],5,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],5,length,4).
+struct_dt_elem_i([ 0,8,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],5,sign,0).
+struct_dt_elem_i([ 0,8,0 ],5,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],5,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],5,attributeid,'9').
+struct_dt_elem_i([ 0,8,0 ],5,'ExternalName','ClienteId').
+struct_dt_elem_i([ 0,8,0 ],5,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],6,name,'Clientename').
+struct_dt_elem_i([ 0,8,0 ],6,camelname,'ClienteName').
+struct_dt_elem_i([ 0,8,0 ],6,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],6,length,40).
+struct_dt_elem_i([ 0,8,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],6,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],6,pic,'').
+struct_dt_elem_i([ 0,8,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],6,attributeid,'10').
+struct_dt_elem_i([ 0,8,0 ],6,'ExternalName','ClienteName').
+struct_dt_elem_i([ 0,8,0 ],6,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],7,name,'Espectaculoid').
+struct_dt_elem_i([ 0,8,0 ],7,camelname,'EspectaculoId').
+struct_dt_elem_i([ 0,8,0 ],7,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],7,length,4).
+struct_dt_elem_i([ 0,8,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],7,sign,0).
+struct_dt_elem_i([ 0,8,0 ],7,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],7,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],7,attributeid,'1').
+struct_dt_elem_i([ 0,8,0 ],7,'ExternalName','EspectaculoId').
+struct_dt_elem_i([ 0,8,0 ],7,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],8,name,'Espectaculoname').
+struct_dt_elem_i([ 0,8,0 ],8,camelname,'EspectaculoName').
+struct_dt_elem_i([ 0,8,0 ],8,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],8,length,40).
+struct_dt_elem_i([ 0,8,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],8,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],8,pic,'').
+struct_dt_elem_i([ 0,8,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],8,attributeid,'2').
+struct_dt_elem_i([ 0,8,0 ],8,'ExternalName','EspectaculoName').
+struct_dt_elem_i([ 0,8,0 ],8,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],9,name,'Espectaculofecha').
+struct_dt_elem_i([ 0,8,0 ],9,camelname,'EspectaculoFecha').
+struct_dt_elem_i([ 0,8,0 ],9,length,8).
+struct_dt_elem_i([ 0,8,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],9,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,8,0 ],9,pic,'99/99/99').
+struct_dt_elem_i([ 0,8,0 ],9,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],9,attributeid,'16').
+struct_dt_elem_i([ 0,8,0 ],9,'ExternalName','EspectaculoFecha').
+struct_dt_elem_i([ 0,8,0 ],9,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],10,name,'Espectaculofuncionid').
+struct_dt_elem_i([ 0,8,0 ],10,camelname,'EspectaculoFuncionId').
+struct_dt_elem_i([ 0,8,0 ],10,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],10,length,4).
+struct_dt_elem_i([ 0,8,0 ],10,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],10,sign,0).
+struct_dt_elem_i([ 0,8,0 ],10,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],10,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],10,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],10,attributeid,'47').
+struct_dt_elem_i([ 0,8,0 ],10,'ExternalName','EspectaculoFuncionId').
+struct_dt_elem_i([ 0,8,0 ],10,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],11,name,'Espectaculofuncionname').
+struct_dt_elem_i([ 0,8,0 ],11,camelname,'EspectaculoFuncionName').
+struct_dt_elem_i([ 0,8,0 ],11,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],11,length,40).
+struct_dt_elem_i([ 0,8,0 ],11,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],11,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],11,pic,'').
+struct_dt_elem_i([ 0,8,0 ],11,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],11,attributeid,'48').
+struct_dt_elem_i([ 0,8,0 ],11,'ExternalName','EspectaculoFuncionName').
+struct_dt_elem_i([ 0,8,0 ],11,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],12,name,'Espectaculoimagen').
+struct_dt_elem_i([ 0,8,0 ],12,camelname,'EspectaculoImagen').
+struct_dt_elem_i([ 0,8,0 ],12,length,4).
+struct_dt_elem_i([ 0,8,0 ],12,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],12,type,[ 7,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],12,pic,'').
+struct_dt_elem_i([ 0,8,0 ],12,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],12,attributeid,'26').
+struct_dt_elem_i([ 0,8,0 ],12,'ExternalName','EspectaculoImagen').
+struct_dt_elem_i([ 0,8,0 ],12,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],13,name,'Espectaculoimagen_gxi').
+struct_dt_elem_i([ 0,8,0 ],13,camelname,'EspectaculoImagen_GXI').
+struct_dt_elem_i([ 0,8,0 ],13,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],13,isadd,'True').
+struct_dt_elem_i([ 0,8,0 ],13,length,2048).
+struct_dt_elem_i([ 0,8,0 ],13,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],13,type,[ 13,2048,0 ]).
+struct_dt_elem_i([ 0,8,0 ],14,name,'Espectaculopaisname').
+struct_dt_elem_i([ 0,8,0 ],14,camelname,'EspectaculoPaisName').
+struct_dt_elem_i([ 0,8,0 ],14,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],14,length,40).
+struct_dt_elem_i([ 0,8,0 ],14,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],14,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],14,pic,'').
+struct_dt_elem_i([ 0,8,0 ],14,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],14,attributeid,'50').
+struct_dt_elem_i([ 0,8,0 ],14,'ExternalName','EspectaculoPaisName').
+struct_dt_elem_i([ 0,8,0 ],14,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],15,name,'Lugarname').
+struct_dt_elem_i([ 0,8,0 ],15,camelname,'LugarName').
+struct_dt_elem_i([ 0,8,0 ],15,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],15,length,40).
+struct_dt_elem_i([ 0,8,0 ],15,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],15,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],15,pic,'').
+struct_dt_elem_i([ 0,8,0 ],15,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],15,attributeid,'5').
+struct_dt_elem_i([ 0,8,0 ],15,'ExternalName','LugarName').
+struct_dt_elem_i([ 0,8,0 ],15,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],16,name,'Lugarsectorid').
+struct_dt_elem_i([ 0,8,0 ],16,camelname,'LugarSectorId').
+struct_dt_elem_i([ 0,8,0 ],16,basedon,86).
+struct_dt_elem_i([ 0,8,0 ],16,length,4).
+struct_dt_elem_i([ 0,8,0 ],16,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],16,sign,0).
+struct_dt_elem_i([ 0,8,0 ],16,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],16,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],16,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],16,attributeid,'27').
+struct_dt_elem_i([ 0,8,0 ],16,'ExternalName','LugarSectorId').
+struct_dt_elem_i([ 0,8,0 ],16,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],17,name,'Lugarsectorname').
+struct_dt_elem_i([ 0,8,0 ],17,camelname,'LugarSectorName').
+struct_dt_elem_i([ 0,8,0 ],17,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],17,length,40).
+struct_dt_elem_i([ 0,8,0 ],17,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],17,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],17,pic,'').
+struct_dt_elem_i([ 0,8,0 ],17,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],17,attributeid,'28').
+struct_dt_elem_i([ 0,8,0 ],17,'ExternalName','LugarSectorName').
+struct_dt_elem_i([ 0,8,0 ],17,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],18,name,'Lugarsectorprecio').
+struct_dt_elem_i([ 0,8,0 ],18,camelname,'LugarSectorPrecio').
+struct_dt_elem_i([ 0,8,0 ],18,length,4).
+struct_dt_elem_i([ 0,8,0 ],18,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],18,sign,0).
+struct_dt_elem_i([ 0,8,0 ],18,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],18,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],18,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],18,attributeid,'30').
+struct_dt_elem_i([ 0,8,0 ],18,'ExternalName','LugarSectorPrecio').
+struct_dt_elem_i([ 0,8,0 ],18,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],19,name,'Lugarsectordisponibles').
+struct_dt_elem_i([ 0,8,0 ],19,camelname,'LugarSectorDisponibles').
+struct_dt_elem_i([ 0,8,0 ],19,length,4).
+struct_dt_elem_i([ 0,8,0 ],19,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],19,sign,0).
+struct_dt_elem_i([ 0,8,0 ],19,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],19,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],19,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],19,attributeid,'38').
+struct_dt_elem_i([ 0,8,0 ],19,'ExternalName','LugarSectorDisponibles').
+struct_dt_elem_i([ 0,8,0 ],19,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,8,0 ],20,name,'Tipoespectaculoname').
+struct_dt_elem_i([ 0,8,0 ],20,camelname,'TipoEspectaculoName').
+struct_dt_elem_i([ 0,8,0 ],20,basedon,87).
+struct_dt_elem_i([ 0,8,0 ],20,length,40).
+struct_dt_elem_i([ 0,8,0 ],20,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],20,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,8,0 ],20,pic,'').
+struct_dt_elem_i([ 0,8,0 ],20,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],20,attributeid,'8').
+struct_dt_elem_i([ 0,8,0 ],20,'ExternalName','TipoEspectaculoName').
+struct_dt_elem_i([ 0,8,0 ],20,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,13,30 ],1,name,'Id').
+struct_dt_elem_i([ 26,13,30 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,13,30 ],1,length,128).
+struct_dt_elem_i([ 26,13,30 ],1,decimals,0).
+struct_dt_elem_i([ 26,13,30 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,13,30 ],1,pic,'').
+struct_dt_elem_i([ 26,13,30 ],1,collection,'False').
+struct_dt_elem_i([ 26,13,30 ],1,'ExternalName','Id').
+struct_dt_elem_i([ 26,13,30 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,13,30 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,13,30 ],1,'XmlName','').
+struct_dt_elem_i([ 26,13,30 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,13,30 ],1,soaptype,'').
+struct_dt_elem_i([ 26,13,30 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,13,30 ],1,'JsonName','').
+struct_dt_elem_i([ 26,13,30 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,13,30 ],2,name,'Type').
+struct_dt_elem_i([ 26,13,30 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,13,30 ],2,basedon,50).
+struct_dt_elem_i([ 26,13,30 ],2,length,2).
+struct_dt_elem_i([ 26,13,30 ],2,decimals,0).
+struct_dt_elem_i([ 26,13,30 ],2,sign,0).
+struct_dt_elem_i([ 26,13,30 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,13,30 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,13,30 ],2,collection,'False').
+struct_dt_elem_i([ 26,13,30 ],2,'ExternalName','Type').
+struct_dt_elem_i([ 26,13,30 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,13,30 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,13,30 ],2,'XmlName','').
+struct_dt_elem_i([ 26,13,30 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,13,30 ],2,soaptype,'').
+struct_dt_elem_i([ 26,13,30 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,13,30 ],2,'JsonName','').
+struct_dt_elem_i([ 26,13,30 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,13,30 ],3,name,'Description').
+struct_dt_elem_i([ 26,13,30 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,13,30 ],3,length,256).
+struct_dt_elem_i([ 26,13,30 ],3,decimals,0).
+struct_dt_elem_i([ 26,13,30 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,13,30 ],3,pic,'').
+struct_dt_elem_i([ 26,13,30 ],3,collection,'False').
+struct_dt_elem_i([ 26,13,30 ],3,'ExternalName','Description').
+struct_dt_elem_i([ 26,13,30 ],3,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 26,13,30 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,13,30 ],3,'XmlName','').
+struct_dt_elem_i([ 26,13,30 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,13,30 ],3,soaptype,'').
+struct_dt_elem_i([ 26,13,30 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,13,30 ],3,'JsonName','').
+struct_dt_elem_i([ 26,13,30 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 0,8,0 ],13,attributeid,'40000').
+ 
+ 
+ 
+ 
+ 
+sub_info_i(146,'Start',1,40,[ [],[] ]).
+sub_info_i(146,'After Trn',42,54,[ [],[] ]).
+ 
+pgm_parm_i(proc,15,'IMPRESIONENTRADA',[ [ int,4,0,0 ] ],[ [ 'EntradaId',inout,[] ] ]).
+ 
+pgm_callprotocol_i(trn,8,'ENTRADA_BC','INTERNAL','Secure').
+pgm_callprotocol_i(proc,15,'IMPRESIONENTRADA','HTTP','Secure').
+ 
+ 
+pgm_main_info_i(proc,15,'IMPRESIONENTRADA',[ 15,'AIMPRESIONENTRADA','','','','','HTTP' ]).
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

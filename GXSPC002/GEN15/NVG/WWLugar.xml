@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
@@ -9,21 +9,8 @@
 <ObjDesc>Lugars</ObjDesc>
 <ObjPgmName>WWLugar</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
-<Warnings>
-<Warning>
-<MsgCode>spc0038</MsgCode>
-<Message>
-<Token>There is no index for order </Token>
-<Attribute>
-<AttriId>5</AttriId>
-<AttriName>LugarName</AttriName>
-<Description>Lugar Name</Description></Attribute>
-<Token>; poor performance may be noticed</Token>
-<Token> in grid '</Token>
-<Token>Grid</Token>
-<Token>'</Token>
-<Token>.</Token></Message></Warning></Warnings>
+<Result>genreq</Result>
+<Warnings></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>
@@ -65,6 +52,7 @@
 <AttriName>LugarName</AttriName>
 <Description>Lugar Name</Description></Attribute></Order>
 <Condition></Condition>
+<IndexName>ULUGAR</IndexName>
 <LevelOptions></LevelOptions>
 <Optimizations>
 <Optimization>

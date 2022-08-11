@@ -2,7 +2,7 @@ spec_i([ web,66,'Espectaculoes','WWEspectaculo',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 15,[ [ 15,many ],[ 2,one ],[ 3,one ],[ 4,one ] ],[],[],[ [ [ 15,2,3,4 ],[ 26,40000,8,7,6,3,5,4,16,2,1 ] ] ],[ [ [ 15,2,3,4 ],[] ] ],[ 2 ],'',[],[] ]).
+level_i(2,[ 15,[ [ 15,many ],[ 2,one ],[ 3,one ],[ 4,one ] ],[],[],[ [ [ 15,2,3,4 ],[ 26,40000,8,7,6,3,5,4,16,2,1 ] ] ],[ [ [ 15,2,3,4 ],[] ] ],[ 2 ],'UESPECTACULO',[],[] ]).
  
 tw_i(2,[ [ 2,[ [ 15,4,4 ] ] ],[ 3,[ [ 2,3,3 ] ] ],[ 4,[ [ 15,7,7 ] ] ] ]).
  
@@ -135,7 +135,7 @@ rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"WWEspectaculo"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,15,[],[ [],'',[] ]).
+a_i(3,2,t,15,[],[ [],'UESPECTACULO',[] ]).
 a_i(4,2,r,2,[],[ [ [ 15,4,4 ] ],'ILUGAR',[] ]).
 a_i(5,2,r,3,[],[ [ [ 2,3,3 ] ],'IPAIS',[] ]).
 a_i(6,2,r,4,[],[ [ [ 15,7,7 ] ],'ITIPOESPECTACULO',[] ]).
@@ -201,8 +201,8 @@ table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
 table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
 table_i(15,[ 'Espectaculo',[ 1,2,16,4,7,26,40000 ],'Espectaculo','Espectaculo' ]).
  
-index_i(15,[ '',a,[ 2 ],'' ]).
 index_i(15,[ 'IESPECTACULO',u,[ 1 ],'IEspectaculo' ]).
+index_i(15,[ 'UESPECTACULO',d,[ 2 ],'UEspectaculo' ]).
 index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
 index_i(4,[ 'ITIPOESPECTACULO',u,[ 7 ],'ITipoEspectaculo' ]).
@@ -942,7 +942,6 @@ html_comp_i(37,'Invitemsg','',d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0038,[ 'There is no index for order ',[ att(2,2) ],'; poor performance may be noticed',[ ' in grid ''','Grid','''' ],'.' ])).
  
  
  

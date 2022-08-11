@@ -6,13 +6,14 @@ GxObjectCollection.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
 @genexus.programs.sdt.bld
-type_SdtPais.cs
 type_SdtFuncion.cs
+type_SdtCliente.cs
 type_SdtLugar.cs
 type_SdtLugar_Sector.cs
+type_SdtTipoEspectaculo.cs
 type_SdtEspectaculo.cs
 type_SdtEspectaculo_EspectaculoFuncion.cs
 type_SdtEspectaculo_Funcion.cs
 type_SdtEspectaculo_LugarSector.cs
-type_SdtTipoEspectaculo.cs
+type_SdtPais.cs
 gxdomainpage.cs

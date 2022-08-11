@@ -1,0 +1,37 @@
+current_obj_i(2,mnproc,10).
+ 
+current_guid('5ea9a078-3c6b-7e99-9f89-e88e0c0035a0').
+ 
+ 
+called_tree_i(33,10,1000,8).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(aentrada_dataprovider,'Entrada_Data Provider','','""','INTERNAL',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(aentrada_dataprovider,[],[],[],10).
+ 
+ 
+obj_parms_i([ 'GXBCCollection<SdtEntrada> aP0_Gxm2rootcol' ],[ [ 'Gxm2rootcol',out ] ]).
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+ 

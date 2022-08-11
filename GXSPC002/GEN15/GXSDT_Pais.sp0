@@ -1,5 +1,5 @@
  
-spec_i([ sdt,[ 0,3,0 ],'Pais','Pais',0,spa,'17_0_10-161416' ]).
+spec_i([ sdt,[ 0,3,0 ],'Pais','Pais',0,spa,'17_0_10-162473' ]).
  
 struct_dt_i([ 0,3,0 ],name,'Pais').
 struct_dt_i([ 0,3,0 ],namespace,'Obligatorio1v2').

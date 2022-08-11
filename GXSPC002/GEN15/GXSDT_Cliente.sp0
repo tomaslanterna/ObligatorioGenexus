@@ -1,0 +1,70 @@
+ 
+spec_i([ sdt,[ 0,5,0 ],'Cliente','Cliente',0,spa,'17_0_10-162473' ]).
+ 
+struct_dt_i([ 0,5,0 ],name,'Cliente').
+struct_dt_i([ 0,5,0 ],namespace,'Obligatorio1v2').
+struct_dt_i([ 0,5,0 ],significantName,'Cliente').
+struct_dt_i([ 0,5,0 ],'ObjName','Cliente').
+struct_dt_i([ 0,5,0 ],'ObjDesc','Cliente').
+struct_dt_i([ 0,5,0 ],'ExternalName','Cliente').
+struct_dt_i([ 0,5,0 ],'ExternalNamespace','Obligatorio1v2').
+struct_dt_i([ 0,5,0 ],key,[ 9 ]).
+struct_dt_i([ 0,5,0 ],lvl,5).
+struct_dt_i([ 0,5,0 ],fullname,'Cliente').
+ 
+struct_dt_elem_i([ 0,5,0 ],1,name,'Clienteid').
+struct_dt_elem_i([ 0,5,0 ],1,camelname,'ClienteId').
+struct_dt_elem_i([ 0,5,0 ],1,basedon,86).
+struct_dt_elem_i([ 0,5,0 ],1,length,4).
+struct_dt_elem_i([ 0,5,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,5,0 ],1,sign,0).
+struct_dt_elem_i([ 0,5,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,5,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,5,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,5,0 ],1,attributeid,'9').
+struct_dt_elem_i([ 0,5,0 ],1,'ExternalName','ClienteId').
+struct_dt_elem_i([ 0,5,0 ],1,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,5,0 ],2,name,'Clientename').
+struct_dt_elem_i([ 0,5,0 ],2,camelname,'ClienteName').
+struct_dt_elem_i([ 0,5,0 ],2,basedon,87).
+struct_dt_elem_i([ 0,5,0 ],2,length,40).
+struct_dt_elem_i([ 0,5,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,5,0 ],2,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,5,0 ],2,pic,'').
+struct_dt_elem_i([ 0,5,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,5,0 ],2,attributeid,'10').
+struct_dt_elem_i([ 0,5,0 ],2,'ExternalName','ClienteName').
+struct_dt_elem_i([ 0,5,0 ],2,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,5,0 ],3,name,'Paisid').
+struct_dt_elem_i([ 0,5,0 ],3,camelname,'PaisId').
+struct_dt_elem_i([ 0,5,0 ],3,basedon,86).
+struct_dt_elem_i([ 0,5,0 ],3,length,4).
+struct_dt_elem_i([ 0,5,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,5,0 ],3,sign,0).
+struct_dt_elem_i([ 0,5,0 ],3,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,5,0 ],3,pic,'ZZZ9').
+struct_dt_elem_i([ 0,5,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,5,0 ],3,attributeid,'3').
+struct_dt_elem_i([ 0,5,0 ],3,'ExternalName','PaisId').
+struct_dt_elem_i([ 0,5,0 ],3,'ExternalNamespace','Obligatorio1v2').
+struct_dt_elem_i([ 0,5,0 ],4,name,'Paisname').
+struct_dt_elem_i([ 0,5,0 ],4,camelname,'PaisName').
+struct_dt_elem_i([ 0,5,0 ],4,basedon,87).
+struct_dt_elem_i([ 0,5,0 ],4,length,40).
+struct_dt_elem_i([ 0,5,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,5,0 ],4,type,[ 13,40,0 ]).
+struct_dt_elem_i([ 0,5,0 ],4,pic,'').
+struct_dt_elem_i([ 0,5,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,5,0 ],4,attributeid,'6').
+struct_dt_elem_i([ 0,5,0 ],4,'ExternalName','PaisName').
+struct_dt_elem_i([ 0,5,0 ],4,'ExternalNamespace','Obligatorio1v2').
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus','AssemblyName','GeneXus.dll').

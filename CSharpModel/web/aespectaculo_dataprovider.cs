@@ -102,6 +102,28 @@ namespace GeneXus.Programs {
          Gxm1espectaculo.gxTpr_Espectaculofuncion.Add(Gxm4espectaculo_espectaculofuncion, 0);
          Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionname = "La Renga";
          Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionprecio = 2000;
+         Gxm1espectaculo = new SdtEspectaculo(context);
+         Gxm2rootcol.Add(Gxm1espectaculo, 0);
+         Gxm1espectaculo.gxTpr_Espectaculoname = "Mundial 2022";
+         Gxm1espectaculo.gxTpr_Espectaculofecha = Gx_date;
+         Gxm1espectaculo.gxTpr_Lugarid = 1;
+         Gxm1espectaculo.gxTpr_Tipoespectaculoid = 4;
+         Gxm3espectaculo_lugarsector = new SdtEspectaculo_LugarSector(context);
+         Gxm1espectaculo.gxTpr_Lugarsector.Add(Gxm3espectaculo_lugarsector, 0);
+         Gxm3espectaculo_lugarsector.gxTpr_Lugarsectorid = 1;
+         Gxm3espectaculo_lugarsector.gxTpr_Lugarsectorestadosector = true;
+         Gxm3espectaculo_lugarsector = new SdtEspectaculo_LugarSector(context);
+         Gxm1espectaculo.gxTpr_Lugarsector.Add(Gxm3espectaculo_lugarsector, 0);
+         Gxm3espectaculo_lugarsector.gxTpr_Lugarsectorid = 2;
+         Gxm3espectaculo_lugarsector.gxTpr_Lugarsectorestadosector = true;
+         Gxm4espectaculo_espectaculofuncion = new SdtEspectaculo_EspectaculoFuncion(context);
+         Gxm1espectaculo.gxTpr_Espectaculofuncion.Add(Gxm4espectaculo_espectaculofuncion, 0);
+         Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionname = "Uruguay vs Argentina";
+         Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionprecio = 5000;
+         Gxm4espectaculo_espectaculofuncion = new SdtEspectaculo_EspectaculoFuncion(context);
+         Gxm1espectaculo.gxTpr_Espectaculofuncion.Add(Gxm4espectaculo_espectaculofuncion, 0);
+         Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionname = "Brazil vs Alemania";
+         Gxm4espectaculo_espectaculofuncion.gxTpr_Espectaculofuncionprecio = 6000;
          this.cleanup();
       }
 

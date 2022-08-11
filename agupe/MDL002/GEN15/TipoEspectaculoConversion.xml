@@ -66,10 +66,21 @@
 <AttriName>TipoEspectaculoId</AttriName>
 <Description>Tipo Espectaculo Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>Yes</Clustered></Index></Indices></TableIndices>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>UTIPOESPECTACULO</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>TipoEspectaculoName</AttriName>
+<Description>Tipo Espectaculo Name</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoName] nvarchar(40) NOT NULL , PRIMARY KEY([TipoEspectaculoId])) </Statement></Statements>
+<Statement>CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoName] nvarchar(40) NOT NULL , PRIMARY KEY([TipoEspectaculoId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoName] )</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

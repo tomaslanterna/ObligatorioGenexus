@@ -1,0 +1,6 @@
+bc_dt_elem_i([ 0,5,0 ],'Clienteid',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Clientename',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Paisid',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Paisname',readonly,yes).
+bc_dt_elem_i([ 0,5,0 ],'Paisname',allownulls,no).
+ 

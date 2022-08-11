@@ -4,14 +4,16 @@
 pgm_main_i(web,10,'HOME',[ 15,'HOME','Home','','','','' ]).
 pgm_main_i(mnproc,6,'FUNCION_DATAPROVIDER',[ 15,'AFUNCION_DATAPROVIDER','Funcion_Data Provider','','','','INTERNAL' ]).
 pgm_main_i(mnproc,5,'ESPECTACULO_DATAPROVIDER',[ 15,'AESPECTACULO_DATAPROVIDER','Espectaculo_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(mnproc,2,'PAIS_DATAPROVIDER',[ 15,'APAIS_DATAPROVIDER','Pais_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(mnproc,3,'TIPOESPECTACULO_DATAPROVIDER',[ 15,'ATIPOESPECTACULO_DATAPROVIDER','Tipo Espectaculo_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(mnproc,8,'ESPECTACULO_DATAPROVIDER',[ 15,'AESPECTACULO_DATAPROVIDER','Espectaculo_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(mnproc,4,'LUGAR_DATAPROVIDER',[ 15,'ALUGAR_DATAPROVIDER','Lugar_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(proc,15,'IMPRESIONENTRADA',[ 15,'AIMPRESIONENTRADA','Impresion Entrada','','','','HTTP' ]).
-pgm_main_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[ 15,'AIMPRESIONESPECTACULOSPORTIPO','Impresion Espectaculos Por Tipo','','','','HTTP' ]).
 pgm_main_i(proc,18,'IMPRESIONESPECTACULOSFECHA',[ 15,'AIMPRESIONESPECTACULOSFECHA','Impresion Espectaculos Fecha','','','','HTTP' ]).
+pgm_main_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO',[ 15,'AIMPRESIONESPECTACULOSPORTIPO','Impresion Espectaculos Por Tipo','','','','HTTP' ]).
+pgm_main_i(proc,15,'IMPRESIONENTRADA',[ 15,'AIMPRESIONENTRADA','Impresion Entrada','','','','HTTP' ]).
 pgm_main_i(proc,17,'IMPRESIONESPECTACULOS',[ 15,'AIMPRESIONESPECTACULOS','Impresion Espectaculos','','','','HTTP' ]).
+pgm_main_i(mnproc,10,'ENTRADA_DATAPROVIDER',[ 15,'AENTRADA_DATAPROVIDER','Entrada_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,3,'TIPOESPECTACULO_DATAPROVIDER',[ 15,'ATIPOESPECTACULO_DATAPROVIDER','Tipo Espectaculo_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,2,'PAIS_DATAPROVIDER',[ 15,'APAIS_DATAPROVIDER','Pais_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,4,'LUGAR_DATAPROVIDER',[ 15,'ALUGAR_DATAPROVIDER','Lugar_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,9,'CLIENTE_DATAPROVIDER',[ 15,'ACLIENTE_DATAPROVIDER','Cliente_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,8,'ESPECTACULO_DATAPROVIDER',[ 15,'AESPECTACULO_DATAPROVIDER','Espectaculo_Data Provider','','','','INTERNAL' ]).
  
 pgm_prop_i(web,5,'RWDRECENTLINKS','WEB_COMP','Yes').
 pgm_prop_i(web,5,'RWDRECENTLINKS','URLAccess','No').
@@ -31,15 +33,8 @@ pgm_prop_i(web,16,'CLIENTEVENTAWC','WEB_COMP','Yes').
 pgm_prop_i(web,16,'CLIENTEVENTAWC','URLAccess','No').
 pgm_prop_i(web,30,'ESPECTACULOINVITACIONWC','WEB_COMP','Yes').
 pgm_prop_i(web,30,'ESPECTACULOINVITACIONWC','URLAccess','No').
-pgm_prop_i(web,35,'PAISCLIENTEWC','WEB_COMP','Yes').
-pgm_prop_i(web,35,'PAISCLIENTEWC','URLAccess','No').
-pgm_prop_i(web,33,'PAISGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,33,'PAISGENERAL','URLAccess','No').
 pgm_prop_i(web,20,'VENTAGENERAL','WEB_COMP','Yes').
 pgm_prop_i(web,20,'VENTAGENERAL','URLAccess','No').
-pgm_prop_i(web,34,'PAISLUGARWC','WEB_COMP','Yes').
-pgm_prop_i(web,34,'PAISLUGARWC','URLAccess','No').
-pgm_prop_i(trn,3,'PAIS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(web,43,'FUNCIONENTRADAWC','WEB_COMP','Yes').
 pgm_prop_i(web,43,'FUNCIONENTRADAWC','URLAccess','No').
 pgm_prop_i(web,42,'FUNCIONGENERAL','WEB_COMP','Yes').
@@ -59,49 +54,61 @@ pgm_prop_i(mnproc,5,'AESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
 pgm_prop_i(mnproc,5,'ESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
 pgm_prop_i(web,50,'LUGARSECTORWC','WEB_COMP','Yes').
 pgm_prop_i(web,50,'LUGARSECTORWC','URLAccess','No').
-pgm_prop_i(trn,2,'LUGAR',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(web,49,'LUGARGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,49,'LUGARGENERAL','URLAccess','No').
-pgm_prop_i(web,51,'LUGARESPECTACULOWC','WEB_COMP','Yes').
-pgm_prop_i(web,51,'LUGARESPECTACULOWC','URLAccess','No').
 pgm_prop_i(web,69,'ESPECTACULOFUNCIONWC','WEB_COMP','Yes').
 pgm_prop_i(web,69,'ESPECTACULOFUNCIONWC','URLAccess','No').
 pgm_prop_i(web,74,'ESPECTACULOESPECTACULOFUNCIONWC','WEB_COMP','Yes').
 pgm_prop_i(web,74,'ESPECTACULOESPECTACULOFUNCIONWC','URLAccess','No').
-pgm_prop_i(web,67,'ESPECTACULOGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,67,'ESPECTACULOGENERAL','URLAccess','No').
-pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','WEB_COMP','Yes').
-pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','URLAccess','No').
+pgm_prop_i(web,49,'LUGARGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,49,'LUGARGENERAL','URLAccess','No').
+pgm_prop_i(proc,18,'AIMPRESIONESPECTACULOSFECHA','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,18,'IMPRESIONESPECTACULOSFECHA','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,16,'AIMPRESIONESPECTACULOSPORTIPO','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,15,'AIMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,15,'IMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,17,'AIMPRESIONESPECTACULOS','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,17,'IMPRESIONESPECTACULOS','CALL_PROTOCOL','HTTP').
+pgm_prop_i(web,34,'PAISLUGARWC','WEB_COMP','Yes').
+pgm_prop_i(web,34,'PAISLUGARWC','URLAccess','No').
+pgm_prop_i(web,33,'PAISGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,33,'PAISGENERAL','URLAccess','No').
 pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','WEB_COMP','Yes').
 pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','URLAccess','No').
 pgm_prop_i(web,15,'CLIENTEGENERAL','WEB_COMP','Yes').
 pgm_prop_i(web,15,'CLIENTEGENERAL','URLAccess','No').
-pgm_prop_i(web,23,'ENTRADAGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,23,'ENTRADAGENERAL','URLAccess','No').
-pgm_prop_i(web,17,'CLIENTEENTRADAWC','WEB_COMP','Yes').
-pgm_prop_i(web,17,'CLIENTEENTRADAWC','URLAccess','No').
-pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','WEB_COMP','Yes').
-pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','URLAccess','No').
+pgm_prop_i(web,35,'PAISCLIENTEWC','WEB_COMP','Yes').
+pgm_prop_i(web,35,'PAISCLIENTEWC','URLAccess','No').
+pgm_prop_i(trn,5,'CLIENTE',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(web,46,'INVITACIONGENERAL','WEB_COMP','Yes').
 pgm_prop_i(web,46,'INVITACIONGENERAL','URLAccess','No').
+pgm_prop_i(trn,2,'LUGAR',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,4,'TIPOESPECTACULO',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(web,67,'ESPECTACULOGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,67,'ESPECTACULOGENERAL','URLAccess','No').
+pgm_prop_i(web,51,'LUGARESPECTACULOWC','WEB_COMP','Yes').
+pgm_prop_i(web,51,'LUGARESPECTACULOWC','URLAccess','No').
+pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','WEB_COMP','Yes').
+pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','URLAccess','No').
+pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','WEB_COMP','Yes').
+pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','URLAccess','No').
+pgm_prop_i(mnproc,10,'AENTRADA_DATAPROVIDER','OutputSDT',o(0,'Entrada')).
+pgm_prop_i(mnproc,10,'ENTRADA_DATAPROVIDER','OutputSDT',o(0,'Entrada')).
 pgm_prop_i(trn,10,'ESPECTACULO',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(mnproc,2,'APAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
-pgm_prop_i(mnproc,2,'PAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
+pgm_prop_i(trn,3,'PAIS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(mnproc,3,'ATIPOESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'TipoEspectaculo')).
 pgm_prop_i(mnproc,3,'TIPOESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'TipoEspectaculo')).
-pgm_prop_i(mnproc,8,'AESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
-pgm_prop_i(mnproc,8,'ESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
+pgm_prop_i(mnproc,2,'APAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
+pgm_prop_i(mnproc,2,'PAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
 pgm_prop_i(mnproc,4,'ALUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
 pgm_prop_i(mnproc,4,'LUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
-pgm_prop_i(proc,15,'AIMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,15,'IMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,16,'AIMPRESIONESPECTACULOSPORTIPO','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,16,'IMPRESIONESPECTACULOSPORTIPO','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,18,'AIMPRESIONESPECTACULOSFECHA','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,18,'IMPRESIONESPECTACULOSFECHA','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,17,'AIMPRESIONESPECTACULOS','CALL_PROTOCOL','HTTP').
-pgm_prop_i(proc,17,'IMPRESIONESPECTACULOS','CALL_PROTOCOL','HTTP').
-pgm_prop_i(trn,4,'TIPOESPECTACULO',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(mnproc,9,'ACLIENTE_DATAPROVIDER','OutputSDT',o(0,'Cliente')).
+pgm_prop_i(mnproc,9,'CLIENTE_DATAPROVIDER','OutputSDT',o(0,'Cliente')).
+pgm_prop_i(mnproc,8,'AESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
+pgm_prop_i(mnproc,8,'ESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
+pgm_prop_i(web,17,'CLIENTEENTRADAWC','WEB_COMP','Yes').
+pgm_prop_i(web,17,'CLIENTEENTRADAWC','URLAccess','No').
+pgm_prop_i(web,23,'ENTRADAGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,23,'ENTRADAGENERAL','URLAccess','No').
  
 model_wrkinfo_i([ '.Net Environment','CSharpModel' ]).
  
@@ -173,7 +180,7 @@ lng_prop_i(1,'LangTimeFormat','24',v).
 lng_prop_i(1,'LangDecimalPoint',',',v).
 lng_prop_i(1,'FullyQualifiedName','Spanish',d).
  
-ver_stamp('20220810.225446').
+ver_stamp('20220811.221242').
  
-ver_stamp(date(2022,8,10),time(21,18,21,22)).
+ver_stamp(date(2022,8,11),time(19,13,10,21)).
  

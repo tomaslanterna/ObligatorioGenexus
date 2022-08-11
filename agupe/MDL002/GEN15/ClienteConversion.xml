@@ -7,7 +7,7 @@
 <Description>Cliente</Description></Table>
 <ReorgCls>c</ReorgCls>
 <ReorgCode>new</ReorgCode>
-<ReorgMsg>Cliente is new</ReorgMsg>
+<ReorgMsg>Cliente is new (initialize with Cliente_DataProvider)</ReorgMsg>
 <ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
@@ -95,6 +95,16 @@
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>UCLIENTE</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>10</AttriId>
+<AttriName>ClienteName</AttriName>
+<Description>Cliente Name</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
@@ -111,6 +121,7 @@
 <Statements>
 <Statement>CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([ClienteId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [ICLIENTE1] ON [Cliente] ([PaisId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [UCLIENTE] ON [Cliente] ([ClienteName] )</Statement>
 <Statement>ALTER TABLE [Cliente] ADD CONSTRAINT [ICLIENTE1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

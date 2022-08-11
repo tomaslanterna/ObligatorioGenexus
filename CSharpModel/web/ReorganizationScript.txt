@@ -5,6 +5,7 @@ CREATE TABLE [EspectaculoLugarSector] ([EspectaculoId] smallint NOT NULL , [Luga
 CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoName] nvarchar(40) NOT NULL , [EspectaculoFecha] datetime NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , [EspectaculoImagen] VARBINARY(MAX) NOT NULL , [EspectaculoImagen_GXI] varchar(2048) NULL , PRIMARY KEY([EspectaculoId]))
 CREATE NONCLUSTERED INDEX [IESPECTACULO1] ON [Espectaculo] ([TipoEspectaculoId] )
 CREATE NONCLUSTERED INDEX [IESPECTACULO2] ON [Espectaculo] ([LugarId] )
+CREATE NONCLUSTERED INDEX [UESPECTACULO] ON [Espectaculo] ([EspectaculoName] )
 
 CREATE TABLE [LugarSector] ([LugarId] smallint NOT NULL , [LugarSectorId] smallint NOT NULL , [LugarSectorName] nvarchar(40) NOT NULL , [LugarSectorCantidad] smallint NOT NULL , [LugarSectorPrecio] smallint NOT NULL , PRIMARY KEY([LugarId], [LugarSectorId]))
 
@@ -19,13 +20,17 @@ CREATE NONCLUSTERED INDEX [IENTRADA3] ON [Entrada] ([EspectaculoId] ,[Espectacul
 
 CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([ClienteId]))
 CREATE NONCLUSTERED INDEX [ICLIENTE1] ON [Cliente] ([PaisId] )
+CREATE NONCLUSTERED INDEX [UCLIENTE] ON [Cliente] ([ClienteName] )
 
 CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoName] nvarchar(40) NOT NULL , PRIMARY KEY([TipoEspectaculoId]))
+CREATE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoName] )
 
 CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId]))
+CREATE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisName] )
 
 CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([LugarId]))
 CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] )
+CREATE NONCLUSTERED INDEX [ULUGAR] ON [Lugar] ([LugarName] )
 
 ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])
 

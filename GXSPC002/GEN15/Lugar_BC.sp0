@@ -1,4 +1,4 @@
-spec_i([ trn,2,'Lugar','Lugar_BC',[],spa,'17_0_10-161416' ]).
+spec_i([ trn,2,'Lugar','Lugar_BC',[],spa,'17_0_10-162473' ]).
  
 struct_i(2,0,[ 'Websession' ],[]).
 struct_i(11,2,[ 4,40000 ],[ 40000 ]).

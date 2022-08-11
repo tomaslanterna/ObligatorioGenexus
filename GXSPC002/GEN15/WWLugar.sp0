@@ -1,8 +1,8 @@
-spec_i([ web,48,'Lugars','WWLugar',0,spa,'17_0_10-161416' ]).
+spec_i([ web,48,'Lugars','WWLugar',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 2,[ [ 2,many ],[ 3,one ] ],[],[],[ [ [ 2,3 ],[ 6,3,5,4 ] ] ],[ [ [ 2,3 ],[] ] ],[ 5 ],'',[],[] ]).
+level_i(2,[ 2,[ [ 2,many ],[ 3,one ] ],[],[],[ [ [ 2,3 ],[ 6,3,5,4 ] ] ],[ [ [ 2,3 ],[] ] ],[ 5 ],'ULUGAR',[],[] ]).
  
 tw_i(2,[ [ 3,[ [ 2,3,3 ] ] ] ]).
  
@@ -129,7 +129,7 @@ rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"WWLugar"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,2,[],[ [],'',[] ]).
+a_i(3,2,t,2,[],[ [],'ULUGAR',[] ]).
 a_i(4,2,r,3,[],[ [ [ 2,3,3 ] ],'IPAIS',[] ]).
 a_i(5,1,f,[ t('&Update',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(6,1,f,[ t('&Delete',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
@@ -175,8 +175,8 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ])
 table_i(2,[ 'Lugar',[ 4,5,3 ],'Lugar','Lugar' ]).
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
  
-index_i(2,[ '',a,[ 5 ],'' ]).
 index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
+index_i(2,[ 'ULUGAR',d,[ 5 ],'ULugar' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
  
  
@@ -739,7 +739,6 @@ html_comp_i(31,'Invitemsg','',d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0038,[ 'There is no index for order ',[ att(2,5) ],'; poor performance may be noticed',[ ' in grid ''','Grid','''' ],'.' ])).
  
  
  
