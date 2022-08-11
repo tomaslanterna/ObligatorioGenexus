@@ -25,8 +25,8 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include = "$(WebDirectory)\isauthorized.cs" />
-		<Compile Include = "$(WebDirectory)\impresionentrada.cs" />
 		<Compile Include = "$(WebDirectory)\entrada.cs" />
+		<Compile Include = "$(WebDirectory)\impresionentrada.cs" />
 
 	</ItemGroup>
 	

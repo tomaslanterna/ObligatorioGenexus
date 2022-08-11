@@ -2449,8 +2449,8 @@ namespace GeneXus.Programs {
                   {
                      context.WriteHtmlText( GXUtil.HtmlDocType( )) ;
                      context.WriteHtmlText( "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"><title>Close window</title>") ;
-                     context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 511400), false, true);
-                     context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 511400), false, true);
+                     context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 552120), false, true);
+                     context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 552120), false, true);
                      context.WriteHtmlText( "</head><body><script type=\"text/javascript\">") ;
                      context.WriteHtmlText( "gx.fn.closeWindowServerScript(") ;
                      context.WriteHtmlText( context.getWebReturnParmsJS( )) ;

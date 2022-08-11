@@ -14,6 +14,8 @@
 		<ProjectReference Include=".\..\atipoespectaculo_dataprovider\atipoespectaculo_dataprovider.csproj" />
 		<ProjectReference Include=".\..\alugar_dataprovider\alugar_dataprovider.csproj" />
 		<ProjectReference Include=".\..\aespectaculo_dataprovider\aespectaculo_dataprovider.csproj" />
+		<ProjectReference Include=".\..\aimpresionentrada\aimpresionentrada.csproj" />
+		<ProjectReference Include=".\..\aimpresionentrada\aimpresionentrada.csproj" />
 		<ProjectReference Include=".\..\appmasterpage\appmasterpage.csproj" />
 		<ProjectReference Include=".\..\recentlinks\recentlinks.csproj" />
 		<ProjectReference Include=".\..\promptmasterpage\promptmasterpage.csproj" />

@@ -1,4 +1,4 @@
-spec_i([ trn,5,'Cliente','Cliente',[],spa,'17_0_10-162473' ]).
+spec_i([ trn,5,'Cliente','Cliente',[],spa,'17_0_10-161416' ]).
  
 struct_i(5,0,[ 'Pgmname','Trncontext','Insert_paisid','GXV1','Trncontextatt','Mode','Clienteid','Websession' ],[]).
  

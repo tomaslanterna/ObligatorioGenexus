@@ -1,8 +1,8 @@
-spec_i([ web,23,'Entrada General','EntradaGeneral',0,spa,'17_0_10-162473' ]).
+spec_i([ web,23,'Entrada General','EntradaGeneral',0,spa,'17_0_10-161416' ]).
  
 struct_i(2,1,[ 'Pgmname',23 ],[]).
  
-level_i(2,[ 9,[ [ 9,many ],[ 5,one ],[ 3,one ],[ 15,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 18,one ],[ 2000,one ] ],[],[],[ [ [ 9,5,3,15,2,4,11,18,2000 ],[ 23,4,7,30,28,50,3,48,47,8,27,5,6,16,2,1,10,9,42,29,37,38 ] ] ],[ [ [ 9,5,3,15,2,4,11,18,2000 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],23,23 ] ] ],[] ]).
+level_i(2,[ 9,[ [ 9,many ],[ 5,one ],[ 3,one ],[ 15,one ],[ 2,one ],[ 4,one ],[ 11,one ],[ 18,one ],[ 2000,one ] ],[],[],[ [ [ 9,5,3,15,2,4,11,18,2000 ],[ 23,4,7,26,40000,30,28,50,3,48,47,8,27,5,6,16,2,1,10,9,42,29,37,38 ] ] ],[ [ [ 9,5,3,15,2,4,11,18,2000 ],[] ] ],[ 23 ],'IENTRADA',[ 9,[ [ [],23,23 ] ] ],[] ]).
  
 tw_i(2,[ [ 5,[ [ 9,9,9 ] ] ],[ 3,[ [ 5,3,3 ] ] ],[ 15,[ [ 9,1,1 ] ] ],[ 2,[ [ 15,4,4 ] ] ],[ 4,[ [ 15,7,7 ] ] ],[ 11,[ [ 15,4,4 ],[ 9,27,27 ] ] ],[ 18,[ [ 9,1,1 ],[ 9,47,47 ] ] ],[ 2000,[ [ 9,oe([ t(1,2) ]),1 ],[ 9,oe([ t(27,2) ]),27 ] ] ] ]).
  
@@ -11,15 +11,15 @@ lwi_i(2,[ [] ]).
  
  
  
-ta_i(2,[ [ [ 9,23 ],[ 15,4 ],[ 15,7 ],[ 11,30 ],[ 11,28 ],[ 9,50 ],[ 5,3 ],[ 18,48 ],[ 9,47 ],[ 4,8 ],[ 9,27 ],[ 2,5 ],[ 3,6 ],[ 15,16 ],[ 15,2 ],[ 9,1 ],[ 5,10 ],[ 9,9 ],[ 9,42 ],[ 11,29 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(2,[ [ [ 9,23 ],[ 15,4 ],[ 15,7 ],[ 15,26 ],[ 15,40000 ],[ 11,30 ],[ 11,28 ],[ 9,50 ],[ 5,3 ],[ 18,48 ],[ 9,47 ],[ 4,8 ],[ 9,27 ],[ 2,5 ],[ 3,6 ],[ 15,16 ],[ 15,2 ],[ 9,1 ],[ 5,10 ],[ 9,9 ],[ 9,42 ],[ 11,29 ],[ 2000,se(37,[ [ 2000,37 ] ],[ t('coalesce(',1),t(37,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
  
-las_i(2,[ [ 23,4,7,30,28,50,3,48,47,8,27,5,6,16,2,1,10,9,42,29,37,38 ] ]).
+las_i(2,[ [ 23,4,7,26,40000,30,28,50,3,48,47,8,27,5,6,16,2,1,10,9,42,29,37,38 ] ]).
  
 lac_i(2,[ [] ]).
  
  
  
-cls_i([ 0,0 ],[ 0,39 ]).
+cls_i([ 0,0 ],[ 0,1023 ]).
  
 pos_i(23,[ 0,0,0 ]).
 pos_i(42,[ 0,0,0 ]).
@@ -39,6 +39,7 @@ pos_i(3,[ 0,0,0 ]).
 pos_i(50,[ 0,0,0 ]).
 pos_i(28,[ 0,0,0 ]).
 pos_i(30,[ 0,0,0 ]).
+pos_i(26,[ 0,0,0 ]).
  
  
 default_i(e('Pgmname',2,2,'"EntradaGeneral"')).
@@ -172,6 +173,8 @@ v_i(r,o,6,6).
 v_i(r,i,7,1).
 v_i(r,o,7,4).
 v_i(r,o,7,7).
+v_i(r,o,7,26).
+v_i(r,o,7,40000).
 v_i(r,o,7,16).
 v_i(r,o,7,2).
 v_i(r,i,8,4).
@@ -197,8 +200,10 @@ v_i(r,o,12,37).
  
 attri_i(37,[ 'LugarSectorVendidas',int,4,0,'ZZZ9',0,'Lugar Sector Vendidas','',0 ]).
 attri_i(29,[ 'LugarSectorCantidad',int,4,0,'ZZZ9',0,'Lugar Sector Cantidad','',0 ]).
+attri_i(40000,[ 'EspectaculoImagen_GXI',svchar,2048,0,'',0,'',[],0 ]).
 attri_i(4,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
+attri_i(26,[ 'EspectaculoImagen',bits,4,0,'',0,'Espectaculo Imagen','',0 ]).
 attri_i(30,[ 'LugarSectorPrecio',int,4,0,'ZZZ9',0,'Lugar Sector Precio','',0 ]).
 attri_i(28,[ 'LugarSectorName',svchar,40,0,'',0,'Lugar Sector Name','',0 ]).
 attri_i(50,[ 'EspectaculoPaisName',svchar,40,0,'',0,'Espectaculo Pais Name','',0 ]).
@@ -234,7 +239,7 @@ table_i(4,[ 'TipoEspectaculo',[ 7,8 ],'Tipo Espectaculo','TipoEspectaculo' ]).
 table_i(18,[ 'EspectaculoFuncion',[ 1,47,48 ],'Funcion','EspectaculoFuncion' ]).
 table_i(5,[ 'Cliente',[ 9,10,3 ],'Cliente','Cliente' ]).
 table_i(11,[ 'LugarSector',[ 4,27,28,29,30 ],'Sector','LugarSector' ]).
-table_i(15,[ 'Espectaculo',[ 1,2,16,4,7 ],'Espectaculo','Espectaculo' ]).
+table_i(15,[ 'Espectaculo',[ 1,2,16,4,7,26,40000 ],'Espectaculo','Espectaculo' ]).
 table_i(9,[ 'Entrada',[ 23,9,27,42,1,47,50 ],'Entrada','Entrada' ]).
  
 index_i(9,[ 'IENTRADA',u,[ 23 ],'IEntrada' ]).
@@ -289,7 +294,7 @@ dom_info_i(86,[ 'Id' ]).
 dom_info_i(87,[ 'Name' ]).
  
  
-break_i(2,nvg,1,[],[ [ 23,42,9,10,1,2,16,6,5,27,38,8,47,48,3,50,28,30,7,4 ],[],[] ]).
+break_i(2,nvg,1,[],[ [ 23,42,9,10,1,2,16,6,5,27,38,8,47,48,3,50,28,30,26,7,4 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,8).
@@ -447,6 +452,12 @@ html_sub_i(99,100,html_i(0,div(100))).
 html_sub_i(100,101,html_i(0,div(101))).
 html_sub_i(101,102,html_i(0,div(102))).
 html_sub_i(102,103,html_i(0,t(30,2))).
+html_sub_i(11,104,html_i(1,div(104))).
+html_sub_i(104,105,html_i(0,div(105))).
+html_sub_i(105,106,html_i(0,div(106))).
+html_sub_i(106,107,html_i(0,div(107))).
+html_sub_i(107,108,html_i(0,div(108))).
+html_sub_i(108,109,html_i(0,t(26,2))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
@@ -490,6 +501,7 @@ html_tags_i(96,'data-gx-att','att:28').
 html_tags_i(98,'data-gx-att','att:28').
 html_tags_i(101,'data-gx-att','att:30').
 html_tags_i(103,'data-gx-att','att:30').
+html_tags_i(109,'data-gx-att','att:26').
  
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(2,'Class','Section',d,[ str ]).
@@ -580,7 +592,7 @@ html_comp_i(11,'Semanticcontent',div,d,[ str ]).
 html_comp_i(11,'Align',left,d,[ str ]).
 html_comp_i(11,'Valign',top,d,[ str ]).
 html_comp_i(12,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(12,'Class','col-xs-12',v,[ str ]).
+html_comp_i(12,'Class','col-xs-12 col-sm-6',v,[ str ]).
 html_comp_i(12,'Id','',d,[ str ]).
 html_comp_i(12,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(12,'Width',measure(0,px),d,[ measure ]).
@@ -1773,6 +1785,71 @@ html_comp_i(103,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(103,'Gxformat',0,d,[ num ]).
 html_comp_i(103,'Title','',d,[ str ]).
 html_comp_i(103,'Invitemsg','',v,[ str ]).
+html_comp_i(104,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(104,'Class','col-xs-12 col-sm-6',v,[ str ]).
+html_comp_i(104,'Id','',d,[ str ]).
+html_comp_i(104,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(104,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(104,'Semanticcontent',div,d,[ str ]).
+html_comp_i(104,'Align',left,d,[ str ]).
+html_comp_i(104,'Valign',top,d,[ str ]).
+html_comp_i(105,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(105,'Class','Table',v,[ str ]).
+html_comp_i(105,'Id','Imagestable',v,[ str ]).
+html_comp_i(105,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(105,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(105,'Semanticcontent',div,d,[ str ]).
+html_comp_i(105,'Align',left,d,[ str ]).
+html_comp_i(105,'Valign',top,d,[ str ]).
+html_comp_i(106,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(106,'Class',row,v,[ str ]).
+html_comp_i(106,'Id','',d,[ str ]).
+html_comp_i(106,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(106,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(106,'Semanticcontent',div,d,[ str ]).
+html_comp_i(106,'Align',left,d,[ str ]).
+html_comp_i(106,'Valign',top,d,[ str ]).
+html_comp_i(107,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(107,'Class','col-xs-12 FormCell',v,[ str ]).
+html_comp_i(107,'Id','',d,[ str ]).
+html_comp_i(107,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(107,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(107,'Semanticcontent',div,d,[ str ]).
+html_comp_i(107,'Align',left,d,[ str ]).
+html_comp_i(107,'Valign',top,d,[ str ]).
+html_comp_i(108,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(108,'Class',' gx-attribute',v,[ str ]).
+html_comp_i(108,'Id','',d,[ str ]).
+html_comp_i(108,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(108,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(108,'Semanticcontent',div,d,[ str ]).
+html_comp_i(108,'Align',left,d,[ str ]).
+html_comp_i(108,'Valign',top,d,[ str ]).
+html_comp_i(109,'Isabstractlayoutcontrol',0,d,[ bool ]).
+html_comp_i(109,'Colcount',5,d,[ num ]).
+html_comp_i(109,'Attid',26,v,[ num ]).
+html_comp_i(109,'Class','ReadonlyAttribute ReadonlyResponsiveImageAttribute',v,[ str ]).
+html_comp_i(109,'Controlname','Espectaculoimagen',d,[ str ]).
+html_comp_i(109,'Returnonclick',0,v,[ bool ]).
+html_comp_i(109,'Eventgx','',d,[ str ]).
+html_comp_i(109,'Captionclass','col-sm-3 ReadonlyAttributeLabel ReadonlyResponsiveImageAttributeLabel',v,[ str ]).
+html_comp_i(109,'Captionstyle','',v,[ str ]).
+html_comp_i(109,'Captionposition','None',v,[ str ]).
+html_comp_i(109,'Captionvalue','Espectaculo Imagen',d,[ str ]).
+html_comp_i(109,'Layoutclass','',v,[ str ]).
+html_comp_i(109,'Controltype',2,d,[ num ]).
+html_comp_i(109,'Inputtype',0,d,[ num ]).
+html_comp_i(109,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(109,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(109,'Autocomplete',0,d,[ bool ]).
+html_comp_i(109,'Autoresize',-1,d,[ bool ]).
+html_comp_i(109,'Ismultiline',0,d,[ bool ]).
+html_comp_i(109,'Maxtextnumberlines',0,d,[ num ]).
+html_comp_i(109,'Border','1',d,[ str ]).
+html_comp_i(109,'Alt','',d,[ str ]).
+html_comp_i(109,'Title','',d,[ str ]).
+html_comp_i(109,'Hspace',0,d,[ num ]).
+html_comp_i(109,'Vspace',0,d,[ num ]).
  
  
  
@@ -1881,6 +1958,12 @@ lit_i(100,1,div(100),[ ctlname('') ]).
 lit_i(99,1,div(99),[ ctlname('') ]).
 lit_i(13,1,div(13),[ ctlname('Attributestable') ]).
 lit_i(12,1,div(12),[ ctlname('') ]).
+lit_i(109,1,t(26,2),[ ctlname(26),ctrltype(edit,109),pos(109),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(108,1,div(108),[ ctlname('') ]).
+lit_i(107,1,div(107),[ ctlname('') ]).
+lit_i(106,1,div(106),[ ctlname('') ]).
+lit_i(105,1,div(105),[ ctlname('Imagestable') ]).
+lit_i(104,1,div(104),[ ctlname('') ]).
 lit_i(11,1,div(11),[ ctlname('') ]).
 lit_i(3,1,div(3),[ ctlname('Maintable') ]).
 lit_i(2,1,div(2),[ ctlname('') ]).
@@ -2099,6 +2182,17 @@ att_prop_i(2,30,'AttValidationFailedMsg','',d).
 att_prop_i(2,30,'DownloadOffline','0',d).
 att_prop_i(2,30,'VarServiceExtName','',d).
 att_prop_i(2,30,'FullName','LugarSectorPrecio',v).
+att_prop_i(2,26,'ExternalName','EspectaculoImagen',d).
+att_prop_i(2,26,'ExternalNamespace','Obligatorio1v2',d).
+att_prop_i(2,26,'EmptyAsNull','Yes',d).
+att_prop_i(2,26,'ExternalStorage','-1',d).
+att_prop_i(2,26,idBasedOn,'',d).
+att_prop_i(2,26,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,26,'AttRegEx','',d).
+att_prop_i(2,26,'AttValidationFailedMsg','',d).
+att_prop_i(2,26,'DownloadOffline','0',d).
+att_prop_i(2,26,'VarServiceExtName','',d).
+att_prop_i(2,26,'FullName','EspectaculoImagen',v).
 att_prop_i(2,7,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,7,'ExternalNamespace','Obligatorio1v2',d).
 att_prop_i(2,7,'EmptyAsNull','Yes',d).
@@ -2144,6 +2238,15 @@ att_prop_i(2,37,idBasedOn,'',d).
 att_prop_i(2,37,'DownloadOffline','0',d).
 att_prop_i(2,37,'VarServiceExtName','',d).
 att_prop_i(2,37,'FullName','LugarSectorVendidas',v).
+att_prop_i(2,40000,'ExternalName','',d).
+att_prop_i(2,40000,'ExternalNamespace','',d).
+att_prop_i(2,40000,'EmptyAsNull','Yes',d).
+att_prop_i(2,40000,idBasedOn,'',d).
+att_prop_i(2,40000,'AUTONUMBER','0',d).
+att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
+att_prop_i(2,40000,'AttValidationFailedMsg','',d).
+att_prop_i(2,40000,'FullName','',v).
  
 tbl_prop_i(2,18,'AllDirSuper',[ [ 15,[ 1 ] ] ],v).
 tbl_prop_i(2,11,'AllDirSuper',[ [ 2,[ 4 ] ] ],v).
@@ -2186,6 +2289,8 @@ tbl_att_prop_i(2,15,2,'AllowNulls',n).
 tbl_att_prop_i(2,15,16,'AllowNulls',n).
 tbl_att_prop_i(2,15,4,'AllowNulls',n).
 tbl_att_prop_i(2,15,7,'AllowNulls',n).
+tbl_att_prop_i(2,15,26,'AllowNulls',n).
+tbl_att_prop_i(2,15,40000,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AUTONUMBER',y).
 tbl_att_prop_i(2,2,5,'AllowNulls',n).

@@ -1,0 +1,36 @@
+current_obj_i(2,proc,15).
+ 
+current_guid('c7f8faf1-aebf-4b8e-b8ab-3dd391c442b6').
+ 
+ 
+ 
+is_webproc_i(aimpresionentrada).
+ 
+ 
+is_pdf_i.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(aimpresionentrada,'Impresion Entrada','','""','HTTP',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(aimpresionentrada,[],[],[],15).
+ 
+ 
+obj_parms_i([ 'short aP0_EntradaId' ],[ [ 'Entradaid',inout ] ]).
+ 
+ 
+ 
+ 
+ 
+ 

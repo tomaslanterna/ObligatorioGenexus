@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-162473</SpecVersion>
+<SpecVersion>17_0_10-161416</SpecVersion>
 <Object>
 <ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
 <ObjCls>1</ObjCls>
@@ -9,11 +9,26 @@
 <ObjDesc>Impresion Entrada</ObjDesc>
 <ObjPgmName>ImpresionEntrada</ObjPgmName>
 <ObjClsName>Procedure</ObjClsName></Object>
-<Result>nogenreq</Result>
-<Warnings></Warnings>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0043</MsgCode>
+<Message>
+<Token></Token>
+<Attribute>
+<AttriId>22</AttriId>
+<AttriName>FuncionName</AttriName>
+<Description>Funcion Name</Description></Attribute>
+<Token> is not instantiated</Token>
+<Token> in group starting at line </Token>
+<Token>1</Token>
+<Token></Token>
+<Token>.</Token></Message></Warning></Warnings>
 <Errors></Errors>
 <OutputDevices>
 <Device>File</Device></OutputDevices>
+<Main>Yes</Main>
+<CallProtocol>HTTP</CallProtocol>
 <Generator>
 <GenId>15</GenId>
 <GenName>Default (.NET Framework)</GenName></Generator>
@@ -69,6 +84,7 @@
 <VarId>Entradaid</VarId>
 <VarName>&amp;EntradaId</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
 <NonOptimizedWhere></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>
 <TableId>9</TableId>
@@ -80,7 +96,66 @@
 <AttriId>23</AttriId>
 <AttriName>EntradaId</AttriName>
 <Description>Entrada Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></NavigationTree>
+<Tables>
+<Table>
+<TableId>5</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>ClienteId</AttriName>
+<Description>Cliente Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>15</TableId>
+<TableName>Espectaculo</TableName>
+<Description>Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>2</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>4</TableId>
+<TableName>TipoEspectaculo</TableName>
+<Description>Tipo Espectaculo</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>TipoEspectaculoId</AttriName>
+<Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>LugarSector</TableName>
+<Description>Sector</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>LugarSectorId</AttriName>
+<Description>Lugar Sector Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>

@@ -1,4 +1,4 @@
-spec_i([ trn,10,'Espectaculo','Espectaculo',[],spa,'17_0_10-162473' ]).
+spec_i([ trn,10,'Espectaculo','Espectaculo',[],spa,'17_0_10-161416' ]).
  
 struct_i(15,0,[ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt','Mode','Espectaculoid','Websession' ],[]).
 struct_i(16,15,[ 'Pgmname','Trncontext','Insert_lugarid','Insert_tipoespectaculoid','GXV1','Trncontextatt',4,1 ],[]).

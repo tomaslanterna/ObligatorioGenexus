@@ -40,30 +40,6 @@
               </Property>
             </Properties>
           </Field>
-          <Field name="PaisId" description="Pais Id">
-            <Properties>
-              <Property>
-                <Name>Type</Name>
-                <Value>Numeric</Value>
-              </Property>
-              <Property>
-                <Name>Length</Name>
-                <Value>4</Value>
-              </Property>
-            </Properties>
-          </Field>
-          <Field name="PaisName" description="Pais Name">
-            <Properties>
-              <Property>
-                <Name>Type</Name>
-                <Value>VarChar</Value>
-              </Property>
-              <Property>
-                <Name>Length</Name>
-                <Value>40</Value>
-              </Property>
-            </Properties>
-          </Field>
           <Field name="LugarId" description="Lugar Id">
             <Properties>
               <Property>
@@ -77,6 +53,30 @@
             </Properties>
           </Field>
           <Field name="LugarName" description="Lugar Name">
+            <Properties>
+              <Property>
+                <Name>Type</Name>
+                <Value>VarChar</Value>
+              </Property>
+              <Property>
+                <Name>Length</Name>
+                <Value>40</Value>
+              </Property>
+            </Properties>
+          </Field>
+          <Field name="PaisId" description="Pais Id">
+            <Properties>
+              <Property>
+                <Name>Type</Name>
+                <Value>Numeric</Value>
+              </Property>
+              <Property>
+                <Name>Length</Name>
+                <Value>4</Value>
+              </Property>
+            </Properties>
+          </Field>
+          <Field name="PaisName" description="Pais Name">
             <Properties>
               <Property>
                 <Name>Type</Name>

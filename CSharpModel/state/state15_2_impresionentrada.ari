@@ -1,12 +1,8 @@
-current_obj_i(2,proc,15).
- 
-current_guid('c7f8faf1-aebf-4b8e-b8ab-3dd391c442b6').
+current_obj_i(2,proc,0).
  
  
  
- 
- 
-is_pdf_i.
+called_tree_i(1,0,1,15).
  
  
  
@@ -22,10 +18,13 @@ is_pdf_i.
  
  
  
-ij_object_dependency(impresionentrada,[],[],[],15).
  
  
-obj_parms_i([ 'short aP0_EntradaId' ],[ [ 'Entradaid',inout ] ]).
+ 
+ij_object_dependency(impresionentrada,[],[],[],0).
+ 
+ 
+obj_parms_i([ 'short aP0_EntradaId' ],[ [ 'EntradaId',inout ] ]).
  
  
  

@@ -3,8 +3,8 @@
 	<IntegratedSecurity>True</IntegratedSecurity>
 	<ServerInstance>(LocalDB)\MSSQLLocalDB</ServerInstance>
 	<CreateDbInKbFolder>True</CreateDbInKbFolder>
-	<Directory>C:\Users\agupe\Git\ObligatorioGenexus</Directory>
+	<Directory>C:\Models\Obligatorio1v2</Directory>
 	<DataFile>GX_KB_Obligatorio1v2.mdf</DataFile>
 	<LogFile>GX_KB_Obligatorio1v2_log.ldf</LogFile>
-	<HostName>DESKTOP-H0UOT61</HostName>
+	<HostName>LAPTOP-JS3D3FLO</HostName>
 </ConnectionInformation>

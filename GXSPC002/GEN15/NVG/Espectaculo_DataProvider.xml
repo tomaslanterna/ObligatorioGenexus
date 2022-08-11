@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-162473</SpecVersion>
+<SpecVersion>17_0_10-161416</SpecVersion>
 <Object>
 <ObjClsGuid>2a9e9aba-d2de-4801-ae7f-5e3819222daf</ObjClsGuid>
 <ObjCls>33</ObjCls>
@@ -9,7 +9,7 @@
 <ObjDesc>Espectaculo_Data Provider</ObjDesc>
 <ObjPgmName>Espectaculo_DataProvider</ObjPgmName>
 <ObjClsName>DataProvider</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <OutputDevices>

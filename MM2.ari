@@ -6,8 +6,9 @@ pgm_main_i(mnproc,6,'FUNCION_DATAPROVIDER',[ 15,'AFUNCION_DATAPROVIDER','Funcion
 pgm_main_i(mnproc,5,'ESPECTACULO_DATAPROVIDER',[ 15,'AESPECTACULO_DATAPROVIDER','Espectaculo_Data Provider','','','','INTERNAL' ]).
 pgm_main_i(mnproc,2,'PAIS_DATAPROVIDER',[ 15,'APAIS_DATAPROVIDER','Pais_Data Provider','','','','INTERNAL' ]).
 pgm_main_i(mnproc,3,'TIPOESPECTACULO_DATAPROVIDER',[ 15,'ATIPOESPECTACULO_DATAPROVIDER','Tipo Espectaculo_Data Provider','','','','INTERNAL' ]).
-pgm_main_i(mnproc,4,'LUGAR_DATAPROVIDER',[ 15,'ALUGAR_DATAPROVIDER','Lugar_Data Provider','','','','INTERNAL' ]).
 pgm_main_i(mnproc,8,'ESPECTACULO_DATAPROVIDER',[ 15,'AESPECTACULO_DATAPROVIDER','Espectaculo_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(mnproc,4,'LUGAR_DATAPROVIDER',[ 15,'ALUGAR_DATAPROVIDER','Lugar_Data Provider','','','','INTERNAL' ]).
+pgm_main_i(proc,15,'IMPRESIONENTRADA',[ 15,'AIMPRESIONENTRADA','Impresion Entrada','','','','HTTP' ]).
  
 pgm_prop_i(web,5,'RWDRECENTLINKS','WEB_COMP','Yes').
 pgm_prop_i(web,5,'RWDRECENTLINKS','URLAccess','No').
@@ -67,29 +68,31 @@ pgm_prop_i(web,74,'ESPECTACULOESPECTACULOFUNCIONWC','URLAccess','No').
 pgm_prop_i(web,67,'ESPECTACULOGENERAL','WEB_COMP','Yes').
 pgm_prop_i(web,67,'ESPECTACULOGENERAL','URLAccess','No').
 pgm_prop_i(trn,4,'TIPOESPECTACULO',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','WEB_COMP','Yes').
-pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','URLAccess','No').
-pgm_prop_i(web,23,'ENTRADAGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,23,'ENTRADAGENERAL','URLAccess','No').
-pgm_prop_i(web,46,'INVITACIONGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,46,'INVITACIONGENERAL','URLAccess','No').
 pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','WEB_COMP','Yes').
 pgm_prop_i(web,39,'TIPOESPECTACULOESPECTACULOWC','URLAccess','No').
+pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','URLAccess','No').
+pgm_prop_i(web,15,'CLIENTEGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,15,'CLIENTEGENERAL','URLAccess','No').
+pgm_prop_i(web,23,'ENTRADAGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,23,'ENTRADAGENERAL','URLAccess','No').
+pgm_prop_i(web,17,'CLIENTEENTRADAWC','WEB_COMP','Yes').
+pgm_prop_i(web,17,'CLIENTEENTRADAWC','URLAccess','No').
+pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','WEB_COMP','Yes').
+pgm_prop_i(web,68,'ESPECTACULOLUGARSECTORWC','URLAccess','No').
+pgm_prop_i(web,46,'INVITACIONGENERAL','WEB_COMP','Yes').
+pgm_prop_i(web,46,'INVITACIONGENERAL','URLAccess','No').
 pgm_prop_i(trn,10,'ESPECTACULO',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(mnproc,2,'APAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
 pgm_prop_i(mnproc,2,'PAIS_DATAPROVIDER','OutputSDT',o(0,'Pais')).
 pgm_prop_i(mnproc,3,'ATIPOESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'TipoEspectaculo')).
 pgm_prop_i(mnproc,3,'TIPOESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'TipoEspectaculo')).
-pgm_prop_i(mnproc,4,'ALUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
-pgm_prop_i(mnproc,4,'LUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
 pgm_prop_i(mnproc,8,'AESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
 pgm_prop_i(mnproc,8,'ESPECTACULO_DATAPROVIDER','OutputSDT',o(0,'Espectaculo')).
-pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,38,'TIPOESPECTACULOGENERAL','URLAccess','No').
-pgm_prop_i(web,15,'CLIENTEGENERAL','WEB_COMP','Yes').
-pgm_prop_i(web,15,'CLIENTEGENERAL','URLAccess','No').
-pgm_prop_i(web,17,'CLIENTEENTRADAWC','WEB_COMP','Yes').
-pgm_prop_i(web,17,'CLIENTEENTRADAWC','URLAccess','No').
+pgm_prop_i(mnproc,4,'ALUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
+pgm_prop_i(mnproc,4,'LUGAR_DATAPROVIDER','OutputSDT',o(0,'Lugar')).
+pgm_prop_i(proc,15,'AIMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
+pgm_prop_i(proc,15,'IMPRESIONENTRADA','CALL_PROTOCOL','HTTP').
  
 model_wrkinfo_i([ '.Net Environment','CSharpModel' ]).
  
@@ -161,7 +164,7 @@ lng_prop_i(1,'LangTimeFormat','24',v).
 lng_prop_i(1,'LangDecimalPoint',',',v).
 lng_prop_i(1,'FullyQualifiedName','Spanish',d).
  
-ver_stamp('20220810.153356').
+ver_stamp('20220810.225446').
  
-ver_stamp(date(2022,8,10),time(12,35,26,13)).
+ver_stamp(date(2022,8,10),time(21,18,21,22)).
  
