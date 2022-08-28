@@ -9,7 +9,7 @@
 <ObjDesc>Pais</ObjDesc>
 <ObjPgmName>Pais_BC</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

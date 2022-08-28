@@ -61,4 +61,10 @@
     <ObjDesc>WPEspectaculos Tipo</ObjDesc>
     <ObjLink>wpespectaculostipo.aspx</ObjLink>
   </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AumentarPrecioSectores</ObjName>
+    <ObjDesc>Aumentar Precio Sectores</ObjDesc>
+    <ObjLink>aumentarpreciosectores.aspx</ObjLink>
+  </Object>
 </Objects>

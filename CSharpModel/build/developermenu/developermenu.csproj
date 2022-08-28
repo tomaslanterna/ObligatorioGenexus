@@ -71,6 +71,7 @@
 		<ProjectReference Include=".\..\espectaculoespectaculofuncionwc\espectaculoespectaculofuncionwc.csproj" />
 		<ProjectReference Include=".\..\espectaculos\espectaculos.csproj" />
 		<ProjectReference Include=".\..\wpespectaculostipo\wpespectaculostipo.csproj" />
+		<ProjectReference Include=".\..\aumentarpreciosectores\aumentarpreciosectores.csproj" />
 		<ProjectReference Include=".\..\lugar\lugar.csproj" />
 		<ProjectReference Include=".\..\pais\pais.csproj" />
 		<ProjectReference Include=".\..\tipoespectaculo\tipoespectaculo.csproj" />

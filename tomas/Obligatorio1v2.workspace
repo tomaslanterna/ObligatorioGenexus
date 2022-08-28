@@ -1,57 +1,62 @@
 <Objects>
+  <Object>
+    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
+    <Id>77</Id>
+    <Part>d24a58ad-57ba-41b7-9e6e-eaca3543c778</Part>
+  </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-8</Key>
-          <Name>Entrada</Name>
-          <LastAccess>2022-08-10T20:30:07.8661099-03:00</LastAccess>
+          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-2</Key>
+          <Name>Pais_DataProvider</Name>
+          <LastAccess>2022-08-11T18:49:32.6631936-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>280c149c-48b2-4284-a532-0c999df9e006-3</Key>
+          <Name>Diagram1</Name>
+          <LastAccess>2022-08-11T18:17:19.4420193-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-3</Key>
+          <Name>Pais</Name>
+          <LastAccess>2022-08-11T18:00:00.5597127-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-3</Key>
+          <Name>Pais</Name>
+          <LastAccess>2022-08-11T17:50:02.2407135-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-4</Key>
+          <Name>TipoEspectaculo</Name>
+          <LastAccess>2022-08-11T17:50:00.1487701-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-2</Key>
+          <Name>Lugar</Name>
+          <LastAccess>2022-08-11T17:49:57.4270919-03:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
           <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-9</Key>
           <Name>Invitacion</Name>
-          <LastAccess>2022-08-09T23:50:33.4357887-03:00</LastAccess>
+          <LastAccess>2022-08-11T17:49:49.581403-03:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
           <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-10</Key>
           <Name>Espectaculo</Name>
-          <LastAccess>2022-08-09T23:43:24.9724243-03:00</LastAccess>
+          <LastAccess>2022-08-11T17:49:40.0302513-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-8</Key>
+          <Name>Entrada</Name>
+          <LastAccess>2022-08-11T17:49:35.1284237-03:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
           <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-5</Key>
           <Name>Cliente</Name>
-          <LastAccess>2022-08-09T23:42:08.3168219-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-8</Key>
-          <Name>Espectaculo_DataProvider</Name>
-          <LastAccess>2022-08-09T23:37:07.1955315-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-1</Key>
-          <Name>Espectaculo</Name>
-          <LastAccess>2022-08-09T23:16:57.3829086-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-23</Key>
-          <Name>EntradaGeneral</Name>
-          <LastAccess>2022-08-09T23:12:45.5531151-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-5</Key>
-          <Name>Espectaculo_DataProvider</Name>
-          <LastAccess>2022-08-09T22:50:29.2665405-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-7</Key>
-          <Name>Espectaculo2_DataProvider</Name>
-          <LastAccess>2022-08-09T22:46:25.5753167-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-7</Key>
-          <Name>Funcion</Name>
-          <LastAccess>2022-08-09T22:41:28.8503015-03:00</LastAccess>
+          <LastAccess>2022-08-11T17:49:32.6885658-03:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

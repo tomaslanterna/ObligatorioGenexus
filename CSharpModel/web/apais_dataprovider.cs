@@ -83,15 +83,19 @@ namespace GeneXus.Programs {
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "URUGUAY";
+         Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "517b3558-b7ae-4e50-ae1a-16b8b0606a27", "", context.GetTheme( ))));
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "ARGENTINA";
+         Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "62f48ed1-e238-437e-894f-eeb96f708d5c", "", context.GetTheme( ))));
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "BRASIL";
+         Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "bb0201da-9886-4eb6-971b-2f167e23139b", "", context.GetTheme( ))));
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "CHILE";
+         Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "aed57f5c-1ff4-40f4-87e6-ed4ae51eb19c", "", context.GetTheme( ))));
          this.cleanup();
       }
 
