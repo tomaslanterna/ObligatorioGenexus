@@ -1,4 +1,4 @@
-spec_i([ trn,10,'Espectaculo','Espectaculo_BC',[],spa,'17_0_10-161416' ]).
+spec_i([ trn,10,'Espectaculo','Espectaculo_BC',[],spa,'17_0_10-162473' ]).
  
 struct_i(15,0,[ 'Websession' ],[]).
 struct_i(16,15,[ 4,1 ],[]).
@@ -733,6 +733,7 @@ i_tbl_best_trn(18,[ 10,3,'Espectaculo','Espectaculo',[] ]).
 i_tbl_best_trn(2,[ 2,1,'Lugar','Lugar',[] ]).
 i_tbl_best_trn(4,[ 4,1,'TipoEspectaculo','Tipo Espectaculo',[] ]).
 i_tbl_best_trn(3,[ 3,1,'Pais','Pais',[] ]).
+i_tbl_best_trn(9,[ 8,1,'Entrada','Entrada',[] ]).
 i_tbl_best_trn(11,[ 2,2,'Lugar','Lugar',[] ]).
 i_tbl_best_trn(2000,[ 10,2,'Espectaculo','Espectaculo',[] ]).
  

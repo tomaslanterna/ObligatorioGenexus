@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\aimpresionentrada.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionentrada\obj\Release\aimpresionentrada.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionentrada\obj\Release\aimpresionentrada.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\aimpresionentrada.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionentrada\obj\Release\aimpresionentrada.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionentrada\obj\Release\aimpresionentrada.dll

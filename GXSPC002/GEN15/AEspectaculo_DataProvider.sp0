@@ -1,4 +1,4 @@
-spec_i([ mnproc,8,'Espectaculo_Data Provider','Espectaculo_DataProvider',0,spa,'17_0_10-161416' ]).
+spec_i([ mnproc,8,'Espectaculo_Data Provider','Espectaculo_DataProvider',0,spa,'17_0_10-162473' ]).
  
  
  
@@ -148,22 +148,44 @@ b_line_i(6,1,1,cmd,6,[ t('',107,5,0),t([ t('Gxm1espectaculo',23,6,0),t('Espectac
 b_line_i(7,1,1,cmd,6,[ t('',107,6,0),t([ t('Gxm1espectaculo',23,6,0),t('Espectaculofecha',3,6,0) ],29,6,0),t(=,10,6,0),t('Today',23,6,0) ]).
 b_line_i(8,1,1,cmd,6,[ t('',107,7,0),t([ t('Gxm1espectaculo',23,6,0),t('Lugarid',3,6,0) ],29,6,0),t(=,10,6,0),t('1',3,6,0) ]).
 b_line_i(9,1,1,cmd,6,[ t('',107,8,0),t([ t('Gxm1espectaculo',23,6,0),t('Tipoespectaculoid',3,6,0) ],29,6,0),t(=,10,6,0),t('1',3,6,0) ]).
-b_line_i(12,1,1,cmd,6,[ t('',107,12,0),t('Gxm3espectaculo_lugarsector',23,6,0),t(=,10,6,0),t([ 'Espectaculo.LugarSector',[ t('(',0,12,0),t(')',4,12,0) ],n ],46,6,0) ]).
-b_line_i([ 12,1 ],1,1,cmd,6,[ t('',107,12,0),t([ t('Gxm1espectaculo',23,12,0),t('Lugarsector',3,12,0),t('add(',1,12,0) ],31,12,0),t('Gxm3espectaculo_lugarsector',23,6,0),t(')',4,6,0) ]).
-b_line_i(14,1,1,cmd,8,[ t('',107,14,0),t([ t('Gxm3espectaculo_lugarsector',23,8,0),t('Lugarsectorid',3,8,0) ],29,8,0),t(=,10,8,0),t('1',3,8,0) ]).
-b_line_i(15,1,1,cmd,8,[ t('',107,15,0),t([ t('Gxm3espectaculo_lugarsector',23,8,0),t('Lugarsectorestadosector',3,8,0) ],29,8,0),t(=,10,8,0),t('TRUE',40,8,0) ]).
-b_line_i(20,1,1,cmd,8,[ t('',107,20,0),t('Gxm3espectaculo_lugarsector',23,8,0),t(=,10,8,0),t([ 'Espectaculo.LugarSector',[ t('(',0,20,0),t(')',4,20,0) ],n ],46,8,0) ]).
-b_line_i([ 20,1 ],1,1,cmd,8,[ t('',107,20,0),t([ t('Gxm1espectaculo',23,20,0),t('Lugarsector',3,20,0),t('add(',1,20,0) ],31,20,0),t('Gxm3espectaculo_lugarsector',23,8,0),t(')',4,8,0) ]).
-b_line_i(22,1,1,cmd,10,[ t('',107,22,0),t([ t('Gxm3espectaculo_lugarsector',23,10,0),t('Lugarsectorid',3,10,0) ],29,10,0),t(=,10,10,0),t('2',3,10,0) ]).
-b_line_i(23,1,1,cmd,10,[ t('',107,23,0),t([ t('Gxm3espectaculo_lugarsector',23,10,0),t('Lugarsectorestadosector',3,10,0) ],29,10,0),t(=,10,10,0),t('TRUE',40,10,0) ]).
-b_line_i(28,1,1,cmd,10,[ t('',107,28,0),t('Gxm4espectaculo_espectaculofuncion',23,10,0),t(=,10,10,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,28,0),t(')',4,28,0) ],n ],46,10,0) ]).
-b_line_i([ 28,1 ],1,1,cmd,10,[ t('',107,28,0),t([ t('Gxm1espectaculo',23,28,0),t('Espectaculofuncion',3,28,0),t('add(',1,28,0) ],31,28,0),t('Gxm4espectaculo_espectaculofuncion',23,10,0),t(')',4,10,0) ]).
-b_line_i(30,1,1,cmd,12,[ t('',107,30,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,12,0),t('Espectaculofuncionname',3,12,0) ],29,12,0),t(=,10,12,0),t('''TINI''',3,12,0) ]).
-b_line_i(31,1,1,cmd,12,[ t('',107,31,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,12,0),t('Espectaculofuncionprecio',3,12,0) ],29,12,0),t(=,10,12,0),t('3000',3,12,0) ]).
-b_line_i(36,1,1,cmd,12,[ t('',107,36,0),t('Gxm4espectaculo_espectaculofuncion',23,12,0),t(=,10,12,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,36,0),t(')',4,36,0) ],n ],46,12,0) ]).
-b_line_i([ 36,1 ],1,1,cmd,12,[ t('',107,36,0),t([ t('Gxm1espectaculo',23,36,0),t('Espectaculofuncion',3,36,0),t('add(',1,36,0) ],31,36,0),t('Gxm4espectaculo_espectaculofuncion',23,12,0),t(')',4,12,0) ]).
-b_line_i(38,1,1,cmd,14,[ t('',107,38,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,14,0),t('Espectaculofuncionname',3,14,0) ],29,14,0),t(=,10,14,0),t('''La Renga''',3,14,0) ]).
-b_line_i(39,1,1,cmd,14,[ t('',107,39,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,14,0),t('Espectaculofuncionprecio',3,14,0) ],29,14,0),t(=,10,14,0),t('2000',3,14,0) ]).
+b_line_i(12,1,1,cmd,6,[ t('',107,11,0),t('Gxm3espectaculo_lugarsector',23,6,0),t(=,10,6,0),t([ 'Espectaculo.LugarSector',[ t('(',0,12,0),t(')',4,12,0) ],n ],46,6,0) ]).
+b_line_i([ 12,1 ],1,1,cmd,6,[ t('',107,11,0),t([ t('Gxm1espectaculo',23,12,0),t('Lugarsector',3,12,0),t('add(',1,12,0) ],31,12,0),t('Gxm3espectaculo_lugarsector',23,6,0),t(')',4,6,0) ]).
+b_line_i(14,1,1,cmd,8,[ t('',107,13,0),t([ t('Gxm3espectaculo_lugarsector',23,8,0),t('Lugarsectorid',3,8,0) ],29,8,0),t(=,10,8,0),t('1',3,8,0) ]).
+b_line_i(15,1,1,cmd,8,[ t('',107,14,0),t([ t('Gxm3espectaculo_lugarsector',23,8,0),t('Lugarsectorestadosector',3,8,0) ],29,8,0),t(=,10,8,0),t('TRUE',40,8,0) ]).
+b_line_i(20,1,1,cmd,8,[ t('',107,19,0),t('Gxm3espectaculo_lugarsector',23,8,0),t(=,10,8,0),t([ 'Espectaculo.LugarSector',[ t('(',0,20,0),t(')',4,20,0) ],n ],46,8,0) ]).
+b_line_i([ 20,1 ],1,1,cmd,8,[ t('',107,19,0),t([ t('Gxm1espectaculo',23,20,0),t('Lugarsector',3,20,0),t('add(',1,20,0) ],31,20,0),t('Gxm3espectaculo_lugarsector',23,8,0),t(')',4,8,0) ]).
+b_line_i(22,1,1,cmd,10,[ t('',107,21,0),t([ t('Gxm3espectaculo_lugarsector',23,10,0),t('Lugarsectorid',3,10,0) ],29,10,0),t(=,10,10,0),t('2',3,10,0) ]).
+b_line_i(23,1,1,cmd,10,[ t('',107,22,0),t([ t('Gxm3espectaculo_lugarsector',23,10,0),t('Lugarsectorestadosector',3,10,0) ],29,10,0),t(=,10,10,0),t('TRUE',40,10,0) ]).
+b_line_i(28,1,1,cmd,10,[ t('',107,27,0),t('Gxm4espectaculo_espectaculofuncion',23,10,0),t(=,10,10,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,28,0),t(')',4,28,0) ],n ],46,10,0) ]).
+b_line_i([ 28,1 ],1,1,cmd,10,[ t('',107,27,0),t([ t('Gxm1espectaculo',23,28,0),t('Espectaculofuncion',3,28,0),t('add(',1,28,0) ],31,28,0),t('Gxm4espectaculo_espectaculofuncion',23,10,0),t(')',4,10,0) ]).
+b_line_i(30,1,1,cmd,12,[ t('',107,29,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,12,0),t('Espectaculofuncionname',3,12,0) ],29,12,0),t(=,10,12,0),t('''TINI''',3,12,0) ]).
+b_line_i(31,1,1,cmd,12,[ t('',107,30,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,12,0),t('Espectaculofuncionprecio',3,12,0) ],29,12,0),t(=,10,12,0),t('3000',3,12,0) ]).
+b_line_i(36,1,1,cmd,12,[ t('',107,35,0),t('Gxm4espectaculo_espectaculofuncion',23,12,0),t(=,10,12,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,36,0),t(')',4,36,0) ],n ],46,12,0) ]).
+b_line_i([ 36,1 ],1,1,cmd,12,[ t('',107,35,0),t([ t('Gxm1espectaculo',23,36,0),t('Espectaculofuncion',3,36,0),t('add(',1,36,0) ],31,36,0),t('Gxm4espectaculo_espectaculofuncion',23,12,0),t(')',4,12,0) ]).
+b_line_i(38,1,1,cmd,14,[ t('',107,37,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,14,0),t('Espectaculofuncionname',3,14,0) ],29,14,0),t(=,10,14,0),t('''La Renga''',3,14,0) ]).
+b_line_i(39,1,1,cmd,14,[ t('',107,38,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,14,0),t('Espectaculofuncionprecio',3,14,0) ],29,14,0),t(=,10,14,0),t('2000',3,14,0) ]).
+b_line_i(43,1,1,cmd,14,[ t('',107,42,0),t('Gxm1espectaculo',23,14,0),t(=,10,14,0),t([ 'Espectaculo',[ t('(',0,43,0),t(')',4,43,0) ],n ],46,14,0) ]).
+b_line_i([ 43,1 ],1,1,cmd,14,[ t('',107,42,0),t([ t('Gxm2rootcol',23,43,0),t('add(',1,43,0) ],31,43,0),t('Gxm1espectaculo',23,14,0),t(')',4,14,0) ]).
+b_line_i(45,1,1,cmd,16,[ t('',107,44,0),t([ t('Gxm1espectaculo',23,16,0),t('Espectaculoname',3,16,0) ],29,16,0),t(=,10,16,0),t('''Mundial 2022''',3,16,0) ]).
+b_line_i(46,1,1,cmd,16,[ t('',107,45,0),t([ t('Gxm1espectaculo',23,16,0),t('Espectaculofecha',3,16,0) ],29,16,0),t(=,10,16,0),t('Today',23,16,0) ]).
+b_line_i(47,1,1,cmd,16,[ t('',107,46,0),t([ t('Gxm1espectaculo',23,16,0),t('Lugarid',3,16,0) ],29,16,0),t(=,10,16,0),t('1',3,16,0) ]).
+b_line_i(48,1,1,cmd,16,[ t('',107,47,0),t([ t('Gxm1espectaculo',23,16,0),t('Tipoespectaculoid',3,16,0) ],29,16,0),t(=,10,16,0),t('4',3,16,0) ]).
+b_line_i(51,1,1,cmd,16,[ t('',107,50,0),t('Gxm3espectaculo_lugarsector',23,16,0),t(=,10,16,0),t([ 'Espectaculo.LugarSector',[ t('(',0,51,0),t(')',4,51,0) ],n ],46,16,0) ]).
+b_line_i([ 51,1 ],1,1,cmd,16,[ t('',107,50,0),t([ t('Gxm1espectaculo',23,51,0),t('Lugarsector',3,51,0),t('add(',1,51,0) ],31,51,0),t('Gxm3espectaculo_lugarsector',23,16,0),t(')',4,16,0) ]).
+b_line_i(53,1,1,cmd,18,[ t('',107,52,0),t([ t('Gxm3espectaculo_lugarsector',23,18,0),t('Lugarsectorid',3,18,0) ],29,18,0),t(=,10,18,0),t('1',3,18,0) ]).
+b_line_i(54,1,1,cmd,18,[ t('',107,53,0),t([ t('Gxm3espectaculo_lugarsector',23,18,0),t('Lugarsectorestadosector',3,18,0) ],29,18,0),t(=,10,18,0),t('TRUE',40,18,0) ]).
+b_line_i(59,1,1,cmd,18,[ t('',107,58,0),t('Gxm3espectaculo_lugarsector',23,18,0),t(=,10,18,0),t([ 'Espectaculo.LugarSector',[ t('(',0,59,0),t(')',4,59,0) ],n ],46,18,0) ]).
+b_line_i([ 59,1 ],1,1,cmd,18,[ t('',107,58,0),t([ t('Gxm1espectaculo',23,59,0),t('Lugarsector',3,59,0),t('add(',1,59,0) ],31,59,0),t('Gxm3espectaculo_lugarsector',23,18,0),t(')',4,18,0) ]).
+b_line_i(61,1,1,cmd,20,[ t('',107,60,0),t([ t('Gxm3espectaculo_lugarsector',23,20,0),t('Lugarsectorid',3,20,0) ],29,20,0),t(=,10,20,0),t('2',3,20,0) ]).
+b_line_i(62,1,1,cmd,20,[ t('',107,61,0),t([ t('Gxm3espectaculo_lugarsector',23,20,0),t('Lugarsectorestadosector',3,20,0) ],29,20,0),t(=,10,20,0),t('TRUE',40,20,0) ]).
+b_line_i(67,1,1,cmd,20,[ t('',107,66,0),t('Gxm4espectaculo_espectaculofuncion',23,20,0),t(=,10,20,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,67,0),t(')',4,67,0) ],n ],46,20,0) ]).
+b_line_i([ 67,1 ],1,1,cmd,20,[ t('',107,66,0),t([ t('Gxm1espectaculo',23,67,0),t('Espectaculofuncion',3,67,0),t('add(',1,67,0) ],31,67,0),t('Gxm4espectaculo_espectaculofuncion',23,20,0),t(')',4,20,0) ]).
+b_line_i(69,1,1,cmd,22,[ t('',107,68,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,22,0),t('Espectaculofuncionname',3,22,0) ],29,22,0),t(=,10,22,0),t('''Uruguay vs Argentina''',3,22,0) ]).
+b_line_i(70,1,1,cmd,22,[ t('',107,69,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,22,0),t('Espectaculofuncionprecio',3,22,0) ],29,22,0),t(=,10,22,0),t('5000',3,22,0) ]).
+b_line_i(75,1,1,cmd,22,[ t('',107,74,0),t('Gxm4espectaculo_espectaculofuncion',23,22,0),t(=,10,22,0),t([ 'Espectaculo.EspectaculoFuncion',[ t('(',0,75,0),t(')',4,75,0) ],n ],46,22,0) ]).
+b_line_i([ 75,1 ],1,1,cmd,22,[ t('',107,74,0),t([ t('Gxm1espectaculo',23,75,0),t('Espectaculofuncion',3,75,0),t('add(',1,75,0) ],31,75,0),t('Gxm4espectaculo_espectaculofuncion',23,22,0),t(')',4,22,0) ]).
+b_line_i(77,1,1,cmd,24,[ t('',107,76,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,24,0),t('Espectaculofuncionname',3,24,0) ],29,24,0),t(=,10,24,0),t('''Brazil vs Alemania''',3,24,0) ]).
+b_line_i(78,1,1,cmd,24,[ t('',107,77,0),t([ t('Gxm4espectaculo_espectaculofuncion',23,24,0),t('Espectaculofuncionprecio',3,24,0) ],29,24,0),t(=,10,24,0),t('6000',3,24,0) ]).
  
  
  

@@ -1,0 +1,3 @@
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\aentrada_dataprovider.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aentrada_dataprovider\obj\Release\aentrada_dataprovider.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aentrada_dataprovider\obj\Release\aentrada_dataprovider.dll

@@ -398,6 +398,30 @@ namespace GeneXus.Programs {
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
          }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UESPECTACULO] ON [Espectaculo] ([EspectaculoName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [UESPECTACULO] ON [Espectaculo] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UESPECTACULO] ON [Espectaculo] ([EspectaculoName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       public void CreateLugarSector( )
@@ -794,6 +818,30 @@ namespace GeneXus.Programs {
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
          }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UCLIENTE] ON [Cliente] ([ClienteName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [UCLIENTE] ON [Cliente] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UCLIENTE] ON [Cliente] ([ClienteName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       public void CreateTipoEspectaculo( )
@@ -857,6 +905,30 @@ namespace GeneXus.Programs {
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
          }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       public void CreatePais( )
@@ -914,6 +986,30 @@ namespace GeneXus.Programs {
                }
             }
             cmdBuffer=" CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId]))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [UPAIS] ON [Pais] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisName] ) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -1001,6 +1097,30 @@ namespace GeneXus.Programs {
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
             cmdBuffer=" CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ULUGAR] ON [Lugar] ([LugarName] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [ULUGAR] ON [Lugar] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ULUGAR] ON [Lugar] ([LugarName] ) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;

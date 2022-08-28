@@ -1,6 +1,6 @@
 
 <ObjectSpec>
-<SpecVersion>17_0_10-161416</SpecVersion>
+<SpecVersion>17_0_10-162473</SpecVersion>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
@@ -9,7 +9,7 @@
 <ObjDesc>Pais Cliente WC</ObjDesc>
 <ObjPgmName>PaisClienteWC</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

@@ -95,6 +95,16 @@
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>ULUGAR</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>5</AttriId>
+<AttriName>LugarName</AttriName>
+<Description>Lugar Name</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
@@ -111,6 +121,7 @@
 <Statements>
 <Statement>CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarName] nvarchar(40) NOT NULL , [PaisId] smallint NOT NULL , PRIMARY KEY([LugarId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [ULUGAR] ON [Lugar] ([LugarName] )</Statement>
 <Statement>ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

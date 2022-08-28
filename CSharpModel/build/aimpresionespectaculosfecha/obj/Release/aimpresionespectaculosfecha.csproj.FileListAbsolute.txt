@@ -1,3 +1,6 @@
 C:\Models\Obligatorio1v2\CSharpModel\web\bin\aimpresionespectaculosfecha.dll
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionespectaculosfecha\obj\Release\aimpresionespectaculosfecha.csprojResolveAssemblyReference.cache
 C:\Models\Obligatorio1v2\CSharpModel\build\aimpresionespectaculosfecha\obj\Release\aimpresionespectaculosfecha.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\web\bin\aimpresionespectaculosfecha.dll
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionespectaculosfecha\obj\Release\aimpresionespectaculosfecha.csprojResolveAssemblyReference.cache
+C:\Users\agupe\Git\ObligatorioGenexus\CSharpModel\build\aimpresionespectaculosfecha\obj\Release\aimpresionespectaculosfecha.dll

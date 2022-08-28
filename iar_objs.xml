@@ -12,7 +12,7 @@
 <TableName>EspectaculoFuncion</TableName>
 <Description>Funcion</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\EspectaculoFuncionConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\EspectaculoFuncionConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -26,7 +26,7 @@
 <TableName>EspectaculoLugarSector</TableName>
 <Description>Lugar Sector</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\EspectaculoLugarSectorConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\EspectaculoLugarSectorConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -40,7 +40,7 @@
 <TableName>Espectaculo</TableName>
 <Description>Espectaculo</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\EspectaculoConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\EspectaculoConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -54,7 +54,7 @@
 <TableName>LugarSector</TableName>
 <Description>Sector</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\LugarSectorConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\LugarSectorConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -68,7 +68,7 @@
 <TableName>Invitacion</TableName>
 <Description>Invitacion</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\InvitacionConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\InvitacionConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -82,7 +82,7 @@
 <TableName>Entrada</TableName>
 <Description>Entrada</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\EntradaConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\EntradaConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -96,7 +96,7 @@
 <TableName>Cliente</TableName>
 <Description>Cliente</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\ClienteConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\ClienteConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -110,7 +110,7 @@
 <TableName>TipoEspectaculo</TableName>
 <Description>Tipo Espectaculo</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\TipoEspectaculoConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\TipoEspectaculoConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -124,7 +124,7 @@
 <TableName>Pais</TableName>
 <Description>Pais</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\PaisConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\PaisConversion.xml</ObjNavig></Object>
 <Object>
 <ReorgCls>c</ReorgCls>
 <Mod>1</Mod>
@@ -138,4 +138,4 @@
 <TableName>Lugar</TableName>
 <Description>Lugar</Description></Table>
 <ReorgAction>*</ReorgAction>
-<ObjNavig>tomas\MDL002\GEN15\LugarConversion.xml</ObjNavig></Object>
+<ObjNavig>agupe\MDL002\GEN15\LugarConversion.xml</ObjNavig></Object>

@@ -6,5 +6,9 @@ subtype_views_enabled_i(1,yes,'17_0_10-160901').
  
 subtype_view_last_no_i(1,512).
  
+<<<<<<< HEAD
 subtype_view_ts_i(1,'2022-08-11 21:49:44').
+=======
+subtype_view_ts_i(1,'2022-08-11 22:12:42').
+>>>>>>> d6c962a9713a8c4660e4a3d878976af560fc8801
  

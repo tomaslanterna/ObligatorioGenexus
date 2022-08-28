@@ -1,8 +1,8 @@
-spec_i([ web,14,'Clientes','WWCliente',0,spa,'17_0_10-161416' ]).
+spec_i([ web,14,'Clientes','WWCliente',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
-level_i(2,[ 5,[ [ 5,many ],[ 3,one ] ],[],[],[ [ [ 5,3 ],[ 6,3,10,9 ] ] ],[ [ [ 5,3 ],[] ] ],[ 10 ],'',[],[] ]).
+level_i(2,[ 5,[ [ 5,many ],[ 3,one ] ],[],[],[ [ [ 5,3 ],[ 6,3,10,9 ] ] ],[ [ [ 5,3 ],[] ] ],[ 10 ],'UCLIENTE',[],[] ]).
  
 tw_i(2,[ [ 3,[ [ 5,3,3 ] ] ] ]).
  
@@ -129,7 +129,7 @@ rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Pgmname',[],[ [],[ t('"WWCliente"',3) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,5,[],[ [],'',[] ]).
+a_i(3,2,t,5,[],[ [],'UCLIENTE',[] ]).
 a_i(4,2,r,3,[],[ [ [ 5,3,3 ] ],'IPAIS',[] ]).
 a_i(5,1,f,[ t('&Update',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(6,1,f,[ t('&Delete',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
@@ -175,8 +175,8 @@ attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ])
 table_i(5,[ 'Cliente',[ 9,10,3 ],'Cliente','Cliente' ]).
 table_i(3,[ 'Pais',[ 3,6 ],'Pais','Pais' ]).
  
-index_i(5,[ '',a,[ 10 ],'' ]).
 index_i(5,[ 'ICLIENTE',u,[ 9 ],'ICliente' ]).
+index_i(5,[ 'UCLIENTE',d,[ 10 ],'UCliente' ]).
 index_i(3,[ 'IPAIS',u,[ 3 ],'IPais' ]).
  
  
@@ -739,7 +739,6 @@ html_comp_i(31,'Invitemsg','',d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0038,[ 'There is no index for order ',[ att(2,10) ],'; poor performance may be noticed',[ ' in grid ''','Grid','''' ],'.' ])).
  
  
  

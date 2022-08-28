@@ -1,4 +1,4 @@
-spec_i([ trn,3,'Pais','Pais_BC',[],spa,'17_0_10-161416' ]).
+spec_i([ trn,3,'Pais','Pais_BC',[],spa,'17_0_10-162473' ]).
  
 struct_i(3,0,[ 'Websession' ],[]).
  
@@ -364,6 +364,7 @@ var_prop_i(2,'Paisid',idBasedOn,'',v).
  
 i_tbl_best_trn(3,[ 3,1,'Pais','Pais',[] ]).
 i_tbl_best_trn(2,[ 2,1,'Lugar','Lugar',[] ]).
+i_tbl_best_trn(5,[ 5,1,'Cliente','Cliente',[] ]).
  
  
  

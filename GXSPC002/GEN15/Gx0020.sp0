@@ -1,4 +1,4 @@
-spec_i([ web,52,'Selection List Lugar','Gx0020',0,spa,'17_0_10-161416' ]).
+spec_i([ web,52,'Selection List Lugar','Gx0020',0,spa,'17_0_10-162473' ]).
  
 struct_i(2,1,[ 'Advanced_label_template' ],[]).
  
@@ -179,6 +179,7 @@ index_i(2,[ 'ILUGAR',u,[ 4 ],'ILugar' ]).
  
  
 add_att_i(bits,2,'Linkselection_GXI','Linkselection','Linkselection_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,39,'PaisFlag_GXI',[ svchar,2048,0,0 ]).
  
  
  

@@ -7,12 +7,17 @@ GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
 @genexus.programs.sdt.bld
 type_SdtFuncion.cs
+type_SdtCliente.cs
 type_SdtLugar.cs
 type_SdtLugar_Sector.cs
+type_SdtTipoEspectaculo.cs
 type_SdtEspectaculo.cs
 type_SdtEspectaculo_EspectaculoFuncion.cs
 type_SdtEspectaculo_Funcion.cs
 type_SdtEspectaculo_LugarSector.cs
+<<<<<<< HEAD
 type_SdtTipoEspectaculo.cs
+=======
+>>>>>>> d6c962a9713a8c4660e4a3d878976af560fc8801
 type_SdtPais.cs
 gxdomainpage.cs

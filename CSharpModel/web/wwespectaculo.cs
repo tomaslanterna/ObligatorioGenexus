@@ -251,7 +251,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 511400), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 511400), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202281012272992", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20228111850523", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1265,7 +1265,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202281012273012", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20228111850542", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1283,7 +1283,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("wwespectaculo.js", "?202281012273013", false, true);
+            context.AddJavascriptSource("wwespectaculo.js", "?20228111850542", false, true);
          }
          /* End function include_jscripts */
       }

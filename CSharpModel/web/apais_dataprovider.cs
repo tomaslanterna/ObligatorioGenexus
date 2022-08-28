@@ -92,6 +92,13 @@ namespace GeneXus.Programs {
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "BRASIL";
          Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "bb0201da-9886-4eb6-971b-2f167e23139b", "", context.GetTheme( ))));
+<<<<<<< HEAD
+=======
+         Gxm1pais = new SdtPais(context);
+         Gxm2rootcol.Add(Gxm1pais, 0);
+         Gxm1pais.gxTpr_Paisname = "MEXICO";
+         Gxm1pais.gxTpr_Paisflag = context.convertURL( (string)(context.GetImagePath( "516ea631-6a90-409b-b133-fb4076f65530", "", context.GetTheme( ))));
+>>>>>>> d6c962a9713a8c4660e4a3d878976af560fc8801
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
          Gxm1pais.gxTpr_Paisname = "CHILE";

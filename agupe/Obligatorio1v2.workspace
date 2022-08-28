@@ -1,13 +1,33 @@
 <Objects>
   <Object>
-    <Type>280c149c-48b2-4284-a532-0c999df9e006</Type>
-    <Id>3</Id>
-    <Part>a5e6a251-2df0-44d8-adab-1da237574326</Part>
+    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+    <Id>5</Id>
+    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
   </Object>
   <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>10</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
+    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+    <Id>2</Id>
+    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
+  </Object>
+  <Object>
+    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+    <Id>4</Id>
+    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
+  </Object>
+  <Object>
+    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+    <Id>3</Id>
+    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
+  </Object>
+  <Object>
+    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+    <Id>8</Id>
+    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
+  </Object>
+  <Object>
+    <Type>78cecefe-be7d-4980-86ce-8d6e91fba04b</Type>
+    <Id>3</Id>
+    <Part>a51ced48-7bee-0001-ab12-04e9e32123d1</Part>
   </Object>
   <Object>
     <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
@@ -15,14 +35,90 @@
     <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
   </Object>
   <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+    <Type>2a9e9aba-d2de-4801-ae7f-5e3819222daf</Type>
+    <Id>9</Id>
+    <Part>1d8aeb5a-6e98-45a7-92d2-d8de7384e432</Part>
+  </Object>
+  <Object>
+    <Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+    <Id>3</Id>
+    <Part>a5c0e770-560d-0001-0001-7fe71c260de3</Part>
+  </Object>
+  <Object>
+    <Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+    <Id>2</Id>
+    <Part>a5c0e770-560d-0001-0001-7fe71c260de3</Part>
+  </Object>
+  <Object>
+    <Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+    <Id>15</Id>
+    <Part>a5c0e770-560d-0001-0001-7fe71c260de3</Part>
+  </Object>
+  <Object>
+    <Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
     <Id>5</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
+    <Part>a5c0e770-560d-0001-0001-7fe71c260de3</Part>
+  </Object>
+  <Object>
+    <Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+    <Id>4</Id>
+    <Part>a5c0e770-560d-0001-0001-7fe71c260de3</Part>
   </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
-      <RecentKBObjects />
+      <RecentKBObjects>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-4</Key>
+          <Name>TipoEspectaculo</Name>
+          <LastAccess>2022-08-11T18:45:56.5871582-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-5</Key>
+          <Name>Cliente</Name>
+          <LastAccess>2022-08-11T18:44:38.0523613-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-15</Key>
+          <Name>Espectaculo</Name>
+          <LastAccess>2022-08-11T18:44:17.3268371-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-2</Key>
+          <Name>Lugar</Name>
+          <LastAccess>2022-08-11T18:43:36.2165486-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-3</Key>
+          <Name>Pais</Name>
+          <LastAccess>2022-08-11T18:41:30.7220433-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-9</Key>
+          <Name>Cliente_DataProvider</Name>
+          <LastAccess>2022-08-11T18:39:31.5519102-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-8</Key>
+          <Name>Entrada</Name>
+          <LastAccess>2022-08-11T18:38:56.7084101-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-10</Key>
+          <Name>Entrada_DataProvider</Name>
+          <LastAccess>2022-08-11T18:38:42.8444697-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>78cecefe-be7d-4980-86ce-8d6e91fba04b-3</Key>
+          <Name>WorkWithEntrada</Name>
+          <LastAccess>2022-08-11T18:38:18.3481667-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-8</Key>
+          <Name>Espectaculo_DataProvider</Name>
+          <LastAccess>2022-08-11T18:27:03.3211979-03:00</LastAccess>
+        </RecentKBObject>
+      </RecentKBObjects>
     </RecentKBObjectsList>
   </Recent>
 </Objects>

@@ -24,6 +24,10 @@
 		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo.cs" />
 		<Compile Include = "$(WebDirectory)\GxWebServicesConfig.cs" />
 		<Compile Include = "$(WebDirectory)\GxFullTextSearchReindexer.cs" />
+<<<<<<< HEAD
+=======
+		<Compile Include = "$(WebDirectory)\type_SdtCliente.cs" />
+>>>>>>> d6c962a9713a8c4660e4a3d878976af560fc8801
 		<Compile Include = "$(WebDirectory)\type_SdtPais.cs" />
 		<Compile Include = "$(WebDirectory)\GxWebStd.cs" />
 		<Compile Include = "$(WebDirectory)\type_SdtEspectaculo_LugarSector.cs" />

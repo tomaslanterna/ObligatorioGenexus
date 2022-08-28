@@ -104,10 +104,21 @@
 <AttriName>PaisId</AttriName>
 <Description>Pais Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>Yes</Clustered></Index></Indices></TableIndices>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>UPAIS</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>6</AttriId>
+<AttriName>PaisName</AttriName>
+<Description>Pais Name</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId])) </Statement></Statements>
+<Statement>CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisName] nvarchar(40) NOT NULL , [PaisFlag] VARBINARY(MAX) NULL , [PaisFlag_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisName] )</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>
